@@ -6,7 +6,7 @@ use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\AuthController;
 use Orion\Facades\Orion;
 
-Orion::resource('users', UserController::class);
+Orion::resource('users', UserController::class)->withoutBatch();
 
 Route::post('auth/login', [AuthController::class, 'login']);
 
