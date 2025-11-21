@@ -37,10 +37,9 @@ class LocalizacaoController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Localizacao $localizacao)
+    public function show($id)
     {
-        return Localizacao::findOrFail($localizacao->id);
-
+        return Localizacao::findOrFail($id);
     }
 
     /**

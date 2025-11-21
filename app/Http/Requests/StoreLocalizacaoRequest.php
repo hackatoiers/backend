@@ -22,13 +22,13 @@ class StoreLocalizacaoRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'sitio' => 'required|string|max:255',
-            'cidade' => 'string|max:255',
-            'estado' => 'string|max:255',
-            'pais' => 'string|max:255',
-            'estante' => 'required|string|max:255',
-            'prateleira' => 'required|string|max:255',
-            'sala' => 'required|string|max:255',
+            'place' => 'required|string|max:255',
+            'city' => 'string|max:255',
+            'state' => 'string|max:255',
+            'country' => 'string|max:255',
+            'bookcase' => 'required|string|max:255',
+            'sheif' => 'required|string|max:255',
+            'room' => 'required|string|max:255',
         ];
     }
 }

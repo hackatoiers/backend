@@ -5,9 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Subtipo extends Model
+class Photo extends Model
 {
-    /** @use HasFactory<\Database\Factories\SubtipoFactory> */
-    protected $fillable = ["name" , "materials_id"];
+    /** @use HasFactory<\Database\Factories\PhotoFactory> */
     use HasFactory;
 }

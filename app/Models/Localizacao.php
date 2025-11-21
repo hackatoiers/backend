@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Localizacao extends Model
 {
     /** @use HasFactory<\Database\Factories\LocalizacaoFactory> */
-    protected $fillable = ["cidade", "estado", "pais", "estante", "prateleira", "sala", "sitio"];
+    protected $fillable = ["city", "state", "country", "shelf", "bookcase", "room", "site"];
     use HasFactory;
 }

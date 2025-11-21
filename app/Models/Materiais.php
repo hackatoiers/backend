@@ -8,9 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Materiais extends Model
 {
     /** @use HasFactory<\Database\Factories\MateriaisFactory> */
-    protected $fillable = ["nome"];
+    protected $fillable = ["name"];
 
-    protected $table = "materiais";
 
     use HasFactory;
 }

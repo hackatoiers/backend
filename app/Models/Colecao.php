@@ -9,6 +9,6 @@ class Colecao extends Model
 {
     /** @use HasFactory<\Database\Factories\ColecaoFactory> */
     use HasFactory;
-    protected $fillable = ["nome", "dono", "descricao"];
+    protected $fillable = ["name", "owner", "description"];
 
 }

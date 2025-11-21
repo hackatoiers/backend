@@ -7,6 +7,7 @@ use App\Http\Controllers\Api\LocalizacaoController;
 use App\Http\Controllers\Api\ColecaoController;
 use App\Http\Controllers\Api\AcoesConservacaoController;
 use App\Http\Controllers\Api\MateriaisController;
+use App\Http\Controllers\Api\SubtipoController;
 
 Route::get('users/search', [UserController::class, 'search']);
 Route::apiResource('users', UserController::class);
@@ -20,5 +21,6 @@ Route::middleware('auth:sanctum')->group(function () {
 
 Route::apiResource('locations', LocalizacaoController::class);
 Route::apiResource('colections', ColecaoController::class);
-Route::apiResource('acoes-conservacao', AcoesConservacaoController::class);
-Route::apiResource('materiais', MateriaisController::class);
+Route::apiResource('conserve-actions', AcoesConservacaoController::class);
+Route::apiResource('materials', MateriaisController::class);
+Route::apiResource('subtypes', SubtipoController::class);

@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreItemRequest;
-use App\Http\Requests\UpdateItemRequest;
-use App\Models\Item;
+use App\Http\Requests\StorePhotoRequest;
+use App\Http\Requests\UpdatePhotoRequest;
+use App\Models\Photo;
 
-class ItemController extends Controller
+class PhotoController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        
+        //
     }
 
     /**
@@ -27,7 +27,7 @@ class ItemController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreItemRequest $request)
+    public function store(StorePhotoRequest $request)
     {
         //
     }
@@ -35,7 +35,7 @@ class ItemController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Item $item)
+    public function show(Photo $photo)
     {
         //
     }
@@ -43,7 +43,7 @@ class ItemController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Item $item)
+    public function edit(Photo $photo)
     {
         //
     }
@@ -51,7 +51,7 @@ class ItemController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateItemRequest $request, Item $item)
+    public function update(UpdatePhotoRequest $request, Photo $photo)
     {
         //
     }
@@ -59,7 +59,7 @@ class ItemController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Item $item)
+    public function destroy(Photo $photo)
     {
         //
     }

@@ -11,11 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('acoes_conservacaos', function (Blueprint $table) {
+        Schema::create('colecaos', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->date('data_acao');
-            $table->text('descricao');
+            $table->string('owner');
+            $table->text('description');
+            $table->string('name');
+
         });
     }
 
@@ -24,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('acoes_conservacaos');
+        Schema::dropIfExists('colecaos');
     }
 };

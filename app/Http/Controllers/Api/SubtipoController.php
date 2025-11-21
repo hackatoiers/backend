@@ -1,7 +1,7 @@
 <?php
 
-namespace App\Http\Controllers;
-
+namespace App\Http\Controllers\Api;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreSubtipoRequest;
 use App\Http\Requests\UpdateSubtipoRequest;
 use App\Models\Subtipo;
@@ -13,7 +13,7 @@ class SubtipoController extends Controller
      */
     public function index()
     {
-        //
+        return Subtipo::all();
     }
 
     /**
@@ -29,15 +29,16 @@ class SubtipoController extends Controller
      */
     public function store(StoreSubtipoRequest $request)
     {
-        //
+        $subtype = $request->validated();
+        return Subtipo::create($subtype);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Subtipo $subtipo)
+    public function show($id )
     {
-        //
+        return Subtipo::findOrFail($id);
     }
 
     /**
@@ -61,6 +62,7 @@ class SubtipoController extends Controller
      */
     public function destroy(Subtipo $subtipo)
     {
-        //
+        $subtipo->delete();
+        return response()->json(['message' => 'Item deleted successfully']);
     }
 }

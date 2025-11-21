@@ -22,9 +22,9 @@ class StoreColecaoRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nome' => 'required|string|max:255',
-            'dono' => 'string|max:255',
-            'descricao' => 'string|max:1000',
+            'name' => 'required|string|max:255',
+            'owner' => 'string|max:255',
+            'description' => 'string|max:1000',
         ];
     }
 }

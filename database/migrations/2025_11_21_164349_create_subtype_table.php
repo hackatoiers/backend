@@ -11,16 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('localizacaos', function (Blueprint $table) {
+        Schema::create('subtipos', function (Blueprint $table) {
             $table->id();
-            $table->string('sitio');
-            $table->string('cidade');
-            $table->string('estado');
-            $table->string('pais');
-            $table->string('estante');
-            $table->string('prateleira');
-            $table->string('sala');
             $table->timestamps();
+            $table->string('name');
+            $table->foreignId('materials_id')->constrained('materiais')->onDelete('cascade');
         });
     }
 
@@ -29,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('localizacaos');
+        Schema::dropIfExists('subtipos');
     }
 };

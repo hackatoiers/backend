@@ -14,14 +14,22 @@ return new class extends Migration
         Schema::create('items', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('nome');
-            $table->integer('numero');
-            $table->json('dimensoes');
-            $table->foreignId('localizacao_id')->constrained('localizacaos');
-            $table->foreignId('material_id')->constrained('materiais');
-            $table->foreignId('subtipo_id')->constrained('subtipos');
-            $table->foreignId('colecao_id')->constrained('colecaos');
-            $table->foreignId('acao_conservacao_id')->constrained('acoes_conservacaos');
+            $table->string('name');
+            $table->integer('number');
+            $table->json('dimentions');
+            $table->foreignId('location_id')->constrained('locations');
+            $table->foreignId('materials_id')->constrained('materials');
+            $table->foreignId('subtype_id')->constrained('subtypes');
+            $table->foreignId('colection_id')->constrained('colections');
+            $table->foreignId('action_conserve_id')->constrained('actions_conserve');
+            $table->integer('weight');
+            $table->string('technic');
+            $table->string('integrity');
+            $table->string('conservation_state');
+            $table->string('conservation_detail');
+            $table->text('description');
+            $table->string('reference');
+            $table->date('date_cadastred');
         });
     }
 

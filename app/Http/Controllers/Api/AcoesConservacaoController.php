@@ -37,9 +37,9 @@ class AcoesConservacaoController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(AcoesConservacao $acoesConservacao)
+    public function show($id)
     {
-        return AcoesConservacao::findOrFail($acoesConservacao->id);
+        return AcoesConservacao::findOrFail($id);
     }
 
     /**

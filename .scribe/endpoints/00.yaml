@@ -360,8 +360,11 @@ endpoints:
     responses:
       -
         custom: []
-        status: 200
-        content: '[{"id":1,"sitio":"b","cidade":"n","estado":"g","pais":"z","estante":"m","prateleira":"i","sala":"y","created_at":"2025-11-21T17:36:50.000000Z","updated_at":"2025-11-21T17:36:50.000000Z"},{"id":2,"sitio":"b","cidade":"n","estado":"g","pais":"z","estante":"m","prateleira":"i","sala":"y","created_at":"2025-11-21T17:37:05.000000Z","updated_at":"2025-11-21T17:37:05.000000Z"},{"id":3,"sitio":"fer","cidade":"n","estado":"g","pais":"z","estante":"m","prateleira":"i","sala":"y","created_at":"2025-11-21T17:38:22.000000Z","updated_at":"2025-11-21T17:38:22.000000Z"},{"id":4,"sitio":"bosyta","cidade":"art","estado":"asdsg","pais":"zsadas","estante":"mdsaads","prateleira":"saddasi","sala":"ydsada","created_at":"2025-11-21T17:39:19.000000Z","updated_at":"2025-11-21T17:39:19.000000Z"}]'
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -395,9 +398,9 @@ endpoints:
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      sitio:
+      place:
         custom: []
-        name: sitio
+        name: place
         description: 'Must not be greater than 255 characters.'
         required: true
         example: b
@@ -406,9 +409,9 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         deprecated: false
-      cidade:
+      city:
         custom: []
-        name: cidade
+        name: city
         description: 'Must not be greater than 255 characters.'
         required: false
         example: 'n'
@@ -417,9 +420,9 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         deprecated: false
-      estado:
+      state:
         custom: []
-        name: estado
+        name: state
         description: 'Must not be greater than 255 characters.'
         required: false
         example: g
@@ -428,9 +431,9 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         deprecated: false
-      pais:
+      country:
         custom: []
-        name: pais
+        name: country
         description: 'Must not be greater than 255 characters.'
         required: false
         example: z
@@ -439,9 +442,9 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         deprecated: false
-      estante:
+      bookcase:
         custom: []
-        name: estante
+        name: bookcase
         description: 'Must not be greater than 255 characters.'
         required: true
         example: m
@@ -450,9 +453,9 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         deprecated: false
-      prateleira:
+      sheif:
         custom: []
-        name: prateleira
+        name: sheif
         description: 'Must not be greater than 255 characters.'
         required: true
         example: i
@@ -461,9 +464,9 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         deprecated: false
-      sala:
+      room:
         custom: []
-        name: sala
+        name: room
         description: 'Must not be greater than 255 characters.'
         required: true
         example: 'y'
@@ -473,13 +476,13 @@ endpoints:
         nullable: false
         deprecated: false
     cleanBodyParameters:
-      sitio: b
-      cidade: 'n'
-      estado: g
-      pais: z
-      estante: m
-      prateleira: i
-      sala: 'y'
+      place: b
+      city: 'n'
+      state: g
+      country: z
+      bookcase: m
+      sheif: i
+      room: 'y'
     fileParameters: []
     responses: []
     responseFields: []
@@ -511,14 +514,14 @@ endpoints:
         name: id
         description: 'The ID of the location.'
         required: true
-        example: 1
-        type: integer
+        example: architecto
+        type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      id: 1
+      id: architecto
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -527,10 +530,10 @@ endpoints:
     responses:
       -
         custom: []
-        status: 404
+        status: 500
         content: |-
           {
-              "message": "No query results for model [App\\Models\\Localizacao]."
+              "message": "Server Error"
           }
         headers:
           cache-control: 'no-cache, private'
@@ -567,14 +570,14 @@ endpoints:
         name: id
         description: 'The ID of the location.'
         required: true
-        example: 1
+        example: 16
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      id: 1
+      id: 16
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -610,14 +613,14 @@ endpoints:
         name: id
         description: 'The ID of the location.'
         required: true
-        example: 1
+        example: 16
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      id: 1
+      id: 16
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -658,7 +661,7 @@ endpoints:
       -
         custom: []
         status: 200
-        content: '[{"id":1,"created_at":"2025-11-21T18:02:13.000000Z","updated_at":"2025-11-21T18:02:13.000000Z","dono":"n","descricao":"hadshashdajs","nome":"b"}]'
+        content: '[]'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -692,9 +695,9 @@ endpoints:
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      nome:
+      name:
         custom: []
-        name: nome
+        name: name
         description: 'Must not be greater than 255 characters.'
         required: true
         example: b
@@ -703,9 +706,9 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         deprecated: false
-      dono:
+      owner:
         custom: []
-        name: dono
+        name: owner
         description: 'Must not be greater than 255 characters.'
         required: false
         example: 'n'
@@ -714,21 +717,21 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         deprecated: false
-      descricao:
+      description:
         custom: []
-        name: descricao
+        name: description
         description: 'Must not be greater than 1000 characters.'
         required: false
-        example: g
+        example: 'Animi quos velit et fugiat.'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanBodyParameters:
-      nome: b
-      dono: 'n'
-      descricao: g
+      name: b
+      owner: 'n'
+      description: 'Animi quos velit et fugiat.'
     fileParameters: []
     responses: []
     responseFields: []
@@ -760,14 +763,14 @@ endpoints:
         name: id
         description: 'The ID of the colection.'
         required: true
-        example: 1
-        type: integer
+        example: architecto
+        type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      id: 1
+      id: architecto
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -779,7 +782,7 @@ endpoints:
         status: 404
         content: |-
           {
-              "message": "No query results for model [App\\Models\\Colecao]."
+              "message": "No query results for model [App\\Models\\Colecao] architecto"
           }
         headers:
           cache-control: 'no-cache, private'
@@ -816,14 +819,14 @@ endpoints:
         name: id
         description: 'The ID of the colection.'
         required: true
-        example: 1
+        example: 16
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      id: 1
+      id: 16
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -859,14 +862,14 @@ endpoints:
         name: id
         description: 'The ID of the colection.'
         required: true
-        example: 1
+        example: 16
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      id: 1
+      id: 16
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -882,7 +885,7 @@ endpoints:
     custom: []
     httpMethods:
       - GET
-    uri: api/acoes-conservacao
+    uri: api/conserve-actions
     metadata:
       custom: []
       groupName: Endpoints
@@ -907,7 +910,7 @@ endpoints:
       -
         custom: []
         status: 200
-        content: '[{"id":1,"created_at":"2025-11-21T18:13:09.000000Z","updated_at":"2025-11-21T18:13:09.000000Z","data_acao":"2025-11-21T18:12:40","descricao":"b"},{"id":2,"created_at":"2025-11-21T18:21:58.000000Z","updated_at":"2025-11-21T18:21:58.000000Z","data_acao":"2025-11-21T18:12:40","descricao":"b"}]'
+        content: '[]'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -922,7 +925,7 @@ endpoints:
     custom: []
     httpMethods:
       - POST
-    uri: api/acoes-conservacao
+    uri: api/conserve-actions
     metadata:
       custom: []
       groupName: Endpoints
@@ -941,31 +944,31 @@ endpoints:
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      data_acao:
+      action_date:
         custom: []
-        name: data_acao
+        name: action_date
         description: 'Must be a valid date.'
         required: false
-        example: '2025-11-21T18:26:17'
+        example: '2025-11-21T19:13:09'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
-      descricao:
+      description:
         custom: []
-        name: descricao
+        name: description
         description: 'Must not be greater than 1000 characters.'
         required: false
-        example: b
+        example: 'Eius et animi quos velit et.'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanBodyParameters:
-      data_acao: '2025-11-21T18:26:17'
-      descricao: b
+      action_date: '2025-11-21T19:13:09'
+      description: 'Eius et animi quos velit et.'
     fileParameters: []
     responses: []
     responseFields: []
@@ -977,7 +980,7 @@ endpoints:
     custom: []
     httpMethods:
       - GET
-    uri: 'api/acoes-conservacao/{id}'
+    uri: 'api/conserve-actions/{id}'
     metadata:
       custom: []
       groupName: Endpoints
@@ -995,16 +998,16 @@ endpoints:
       id:
         custom: []
         name: id
-        description: 'The ID of the acoes conservacao.'
+        description: 'The ID of the conserve action.'
         required: true
-        example: 1
-        type: integer
+        example: architecto
+        type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      id: 1
+      id: architecto
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -1013,8 +1016,11 @@ endpoints:
     responses:
       -
         custom: []
-        status: 200
-        content: '{"id":1,"created_at":"2025-11-21T18:13:09.000000Z","updated_at":"2025-11-21T18:13:09.000000Z","data_acao":"2025-11-21T18:12:40","descricao":"b"}'
+        status: 404
+        content: |-
+          {
+              "message": "No query results for model [App\\Models\\AcoesConservacao] architecto"
+          }
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -1030,7 +1036,7 @@ endpoints:
     httpMethods:
       - PUT
       - PATCH
-    uri: 'api/acoes-conservacao/{id}'
+    uri: 'api/conserve-actions/{id}'
     metadata:
       custom: []
       groupName: Endpoints
@@ -1048,16 +1054,16 @@ endpoints:
       id:
         custom: []
         name: id
-        description: 'The ID of the acoes conservacao.'
+        description: 'The ID of the conserve action.'
         required: true
-        example: 1
+        example: 16
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      id: 1
+      id: 16
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -1073,7 +1079,7 @@ endpoints:
     custom: []
     httpMethods:
       - DELETE
-    uri: 'api/acoes-conservacao/{id}'
+    uri: 'api/conserve-actions/{id}'
     metadata:
       custom: []
       groupName: Endpoints
@@ -1091,16 +1097,16 @@ endpoints:
       id:
         custom: []
         name: id
-        description: 'The ID of the acoes conservacao.'
+        description: 'The ID of the conserve action.'
         required: true
-        example: 1
+        example: 16
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      id: 1
+      id: 16
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -1116,7 +1122,7 @@ endpoints:
     custom: []
     httpMethods:
       - GET
-    uri: api/materiais
+    uri: api/materials
     metadata:
       custom: []
       groupName: Endpoints
@@ -1141,7 +1147,7 @@ endpoints:
       -
         custom: []
         status: 200
-        content: '[{"id":1,"created_at":"2025-11-21T18:23:24.000000Z","updated_at":"2025-11-21T18:23:24.000000Z","nome":"b"},{"id":2,"created_at":"2025-11-21T18:23:30.000000Z","updated_at":"2025-11-21T18:23:30.000000Z","nome":"b"}]'
+        content: '[{"id":1,"created_at":"2025-11-21T19:06:29.000000Z","updated_at":"2025-11-21T19:06:29.000000Z","name":"b"}]'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -1156,7 +1162,7 @@ endpoints:
     custom: []
     httpMethods:
       - POST
-    uri: api/materiais
+    uri: api/materials
     metadata:
       custom: []
       groupName: Endpoints
@@ -1175,9 +1181,9 @@ endpoints:
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
-      nome:
+      name:
         custom: []
-        name: nome
+        name: name
         description: 'Must not be greater than 255 characters.'
         required: true
         example: b
@@ -1187,7 +1193,7 @@ endpoints:
         nullable: false
         deprecated: false
     cleanBodyParameters:
-      nome: b
+      name: b
     fileParameters: []
     responses: []
     responseFields: []
@@ -1199,7 +1205,7 @@ endpoints:
     custom: []
     httpMethods:
       - GET
-    uri: 'api/materiais/{id}'
+    uri: 'api/materials/{id}'
     metadata:
       custom: []
       groupName: Endpoints
@@ -1217,16 +1223,16 @@ endpoints:
       id:
         custom: []
         name: id
-        description: 'The ID of the materiai.'
+        description: 'The ID of the material.'
         required: true
-        example: 1
-        type: integer
+        example: architecto
+        type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      id: 1
+      id: architecto
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -1238,7 +1244,7 @@ endpoints:
         status: 404
         content: |-
           {
-              "message": "No query results for model [App\\Models\\Materiais]."
+              "message": "No query results for model [App\\Models\\Materiais] architecto"
           }
         headers:
           cache-control: 'no-cache, private'
@@ -1255,7 +1261,7 @@ endpoints:
     httpMethods:
       - PUT
       - PATCH
-    uri: 'api/materiais/{id}'
+    uri: 'api/materials/{id}'
     metadata:
       custom: []
       groupName: Endpoints
@@ -1273,7 +1279,7 @@ endpoints:
       id:
         custom: []
         name: id
-        description: 'The ID of the materiai.'
+        description: 'The ID of the material.'
         required: true
         example: 1
         type: integer
@@ -1298,7 +1304,7 @@ endpoints:
     custom: []
     httpMethods:
       - DELETE
-    uri: 'api/materiais/{id}'
+    uri: 'api/materials/{id}'
     metadata:
       custom: []
       groupName: Endpoints
@@ -1316,7 +1322,7 @@ endpoints:
       id:
         custom: []
         name: id
-        description: 'The ID of the materiai.'
+        description: 'The ID of the material.'
         required: true
         example: 1
         type: integer
@@ -1326,6 +1332,243 @@ endpoints:
         deprecated: false
     cleanUrlParameters:
       id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/subtypes
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 200
+        content: '[]'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: api/subtypes
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        custom: []
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: b
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      materials_id:
+        custom: []
+        name: materials_id
+        description: 'The <code>id</code> of an existing record in the materiais table.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      name: b
+      materials_id: architecto
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: 'api/subtypes/{id}'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        custom: []
+        name: id
+        description: 'The ID of the subtype.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      id: architecto
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 404
+        content: |-
+          {
+              "message": "No query results for model [App\\Models\\Subtipo] architecto"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/subtypes/{id}'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        custom: []
+        name: id
+        description: 'The ID of the subtype.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - DELETE
+    uri: 'api/subtypes/{id}'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        custom: []
+        name: id
+        description: 'The ID of the subtype.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      id: 16
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

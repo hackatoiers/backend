@@ -22,8 +22,8 @@ class StoreAcoesConservacaoRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'data_acao' => 'date',
-            'descricao' => 'string|max:1000',
+            'action_date' => 'date',
+            'description' => 'string|max:1000',
         ];
     }
 }

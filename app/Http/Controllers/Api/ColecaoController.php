@@ -38,9 +38,9 @@ class ColecaoController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Colecao $colecao)
+    public function show( $id)
     {
-        return Colecao::findOrFail($colecao->id);
+        return Colecao::findOrFail($id);
     }
 
     /**
