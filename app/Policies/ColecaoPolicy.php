@@ -35,9 +35,9 @@ class ColecaoPolicy
     /**
      * Determine whether the user can update the model.
      */
-    public function update(User $user, Colecao $colecao): bool
+    public function update(?User $user, Colecao $colecao): bool
     {
-        return false;
+        return true;
     }
 
     /**

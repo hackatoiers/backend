@@ -11,7 +11,7 @@ class UpdateColecaoRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,9 @@ class UpdateColecaoRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => 'required|string|max:255',
+            'owner' => 'string|max:255',
+            'description' => 'string|max:1000',
         ];
     }
 }

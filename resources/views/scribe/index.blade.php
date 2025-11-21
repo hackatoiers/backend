@@ -815,7 +815,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --data "{
     \"email\": \"gbailey@example.net\",
     \"password\": \"+-0pBNvYgxwmi\\/#iw\",
-    \"remember\": false
+    \"remember\": true
 }"
 </code></pre></div>
 
@@ -833,7 +833,7 @@ const headers = {
 let body = {
     "email": "gbailey@example.net",
     "password": "+-0pBNvYgxwmi\/#iw",
-    "remember": false
+    "remember": true
 };
 
 fetch(url, {
@@ -962,7 +962,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <code>false</code>
         </label>
     <br>
-<p>Example: <code>false</code></p>
+<p>Example: <code>true</code></p>
         </div>
         </form>
 
@@ -2747,7 +2747,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"action_date\": \"2025-11-21T19:13:09\",
+    \"action_date\": \"2025-11-21T20:31:28\",
     \"description\": \"Eius et animi quos velit et.\"
 }"
 </code></pre></div>
@@ -2764,7 +2764,7 @@ const headers = {
 };
 
 let body = {
-    "action_date": "2025-11-21T19:13:09",
+    "action_date": "2025-11-21T20:31:28",
     "description": "Eius et animi quos velit et."
 };
 
@@ -2857,10 +2857,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="action_date"                data-endpoint="POSTapi-conserve-actions"
-               value="2025-11-21T19:13:09"
+               value="2025-11-21T20:31:28"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-11-21T19:13:09</code></p>
+<p>Must be a valid date. Example: <code>2025-11-21T20:31:28</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
@@ -3313,14 +3313,7 @@ content-type: application/json
 vary: Origin
  </code></pre></details>         <pre>
 
-<code class="language-json" style="max-height: 300px;">[
-    {
-        &quot;id&quot;: 1,
-        &quot;created_at&quot;: &quot;2025-11-21T19:06:29.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-11-21T19:06:29.000000Z&quot;,
-        &quot;name&quot;: &quot;b&quot;
-    }
-]</code>
+<code class="language-json" style="max-height: 300px;">[]</code>
  </pre>
     </span>
 <span id="execution-results-GETapi-materials" hidden>
@@ -3680,14 +3673,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/materials/1" \
+    "http://localhost:8000/api/materials/16" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/materials/1"
+    "http://localhost:8000/api/materials/16"
 );
 
 const headers = {
@@ -3787,10 +3780,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="PUTapi-materials--id-"
-               value="1"
+               value="16"
                data-component="url">
     <br>
-<p>The ID of the material. Example: <code>1</code></p>
+<p>The ID of the material. Example: <code>16</code></p>
             </div>
                     </form>
 
@@ -3807,14 +3800,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/materials/1" \
+    "http://localhost:8000/api/materials/16" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/materials/1"
+    "http://localhost:8000/api/materials/16"
 );
 
 const headers = {
@@ -3910,10 +3903,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="DELETEapi-materials--id-"
-               value="1"
+               value="16"
                data-component="url">
     <br>
-<p>The ID of the material. Example: <code>1</code></p>
+<p>The ID of the material. Example: <code>16</code></p>
             </div>
                     </form>
 

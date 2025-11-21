@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreColecaoRequest;
 use App\Http\Requests\UpdateColecaoRequest;
 use App\Models\Colecao;
-use App\Http\Controllers\Controller;
-
 
 class ColecaoController extends Controller
 {
@@ -21,10 +20,7 @@ class ColecaoController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
-    {
-
-    }
+    public function create() {}
 
     /**
      * Store a newly created resource in storage.
@@ -32,13 +28,14 @@ class ColecaoController extends Controller
     public function store(StoreColecaoRequest $request)
     {
         $colections = $request->validated();
+
         return Colecao::create($colections);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show( $id)
+    public function show($id)
     {
         return Colecao::findOrFail($id);
     }
@@ -54,9 +51,12 @@ class ColecaoController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateColecaoRequest $request, Colecao $colecao)
+    public function update(UpdateColecaoRequest $request, $id)
     {
-        //
+        $colecao = Colecao::findOrFail($id);
+
+        $colecao->update($request->validated());
+        return response()->json($colecao);
     }
 
     /**
@@ -65,6 +65,7 @@ class ColecaoController extends Controller
     public function destroy(Colecao $colecao)
     {
         $colecao->delete();
+
         return response()->json(['message' => 'Item deleted successfully']);
     }
 }
