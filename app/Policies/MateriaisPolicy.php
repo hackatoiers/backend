@@ -27,9 +27,9 @@ class MateriaisPolicy
     /**
      * Determine whether the user can create models.
      */
-    public function create(User $user): bool
+    public function create(?User $user): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -43,9 +43,9 @@ class MateriaisPolicy
     /**
      * Determine whether the user can delete the model.
      */
-    public function delete(User $user, Materiais $materiais): bool
+    public function delete(?User $user, Materiais $materiais): bool
     {
-        return false;
+        return true;
     }
 
     /**

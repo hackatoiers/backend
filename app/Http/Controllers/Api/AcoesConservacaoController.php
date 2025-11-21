@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use App\Http\Requests\StoreAcoesConservacaoRequest;
 use App\Http\Requests\UpdateAcoesConservacaoRequest;
 use App\Models\AcoesConservacao;
+use App\Http\Controllers\Controller;
 
 class AcoesConservacaoController extends Controller
 {
@@ -13,7 +14,7 @@ class AcoesConservacaoController extends Controller
      */
     public function index()
     {
-        //
+        return AcoesConservacao::all();
     }
 
     /**
@@ -29,7 +30,8 @@ class AcoesConservacaoController extends Controller
      */
     public function store(StoreAcoesConservacaoRequest $request)
     {
-        //
+        $acoesConservacao = $request->validated();
+        return AcoesConservacao::create($acoesConservacao);
     }
 
     /**
@@ -37,7 +39,7 @@ class AcoesConservacaoController extends Controller
      */
     public function show(AcoesConservacao $acoesConservacao)
     {
-        //
+        return AcoesConservacao::findOrFail($acoesConservacao->id);
     }
 
     /**
@@ -61,6 +63,7 @@ class AcoesConservacaoController extends Controller
      */
     public function destroy(AcoesConservacao $acoesConservacao)
     {
-        //
+        $acoesConservacao->delete();
+        return response()->json(['message' => 'Item deleted successfully']);
     }
 }

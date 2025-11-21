@@ -39,7 +39,7 @@ class LocalizacaoController extends Controller
      */
     public function show(Localizacao $localizacao)
     {
-        return $localizacao->all();
+        return Localizacao::findOrFail($localizacao->id);
 
     }
 

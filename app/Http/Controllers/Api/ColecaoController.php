@@ -40,7 +40,7 @@ class ColecaoController extends Controller
      */
     public function show(Colecao $colecao)
     {
-        //
+        return Colecao::findOrFail($colecao->id);
     }
 
     /**

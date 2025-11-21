@@ -9,4 +9,6 @@ class AcoesConservacao extends Model
 {
     /** @use HasFactory<\Database\Factories\AcoesConservacaoFactory> */
     use HasFactory;
+    protected $fillable = ['data_acao', 'descricao'];
+
 }

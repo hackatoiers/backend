@@ -11,7 +11,7 @@ class StoreAcoesConservacaoRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,8 @@ class StoreAcoesConservacaoRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'data_acao' => 'date',
+            'descricao' => 'string|max:1000',
         ];
     }
 }

@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use App\Http\Requests\StoreMateriaisRequest;
 use App\Http\Requests\UpdateMateriaisRequest;
 use App\Models\Materiais;
+use App\Http\Controllers\Controller;
 
 class MateriaisController extends Controller
 {
@@ -13,7 +14,7 @@ class MateriaisController extends Controller
      */
     public function index()
     {
-        //
+        return Materiais::all();
     }
 
     /**
@@ -29,15 +30,16 @@ class MateriaisController extends Controller
      */
     public function store(StoreMateriaisRequest $request)
     {
-        //
+        $materiais = $request->validated();
+        return Materiais::create($materiais);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Materiais $materiais)
+    public function show($id)
     {
-        //
+        return Materiais::findOrFail($id);
     }
 
     /**
@@ -61,6 +63,7 @@ class MateriaisController extends Controller
      */
     public function destroy(Materiais $materiais)
     {
-        //
+        $materiais->delete();
+        return response()->json(['message' => 'Material deleted successfully.']);
     }
 }
