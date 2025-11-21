@@ -13,15 +13,14 @@ return new class extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->string('name');
-            $table->integer('number');
-            $table->json('dimentions');
+            $table->string('number');
+            $table->integer('length')->nullable();
+            $table->integer('height')->nullable();
+            $table->integer('width')->nullable();
             $table->foreignId('location_id')->constrained('locations');
-            $table->foreignId('materials_id')->constrained('materials');
             $table->foreignId('subtype_id')->constrained('subtypes');
             $table->foreignId('colection_id')->constrained('colections');
-            $table->foreignId('action_conserve_id')->constrained('actions_conserve');
             $table->integer('weight');
             $table->string('technic');
             $table->string('integrity');
@@ -29,7 +28,8 @@ return new class extends Migration
             $table->string('conservation_detail');
             $table->text('description');
             $table->string('reference');
-            $table->date('date_cadastred');
+            
+            $table->timestamps();
         });
     }
 

@@ -13,9 +13,11 @@ return new class extends Migration
     {
         Schema::create('acoes_conservacaos', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
-            $table->date('action_date');
+
+            $table->timestamp('date_action');
             $table->text('description');
+
+            $table->timestamps(); 
         });
     }
 
