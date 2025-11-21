@@ -3,31 +3,66 @@
 namespace App\Http\Controllers\Api;
 
 use App\Models\User;
-use Orion\Http\Controllers\Controller;
-use App\Http\Requests\UserRequest;
+use App\Http\Requests\StoreUserRequest;
+use App\Http\Requests\UpdateUserRequest;
+use App\Http\Resources\UserResource;
+use App\Http\Resources\UserCollection;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class UserController extends Controller
 {
-    protected $model = User::class;
-
-    protected function storeRequest()
+    public function __construct()
     {
-        return UserRequest::class;
+        $this->authorizeResource(User::class, 'user');
+    }
+    /**
+     * Display a listing of the resource.
+     */
+    public function index(Request $request)
+    {
+        return new UserCollection(User::paginate($this->resolvePerPage($request)));
+    }
+    
+    /**
+     * Display the specified resource.
+     */
+    public function show(User $user)
+    {
+        return new UserResource($user);
     }
 
-    protected function updateRequest()
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(UpdateUserRequest $request, User $user)
     {
-        return UserRequest::class;
+
+        $user->update($request->validated());
+
+        return new UserResource($user);
     }
 
-    protected $searchable = ['name', 'email'];
-
-    protected $fillable = ['name', 'email', 'password'];
-
-    protected function beforeSave($request, $model)
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(Request $request)
     {
-        if ($request->has('password')) {
-            $model->password = bcrypt($request->password);
-        }
+        $request->user()->delete();
+
+        return response()->json(['message' => 'User deleted']);
+    }
+
+    public function search(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email',
+        ]);
+
+        $user = User::where('email', $request->email)
+            ->select('name', 'email', 'avatar')
+            ->firstOrFail();
+
+        return response()->json($user, 200);
     }
 }
