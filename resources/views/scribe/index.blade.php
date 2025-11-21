@@ -1285,7 +1285,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --data "{
     \"email\": \"gbailey@example.net\",
     \"password\": \"+-0pBNvYgxwmi\\/#iw\",
-    \"remember\": true
+    \"remember\": false
 }"
 </code></pre></div>
 
@@ -1303,7 +1303,7 @@ const headers = {
 let body = {
     "email": "gbailey@example.net",
     "password": "+-0pBNvYgxwmi\/#iw",
-    "remember": true
+    "remember": false
 };
 
 fetch(url, {
@@ -1432,7 +1432,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <code>false</code>
         </label>
     <br>
-<p>Example: <code>true</code></p>
+<p>Example: <code>false</code></p>
         </div>
         </form>
 

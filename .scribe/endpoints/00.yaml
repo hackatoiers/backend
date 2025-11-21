@@ -409,7 +409,7 @@ endpoints:
         name: remember
         description: ''
         required: false
-        example: true
+        example: false
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -418,7 +418,7 @@ endpoints:
     cleanBodyParameters:
       email: gbailey@example.net
       password: '+-0pBNvYgxwmi/#iw'
-      remember: true
+      remember: false
     fileParameters: []
     responses: []
     responseFields: []

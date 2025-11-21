@@ -10,7 +10,15 @@ class UserController extends Controller
 {
     protected $model = User::class;
 
-    protected $request = UserRequest::class;
+    protected function storeRequest()
+    {
+        return UserRequest::class;
+    }
+
+    protected function updateRequest()
+    {
+        return UserRequest::class;
+    }
 
     protected $searchable = ['name', 'email'];
 
