@@ -31,7 +31,8 @@ return Application::configure(basePath: dirname(__DIR__))
                 HandleCors::class
             ],
         );
-        $middleware->statefulApi();
+       // $middleware->statefulApi();
+
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         if (request()->is('api/*')) {
