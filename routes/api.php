@@ -1,13 +1,12 @@
 <?php
+
+namespace App\Http\Controllers\Api;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\Api\LocalizacaoController;
-use App\Http\Controllers\Api\ColecaoController;
-use App\Http\Controllers\Api\AcoesConservacaoController;
-use App\Http\Controllers\Api\MateriaisController;
-use App\Http\Controllers\Api\SubtipoController;
+use Orion\Facades\Orion;
 
 Route::get('users/search', [UserController::class, 'search']);
 Route::apiResource('users', UserController::class);
@@ -19,8 +18,12 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('auth/me', [AuthController::class, 'me']);
 });
 
-Route::apiResource('locations', LocalizacaoController::class);
-Route::apiResource('colections', ColecaoController::class);
-Route::apiResource('conserve-actions', AcoesConservacaoController::class);
-Route::apiResource('materials', MateriaisController::class);
-Route::apiResource('subtypes', SubtipoController::class);
+Orion::resource('collections', CollectionController::class)->withoutBatch();
+Orion::resource('conservation-actions', ConservationActionController::class)->withoutBatch();
+Orion::resource('ethnic-groups', EthnicGroupController::class)->withoutBatch();
+Orion::resource('items', ItemController::class)->withoutBatch();
+Orion::resource('materials', MaterialController::class)->withoutBatch();
+Orion::resource('location', LocationController::class)->withoutBatch();
+Orion::resource('material', MaterialController::class)->withoutBatch();
+Orion::resource('photos', PhotoController::class)->withoutBatch();
+Orion::resource('material-subtypes', MaterialSubtypeController::class)->withoutBatch();

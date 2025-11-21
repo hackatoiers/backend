@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('acoes_conservacaos', function (Blueprint $table) {
+        Schema::create('conservation_actions', function (Blueprint $table) {
             $table->id();
 
-            $table->timestamp('date_action');
+            $table->timestamp('action_date');
             $table->text('description');
 
             $table->timestamps(); 
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('acoes_conservacaos');
+        Schema::dropIfExists('conservation_actions');
     }
 };

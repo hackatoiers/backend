@@ -4,7 +4,7 @@ namespace App;
 
 enum IntegrityEnum: string
 {
-    case FRAGMENTADO = 'fragmentado';
+    case FRAGMENTED = 'fragmented';
     case REGULAR = 'regular';
 }
 

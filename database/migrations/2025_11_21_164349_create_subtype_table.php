@@ -13,9 +13,11 @@ return new class extends Migration
     {
         Schema::create('subtipos', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+
             $table->string('name');
-            $table->foreignId('materials_id')->constrained('materiais')->onDelete('cascade');
+            $table->foreignId('materials_id')->constrained('materials')->restrictOnDelete();
+
+            $table->timestamps();
         });
     }
 

@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('colecaos', function (Blueprint $table) {
+        Schema::create('ethnic_groups', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
-            $table->string('owner');
-            $table->text('description');
-            $table->string('name');
 
+            $table->string('name');
+            $table->text('description');
+
+            $table->timestamps(); 
         });
     }
 
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('colecaos');
+        Schema::dropIfExists('ethnic_groups');
     }
 };

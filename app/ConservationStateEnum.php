@@ -4,7 +4,7 @@ namespace App;
 
 enum ConservationStateEnum: string
 {
-    case BOM = 'bom';
+    case GOOD = 'good';
     case REGULAR = 'regular';
-    case RUIM = 'ruim';
+    case BAD = 'bad';
 }

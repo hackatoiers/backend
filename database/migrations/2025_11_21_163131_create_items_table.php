@@ -14,21 +14,27 @@ return new class extends Migration
         Schema::create('items', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->text('description');
             $table->string('number');
+
             $table->integer('length')->nullable();
             $table->integer('height')->nullable();
             $table->integer('width')->nullable();
-            $table->foreignId('location_id')->constrained('locations');
-            $table->foreignId('subtype_id')->constrained('subtypes');
-            $table->foreignId('colection_id')->constrained('colections');
             $table->integer('weight');
+
+            $table->string('archeological_site');
             $table->string('technic');
+            $table->string('reference');
+
             $table->string('integrity');
             $table->string('conservation_state');
             $table->string('conservation_detail');
-            $table->text('description');
-            $table->string('reference');
-            
+
+            $table->foreignId('location_id')->constrained('locations')->unique()->restrictOnDelete();
+            $table->foreignId('subtype_id')->constrained('subtypes')->restrictOnDelete();
+            $table->foreignId('collection_id')->constrained('collections')->restrictOnDelete();
+            $table->foreignId('ethnic_group_id')->constrained('ethnic_groups')->restrictOnDelete();
+
             $table->timestamps();
         });
     }
