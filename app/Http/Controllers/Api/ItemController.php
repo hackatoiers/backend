@@ -1,22 +1,32 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
-use App\Http\Requests\StoreItemRequest;
-use App\Http\Requests\UpdateItemRequest;
+use App\Http\Controllers\Controller;
 use App\Models\Item;
+use Illuminate\Http\Request;
+use App\Http\Requests\Api\Item\ItemStoreRequest;
+use App\Http\Requests\Api\Item\ItemUpdateRequest;
+use App\Http\Resources\Api\ItemResources;
+use Symfony\Component\HttpKernel\HttpCache\Store;
 
 class ItemController extends Controller
 {
+    public function __construct() {}
+
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        return ItemResources::collection(Item::paginate($this->resolvePerPage($request)));
     }
 
     /**
+     * Display a listing of the resource.
+     *
+
+
      * Show the form for creating a new resource.
      */
     public function create()
@@ -27,9 +37,10 @@ class ItemController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreItemRequest $request)
+    public function store(ItemStoreRequest $request)
     {
-        //
+        $item = Item::create($request->validated());
+        return new ItemResources($item);
     }
 
     /**
@@ -37,7 +48,7 @@ class ItemController extends Controller
      */
     public function show(Item $item)
     {
-        //
+        return new ItemResources($item);
     }
 
     /**
@@ -51,9 +62,10 @@ class ItemController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateItemRequest $request, Item $item)
+    public function update(ItemUpdateRequest $request, Item $item)
     {
-        //
+        $item->update($request->validated());
+        return new ItemResources($item);
     }
 
     /**
@@ -61,6 +73,7 @@ class ItemController extends Controller
      */
     public function destroy(Item $item)
     {
-        //
+        $item->delete();
+        return response()->noContent();
     }
 }

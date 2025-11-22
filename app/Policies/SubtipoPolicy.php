@@ -27,9 +27,9 @@ class SubtipoPolicy
     /**
      * Determine whether the user can create models.
      */
-    public function create(User $user): bool
+    public function create(?User $user): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -43,9 +43,9 @@ class SubtipoPolicy
     /**
      * Determine whether the user can delete the model.
      */
-    public function delete(User $user, Subtipo $subtipo): bool
+    public function delete(?User $user, Subtipo $subtipo): bool
     {
-        return false;
+        return true;
     }
 
     /**

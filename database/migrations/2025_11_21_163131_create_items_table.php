@@ -13,15 +13,29 @@ return new class extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->text('description');
+            $table->string('number');
+
+            $table->integer('length')->nullable();
+            $table->integer('height')->nullable();
+            $table->integer('width')->nullable();
+            $table->integer('weight');
+
+            $table->string('archeological_site');
+            $table->string('technic');
+            $table->string('reference');
+
+            $table->string('integrity');
+            $table->string('conservation_state');
+            $table->string('conservation_detail');
+
+            $table->foreignId('location_id')->constrained('locations')->unique()->restrictOnDelete();
+            $table->foreignId('subtype_id')->constrained('subtypes')->restrictOnDelete();
+            $table->foreignId('collection_id')->constrained('collections')->restrictOnDelete();
+            $table->foreignId('ethnic_group_id')->constrained('ethnic_groups')->restrictOnDelete();
+
             $table->timestamps();
-            $table->string('nome');
-            $table->integer('numero');
-            $table->json('dimensoes');
-            $table->foreignId('localizacao_id')->constrained('localizacaos');
-            $table->foreignId('material_id')->constrained('materiais');
-            $table->foreignId('subtipo_id')->constrained('subtipos');
-            $table->foreignId('colecao_id')->constrained('colecaos');
-            $table->foreignId('acao_conservacao_id')->constrained('acoes_conservacaos');
         });
     }
 
