@@ -24,7 +24,7 @@ class SubType extends Model
 
     public function material()
     {
-        return $this->belongsTo(Material::class);
+        return $this->belongsTo(Material::class, 'materials_id');
     }
 
     public function items()

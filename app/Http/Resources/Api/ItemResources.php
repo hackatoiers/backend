@@ -45,6 +45,25 @@ class ItemResources extends JsonResource
                 });
             }),
 
+            'sub_type' => $this->whenLoaded('subType', function () {
+                return [
+                    'id' => $this->subType->id,
+                    'name' => $this->subType->name,
+                    'material' => $this->subType->material,
+                ];
+            }),
+
+            'location' => $this->whenLoaded('location', function () {
+                return $this->location;
+            }),
+
+            'collection' => $this->whenLoaded('collection', function () {
+                return [
+                    'id' => $this->collection->id,
+                    'name' => $this->collection->name,
+                ];
+            }),
+
             "is_reserved" => $this->reserves()
                 ->where('reserved_at', '<=', now())
                 ->where('deadline_at', '>=', now())
