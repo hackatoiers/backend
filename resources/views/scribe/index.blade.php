@@ -77,6 +77,9 @@
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-GETapi-audits">
                                 <a href="#endpoints-GETapi-audits">GET api/audits</a>
                             </li>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-audits--id-">
+                                <a href="#endpoints-GETapi-audits--id-">GET api/audits/{id}</a>
+                            </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-GETapi-users">
                                 <a href="#endpoints-GETapi-users">Display a listing of the resource.</a>
                             </li>
@@ -455,7 +458,94 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;data&quot;: [],
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 5,
+            &quot;event&quot;: &quot;created&quot;,
+            &quot;user&quot;: null,
+            &quot;auditable_type&quot;: &quot;App\\Models\\Location&quot;,
+            &quot;auditable_id&quot;: 4,
+            &quot;old_values&quot;: [],
+            &quot;new_values&quot;: {
+                &quot;city&quot;: &quot;narnea&quot;,
+                &quot;state&quot;: &quot;g&quot;,
+                &quot;country&quot;: &quot;z&quot;,
+                &quot;room&quot;: &quot;m&quot;,
+                &quot;shelf&quot;: &quot;i&quot;,
+                &quot;bookcase&quot;: &quot;y&quot;
+            },
+            &quot;created_at&quot;: &quot;2025-11-22T01:59:11.000000Z&quot;,
+            &quot;ip_address&quot;: &quot;127.0.0.1&quot;,
+            &quot;url&quot;: &quot;http://localhost:8000/api/location&quot;
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;event&quot;: &quot;created&quot;,
+            &quot;user&quot;: null,
+            &quot;auditable_type&quot;: &quot;App\\Models\\Location&quot;,
+            &quot;auditable_id&quot;: 3,
+            &quot;old_values&quot;: [],
+            &quot;new_values&quot;: {
+                &quot;city&quot;: &quot;n&quot;,
+                &quot;state&quot;: &quot;g&quot;,
+                &quot;country&quot;: &quot;z&quot;,
+                &quot;room&quot;: &quot;m&quot;,
+                &quot;shelf&quot;: &quot;i&quot;,
+                &quot;bookcase&quot;: &quot;y&quot;
+            },
+            &quot;created_at&quot;: &quot;2025-11-22T01:58:12.000000Z&quot;,
+            &quot;ip_address&quot;: &quot;127.0.0.1&quot;,
+            &quot;url&quot;: &quot;http://localhost:8000/api/location&quot;
+        },
+        {
+            &quot;id&quot;: 3,
+            &quot;event&quot;: &quot;created&quot;,
+            &quot;user&quot;: null,
+            &quot;auditable_type&quot;: &quot;App\\Models\\Location&quot;,
+            &quot;auditable_id&quot;: 2,
+            &quot;old_values&quot;: [],
+            &quot;new_values&quot;: {
+                &quot;city&quot;: &quot;n&quot;,
+                &quot;state&quot;: &quot;g&quot;,
+                &quot;country&quot;: &quot;z&quot;,
+                &quot;room&quot;: &quot;m&quot;,
+                &quot;shelf&quot;: &quot;i&quot;,
+                &quot;bookcase&quot;: &quot;y&quot;,
+                &quot;id&quot;: 2
+            },
+            &quot;created_at&quot;: &quot;2025-11-22T01:52:00.000000Z&quot;,
+            &quot;ip_address&quot;: &quot;127.0.0.1&quot;,
+            &quot;url&quot;: &quot;http://localhost:8000/api/location&quot;
+        },
+        {
+            &quot;id&quot;: 2,
+            &quot;event&quot;: &quot;created&quot;,
+            &quot;user&quot;: null,
+            &quot;auditable_type&quot;: &quot;App\\Models\\Material&quot;,
+            &quot;auditable_id&quot;: 2,
+            &quot;old_values&quot;: [],
+            &quot;new_values&quot;: {
+                &quot;name&quot;: &quot;c&quot;
+            },
+            &quot;created_at&quot;: &quot;2025-11-22T01:42:16.000000Z&quot;,
+            &quot;ip_address&quot;: &quot;127.0.0.1&quot;,
+            &quot;url&quot;: &quot;http://localhost:8000/api/materials&quot;
+        },
+        {
+            &quot;id&quot;: 1,
+            &quot;event&quot;: &quot;created&quot;,
+            &quot;user&quot;: null,
+            &quot;auditable_type&quot;: &quot;App\\Models\\Material&quot;,
+            &quot;auditable_id&quot;: 1,
+            &quot;old_values&quot;: [],
+            &quot;new_values&quot;: {
+                &quot;name&quot;: &quot;b&quot;
+            },
+            &quot;created_at&quot;: &quot;2025-11-22T01:42:07.000000Z&quot;,
+            &quot;ip_address&quot;: &quot;127.0.0.1&quot;,
+            &quot;url&quot;: &quot;http://localhost:8000/api/materials&quot;
+        }
+    ],
     &quot;links&quot;: {
         &quot;first&quot;: &quot;http://localhost:8000/api/audits?page=1&quot;,
         &quot;last&quot;: &quot;http://localhost:8000/api/audits?page=1&quot;,
@@ -464,7 +554,7 @@ vary: Origin
     },
     &quot;meta&quot;: {
         &quot;current_page&quot;: 1,
-        &quot;from&quot;: null,
+        &quot;from&quot;: 1,
         &quot;last_page&quot;: 1,
         &quot;links&quot;: [
             {
@@ -488,8 +578,8 @@ vary: Origin
         ],
         &quot;path&quot;: &quot;http://localhost:8000/api/audits&quot;,
         &quot;per_page&quot;: 15,
-        &quot;to&quot;: null,
-        &quot;total&quot;: 0
+        &quot;to&quot;: 5,
+        &quot;total&quot;: 5
     }
 }</code>
  </pre>
@@ -566,6 +656,145 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <p>Example: <code>application/json</code></p>
             </div>
                         </form>
+
+                    <h2 id="endpoints-GETapi-audits--id-">GET api/audits/{id}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-audits--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/audits/architecto" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/audits/architecto"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-audits--id-">
+            <blockquote>
+            <p>Example response (404):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+vary: Origin
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;No query results for model [OwenIt\\Auditing\\Models\\Audit] architecto&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-audits--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-audits--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-audits--id-"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-audits--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-audits--id-">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-audits--id-" data-method="GET"
+      data-path="api/audits/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-audits--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-audits--id-"
+                    onclick="tryItOut('GETapi-audits--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-audits--id-"
+                    onclick="cancelTryOut('GETapi-audits--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-audits--id-"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/audits/{id}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-audits--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-audits--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="id"                data-endpoint="GETapi-audits--id-"
+               value="architecto"
+               data-component="url">
+    <br>
+<p>The ID of the audit. Example: <code>architecto</code></p>
+            </div>
+                    </form>
 
                     <h2 id="endpoints-GETapi-users">Display a listing of the resource.</h2>
 
@@ -2359,7 +2588,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --data "{
     \"description\": \"Eius et animi quos velit et.\",
-    \"action_date\": \"2025-11-22T01:40:50\"
+    \"action_date\": \"2025-11-22T02:12:25\"
 }"
 </code></pre></div>
 
@@ -2376,7 +2605,7 @@ const headers = {
 
 let body = {
     "description": "Eius et animi quos velit et.",
-    "action_date": "2025-11-22T01:40:50"
+    "action_date": "2025-11-22T02:12:25"
 };
 
 fetch(url, {
@@ -2480,10 +2709,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="action_date"                data-endpoint="POSTapi-conservation-actions"
-               value="2025-11-22T01:40:50"
+               value="2025-11-22T02:12:25"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-11-22T01:40:50</code></p>
+<p>Must be a valid date. Example: <code>2025-11-22T02:12:25</code></p>
         </div>
         </form>
 
@@ -2644,7 +2873,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --data "{
     \"description\": \"Eius et animi quos velit et.\",
-    \"action_date\": \"2025-11-22T01:40:50\"
+    \"action_date\": \"2025-11-22T02:12:25\"
 }"
 </code></pre></div>
 
@@ -2661,7 +2890,7 @@ const headers = {
 
 let body = {
     "description": "Eius et animi quos velit et.",
-    "action_date": "2025-11-22T01:40:50"
+    "action_date": "2025-11-22T02:12:25"
 };
 
 fetch(url, {
@@ -2782,10 +3011,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="action_date"                data-endpoint="PUTapi-conservation-actions--id-"
-               value="2025-11-22T01:40:50"
+               value="2025-11-22T02:12:25"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-11-22T01:40:50</code></p>
+<p>Must be a valid date. Example: <code>2025-11-22T02:12:25</code></p>
         </div>
         </form>
 
@@ -4837,7 +5066,20 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;data&quot;: [],
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;name&quot;: &quot;b&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T01:42:07.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T01:42:07.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 2,
+            &quot;name&quot;: &quot;c&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T01:42:16.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T01:42:16.000000Z&quot;
+        }
+    ],
     &quot;links&quot;: {
         &quot;first&quot;: &quot;http://localhost:8000/api/materials?page=1&quot;,
         &quot;last&quot;: &quot;http://localhost:8000/api/materials?page=1&quot;,
@@ -4846,7 +5088,7 @@ vary: Origin
     },
     &quot;meta&quot;: {
         &quot;current_page&quot;: 1,
-        &quot;from&quot;: null,
+        &quot;from&quot;: 1,
         &quot;last_page&quot;: 1,
         &quot;links&quot;: [
             {
@@ -4870,8 +5112,8 @@ vary: Origin
         ],
         &quot;path&quot;: &quot;http://localhost:8000/api/materials&quot;,
         &quot;per_page&quot;: 15,
-        &quot;to&quot;: null,
-        &quot;total&quot;: 0
+        &quot;to&quot;: 2,
+        &quot;total&quot;: 2
     }
 }</code>
  </pre>
@@ -5094,14 +5336,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/materials/16" \
+    --get "http://localhost:8000/api/materials/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/materials/16"
+    "http://localhost:8000/api/materials/1"
 );
 
 const headers = {
@@ -5118,7 +5360,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-materials--id-">
             <blockquote>
-            <p>Example response (404):</p>
+            <p>Example response (200):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -5130,7 +5372,12 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;No query results for model [App\\Models\\Material] 16&quot;
+    &quot;data&quot;: {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;b&quot;,
+        &quot;created_at&quot;: &quot;2025-11-22T01:42:07.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-11-22T01:42:07.000000Z&quot;
+    }
 }</code>
  </pre>
     </span>
@@ -5213,10 +5460,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="GETapi-materials--id-"
-               value="16"
+               value="1"
                data-component="url">
     <br>
-<p>The ID of the material. Example: <code>16</code></p>
+<p>The ID of the material. Example: <code>1</code></p>
             </div>
                     </form>
 
@@ -5233,14 +5480,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/materials/16" \
+    "http://localhost:8000/api/materials/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/materials/16"
+    "http://localhost:8000/api/materials/1"
 );
 
 const headers = {
@@ -5340,10 +5587,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="PUTapi-materials--id-"
-               value="16"
+               value="1"
                data-component="url">
     <br>
-<p>The ID of the material. Example: <code>16</code></p>
+<p>The ID of the material. Example: <code>1</code></p>
             </div>
                     </form>
 
@@ -5360,14 +5607,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/materials/16" \
+    "http://localhost:8000/api/materials/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/materials/16"
+    "http://localhost:8000/api/materials/1"
 );
 
 const headers = {
@@ -5463,10 +5710,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="DELETEapi-materials--id-"
-               value="16"
+               value="1"
                data-component="url">
     <br>
-<p>The ID of the material. Example: <code>16</code></p>
+<p>The ID of the material. Example: <code>1</code></p>
             </div>
                     </form>
 
@@ -5519,7 +5766,56 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;data&quot;: [],
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;name&quot;: null,
+            &quot;city&quot;: &quot;n&quot;,
+            &quot;state&quot;: &quot;g&quot;,
+            &quot;country&quot;: &quot;z&quot;,
+            &quot;room&quot;: &quot;m&quot;,
+            &quot;shelf&quot;: &quot;i&quot;,
+            &quot;bookcase&quot;: &quot;y&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T01:48:11.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T01:48:11.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 2,
+            &quot;name&quot;: null,
+            &quot;city&quot;: &quot;n&quot;,
+            &quot;state&quot;: &quot;g&quot;,
+            &quot;country&quot;: &quot;z&quot;,
+            &quot;room&quot;: &quot;m&quot;,
+            &quot;shelf&quot;: &quot;i&quot;,
+            &quot;bookcase&quot;: &quot;y&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T01:52:00.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T01:52:00.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 3,
+            &quot;name&quot;: null,
+            &quot;city&quot;: &quot;n&quot;,
+            &quot;state&quot;: &quot;g&quot;,
+            &quot;country&quot;: &quot;z&quot;,
+            &quot;room&quot;: &quot;m&quot;,
+            &quot;shelf&quot;: &quot;i&quot;,
+            &quot;bookcase&quot;: &quot;y&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T01:58:12.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T01:58:12.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;name&quot;: null,
+            &quot;city&quot;: &quot;narnea&quot;,
+            &quot;state&quot;: &quot;g&quot;,
+            &quot;country&quot;: &quot;z&quot;,
+            &quot;room&quot;: &quot;m&quot;,
+            &quot;shelf&quot;: &quot;i&quot;,
+            &quot;bookcase&quot;: &quot;y&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T01:59:11.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T01:59:11.000000Z&quot;
+        }
+    ],
     &quot;links&quot;: {
         &quot;first&quot;: &quot;http://localhost:8000/api/location?page=1&quot;,
         &quot;last&quot;: &quot;http://localhost:8000/api/location?page=1&quot;,
@@ -5528,7 +5824,7 @@ vary: Origin
     },
     &quot;meta&quot;: {
         &quot;current_page&quot;: 1,
-        &quot;from&quot;: null,
+        &quot;from&quot;: 1,
         &quot;last_page&quot;: 1,
         &quot;links&quot;: [
             {
@@ -5552,8 +5848,8 @@ vary: Origin
         ],
         &quot;path&quot;: &quot;http://localhost:8000/api/location&quot;,
         &quot;per_page&quot;: 15,
-        &quot;to&quot;: null,
-        &quot;total&quot;: 0
+        &quot;to&quot;: 4,
+        &quot;total&quot;: 4
     }
 }</code>
  </pre>
@@ -5860,14 +6156,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/location/16" \
+    --get "http://localhost:8000/api/location/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/location/16"
+    "http://localhost:8000/api/location/1"
 );
 
 const headers = {
@@ -5884,7 +6180,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-location--id-">
             <blockquote>
-            <p>Example response (404):</p>
+            <p>Example response (200):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -5896,7 +6192,18 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;No query results for model [App\\Models\\Location] 16&quot;
+    &quot;data&quot;: {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: null,
+        &quot;city&quot;: &quot;n&quot;,
+        &quot;state&quot;: &quot;g&quot;,
+        &quot;country&quot;: &quot;z&quot;,
+        &quot;room&quot;: &quot;m&quot;,
+        &quot;shelf&quot;: &quot;i&quot;,
+        &quot;bookcase&quot;: &quot;y&quot;,
+        &quot;created_at&quot;: &quot;2025-11-22T01:48:11.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-11-22T01:48:11.000000Z&quot;
+    }
 }</code>
  </pre>
     </span>
@@ -5979,10 +6286,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="GETapi-location--id-"
-               value="16"
+               value="1"
                data-component="url">
     <br>
-<p>The ID of the location. Example: <code>16</code></p>
+<p>The ID of the location. Example: <code>1</code></p>
             </div>
                     </form>
 
@@ -5999,7 +6306,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/location/16" \
+    "http://localhost:8000/api/location/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -6016,7 +6323,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/location/16"
+    "http://localhost:8000/api/location/1"
 );
 
 const headers = {
@@ -6127,10 +6434,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="PUTapi-location--id-"
-               value="16"
+               value="1"
                data-component="url">
     <br>
-<p>The ID of the location. Example: <code>16</code></p>
+<p>The ID of the location. Example: <code>1</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -6232,14 +6539,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/location/16" \
+    "http://localhost:8000/api/location/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/location/16"
+    "http://localhost:8000/api/location/1"
 );
 
 const headers = {
@@ -6335,10 +6642,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="DELETEapi-location--id-"
-               value="16"
+               value="1"
                data-component="url">
     <br>
-<p>The ID of the location. Example: <code>16</code></p>
+<p>The ID of the location. Example: <code>1</code></p>
             </div>
                     </form>
 
@@ -6391,7 +6698,20 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;data&quot;: [],
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;name&quot;: &quot;b&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T01:42:07.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T01:42:07.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 2,
+            &quot;name&quot;: &quot;c&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T01:42:16.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T01:42:16.000000Z&quot;
+        }
+    ],
     &quot;links&quot;: {
         &quot;first&quot;: &quot;http://localhost:8000/api/material?page=1&quot;,
         &quot;last&quot;: &quot;http://localhost:8000/api/material?page=1&quot;,
@@ -6400,7 +6720,7 @@ vary: Origin
     },
     &quot;meta&quot;: {
         &quot;current_page&quot;: 1,
-        &quot;from&quot;: null,
+        &quot;from&quot;: 1,
         &quot;last_page&quot;: 1,
         &quot;links&quot;: [
             {
@@ -6424,8 +6744,8 @@ vary: Origin
         ],
         &quot;path&quot;: &quot;http://localhost:8000/api/material&quot;,
         &quot;per_page&quot;: 15,
-        &quot;to&quot;: null,
-        &quot;total&quot;: 0
+        &quot;to&quot;: 2,
+        &quot;total&quot;: 2
     }
 }</code>
  </pre>
@@ -6648,14 +6968,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/material/16" \
+    --get "http://localhost:8000/api/material/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/material/16"
+    "http://localhost:8000/api/material/1"
 );
 
 const headers = {
@@ -6672,7 +6992,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-material--id-">
             <blockquote>
-            <p>Example response (404):</p>
+            <p>Example response (200):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -6684,7 +7004,12 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;No query results for model [App\\Models\\Material] 16&quot;
+    &quot;data&quot;: {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;b&quot;,
+        &quot;created_at&quot;: &quot;2025-11-22T01:42:07.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-11-22T01:42:07.000000Z&quot;
+    }
 }</code>
  </pre>
     </span>
@@ -6767,10 +7092,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="GETapi-material--id-"
-               value="16"
+               value="1"
                data-component="url">
     <br>
-<p>The ID of the material. Example: <code>16</code></p>
+<p>The ID of the material. Example: <code>1</code></p>
             </div>
                     </form>
 
@@ -6787,14 +7112,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/material/16" \
+    "http://localhost:8000/api/material/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/material/16"
+    "http://localhost:8000/api/material/1"
 );
 
 const headers = {
@@ -6894,10 +7219,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="PUTapi-material--id-"
-               value="16"
+               value="1"
                data-component="url">
     <br>
-<p>The ID of the material. Example: <code>16</code></p>
+<p>The ID of the material. Example: <code>1</code></p>
             </div>
                     </form>
 
@@ -6914,14 +7239,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/material/16" \
+    "http://localhost:8000/api/material/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/material/16"
+    "http://localhost:8000/api/material/1"
 );
 
 const headers = {
@@ -7017,10 +7342,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="DELETEapi-material--id-"
-               value="16"
+               value="1"
                data-component="url">
     <br>
-<p>The ID of the material. Example: <code>16</code></p>
+<p>The ID of the material. Example: <code>1</code></p>
             </div>
                     </form>
 
@@ -7041,7 +7366,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
     --form "item_id=architecto"\
-    --form "photo=@/tmp/phpcnr92u49mo7f4FgzADC" </code></pre></div>
+    --form "photo=@/tmp/php764hvklqvl4sbGk45yE" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -7150,7 +7475,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Must be an image. Must not be greater than 5120 kilobytes. Example: <code>/tmp/phpcnr92u49mo7f4FgzADC</code></p>
+<p>Must be an image. Must not be greater than 5120 kilobytes. Example: <code>/tmp/php764hvklqvl4sbGk45yE</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>item_id</code></b>&nbsp;&nbsp;
