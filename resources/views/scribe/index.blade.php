@@ -138,19 +138,19 @@
                                 <a href="#endpoints-DELETEapi-ethnic-groups--id-">Remove the specified resource from storage.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-GETapi-items">
-                                <a href="#endpoints-GETapi-items">Fetches the list of resources.</a>
+                                <a href="#endpoints-GETapi-items">Display a listing of the resource.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-POSTapi-items">
-                                <a href="#endpoints-POSTapi-items">Creates new resource in a transaction-safe way.</a>
+                                <a href="#endpoints-POSTapi-items">Store a newly created resource in storage.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-GETapi-items--id-">
-                                <a href="#endpoints-GETapi-items--id-">Fetches resource.</a>
+                                <a href="#endpoints-GETapi-items--id-">Display the specified resource.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-PUTapi-items--id-">
-                                <a href="#endpoints-PUTapi-items--id-">Update a resource in a transaction-safe way.</a>
+                                <a href="#endpoints-PUTapi-items--id-">Update the specified resource in storage.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-DELETEapi-items--id-">
-                                <a href="#endpoints-DELETEapi-items--id-">Deletes a resource.</a>
+                                <a href="#endpoints-DELETEapi-items--id-">Remove the specified resource from storage.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-GETapi-materials">
                                 <a href="#endpoints-GETapi-materials">Display a listing of the resource.</a>
@@ -2195,7 +2195,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --data "{
     \"description\": \"Eius et animi quos velit et.\",
-    \"action_date\": \"2025-11-22T00:28:56\"
+    \"action_date\": \"2025-11-22T00:30:29\"
 }"
 </code></pre></div>
 
@@ -2212,7 +2212,7 @@ const headers = {
 
 let body = {
     "description": "Eius et animi quos velit et.",
-    "action_date": "2025-11-22T00:28:56"
+    "action_date": "2025-11-22T00:30:29"
 };
 
 fetch(url, {
@@ -2316,10 +2316,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="action_date"                data-endpoint="POSTapi-conservation-actions"
-               value="2025-11-22T00:28:56"
+               value="2025-11-22T00:30:29"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-11-22T00:28:56</code></p>
+<p>Must be a valid date. Example: <code>2025-11-22T00:30:29</code></p>
         </div>
         </form>
 
@@ -2480,7 +2480,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --data "{
     \"description\": \"Eius et animi quos velit et.\",
-    \"action_date\": \"2025-11-22T00:28:56\"
+    \"action_date\": \"2025-11-22T00:30:29\"
 }"
 </code></pre></div>
 
@@ -2497,7 +2497,7 @@ const headers = {
 
 let body = {
     "description": "Eius et animi quos velit et.",
-    "action_date": "2025-11-22T00:28:56"
+    "action_date": "2025-11-22T00:30:29"
 };
 
 fetch(url, {
@@ -2618,10 +2618,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="action_date"                data-endpoint="PUTapi-conservation-actions--id-"
-               value="2025-11-22T00:28:56"
+               value="2025-11-22T00:30:29"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-11-22T00:28:56</code></p>
+<p>Must be a valid date. Example: <code>2025-11-22T00:30:29</code></p>
         </div>
         </form>
 
@@ -3480,7 +3480,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="endpoints-GETapi-items">Fetches the list of resources.</h2>
+                    <h2 id="endpoints-GETapi-items">Display a listing of the resource.</h2>
 
 <p>
 </p>
@@ -3517,7 +3517,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-items">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (500):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -3529,42 +3529,7 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;data&quot;: [],
-    &quot;links&quot;: {
-        &quot;first&quot;: &quot;http://191.52.55.208:8000/api/items?page=1&quot;,
-        &quot;last&quot;: &quot;http://191.52.55.208:8000/api/items?page=1&quot;,
-        &quot;prev&quot;: null,
-        &quot;next&quot;: null
-    },
-    &quot;meta&quot;: {
-        &quot;current_page&quot;: 1,
-        &quot;from&quot;: null,
-        &quot;last_page&quot;: 1,
-        &quot;links&quot;: [
-            {
-                &quot;url&quot;: null,
-                &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
-                &quot;page&quot;: null,
-                &quot;active&quot;: false
-            },
-            {
-                &quot;url&quot;: &quot;http://191.52.55.208:8000/api/items?page=1&quot;,
-                &quot;label&quot;: &quot;1&quot;,
-                &quot;page&quot;: 1,
-                &quot;active&quot;: true
-            },
-            {
-                &quot;url&quot;: null,
-                &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
-                &quot;page&quot;: null,
-                &quot;active&quot;: false
-            }
-        ],
-        &quot;path&quot;: &quot;http://191.52.55.208:8000/api/items&quot;,
-        &quot;per_page&quot;: 15,
-        &quot;to&quot;: null,
-        &quot;total&quot;: 0
-    }
+    &quot;message&quot;: &quot;Server Error&quot;
 }</code>
  </pre>
     </span>
@@ -3641,7 +3606,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                         </form>
 
-                    <h2 id="endpoints-POSTapi-items">Creates new resource in a transaction-safe way.</h2>
+                    <h2 id="endpoints-POSTapi-items">Store a newly created resource in storage.</h2>
 
 <p>
 </p>
@@ -3656,7 +3621,27 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <pre><code class="language-bash">curl --request POST \
     "http://191.52.55.208:8000/api/items" \
     --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+    --header "Accept: application/json" \
+    --data "{
+    \"name\": \"b\",
+    \"description\": \"Eius et animi quos velit et.\",
+    \"number\": \"v\",
+    \"length\": 42,
+    \"height\": 37,
+    \"width\": 9,
+    \"weight\": 52,
+    \"archeological_site\": \"i\",
+    \"technic\": \"k\",
+    \"reference\": \"h\",
+    \"integrity\": \"w\",
+    \"conservation_state\": \"a\",
+    \"conservation_detail\": \"y\",
+    \"location_id\": \"architecto\",
+    \"subtype_id\": \"architecto\",
+    \"collection_id\": \"architecto\",
+    \"ethnic_group_id\": \"architecto\"
+}"
+</code></pre></div>
 
 
 <div class="javascript-example">
@@ -3669,9 +3654,30 @@ const headers = {
     "Accept": "application/json",
 };
 
+let body = {
+    "name": "b",
+    "description": "Eius et animi quos velit et.",
+    "number": "v",
+    "length": 42,
+    "height": 37,
+    "width": 9,
+    "weight": 52,
+    "archeological_site": "i",
+    "technic": "k",
+    "reference": "h",
+    "integrity": "w",
+    "conservation_state": "a",
+    "conservation_detail": "y",
+    "location_id": "architecto",
+    "subtype_id": "architecto",
+    "collection_id": "architecto",
+    "ethnic_group_id": "architecto"
+};
+
 fetch(url, {
     method: "POST",
     headers,
+    body: JSON.stringify(body),
 }).then(response =&gt; response.json());</code></pre></div>
 
 </span>
@@ -3749,9 +3755,214 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <br>
 <p>Example: <code>application/json</code></p>
             </div>
-                        </form>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>name</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="name"                data-endpoint="POSTapi-items"
+               value="b"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>b</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="description"                data-endpoint="POSTapi-items"
+               value="Eius et animi quos velit et."
+               data-component="body">
+    <br>
+<p>Example: <code>Eius et animi quos velit et.</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>number</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="number"                data-endpoint="POSTapi-items"
+               value="v"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>v</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>length</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="length"                data-endpoint="POSTapi-items"
+               value="42"
+               data-component="body">
+    <br>
+<p>Must be at least 0. Example: <code>42</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>height</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="height"                data-endpoint="POSTapi-items"
+               value="37"
+               data-component="body">
+    <br>
+<p>Must be at least 0. Example: <code>37</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>width</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="width"                data-endpoint="POSTapi-items"
+               value="9"
+               data-component="body">
+    <br>
+<p>Must be at least 0. Example: <code>9</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>weight</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="weight"                data-endpoint="POSTapi-items"
+               value="52"
+               data-component="body">
+    <br>
+<p>Must be at least 0. Example: <code>52</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>archeological_site</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="archeological_site"                data-endpoint="POSTapi-items"
+               value="i"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>i</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>technic</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="technic"                data-endpoint="POSTapi-items"
+               value="k"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>k</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>reference</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="reference"                data-endpoint="POSTapi-items"
+               value="h"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>h</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>integrity</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="integrity"                data-endpoint="POSTapi-items"
+               value="w"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>w</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>conservation_state</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="conservation_state"                data-endpoint="POSTapi-items"
+               value="a"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>a</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>conservation_detail</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="conservation_detail"                data-endpoint="POSTapi-items"
+               value="y"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>y</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>location_id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="location_id"                data-endpoint="POSTapi-items"
+               value="architecto"
+               data-component="body">
+    <br>
+<p>The <code>id</code> of an existing record in the locations table. Example: <code>architecto</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>subtype_id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="subtype_id"                data-endpoint="POSTapi-items"
+               value="architecto"
+               data-component="body">
+    <br>
+<p>The <code>id</code> of an existing record in the subtypes table. Example: <code>architecto</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>collection_id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="collection_id"                data-endpoint="POSTapi-items"
+               value="architecto"
+               data-component="body">
+    <br>
+<p>The <code>id</code> of an existing record in the collections table. Example: <code>architecto</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>ethnic_group_id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="ethnic_group_id"                data-endpoint="POSTapi-items"
+               value="architecto"
+               data-component="body">
+    <br>
+<p>The <code>id</code> of an existing record in the ethnic_groups table. Example: <code>architecto</code></p>
+        </div>
+        </form>
 
-                    <h2 id="endpoints-GETapi-items--id-">Fetches resource.</h2>
+                    <h2 id="endpoints-GETapi-items--id-">Display the specified resource.</h2>
 
 <p>
 </p>
@@ -3800,7 +4011,7 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;No query results for model [App\\Models\\Item].&quot;
+    &quot;message&quot;: &quot;No query results for model [App\\Models\\Item] 16&quot;
 }</code>
  </pre>
     </span>
@@ -3890,7 +4101,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="endpoints-PUTapi-items--id-">Update a resource in a transaction-safe way.</h2>
+                    <h2 id="endpoints-PUTapi-items--id-">Update the specified resource in storage.</h2>
 
 <p>
 </p>
@@ -3905,7 +4116,23 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <pre><code class="language-bash">curl --request PUT \
     "http://191.52.55.208:8000/api/items/16" \
     --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+    --header "Accept: application/json" \
+    --data "{
+    \"name\": \"b\",
+    \"description\": \"Eius et animi quos velit et.\",
+    \"number\": \"v\",
+    \"length\": 42,
+    \"height\": 37,
+    \"width\": 9,
+    \"weight\": 52,
+    \"archeological_site\": \"i\",
+    \"technic\": \"k\",
+    \"reference\": \"h\",
+    \"integrity\": \"w\",
+    \"conservation_state\": \"a\",
+    \"conservation_detail\": \"y\"
+}"
+</code></pre></div>
 
 
 <div class="javascript-example">
@@ -3918,9 +4145,26 @@ const headers = {
     "Accept": "application/json",
 };
 
+let body = {
+    "name": "b",
+    "description": "Eius et animi quos velit et.",
+    "number": "v",
+    "length": 42,
+    "height": 37,
+    "width": 9,
+    "weight": 52,
+    "archeological_site": "i",
+    "technic": "k",
+    "reference": "h",
+    "integrity": "w",
+    "conservation_state": "a",
+    "conservation_detail": "y"
+};
+
 fetch(url, {
     method: "PUT",
     headers,
+    body: JSON.stringify(body),
 }).then(response =&gt; response.json());</code></pre></div>
 
 </span>
@@ -4015,9 +4259,214 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <br>
 <p>The ID of the item. Example: <code>16</code></p>
             </div>
-                    </form>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>name</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="name"                data-endpoint="PUTapi-items--id-"
+               value="b"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>b</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="description"                data-endpoint="PUTapi-items--id-"
+               value="Eius et animi quos velit et."
+               data-component="body">
+    <br>
+<p>Example: <code>Eius et animi quos velit et.</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>number</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="number"                data-endpoint="PUTapi-items--id-"
+               value="v"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>v</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>length</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="length"                data-endpoint="PUTapi-items--id-"
+               value="42"
+               data-component="body">
+    <br>
+<p>Must be at least 0. Example: <code>42</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>height</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="height"                data-endpoint="PUTapi-items--id-"
+               value="37"
+               data-component="body">
+    <br>
+<p>Must be at least 0. Example: <code>37</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>width</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="width"                data-endpoint="PUTapi-items--id-"
+               value="9"
+               data-component="body">
+    <br>
+<p>Must be at least 0. Example: <code>9</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>weight</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="weight"                data-endpoint="PUTapi-items--id-"
+               value="52"
+               data-component="body">
+    <br>
+<p>Must be at least 0. Example: <code>52</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>archeological_site</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="archeological_site"                data-endpoint="PUTapi-items--id-"
+               value="i"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>i</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>technic</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="technic"                data-endpoint="PUTapi-items--id-"
+               value="k"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>k</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>reference</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="reference"                data-endpoint="PUTapi-items--id-"
+               value="h"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>h</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>integrity</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="integrity"                data-endpoint="PUTapi-items--id-"
+               value="w"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>w</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>conservation_state</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="conservation_state"                data-endpoint="PUTapi-items--id-"
+               value="a"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>a</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>conservation_detail</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="conservation_detail"                data-endpoint="PUTapi-items--id-"
+               value="y"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>y</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>location_id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="location_id"                data-endpoint="PUTapi-items--id-"
+               value=""
+               data-component="body">
+    <br>
+<p>The <code>id</code> of an existing record in the locations table.</p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>subtype_id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="subtype_id"                data-endpoint="PUTapi-items--id-"
+               value=""
+               data-component="body">
+    <br>
+<p>The <code>id</code> of an existing record in the subtypes table.</p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>collection_id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="collection_id"                data-endpoint="PUTapi-items--id-"
+               value=""
+               data-component="body">
+    <br>
+<p>The <code>id</code> of an existing record in the collections table.</p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>ethnic_group_id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="ethnic_group_id"                data-endpoint="PUTapi-items--id-"
+               value=""
+               data-component="body">
+    <br>
+<p>The <code>id</code> of an existing record in the ethnic_groups table.</p>
+        </div>
+        </form>
 
-                    <h2 id="endpoints-DELETEapi-items--id-">Deletes a resource.</h2>
+                    <h2 id="endpoints-DELETEapi-items--id-">Remove the specified resource from storage.</h2>
 
 <p>
 </p>
@@ -6393,7 +6842,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
     --form "item_id=architecto"\
-    --form "photo=@/tmp/phpladq70u29hg570Hpkhd" </code></pre></div>
+    --form "photo=@/tmp/php6uvd939fsovc5mBKT8A" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -6502,7 +6951,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Must be an image. Must not be greater than 5120 kilobytes. Example: <code>/tmp/phpladq70u29hg570Hpkhd</code></p>
+<p>Must be an image. Must not be greater than 5120 kilobytes. Example: <code>/tmp/php6uvd939fsovc5mBKT8A</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>item_id</code></b>&nbsp;&nbsp;

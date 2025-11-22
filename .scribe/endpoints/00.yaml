@@ -696,7 +696,7 @@ endpoints:
         name: action_date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-11-22T00:28:56'
+        example: '2025-11-22T00:30:29'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -704,7 +704,7 @@ endpoints:
         deprecated: false
     cleanBodyParameters:
       description: 'Eius et animi quos velit et.'
-      action_date: '2025-11-22T00:28:56'
+      action_date: '2025-11-22T00:30:29'
     fileParameters: []
     responses: []
     responseFields: []
@@ -819,7 +819,7 @@ endpoints:
         name: action_date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-11-22T00:28:56'
+        example: '2025-11-22T00:30:29'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -827,7 +827,7 @@ endpoints:
         deprecated: false
     cleanBodyParameters:
       description: 'Eius et animi quos velit et.'
-      action_date: '2025-11-22T00:28:56'
+      action_date: '2025-11-22T00:30:29'
     fileParameters: []
     responses: []
     responseFields: []
@@ -1150,7 +1150,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Fetches the list of resources.'
+      title: 'Display a listing of the resource.'
       description: ''
       authenticated: false
       deprecated: false
@@ -1167,8 +1167,11 @@ endpoints:
     responses:
       -
         custom: []
-        status: 200
-        content: '{"data":[],"links":{"first":"http:\/\/191.52.55.208:8000\/api\/items?page=1","last":"http:\/\/191.52.55.208:8000\/api\/items?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","page":null,"active":false},{"url":"http:\/\/191.52.55.208:8000\/api\/items?page=1","label":"1","page":1,"active":true},{"url":null,"label":"Next &raquo;","page":null,"active":false}],"path":"http:\/\/191.52.55.208:8000\/api\/items","per_page":15,"to":null,"total":0}}'
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -1190,7 +1193,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Creates new resource in a transaction-safe way.'
+      title: 'Store a newly created resource in storage.'
       description: ''
       authenticated: false
       deprecated: false
@@ -1201,8 +1204,212 @@ endpoints:
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
+    bodyParameters:
+      name:
+        custom: []
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: b
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      description:
+        custom: []
+        name: description
+        description: ''
+        required: false
+        example: 'Eius et animi quos velit et.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      number:
+        custom: []
+        name: number
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: v
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      length:
+        custom: []
+        name: length
+        description: 'Must be at least 0.'
+        required: false
+        example: 42
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      height:
+        custom: []
+        name: height
+        description: 'Must be at least 0.'
+        required: false
+        example: 37
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      width:
+        custom: []
+        name: width
+        description: 'Must be at least 0.'
+        required: false
+        example: 9
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      weight:
+        custom: []
+        name: weight
+        description: 'Must be at least 0.'
+        required: true
+        example: 52
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      archeological_site:
+        custom: []
+        name: archeological_site
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: i
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      technic:
+        custom: []
+        name: technic
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: k
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      reference:
+        custom: []
+        name: reference
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: h
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      integrity:
+        custom: []
+        name: integrity
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: w
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      conservation_state:
+        custom: []
+        name: conservation_state
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: a
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      conservation_detail:
+        custom: []
+        name: conservation_detail
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: 'y'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      location_id:
+        custom: []
+        name: location_id
+        description: 'The <code>id</code> of an existing record in the locations table.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      subtype_id:
+        custom: []
+        name: subtype_id
+        description: 'The <code>id</code> of an existing record in the subtypes table.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      collection_id:
+        custom: []
+        name: collection_id
+        description: 'The <code>id</code> of an existing record in the collections table.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      ethnic_group_id:
+        custom: []
+        name: ethnic_group_id
+        description: 'The <code>id</code> of an existing record in the ethnic_groups table.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      name: b
+      description: 'Eius et animi quos velit et.'
+      number: v
+      length: 42
+      height: 37
+      width: 9
+      weight: 52
+      archeological_site: i
+      technic: k
+      reference: h
+      integrity: w
+      conservation_state: a
+      conservation_detail: 'y'
+      location_id: architecto
+      subtype_id: architecto
+      collection_id: architecto
+      ethnic_group_id: architecto
     fileParameters: []
     responses: []
     responseFields: []
@@ -1221,7 +1428,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Fetches resource.'
+      title: 'Display the specified resource.'
       description: ''
       authenticated: false
       deprecated: false
@@ -1253,7 +1460,7 @@ endpoints:
         status: 404
         content: |-
           {
-              "message": "No query results for model [App\\Models\\Item]."
+              "message": "No query results for model [App\\Models\\Item] 16"
           }
         headers:
           cache-control: 'no-cache, private'
@@ -1277,7 +1484,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Update a resource in a transaction-safe way.'
+      title: 'Update the specified resource in storage.'
       description: ''
       authenticated: false
       deprecated: false
@@ -1300,8 +1507,208 @@ endpoints:
       id: 16
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
+    bodyParameters:
+      name:
+        custom: []
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: b
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      description:
+        custom: []
+        name: description
+        description: ''
+        required: false
+        example: 'Eius et animi quos velit et.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      number:
+        custom: []
+        name: number
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: v
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      length:
+        custom: []
+        name: length
+        description: 'Must be at least 0.'
+        required: false
+        example: 42
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      height:
+        custom: []
+        name: height
+        description: 'Must be at least 0.'
+        required: false
+        example: 37
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      width:
+        custom: []
+        name: width
+        description: 'Must be at least 0.'
+        required: false
+        example: 9
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      weight:
+        custom: []
+        name: weight
+        description: 'Must be at least 0.'
+        required: false
+        example: 52
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      archeological_site:
+        custom: []
+        name: archeological_site
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: i
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      technic:
+        custom: []
+        name: technic
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: k
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      reference:
+        custom: []
+        name: reference
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: h
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      integrity:
+        custom: []
+        name: integrity
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: w
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      conservation_state:
+        custom: []
+        name: conservation_state
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: a
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      conservation_detail:
+        custom: []
+        name: conservation_detail
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: 'y'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      location_id:
+        custom: []
+        name: location_id
+        description: 'The <code>id</code> of an existing record in the locations table.'
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      subtype_id:
+        custom: []
+        name: subtype_id
+        description: 'The <code>id</code> of an existing record in the subtypes table.'
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      collection_id:
+        custom: []
+        name: collection_id
+        description: 'The <code>id</code> of an existing record in the collections table.'
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      ethnic_group_id:
+        custom: []
+        name: ethnic_group_id
+        description: 'The <code>id</code> of an existing record in the ethnic_groups table.'
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      name: b
+      description: 'Eius et animi quos velit et.'
+      number: v
+      length: 42
+      height: 37
+      width: 9
+      weight: 52
+      archeological_site: i
+      technic: k
+      reference: h
+      integrity: w
+      conservation_state: a
+      conservation_detail: 'y'
     fileParameters: []
     responses: []
     responseFields: []
@@ -1320,7 +1727,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Deletes a resource.'
+      title: 'Remove the specified resource from storage.'
       description: ''
       authenticated: false
       deprecated: false
