@@ -45,12 +45,12 @@
     </span>
 </a>
 <div class="tocify-wrapper">
-
+    
             <div class="lang-selector">
                                             <button type="button" class="lang-button" data-language-name="bash">bash</button>
                                             <button type="button" class="lang-button" data-language-name="javascript">javascript</button>
                     </div>
-
+    
     <div class="search">
         <input type="text" class="search" id="input-search" placeholder="Search">
     </div>
@@ -256,7 +256,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 
         <h1 id="endpoints">Endpoints</h1>
 
-
+    
 
                                 <h2 id="endpoints-GETapi-users-search">GET api/users/search</h2>
 
@@ -765,14 +765,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/users/16" \
+    --get "http://localhost:8000/api/users/architecto" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/users/16"
+    "http://localhost:8000/api/users/architecto"
 );
 
 const headers = {
@@ -801,7 +801,7 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;No query results for model [App\\Models\\User] 16&quot;
+    &quot;message&quot;: &quot;No query results for model [App\\Models\\User] architecto&quot;
 }</code>
  </pre>
     </span>
@@ -879,15 +879,15 @@ You can check the Dev Tools console for debugging information.</code></pre>
                         <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
-<small>integer</small>&nbsp;
+<small>string</small>&nbsp;
  &nbsp;
  &nbsp;
-                <input type="number" style="display: none"
-               step="any"               name="id"                data-endpoint="GETapi-users--id-"
-               value="16"
+                <input type="text" style="display: none"
+                              name="id"                data-endpoint="GETapi-users--id-"
+               value="architecto"
                data-component="url">
     <br>
-<p>The ID of the user. Example: <code>16</code></p>
+<p>The ID of the user. Example: <code>architecto</code></p>
             </div>
                     </form>
 
@@ -904,14 +904,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/users/16" \
+    "http://localhost:8000/api/users/architecto" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/users/16"
+    "http://localhost:8000/api/users/architecto"
 );
 
 const headers = {
@@ -1002,15 +1002,15 @@ You can check the Dev Tools console for debugging information.</code></pre>
                         <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
-<small>integer</small>&nbsp;
+<small>string</small>&nbsp;
  &nbsp;
  &nbsp;
-                <input type="number" style="display: none"
-               step="any"               name="id"                data-endpoint="DELETEapi-users--id-"
-               value="16"
+                <input type="text" style="display: none"
+                              name="id"                data-endpoint="DELETEapi-users--id-"
+               value="architecto"
                data-component="url">
     <br>
-<p>The ID of the user. Example: <code>16</code></p>
+<p>The ID of the user. Example: <code>architecto</code></p>
             </div>
                     </form>
 
@@ -2359,7 +2359,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --data "{
     \"description\": \"Eius et animi quos velit et.\",
-    \"action_date\": \"2025-11-22T00:30:29\"
+    \"action_date\": \"2025-11-22T01:40:50\"
 }"
 </code></pre></div>
 
@@ -2376,7 +2376,7 @@ const headers = {
 
 let body = {
     "description": "Eius et animi quos velit et.",
-    "action_date": "2025-11-22T00:30:29"
+    "action_date": "2025-11-22T01:40:50"
 };
 
 fetch(url, {
@@ -2480,10 +2480,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="action_date"                data-endpoint="POSTapi-conservation-actions"
-               value="2025-11-22T00:30:29"
+               value="2025-11-22T01:40:50"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-11-22T00:30:29</code></p>
+<p>Must be a valid date. Example: <code>2025-11-22T01:40:50</code></p>
         </div>
         </form>
 
@@ -2644,7 +2644,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --data "{
     \"description\": \"Eius et animi quos velit et.\",
-    \"action_date\": \"2025-11-22T00:30:29\"
+    \"action_date\": \"2025-11-22T01:40:50\"
 }"
 </code></pre></div>
 
@@ -2661,7 +2661,7 @@ const headers = {
 
 let body = {
     "description": "Eius et animi quos velit et.",
-    "action_date": "2025-11-22T00:30:29"
+    "action_date": "2025-11-22T01:40:50"
 };
 
 fetch(url, {
@@ -2782,10 +2782,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="action_date"                data-endpoint="PUTapi-conservation-actions--id-"
-               value="2025-11-22T00:30:29"
+               value="2025-11-22T01:40:50"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-11-22T00:30:29</code></p>
+<p>Must be a valid date. Example: <code>2025-11-22T01:40:50</code></p>
         </div>
         </form>
 
@@ -3681,7 +3681,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-items">
             <blockquote>
-            <p>Example response (500):</p>
+            <p>Example response (200):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -3693,7 +3693,42 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Server Error&quot;
+    &quot;data&quot;: [],
+    &quot;links&quot;: {
+        &quot;first&quot;: &quot;http://localhost:8000/api/items?page=1&quot;,
+        &quot;last&quot;: &quot;http://localhost:8000/api/items?page=1&quot;,
+        &quot;prev&quot;: null,
+        &quot;next&quot;: null
+    },
+    &quot;meta&quot;: {
+        &quot;current_page&quot;: 1,
+        &quot;from&quot;: null,
+        &quot;last_page&quot;: 1,
+        &quot;links&quot;: [
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
+                &quot;page&quot;: null,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://localhost:8000/api/items?page=1&quot;,
+                &quot;label&quot;: &quot;1&quot;,
+                &quot;page&quot;: 1,
+                &quot;active&quot;: true
+            },
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
+                &quot;page&quot;: null,
+                &quot;active&quot;: false
+            }
+        ],
+        &quot;path&quot;: &quot;http://localhost:8000/api/items&quot;,
+        &quot;per_page&quot;: 15,
+        &quot;to&quot;: null,
+        &quot;total&quot;: 0
+    }
 }</code>
  </pre>
     </span>
@@ -7006,7 +7041,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
     --form "item_id=architecto"\
-    --form "photo=@/tmp/php6uvd939fsovc5mBKT8A" </code></pre></div>
+    --form "photo=@/tmp/phpcnr92u49mo7f4FgzADC" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -7115,7 +7150,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Must be an image. Must not be greater than 5120 kilobytes. Example: <code>/tmp/php6uvd939fsovc5mBKT8A</code></p>
+<p>Must be an image. Must not be greater than 5120 kilobytes. Example: <code>/tmp/phpcnr92u49mo7f4FgzADC</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>item_id</code></b>&nbsp;&nbsp;
@@ -8054,9 +8089,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
+            
 
-
-
+        
     </div>
     <div class="dark-box">
                     <div class="lang-selector">
