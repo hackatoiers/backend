@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\SubType;
 use App\Models\Material;
 
-class SubtypeFactory extends Factory
+class SubTypeFactory extends Factory
 {
     protected $model = SubType::class;
 
