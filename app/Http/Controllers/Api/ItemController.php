@@ -2,16 +2,23 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Exports\ItemsExport;
 use App\Http\Controllers\Controller;
-use App\Models\Item;
-use Illuminate\Http\Request;
 use App\Http\Requests\Api\Item\ItemStoreRequest;
 use App\Http\Requests\Api\Item\ItemUpdateRequest;
 use App\Http\Resources\Api\ItemResources;
+use App\Models\Item;
+use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 use Symfony\Component\HttpKernel\HttpCache\Store;
 
 class ItemController extends Controller
 {
+    public function export()
+    {
+        return Excel::download(new ItemsExport, 'items.xlsx');
+    }
+
     public function __construct() {}
 
     /**
@@ -40,6 +47,7 @@ class ItemController extends Controller
     public function store(ItemStoreRequest $request)
     {
         $item = Item::create($request->validated());
+
         return new ItemResources($item);
     }
 
@@ -65,6 +73,7 @@ class ItemController extends Controller
     public function update(ItemUpdateRequest $request, Item $item)
     {
         $item->update($request->validated());
+
         return new ItemResources($item);
     }
 
@@ -74,6 +83,7 @@ class ItemController extends Controller
     public function destroy(Item $item)
     {
         $item->delete();
+
         return response()->noContent();
     }
 }

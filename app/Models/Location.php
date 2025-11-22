@@ -34,6 +34,6 @@ class Location extends Model implements Auditable
 
     public function item()
     {
-        return $this->belongsTo(Item::class);
+        return $this->hasOne(Item::class);
     }
 }

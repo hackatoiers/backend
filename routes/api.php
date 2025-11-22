@@ -25,6 +25,8 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('auth/me', [AuthController::class, 'me']);
 });
 
+Route::get('/items/export', [ItemController::class, 'export']);
+
 Route::apiResource('collections', CollectionController::class);
 Route::apiResource('conservation-actions', ConservationActionController::class);
 Route::apiResource('ethnic-groups', EthnicGroupController::class);
@@ -36,6 +38,7 @@ Route::apiResource('photos', PhotoController::class)->only(['store', 'show', 'de
 Route::apiResource('reserves', ReserveController::class)->only(['store', 'index', 'show', 'destroy']);
 Route::apiResource('material-subtypes', MaterialSubtypeController::class);
 
+
 Route::get('/items/{id}/pdf', function ($id) {
     $item = Item::with('photos')->findOrFail($id);
 
@@ -43,3 +46,4 @@ Route::get('/items/{id}/pdf', function ($id) {
 
     return $pdf->download("item_{$item->id}.pdf");
 });
+

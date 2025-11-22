@@ -2,18 +2,18 @@
 
 namespace App\Models;
 
+use App\ConservationStateEnum;
+use App\IntegrityEnum;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\IntegrityEnum;
-use App\ConservationStateEnum;
-use OwenIt\Auditing\Contracts\Auditable;
 use OwenIt\Auditing\Auditable as UseAuditable;
+use OwenIt\Auditing\Contracts\Auditable;
 
 class Item extends Model implements Auditable
 {
     /** @use HasFactory<\Database\Factories\ItemFactory> */
-
     use HasFactory, UseAuditable;
+
     protected $fillable = [
         'name',
         'description',
@@ -37,6 +37,7 @@ class Item extends Model implements Auditable
         'collection_id',
         'ethnic_group_id',
     ];
+
     protected $auditInclude = [
         'name',
         'description',
@@ -60,6 +61,7 @@ class Item extends Model implements Auditable
         'collection_id',
         'ethnic_group_id',
     ];
+
     protected $casts = [
         'conservation_state' => ConservationStateEnum::class,
         'integrity' => IntegrityEnum::class,
@@ -67,12 +69,12 @@ class Item extends Model implements Auditable
 
     public function location()
     {
-        return $this->hasOne(Location::class);
+        return $this->belongsTo(Location::class);
     }
 
     public function subtype()
     {
-        return $this->belongsTo(Subtype::class);
+        return $this->belongsTo(SubType::class);
     }
 
     public function material()
@@ -105,4 +107,3 @@ class Item extends Model implements Auditable
         return $this->hasMany(Reserve::class);
     }
 }
-
