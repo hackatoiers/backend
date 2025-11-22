@@ -6,13 +6,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\IntegrityEnum;
 use App\ConservationStateEnum;
+use OwenIt\Auditing\Contracts\Auditable;
 use OwenIt\Auditing\Auditable as UseAuditable;
 
-class Item extends Model
+class Item extends Model implements Auditable
 {
     /** @use HasFactory<\Database\Factories\ItemFactory> */
 
-    use HasFactory,UseAuditable;
+    use HasFactory, UseAuditable;
     protected $fillable = [
         'name',
         'description',
@@ -97,6 +98,11 @@ class Item extends Model
     public function conservationActions()
     {
         return $this->hasMany(ConservationAction::class);
+    }
+
+    public function reserves()
+    {
+        return $this->hasMany(Reserve::class);
     }
 }
 
