@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
 
             $table->string('user_email');
-            $table->foreignId('item_id')->constrained()->onDelete('cascade');
+            $table->foreignId('item_id')->constrained()->cascadeOnDelete();
             $table->timestamp('reserved_at');
             $table->timestamp('deadline_at')->nullable();
 

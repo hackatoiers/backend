@@ -31,7 +31,7 @@ class Item extends Model implements Auditable
         'integrity',
         'conservation_state',
         'conservation_detail',
-
+        
         'location_id',
         'subtype_id',
         'collection_id',

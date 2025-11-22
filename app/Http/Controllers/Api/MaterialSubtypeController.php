@@ -16,7 +16,7 @@ class MaterialSubtypeController extends Controller
      */
     public function index(Request $request)
     {
-        return MaterialSubtypeResource::collection(SubType::paginate($this->resolvePerPage($request)));
+        return SubType::paginate($this->resolvePerPage($request));
     }
 
     /**

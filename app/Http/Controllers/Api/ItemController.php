@@ -18,7 +18,7 @@ class ItemController extends Controller
     {
         return Excel::download(new ItemsExport, 'items.xlsx');
     }
-
+ 
     public function __construct() {}
 
     /**
@@ -56,7 +56,7 @@ class ItemController extends Controller
      */
     public function show(Item $item)
     {
-        return new ItemResources($item);
+        return new ItemResources($item->load(['photos', 'subType', 'location', 'collection', 'ethnicGroup']));
     }
 
     /**

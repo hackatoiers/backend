@@ -26,7 +26,7 @@
             </style>
 
     <script>
-        var tryItOutBaseUrl = "http://localhost:8000";
+        var tryItOutBaseUrl = "http://191.52.55.208:8000";
         var useCsrf = Boolean();
         var csrfUrl = "/sanctum/csrf-cookie";
     </script>
@@ -265,7 +265,7 @@
     <div class="content">
         <h1 id="introduction">Introduction</h1>
 <aside>
-    <strong>Base URL</strong>: <code>http://localhost:8000</code>
+    <strong>Base URL</strong>: <code>http://191.52.55.208:8000</code>
 </aside>
 <pre><code>This documentation aims to provide all the information you need to work with our API.
 
@@ -292,7 +292,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/users/search" \
+    --get "http://191.52.55.208:8000/api/users/search" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -303,7 +303,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/users/search"
+    "http://191.52.55.208:8000/api/users/search"
 );
 
 const headers = {
@@ -440,14 +440,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/audits" \
+    --get "http://191.52.55.208:8000/api/audits" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/audits"
+    "http://191.52.55.208:8000/api/audits"
 );
 
 const headers = {
@@ -476,16 +476,47 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;data&quot;: [],
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;event&quot;: &quot;deleted&quot;,
+            &quot;user&quot;: &quot;matheus&quot;,
+            &quot;auditable_type&quot;: &quot;App\\Models\\Item&quot;,
+            &quot;auditable_id&quot;: 1,
+            &quot;old_values&quot;: {
+                &quot;name&quot;: &quot;non est&quot;,
+                &quot;description&quot;: &quot;Corrupti architecto laudantium non aliquid consequuntur vel. Ratione ut placeat maxime quia nostrum atque. Commodi rem molestiae odio et rerum quos alias non.&quot;,
+                &quot;number&quot;: &quot;ITEM-4549&quot;,
+                &quot;length&quot;: 15,
+                &quot;height&quot;: 28,
+                &quot;width&quot;: 82,
+                &quot;weight&quot;: 49,
+                &quot;archeological_site&quot;: &quot;Gottliebborough&quot;,
+                &quot;technic&quot;: &quot;inventore&quot;,
+                &quot;reference&quot;: &quot;porro&quot;,
+                &quot;integrity&quot;: &quot;fragmented&quot;,
+                &quot;conservation_state&quot;: &quot;bad&quot;,
+                &quot;conservation_detail&quot;: &quot;Laudantium hic harum possimus veniam qui est quisquam.&quot;,
+                &quot;location_id&quot;: 11,
+                &quot;subtype_id&quot;: 101,
+                &quot;collection_id&quot;: 11,
+                &quot;ethnic_group_id&quot;: 11
+            },
+            &quot;new_values&quot;: [],
+            &quot;created_at&quot;: &quot;2025-11-22T08:57:35.000000Z&quot;,
+            &quot;ip_address&quot;: &quot;191.52.55.57&quot;,
+            &quot;url&quot;: &quot;http://localhost:8000/api/items/1&quot;
+        }
+    ],
     &quot;links&quot;: {
-        &quot;first&quot;: &quot;http://localhost:8000/api/audits?page=1&quot;,
-        &quot;last&quot;: &quot;http://localhost:8000/api/audits?page=1&quot;,
+        &quot;first&quot;: &quot;http://191.52.55.208:8000/api/audits?page=1&quot;,
+        &quot;last&quot;: &quot;http://191.52.55.208:8000/api/audits?page=1&quot;,
         &quot;prev&quot;: null,
         &quot;next&quot;: null
     },
     &quot;meta&quot;: {
         &quot;current_page&quot;: 1,
-        &quot;from&quot;: null,
+        &quot;from&quot;: 1,
         &quot;last_page&quot;: 1,
         &quot;links&quot;: [
             {
@@ -495,7 +526,7 @@ vary: Origin
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://localhost:8000/api/audits?page=1&quot;,
+                &quot;url&quot;: &quot;http://191.52.55.208:8000/api/audits?page=1&quot;,
                 &quot;label&quot;: &quot;1&quot;,
                 &quot;page&quot;: 1,
                 &quot;active&quot;: true
@@ -507,10 +538,10 @@ vary: Origin
                 &quot;active&quot;: false
             }
         ],
-        &quot;path&quot;: &quot;http://localhost:8000/api/audits&quot;,
+        &quot;path&quot;: &quot;http://191.52.55.208:8000/api/audits&quot;,
         &quot;per_page&quot;: 15,
-        &quot;to&quot;: null,
-        &quot;total&quot;: 0
+        &quot;to&quot;: 1,
+        &quot;total&quot;: 1
     }
 }</code>
  </pre>
@@ -601,14 +632,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/audits/architecto" \
+    --get "http://191.52.55.208:8000/api/audits/architecto" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/audits/architecto"
+    "http://191.52.55.208:8000/api/audits/architecto"
 );
 
 const headers = {
@@ -740,14 +771,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/audits/model/architecto" \
+    --get "http://191.52.55.208:8000/api/audits/model/architecto" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/audits/model/architecto"
+    "http://191.52.55.208:8000/api/audits/model/architecto"
 );
 
 const headers = {
@@ -879,14 +910,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/users" \
+    --get "http://191.52.55.208:8000/api/users" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/users"
+    "http://191.52.55.208:8000/api/users"
 );
 
 const headers = {
@@ -915,11 +946,20 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;data&quot;: [],
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: &quot;019aaac7-fa82-7249-8671-c21a7843e057&quot;,
+            &quot;name&quot;: &quot;matheus&quot;,
+            &quot;email&quot;: &quot;matheus@email.com&quot;,
+            &quot;cpf&quot;: null,
+            &quot;created_at&quot;: &quot;2025-11-22T08:57:03.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:57:03.000000Z&quot;
+        }
+    ],
     &quot;meta&quot;: {
         &quot;total&quot;: [
-            0,
-            0
+            1,
+            1
         ],
         &quot;per_page&quot;: [
             15,
@@ -933,7 +973,7 @@ vary: Origin
             1,
             1
         ],
-        &quot;from&quot;: null,
+        &quot;from&quot;: 1,
         &quot;links&quot;: [
             {
                 &quot;url&quot;: null,
@@ -942,7 +982,7 @@ vary: Origin
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://localhost:8000/api/users?page=1&quot;,
+                &quot;url&quot;: &quot;http://191.52.55.208:8000/api/users?page=1&quot;,
                 &quot;label&quot;: &quot;1&quot;,
                 &quot;page&quot;: 1,
                 &quot;active&quot;: true
@@ -954,17 +994,17 @@ vary: Origin
                 &quot;active&quot;: false
             }
         ],
-        &quot;path&quot;: &quot;http://localhost:8000/api/users&quot;,
-        &quot;to&quot;: null
+        &quot;path&quot;: &quot;http://191.52.55.208:8000/api/users&quot;,
+        &quot;to&quot;: 1
     },
     &quot;links&quot;: {
         &quot;first&quot;: [
-            &quot;http://localhost:8000/api/users?page=1&quot;,
-            &quot;http://localhost:8000/api/users?page=1&quot;
+            &quot;http://191.52.55.208:8000/api/users?page=1&quot;,
+            &quot;http://191.52.55.208:8000/api/users?page=1&quot;
         ],
         &quot;last&quot;: [
-            &quot;http://localhost:8000/api/users?page=1&quot;,
-            &quot;http://localhost:8000/api/users?page=1&quot;
+            &quot;http://191.52.55.208:8000/api/users?page=1&quot;,
+            &quot;http://191.52.55.208:8000/api/users?page=1&quot;
         ],
         &quot;prev&quot;: [
             null,
@@ -1064,14 +1104,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/users/architecto" \
+    --get "http://191.52.55.208:8000/api/users/019aaac7-fa82-7249-8671-c21a7843e057" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/users/architecto"
+    "http://191.52.55.208:8000/api/users/019aaac7-fa82-7249-8671-c21a7843e057"
 );
 
 const headers = {
@@ -1088,7 +1128,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-users--id-">
             <blockquote>
-            <p>Example response (404):</p>
+            <p>Example response (200):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -1100,7 +1140,14 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;No query results for model [App\\Models\\User] architecto&quot;
+    &quot;data&quot;: {
+        &quot;id&quot;: &quot;019aaac7-fa82-7249-8671-c21a7843e057&quot;,
+        &quot;name&quot;: &quot;matheus&quot;,
+        &quot;email&quot;: &quot;matheus@email.com&quot;,
+        &quot;cpf&quot;: null,
+        &quot;created_at&quot;: &quot;2025-11-22T08:57:03.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-11-22T08:57:03.000000Z&quot;
+    }
 }</code>
  </pre>
     </span>
@@ -1183,10 +1230,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="GETapi-users--id-"
-               value="architecto"
+               value="019aaac7-fa82-7249-8671-c21a7843e057"
                data-component="url">
     <br>
-<p>The ID of the user. Example: <code>architecto</code></p>
+<p>The ID of the user. Example: <code>019aaac7-fa82-7249-8671-c21a7843e057</code></p>
             </div>
                     </form>
 
@@ -1203,14 +1250,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/users/architecto" \
+    "http://191.52.55.208:8000/api/users/019aaac7-fa82-7249-8671-c21a7843e057" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/users/architecto"
+    "http://191.52.55.208:8000/api/users/019aaac7-fa82-7249-8671-c21a7843e057"
 );
 
 const headers = {
@@ -1306,10 +1353,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="DELETEapi-users--id-"
-               value="architecto"
+               value="019aaac7-fa82-7249-8671-c21a7843e057"
                data-component="url">
     <br>
-<p>The ID of the user. Example: <code>architecto</code></p>
+<p>The ID of the user. Example: <code>019aaac7-fa82-7249-8671-c21a7843e057</code></p>
             </div>
                     </form>
 
@@ -1326,20 +1373,20 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/auth/login" \
+    "http://191.52.55.208:8000/api/auth/login" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
     \"email\": \"gbailey@example.net\",
     \"password\": \"+-0pBNvYgxwmi\\/#iw\",
-    \"remember\": true
+    \"remember\": false
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/auth/login"
+    "http://191.52.55.208:8000/api/auth/login"
 );
 
 const headers = {
@@ -1350,7 +1397,7 @@ const headers = {
 let body = {
     "email": "gbailey@example.net",
     "password": "+-0pBNvYgxwmi\/#iw",
-    "remember": true
+    "remember": false
 };
 
 fetch(url, {
@@ -1479,7 +1526,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <code>false</code>
         </label>
     <br>
-<p>Example: <code>true</code></p>
+<p>Example: <code>false</code></p>
         </div>
         </form>
 
@@ -1496,14 +1543,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/auth/logout" \
+    "http://191.52.55.208:8000/api/auth/logout" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/auth/logout"
+    "http://191.52.55.208:8000/api/auth/logout"
 );
 
 const headers = {
@@ -1606,14 +1653,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/auth/me" \
+    --get "http://191.52.55.208:8000/api/auth/me" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/auth/me"
+    "http://191.52.55.208:8000/api/auth/me"
 );
 
 const headers = {
@@ -1732,14 +1779,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/items/export" \
+    --get "http://191.52.55.208:8000/api/items/export" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/items/export"
+    "http://191.52.55.208:8000/api/items/export"
 );
 
 const headers = {
@@ -1756,20 +1803,20 @@ fetch(url, {
 
 <span id="example-responses-GETapi-items-export">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (500):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
                 <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
             </summary>
-            <pre><code class="language-http">cache-control: public
-content-disposition: attachment; filename=items.xlsx
-content-type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
-accept-ranges: bytes
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
 vary: Origin
  </code></pre></details>         <pre>
 
-<code class="language-json" style="max-height: 300px;"></code>
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Server Error&quot;
+}</code>
  </pre>
     </span>
 <span id="execution-results-GETapi-items-export" hidden>
@@ -1858,14 +1905,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/collections" \
+    --get "http://191.52.55.208:8000/api/collections" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/collections"
+    "http://191.52.55.208:8000/api/collections"
 );
 
 const headers = {
@@ -1897,130 +1944,130 @@ vary: Origin
     &quot;data&quot;: [
         {
             &quot;id&quot;: 1,
-            &quot;name&quot;: &quot;beatae dolores&quot;,
-            &quot;owner&quot;: &quot;Mr. Amir Ernser IV&quot;,
-            &quot;description&quot;: &quot;Ex delectus et enim et veniam cum culpa.&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;name&quot;: &quot;ut ad&quot;,
+            &quot;owner&quot;: &quot;Vida Satterfield&quot;,
+            &quot;description&quot;: &quot;Veniam quam dolor aut odit.&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:23.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:23.000000Z&quot;
         },
         {
             &quot;id&quot;: 2,
-            &quot;name&quot;: &quot;eum ab&quot;,
-            &quot;owner&quot;: &quot;Dayne Berge&quot;,
-            &quot;description&quot;: &quot;Consectetur laudantium architecto eos quaerat.&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;name&quot;: &quot;cumque doloremque&quot;,
+            &quot;owner&quot;: &quot;Felicity Herman&quot;,
+            &quot;description&quot;: &quot;Delectus laborum veniam sed iste.&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:23.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:23.000000Z&quot;
         },
         {
             &quot;id&quot;: 3,
-            &quot;name&quot;: &quot;aut et&quot;,
-            &quot;owner&quot;: &quot;Prof. Roberto Swift&quot;,
-            &quot;description&quot;: &quot;Architecto soluta voluptatem placeat dolore et omnis sed.&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;name&quot;: &quot;id omnis&quot;,
+            &quot;owner&quot;: &quot;Wilson Swift&quot;,
+            &quot;description&quot;: &quot;Voluptas magni voluptatibus quos ea consectetur unde aut.&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:23.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:23.000000Z&quot;
         },
         {
             &quot;id&quot;: 4,
-            &quot;name&quot;: &quot;sit asperiores&quot;,
-            &quot;owner&quot;: &quot;Miss Hulda Abernathy PhD&quot;,
-            &quot;description&quot;: &quot;Provident voluptatem sapiente vel et.&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;name&quot;: &quot;et ipsum&quot;,
+            &quot;owner&quot;: &quot;Bernadine Halvorson&quot;,
+            &quot;description&quot;: &quot;Repudiandae nobis reiciendis dolores blanditiis quis.&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:23.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:23.000000Z&quot;
         },
         {
             &quot;id&quot;: 5,
-            &quot;name&quot;: &quot;temporibus quia&quot;,
-            &quot;owner&quot;: &quot;Prof. Shaniya Kilback DVM&quot;,
-            &quot;description&quot;: &quot;Voluptatem libero deleniti nulla soluta porro.&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;name&quot;: &quot;corporis est&quot;,
+            &quot;owner&quot;: &quot;Nova Reinger DDS&quot;,
+            &quot;description&quot;: &quot;Laudantium exercitationem ad debitis et.&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:23.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:23.000000Z&quot;
         },
         {
             &quot;id&quot;: 6,
-            &quot;name&quot;: &quot;repudiandae dicta&quot;,
-            &quot;owner&quot;: &quot;Mr. Zander Runte&quot;,
-            &quot;description&quot;: &quot;Quis ullam minima atque officia reprehenderit consequatur modi.&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;name&quot;: &quot;ab ex&quot;,
+            &quot;owner&quot;: &quot;Deven Botsford&quot;,
+            &quot;description&quot;: &quot;Aut dicta animi voluptatum totam quis cumque.&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:23.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:23.000000Z&quot;
         },
         {
             &quot;id&quot;: 7,
-            &quot;name&quot;: &quot;est dolor&quot;,
-            &quot;owner&quot;: &quot;Lemuel Zieme&quot;,
-            &quot;description&quot;: &quot;Sapiente qui quam ut et eum similique labore quam.&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;name&quot;: &quot;et numquam&quot;,
+            &quot;owner&quot;: &quot;Ericka Lueilwitz&quot;,
+            &quot;description&quot;: &quot;Eos quia numquam ipsum est id.&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:23.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:23.000000Z&quot;
         },
         {
             &quot;id&quot;: 8,
-            &quot;name&quot;: &quot;veritatis facere&quot;,
-            &quot;owner&quot;: &quot;Bettie Feil&quot;,
-            &quot;description&quot;: &quot;Exercitationem molestiae accusantium nihil nesciunt veniam earum autem ducimus.&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;name&quot;: &quot;tempore nulla&quot;,
+            &quot;owner&quot;: &quot;Cale Mraz MD&quot;,
+            &quot;description&quot;: &quot;Iusto culpa dolorem aut in itaque.&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:23.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:23.000000Z&quot;
         },
         {
             &quot;id&quot;: 9,
-            &quot;name&quot;: &quot;et commodi&quot;,
-            &quot;owner&quot;: &quot;Prof. Jarred Mayert&quot;,
-            &quot;description&quot;: &quot;Nihil dolorem animi assumenda et architecto magni delectus.&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;name&quot;: &quot;dignissimos ad&quot;,
+            &quot;owner&quot;: &quot;Philip Parker&quot;,
+            &quot;description&quot;: &quot;Cum eos voluptatibus quis facilis occaecati sint architecto.&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:23.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:23.000000Z&quot;
         },
         {
             &quot;id&quot;: 10,
-            &quot;name&quot;: &quot;pariatur et&quot;,
-            &quot;owner&quot;: &quot;Mrs. Camylle Bartoletti&quot;,
-            &quot;description&quot;: &quot;Sit et vel ipsum qui.&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;name&quot;: &quot;aut et&quot;,
+            &quot;owner&quot;: &quot;Mr. Nick Harris&quot;,
+            &quot;description&quot;: &quot;Culpa officiis aut nobis eos sed.&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:23.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:23.000000Z&quot;
         },
         {
             &quot;id&quot;: 11,
-            &quot;name&quot;: &quot;impedit qui&quot;,
-            &quot;owner&quot;: &quot;Jean Daniel&quot;,
-            &quot;description&quot;: &quot;Corporis eveniet et accusamus ipsum.&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;name&quot;: &quot;iusto et&quot;,
+            &quot;owner&quot;: &quot;Prof. Zola McGlynn II&quot;,
+            &quot;description&quot;: &quot;Placeat eveniet dolorem vel omnis cumque tempore.&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:25.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:25.000000Z&quot;
         },
         {
             &quot;id&quot;: 12,
-            &quot;name&quot;: &quot;ut molestiae&quot;,
-            &quot;owner&quot;: &quot;Ara Mills&quot;,
-            &quot;description&quot;: &quot;Laborum ea exercitationem consequatur reiciendis.&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;name&quot;: &quot;minus numquam&quot;,
+            &quot;owner&quot;: &quot;Miss Marie Turcotte&quot;,
+            &quot;description&quot;: &quot;Quo ut qui quis non.&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:26.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:26.000000Z&quot;
         },
         {
             &quot;id&quot;: 13,
-            &quot;name&quot;: &quot;voluptatibus recusandae&quot;,
-            &quot;owner&quot;: &quot;Ryley Cremin&quot;,
-            &quot;description&quot;: &quot;Occaecati eius molestiae voluptate delectus qui nostrum.&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;name&quot;: &quot;nihil officiis&quot;,
+            &quot;owner&quot;: &quot;Mark Feeney&quot;,
+            &quot;description&quot;: &quot;Culpa consectetur ea praesentium eum eos nihil saepe.&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:26.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:26.000000Z&quot;
         },
         {
             &quot;id&quot;: 14,
-            &quot;name&quot;: &quot;ea dolores&quot;,
-            &quot;owner&quot;: &quot;Sage Breitenberg&quot;,
-            &quot;description&quot;: &quot;Ut quia et ipsam atque sed aut consequuntur.&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;name&quot;: &quot;tempora id&quot;,
+            &quot;owner&quot;: &quot;Ms. Laney Haley&quot;,
+            &quot;description&quot;: &quot;Doloribus provident repellat nemo in.&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:27.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:27.000000Z&quot;
         },
         {
             &quot;id&quot;: 15,
-            &quot;name&quot;: &quot;doloremque accusamus&quot;,
-            &quot;owner&quot;: &quot;Onie Keeling&quot;,
-            &quot;description&quot;: &quot;Eum illo quibusdam reprehenderit aperiam nam et possimus.&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;name&quot;: &quot;autem provident&quot;,
+            &quot;owner&quot;: &quot;Bo Little&quot;,
+            &quot;description&quot;: &quot;Soluta necessitatibus eaque et tenetur.&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:27.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:27.000000Z&quot;
         }
     ],
     &quot;links&quot;: {
-        &quot;first&quot;: &quot;http://localhost:8000/api/collections?page=1&quot;,
-        &quot;last&quot;: &quot;http://localhost:8000/api/collections?page=2&quot;,
+        &quot;first&quot;: &quot;http://191.52.55.208:8000/api/collections?page=1&quot;,
+        &quot;last&quot;: &quot;http://191.52.55.208:8000/api/collections?page=2&quot;,
         &quot;prev&quot;: null,
-        &quot;next&quot;: &quot;http://localhost:8000/api/collections?page=2&quot;
+        &quot;next&quot;: &quot;http://191.52.55.208:8000/api/collections?page=2&quot;
     },
     &quot;meta&quot;: {
         &quot;current_page&quot;: 1,
@@ -2034,25 +2081,25 @@ vary: Origin
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://localhost:8000/api/collections?page=1&quot;,
+                &quot;url&quot;: &quot;http://191.52.55.208:8000/api/collections?page=1&quot;,
                 &quot;label&quot;: &quot;1&quot;,
                 &quot;page&quot;: 1,
                 &quot;active&quot;: true
             },
             {
-                &quot;url&quot;: &quot;http://localhost:8000/api/collections?page=2&quot;,
+                &quot;url&quot;: &quot;http://191.52.55.208:8000/api/collections?page=2&quot;,
                 &quot;label&quot;: &quot;2&quot;,
                 &quot;page&quot;: 2,
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://localhost:8000/api/collections?page=2&quot;,
+                &quot;url&quot;: &quot;http://191.52.55.208:8000/api/collections?page=2&quot;,
                 &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
                 &quot;page&quot;: 2,
                 &quot;active&quot;: false
             }
         ],
-        &quot;path&quot;: &quot;http://localhost:8000/api/collections&quot;,
+        &quot;path&quot;: &quot;http://191.52.55.208:8000/api/collections&quot;,
         &quot;per_page&quot;: 15,
         &quot;to&quot;: 15,
         &quot;total&quot;: 20
@@ -2146,7 +2193,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/collections" \
+    "http://191.52.55.208:8000/api/collections" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -2159,7 +2206,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/collections"
+    "http://191.52.55.208:8000/api/collections"
 );
 
 const headers = {
@@ -2306,14 +2353,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/collections/1" \
+    --get "http://191.52.55.208:8000/api/collections/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/collections/1"
+    "http://191.52.55.208:8000/api/collections/1"
 );
 
 const headers = {
@@ -2344,11 +2391,11 @@ vary: Origin
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
         &quot;id&quot;: 1,
-        &quot;name&quot;: &quot;beatae dolores&quot;,
-        &quot;owner&quot;: &quot;Mr. Amir Ernser IV&quot;,
-        &quot;description&quot;: &quot;Ex delectus et enim et veniam cum culpa.&quot;,
-        &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+        &quot;name&quot;: &quot;ut ad&quot;,
+        &quot;owner&quot;: &quot;Vida Satterfield&quot;,
+        &quot;description&quot;: &quot;Veniam quam dolor aut odit.&quot;,
+        &quot;created_at&quot;: &quot;2025-11-22T08:56:23.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-11-22T08:56:23.000000Z&quot;
     }
 }</code>
  </pre>
@@ -2452,7 +2499,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/collections/1" \
+    "http://191.52.55.208:8000/api/collections/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -2465,7 +2512,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/collections/1"
+    "http://191.52.55.208:8000/api/collections/1"
 );
 
 const headers = {
@@ -2629,14 +2676,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/collections/1" \
+    "http://191.52.55.208:8000/api/collections/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/collections/1"
+    "http://191.52.55.208:8000/api/collections/1"
 );
 
 const headers = {
@@ -2752,14 +2799,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/conservation-actions" \
+    --get "http://191.52.55.208:8000/api/conservation-actions" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/conservation-actions"
+    "http://191.52.55.208:8000/api/conservation-actions"
 );
 
 const headers = {
@@ -2791,78 +2838,78 @@ vary: Origin
     &quot;data&quot;: [
         {
             &quot;id&quot;: 1,
-            &quot;description&quot;: &quot;Tempore quae iusto neque consequatur sapiente. Dolores ut distinctio molestiae voluptatum. Ut culpa nostrum doloribus necessitatibus. Praesentium nulla et ratione facilis repellat beatae non voluptate.&quot;,
-            &quot;action_date&quot;: &quot;2018-11-24 02:18:41&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;description&quot;: &quot;Qui pariatur aliquam modi sint maiores itaque voluptas vitae. Voluptates voluptatem suscipit ea veniam provident. Inventore tenetur voluptas sit nam eum illo.&quot;,
+            &quot;action_date&quot;: &quot;2016-08-17 09:12:54&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:35.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:35.000000Z&quot;
         },
         {
             &quot;id&quot;: 2,
-            &quot;description&quot;: &quot;Consectetur fugiat reiciendis voluptatem itaque. Quidem mollitia nulla ipsum eligendi eius.&quot;,
-            &quot;action_date&quot;: &quot;2019-02-22 17:03:10&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;description&quot;: &quot;Officiis autem autem et. Animi in quis fuga aut doloremque ut. Nisi ducimus optio omnis labore et ut consequatur nobis.&quot;,
+            &quot;action_date&quot;: &quot;2023-01-19 16:24:53&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:35.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:35.000000Z&quot;
         },
         {
             &quot;id&quot;: 3,
-            &quot;description&quot;: &quot;Explicabo dolore doloremque aliquid ipsum nesciunt aliquid. Ab qui hic vel eius dolorem. Doloribus id dolorem expedita impedit. Enim sit voluptatem hic ut quia facere.&quot;,
-            &quot;action_date&quot;: &quot;2025-11-07 03:37:35&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;description&quot;: &quot;Dolor mollitia nesciunt perspiciatis quis a ea odio. Quia fugiat minima necessitatibus et quibusdam. Accusamus omnis alias provident officia.&quot;,
+            &quot;action_date&quot;: &quot;2021-01-01 08:14:55&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:36.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:36.000000Z&quot;
         },
         {
             &quot;id&quot;: 4,
-            &quot;description&quot;: &quot;Rerum magni id debitis voluptatum. Quibusdam libero quo quia at nihil odio. Doloribus aliquam quas quaerat occaecati vero veniam. Tempore atque quia voluptate.&quot;,
-            &quot;action_date&quot;: &quot;2024-04-08 23:44:47&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;description&quot;: &quot;Praesentium voluptatem dolor cum non expedita vero repudiandae tenetur. Quo voluptatem laboriosam vel est. Numquam et voluptatem non est iste. Reiciendis aspernatur qui numquam voluptatem. Ut laborum voluptatum eaque necessitatibus.&quot;,
+            &quot;action_date&quot;: &quot;2024-04-24 06:03:02&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:36.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:36.000000Z&quot;
         },
         {
             &quot;id&quot;: 5,
-            &quot;description&quot;: &quot;Aspernatur repudiandae quia deleniti optio. Dolores et itaque iste culpa quidem. Doloremque qui debitis quia facilis distinctio debitis maiores sunt.&quot;,
-            &quot;action_date&quot;: &quot;2022-12-04 20:28:36&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;description&quot;: &quot;Ea dolores qui quia maiores perferendis et eius quia. Accusamus quia voluptatum eaque placeat dignissimos. Eum vel quia ipsum nihil modi quasi fuga aperiam. Odit repudiandae atque quis sint quam. Vitae consequatur accusantium cupiditate veniam.&quot;,
+            &quot;action_date&quot;: &quot;2017-08-01 13:59:27&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:36.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:36.000000Z&quot;
         },
         {
             &quot;id&quot;: 6,
-            &quot;description&quot;: &quot;Sit corrupti saepe voluptas ut consequuntur delectus qui ipsa. Vel consectetur accusantium iusto omnis sint. Dicta officiis pariatur et voluptas qui dolorem sint. Dolores ratione sunt rem qui.&quot;,
-            &quot;action_date&quot;: &quot;2021-03-16 13:18:12&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;description&quot;: &quot;Mollitia commodi aut nulla qui voluptatibus. Qui unde quae explicabo soluta optio. Nam at ut consequatur et blanditiis ratione.&quot;,
+            &quot;action_date&quot;: &quot;2019-02-17 07:07:22&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:36.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:36.000000Z&quot;
         },
         {
             &quot;id&quot;: 7,
-            &quot;description&quot;: &quot;Fugiat placeat eaque et neque eos nemo. Et quis ratione nam et voluptas. Amet itaque fuga voluptatem esse omnis nulla adipisci. Accusamus exercitationem ut labore est.&quot;,
-            &quot;action_date&quot;: &quot;2017-09-29 14:05:56&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;description&quot;: &quot;In ducimus perferendis quia consectetur deserunt facere sint. Unde hic eos ipsum neque. Cupiditate dicta et veniam facilis saepe fugiat non.&quot;,
+            &quot;action_date&quot;: &quot;2022-08-05 21:58:02&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:36.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:36.000000Z&quot;
         },
         {
             &quot;id&quot;: 8,
-            &quot;description&quot;: &quot;Ipsa laudantium nesciunt molestias sapiente perspiciatis. Occaecati ut ut accusantium. Ipsum exercitationem eius ea quo sit reiciendis doloribus. Facere quis maiores reiciendis sunt dolore similique molestias. Maxime molestias natus id fuga deleniti libero adipisci.&quot;,
-            &quot;action_date&quot;: &quot;2023-03-04 13:07:03&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;description&quot;: &quot;Ullam sunt facere voluptatem. Molestiae dolores earum ipsam vel sed omnis.&quot;,
+            &quot;action_date&quot;: &quot;2019-10-14 02:17:28&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:36.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:36.000000Z&quot;
         },
         {
             &quot;id&quot;: 9,
-            &quot;description&quot;: &quot;Voluptatem ea facilis nemo ullam totam aut non aut. Consequatur rem assumenda numquam id pariatur voluptas ut. Sed voluptas accusantium odit doloribus commodi at a in.&quot;,
-            &quot;action_date&quot;: &quot;2018-07-03 08:42:16&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;description&quot;: &quot;Sed voluptatem commodi corrupti aut. Fuga similique pariatur aut ipsa deleniti. Necessitatibus vitae dignissimos a nihil nihil distinctio. Repellendus maxime enim eligendi iste.&quot;,
+            &quot;action_date&quot;: &quot;2022-07-06 12:14:29&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:36.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:36.000000Z&quot;
         },
         {
             &quot;id&quot;: 10,
-            &quot;description&quot;: &quot;Ut voluptate dicta maiores aliquam voluptatum molestiae sunt eius. Mollitia sit at omnis assumenda quas. Totam pariatur fuga sunt. Id non praesentium sapiente cupiditate neque occaecati reiciendis.&quot;,
-            &quot;action_date&quot;: &quot;2017-05-11 09:11:01&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;description&quot;: &quot;Hic aliquam quibusdam doloremque qui. Officia sunt enim deserunt. Voluptates blanditiis voluptates aspernatur et rem quasi hic.&quot;,
+            &quot;action_date&quot;: &quot;2020-02-28 09:22:19&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:36.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:36.000000Z&quot;
         }
     ],
     &quot;links&quot;: {
-        &quot;first&quot;: &quot;http://localhost:8000/api/conservation-actions?page=1&quot;,
-        &quot;last&quot;: &quot;http://localhost:8000/api/conservation-actions?page=1&quot;,
+        &quot;first&quot;: &quot;http://191.52.55.208:8000/api/conservation-actions?page=1&quot;,
+        &quot;last&quot;: &quot;http://191.52.55.208:8000/api/conservation-actions?page=1&quot;,
         &quot;prev&quot;: null,
         &quot;next&quot;: null
     },
@@ -2878,7 +2925,7 @@ vary: Origin
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://localhost:8000/api/conservation-actions?page=1&quot;,
+                &quot;url&quot;: &quot;http://191.52.55.208:8000/api/conservation-actions?page=1&quot;,
                 &quot;label&quot;: &quot;1&quot;,
                 &quot;page&quot;: 1,
                 &quot;active&quot;: true
@@ -2890,7 +2937,7 @@ vary: Origin
                 &quot;active&quot;: false
             }
         ],
-        &quot;path&quot;: &quot;http://localhost:8000/api/conservation-actions&quot;,
+        &quot;path&quot;: &quot;http://191.52.55.208:8000/api/conservation-actions&quot;,
         &quot;per_page&quot;: 15,
         &quot;to&quot;: 10,
         &quot;total&quot;: 10
@@ -2984,19 +3031,19 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/conservation-actions" \
+    "http://191.52.55.208:8000/api/conservation-actions" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
     \"description\": \"Eius et animi quos velit et.\",
-    \"action_date\": \"2025-11-22T05:51:48\"
+    \"action_date\": \"2025-11-22T09:12:54\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/conservation-actions"
+    "http://191.52.55.208:8000/api/conservation-actions"
 );
 
 const headers = {
@@ -3006,7 +3053,7 @@ const headers = {
 
 let body = {
     "description": "Eius et animi quos velit et.",
-    "action_date": "2025-11-22T05:51:48"
+    "action_date": "2025-11-22T09:12:54"
 };
 
 fetch(url, {
@@ -3110,10 +3157,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="action_date"                data-endpoint="POSTapi-conservation-actions"
-               value="2025-11-22T05:51:48"
+               value="2025-11-22T09:12:54"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-11-22T05:51:48</code></p>
+<p>Must be a valid date. Example: <code>2025-11-22T09:12:54</code></p>
         </div>
         </form>
 
@@ -3130,14 +3177,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/conservation-actions/1" \
+    --get "http://191.52.55.208:8000/api/conservation-actions/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/conservation-actions/1"
+    "http://191.52.55.208:8000/api/conservation-actions/1"
 );
 
 const headers = {
@@ -3168,10 +3215,10 @@ vary: Origin
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
         &quot;id&quot;: 1,
-        &quot;description&quot;: &quot;Tempore quae iusto neque consequatur sapiente. Dolores ut distinctio molestiae voluptatum. Ut culpa nostrum doloribus necessitatibus. Praesentium nulla et ratione facilis repellat beatae non voluptate.&quot;,
-        &quot;action_date&quot;: &quot;2018-11-24 02:18:41&quot;,
-        &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+        &quot;description&quot;: &quot;Qui pariatur aliquam modi sint maiores itaque voluptas vitae. Voluptates voluptatem suscipit ea veniam provident. Inventore tenetur voluptas sit nam eum illo.&quot;,
+        &quot;action_date&quot;: &quot;2016-08-17 09:12:54&quot;,
+        &quot;created_at&quot;: &quot;2025-11-22T08:56:35.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-11-22T08:56:35.000000Z&quot;
     }
 }</code>
  </pre>
@@ -3275,19 +3322,19 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/conservation-actions/1" \
+    "http://191.52.55.208:8000/api/conservation-actions/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
     \"description\": \"Eius et animi quos velit et.\",
-    \"action_date\": \"2025-11-22T05:51:48\"
+    \"action_date\": \"2025-11-22T09:12:54\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/conservation-actions/1"
+    "http://191.52.55.208:8000/api/conservation-actions/1"
 );
 
 const headers = {
@@ -3297,7 +3344,7 @@ const headers = {
 
 let body = {
     "description": "Eius et animi quos velit et.",
-    "action_date": "2025-11-22T05:51:48"
+    "action_date": "2025-11-22T09:12:54"
 };
 
 fetch(url, {
@@ -3418,10 +3465,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="action_date"                data-endpoint="PUTapi-conservation-actions--id-"
-               value="2025-11-22T05:51:48"
+               value="2025-11-22T09:12:54"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-11-22T05:51:48</code></p>
+<p>Must be a valid date. Example: <code>2025-11-22T09:12:54</code></p>
         </div>
         </form>
 
@@ -3438,14 +3485,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/conservation-actions/1" \
+    "http://191.52.55.208:8000/api/conservation-actions/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/conservation-actions/1"
+    "http://191.52.55.208:8000/api/conservation-actions/1"
 );
 
 const headers = {
@@ -3561,14 +3608,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/ethnic-groups" \
+    --get "http://191.52.55.208:8000/api/ethnic-groups" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/ethnic-groups"
+    "http://191.52.55.208:8000/api/ethnic-groups"
 );
 
 const headers = {
@@ -3601,114 +3648,114 @@ vary: Origin
         {
             &quot;id&quot;: 1,
             &quot;name&quot;: &quot;est&quot;,
-            &quot;description&quot;: &quot;Rerum eius architecto aut libero. Et esse minus saepe non vitae aut. Aut dolores eius molestiae rerum veniam earum.&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;description&quot;: &quot;Reprehenderit sed corrupti rerum minus et. Harum est labore placeat. Quaerat beatae deleniti tempora consequatur. Omnis ab aliquid eligendi voluptas rerum sint velit.&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:23.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:23.000000Z&quot;
         },
         {
             &quot;id&quot;: 2,
-            &quot;name&quot;: &quot;distinctio&quot;,
-            &quot;description&quot;: &quot;Voluptatibus blanditiis est eos sit impedit. Mollitia ullam similique laboriosam ut debitis ex. Aut eaque voluptates ut nam quisquam non laudantium. Et animi facilis suscipit voluptas rem deleniti sint impedit.&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;name&quot;: &quot;commodi&quot;,
+            &quot;description&quot;: &quot;Ipsam maxime qui qui possimus aut. Nihil reprehenderit cum voluptas suscipit. Aliquam vel consequuntur eaque placeat reprehenderit qui rerum. Non eos optio et officiis.&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:23.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:23.000000Z&quot;
         },
         {
             &quot;id&quot;: 3,
-            &quot;name&quot;: &quot;beatae&quot;,
-            &quot;description&quot;: &quot;Deserunt numquam commodi accusantium suscipit. Cupiditate quo dignissimos assumenda tempora illum distinctio. Sunt facilis ut explicabo qui. Autem totam ea voluptates quas.&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;name&quot;: &quot;libero&quot;,
+            &quot;description&quot;: &quot;Quibusdam cupiditate culpa est nam illo in. Voluptas inventore sint minima. Quod totam atque nobis libero ad quas. Quis sunt rerum in. Qui explicabo dolorem eum optio omnis numquam.&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:24.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:24.000000Z&quot;
         },
         {
             &quot;id&quot;: 4,
-            &quot;name&quot;: &quot;eos&quot;,
-            &quot;description&quot;: &quot;Error et exercitationem quod perspiciatis nostrum accusantium. Alias magni et sed sit repellendus voluptatibus quod. Ab ut officia fuga laudantium. Similique iure voluptatum nulla quas dolorum dicta rem.&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;name&quot;: &quot;explicabo&quot;,
+            &quot;description&quot;: &quot;Est corrupti minima molestiae omnis illo. Aut nulla ad voluptates culpa consequatur. Cupiditate blanditiis necessitatibus cumque dolores repellendus ratione earum.&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:24.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:24.000000Z&quot;
         },
         {
             &quot;id&quot;: 5,
-            &quot;name&quot;: &quot;id&quot;,
-            &quot;description&quot;: &quot;Reprehenderit quo officia est. Repellat ullam in omnis qui voluptas a ipsam. Natus est voluptatem consequatur aspernatur non perferendis assumenda. Et dolor sit impedit necessitatibus. Laboriosam facere sit sit sit.&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;name&quot;: &quot;magni&quot;,
+            &quot;description&quot;: &quot;Omnis perferendis iure officia eum. Et totam sunt nostrum qui eveniet reiciendis. Fugiat aut voluptas vero soluta numquam.&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:24.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:24.000000Z&quot;
         },
         {
             &quot;id&quot;: 6,
-            &quot;name&quot;: &quot;quaerat&quot;,
-            &quot;description&quot;: &quot;Sint nulla ut nesciunt tempore autem. Corporis id pariatur alias et minima ullam magni. Eum impedit veritatis voluptates dignissimos sunt voluptatem. Autem impedit tempore perferendis non debitis laudantium.&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;name&quot;: &quot;quae&quot;,
+            &quot;description&quot;: &quot;Autem ut qui qui ut deleniti error. Voluptas itaque odit non maxime delectus exercitationem velit. Et minus voluptatem rem fugiat eum voluptatem fugiat. Dolor et provident quas atque.&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:24.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:24.000000Z&quot;
         },
         {
             &quot;id&quot;: 7,
-            &quot;name&quot;: &quot;magnam&quot;,
-            &quot;description&quot;: &quot;Ipsam rem magnam voluptate sint eius. Repudiandae optio quis et tempore et blanditiis. Facilis ratione iure ratione laboriosam aperiam iure.&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;name&quot;: &quot;ab&quot;,
+            &quot;description&quot;: &quot;Molestiae voluptatibus quas debitis recusandae. Sit et odit velit repudiandae dolorem error sunt.&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:24.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:24.000000Z&quot;
         },
         {
             &quot;id&quot;: 8,
-            &quot;name&quot;: &quot;ea&quot;,
-            &quot;description&quot;: &quot;Suscipit unde dolor et quidem mollitia. Placeat qui placeat qui est enim id quos. In placeat quasi ab illum consequatur modi ipsam autem. Exercitationem in placeat in est dolorem. Sit sed incidunt dolores rem a recusandae.&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;name&quot;: &quot;ipsam&quot;,
+            &quot;description&quot;: &quot;Laudantium non sit nulla sed doloribus ipsa. Ut et omnis deserunt ipsa consectetur possimus corporis. Vel voluptatem aspernatur quos voluptate velit facere fugiat. Ratione blanditiis illum ipsum provident dicta perspiciatis architecto.&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:24.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:24.000000Z&quot;
         },
         {
             &quot;id&quot;: 9,
-            &quot;name&quot;: &quot;ut&quot;,
-            &quot;description&quot;: &quot;Animi sed necessitatibus laudantium culpa nam porro. Quod enim magni doloremque possimus. Quasi quos et nihil molestias. Dignissimos minima maxime expedita sed voluptatem modi. Et voluptates eaque eius neque consequatur animi qui natus.&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;name&quot;: &quot;repudiandae&quot;,
+            &quot;description&quot;: &quot;Consectetur non ea dolore id corrupti consequuntur sed. Necessitatibus molestiae modi iure praesentium.&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:24.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:24.000000Z&quot;
         },
         {
             &quot;id&quot;: 10,
-            &quot;name&quot;: &quot;reiciendis&quot;,
-            &quot;description&quot;: &quot;Dolorum explicabo dolor rerum voluptas occaecati maiores impedit. Quia iure adipisci tempore voluptatibus. Dolor aspernatur unde ducimus exercitationem. Eligendi qui voluptatibus quo accusamus quos neque eaque dolorum.&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;name&quot;: &quot;rem&quot;,
+            &quot;description&quot;: &quot;Ut sit exercitationem totam nisi et inventore sapiente possimus. Expedita est fuga cumque sed commodi molestias. Accusantium nisi dolorum quisquam ex explicabo tenetur ea amet.&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:24.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:24.000000Z&quot;
         },
         {
             &quot;id&quot;: 11,
-            &quot;name&quot;: &quot;et&quot;,
-            &quot;description&quot;: &quot;Rerum voluptates magnam beatae accusamus maxime facilis incidunt. Ea quisquam soluta tempora iure.&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;name&quot;: &quot;voluptatem&quot;,
+            &quot;description&quot;: &quot;Rerum ut doloribus aut. Quo voluptas hic aliquid magni voluptatibus rem. Atque ut id et est dolores rem.&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:25.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:25.000000Z&quot;
         },
         {
             &quot;id&quot;: 12,
-            &quot;name&quot;: &quot;eum&quot;,
-            &quot;description&quot;: &quot;Exercitationem deleniti minus et labore. Soluta at aliquid similique facere doloremque necessitatibus facilis et. Sit qui fugit illum nulla nihil sunt itaque.&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;name&quot;: &quot;veniam&quot;,
+            &quot;description&quot;: &quot;Voluptatem aut harum minima perferendis quia excepturi. Nesciunt aut quod eos autem suscipit ut molestiae. Est sequi perferendis voluptatem voluptatum dignissimos. Aspernatur voluptates consequuntur aliquid qui.&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:26.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:26.000000Z&quot;
         },
         {
             &quot;id&quot;: 13,
-            &quot;name&quot;: &quot;maiores&quot;,
-            &quot;description&quot;: &quot;Quia laboriosam voluptatem impedit voluptates aspernatur eius. Sint optio vel voluptatem vel et sed dicta. Non suscipit nihil voluptatem nostrum in fugiat sequi voluptas.&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;name&quot;: &quot;quia&quot;,
+            &quot;description&quot;: &quot;Qui dolores hic rerum vitae provident voluptates. Ducimus debitis voluptatem culpa sed suscipit dolorem harum. Quaerat numquam omnis perferendis enim sapiente nisi consequatur qui. Autem voluptatem corrupti ut maiores.&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:26.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:26.000000Z&quot;
         },
         {
             &quot;id&quot;: 14,
-            &quot;name&quot;: &quot;impedit&quot;,
-            &quot;description&quot;: &quot;Ea ducimus quaerat porro consectetur veritatis quia. Est id exercitationem qui rerum. Sint et assumenda labore assumenda qui tenetur quam.&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;name&quot;: &quot;ut&quot;,
+            &quot;description&quot;: &quot;Aspernatur ut corrupti est quis id voluptas in. Mollitia et dolor qui corrupti debitis et. Temporibus qui dolor maiores aliquam.&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:27.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:27.000000Z&quot;
         },
         {
             &quot;id&quot;: 15,
-            &quot;name&quot;: &quot;laborum&quot;,
-            &quot;description&quot;: &quot;Et magni harum ex quis dignissimos. Et adipisci quidem ut enim eligendi. Sit suscipit deserunt velit dolorem.&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;name&quot;: &quot;ipsam&quot;,
+            &quot;description&quot;: &quot;Ex commodi incidunt tempore. Repellendus id cupiditate optio porro libero accusamus possimus corporis. Autem voluptas sapiente saepe perspiciatis commodi cum.&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:27.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:27.000000Z&quot;
         }
     ],
     &quot;links&quot;: {
-        &quot;first&quot;: &quot;http://localhost:8000/api/ethnic-groups?page=1&quot;,
-        &quot;last&quot;: &quot;http://localhost:8000/api/ethnic-groups?page=2&quot;,
+        &quot;first&quot;: &quot;http://191.52.55.208:8000/api/ethnic-groups?page=1&quot;,
+        &quot;last&quot;: &quot;http://191.52.55.208:8000/api/ethnic-groups?page=2&quot;,
         &quot;prev&quot;: null,
-        &quot;next&quot;: &quot;http://localhost:8000/api/ethnic-groups?page=2&quot;
+        &quot;next&quot;: &quot;http://191.52.55.208:8000/api/ethnic-groups?page=2&quot;
     },
     &quot;meta&quot;: {
         &quot;current_page&quot;: 1,
@@ -3722,25 +3769,25 @@ vary: Origin
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://localhost:8000/api/ethnic-groups?page=1&quot;,
+                &quot;url&quot;: &quot;http://191.52.55.208:8000/api/ethnic-groups?page=1&quot;,
                 &quot;label&quot;: &quot;1&quot;,
                 &quot;page&quot;: 1,
                 &quot;active&quot;: true
             },
             {
-                &quot;url&quot;: &quot;http://localhost:8000/api/ethnic-groups?page=2&quot;,
+                &quot;url&quot;: &quot;http://191.52.55.208:8000/api/ethnic-groups?page=2&quot;,
                 &quot;label&quot;: &quot;2&quot;,
                 &quot;page&quot;: 2,
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://localhost:8000/api/ethnic-groups?page=2&quot;,
+                &quot;url&quot;: &quot;http://191.52.55.208:8000/api/ethnic-groups?page=2&quot;,
                 &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
                 &quot;page&quot;: 2,
                 &quot;active&quot;: false
             }
         ],
-        &quot;path&quot;: &quot;http://localhost:8000/api/ethnic-groups&quot;,
+        &quot;path&quot;: &quot;http://191.52.55.208:8000/api/ethnic-groups&quot;,
         &quot;per_page&quot;: 15,
         &quot;to&quot;: 15,
         &quot;total&quot;: 20
@@ -3834,7 +3881,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/ethnic-groups" \
+    "http://191.52.55.208:8000/api/ethnic-groups" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -3846,7 +3893,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/ethnic-groups"
+    "http://191.52.55.208:8000/api/ethnic-groups"
 );
 
 const headers = {
@@ -3980,14 +4027,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/ethnic-groups/1" \
+    --get "http://191.52.55.208:8000/api/ethnic-groups/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/ethnic-groups/1"
+    "http://191.52.55.208:8000/api/ethnic-groups/1"
 );
 
 const headers = {
@@ -4019,9 +4066,9 @@ vary: Origin
     &quot;data&quot;: {
         &quot;id&quot;: 1,
         &quot;name&quot;: &quot;est&quot;,
-        &quot;description&quot;: &quot;Rerum eius architecto aut libero. Et esse minus saepe non vitae aut. Aut dolores eius molestiae rerum veniam earum.&quot;,
-        &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+        &quot;description&quot;: &quot;Reprehenderit sed corrupti rerum minus et. Harum est labore placeat. Quaerat beatae deleniti tempora consequatur. Omnis ab aliquid eligendi voluptas rerum sint velit.&quot;,
+        &quot;created_at&quot;: &quot;2025-11-22T08:56:23.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-11-22T08:56:23.000000Z&quot;
     }
 }</code>
  </pre>
@@ -4125,7 +4172,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/ethnic-groups/1" \
+    "http://191.52.55.208:8000/api/ethnic-groups/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -4137,7 +4184,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/ethnic-groups/1"
+    "http://191.52.55.208:8000/api/ethnic-groups/1"
 );
 
 const headers = {
@@ -4288,14 +4335,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/ethnic-groups/1" \
+    "http://191.52.55.208:8000/api/ethnic-groups/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/ethnic-groups/1"
+    "http://191.52.55.208:8000/api/ethnic-groups/1"
 );
 
 const headers = {
@@ -4411,14 +4458,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/items" \
+    --get "http://191.52.55.208:8000/api/items" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/items"
+    "http://191.52.55.208:8000/api/items"
 );
 
 const headers = {
@@ -4449,309 +4496,279 @@ vary: Origin
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: 1,
-            &quot;name&quot;: &quot;qui ratione&quot;,
-            &quot;description&quot;: &quot;Ullam eos id sit molestias dolorem voluptas nihil. Eos ad provident delectus non velit aliquid. Dolore facilis voluptate quos ut.&quot;,
-            &quot;number&quot;: &quot;ITEM-8036&quot;,
-            &quot;length&quot;: 48,
-            &quot;height&quot;: 80,
-            &quot;width&quot;: 67,
-            &quot;weight&quot;: 5,
-            &quot;archeological_site&quot;: &quot;Danielberg&quot;,
-            &quot;technic&quot;: &quot;nostrum&quot;,
-            &quot;reference&quot;: &quot;velit&quot;,
-            &quot;integrity&quot;: &quot;fragmented&quot;,
-            &quot;conservation_state&quot;: &quot;regular&quot;,
-            &quot;conservation_detail&quot;: &quot;Possimus nulla id blanditiis quia alias quos.&quot;,
-            &quot;location_id&quot;: 11,
-            &quot;subtype_id&quot;: 101,
-            &quot;collection_id&quot;: 11,
-            &quot;ethnic_group_id&quot;: 11,
-            &quot;photos&quot;: [
-                &quot;/storage/https://via.placeholder.com/640x480.png/00aadd?text=archaeology+non&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/00ff44?text=archaeology+deserunt&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/0033dd?text=archaeology+sed&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/004411?text=archaeology+a&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/00bbff?text=archaeology+necessitatibus&quot;
-            ],
-            &quot;is_reserved&quot;: true,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
-        },
-        {
             &quot;id&quot;: 2,
-            &quot;name&quot;: &quot;nesciunt enim&quot;,
-            &quot;description&quot;: &quot;Voluptate voluptatibus culpa magnam dolores ea. Autem eum eaque accusantium aut error. Dolores nihil quasi cumque nulla voluptates dolores.&quot;,
-            &quot;number&quot;: &quot;ITEM-4007&quot;,
-            &quot;length&quot;: 39,
-            &quot;height&quot;: 60,
-            &quot;width&quot;: 19,
-            &quot;weight&quot;: 5,
-            &quot;archeological_site&quot;: &quot;Lake Imaburgh&quot;,
-            &quot;technic&quot;: &quot;et&quot;,
-            &quot;reference&quot;: &quot;odio&quot;,
+            &quot;name&quot;: &quot;neque perferendis&quot;,
+            &quot;description&quot;: &quot;Sed nemo aut voluptatem totam. Fugit nam quia neque quis eos. Officiis accusantium eligendi dolore et quod.&quot;,
+            &quot;number&quot;: &quot;ITEM-0474&quot;,
+            &quot;length&quot;: 17,
+            &quot;height&quot;: 91,
+            &quot;width&quot;: 54,
+            &quot;weight&quot;: 19,
+            &quot;archeological_site&quot;: &quot;West Javon&quot;,
+            &quot;technic&quot;: &quot;veritatis&quot;,
+            &quot;reference&quot;: &quot;vel&quot;,
             &quot;integrity&quot;: &quot;regular&quot;,
-            &quot;conservation_state&quot;: &quot;bad&quot;,
-            &quot;conservation_detail&quot;: &quot;Velit dolorum ut vitae tempore architecto asperiores est.&quot;,
+            &quot;conservation_state&quot;: &quot;good&quot;,
+            &quot;conservation_detail&quot;: &quot;Autem atque iure repudiandae et et.&quot;,
             &quot;location_id&quot;: 12,
             &quot;subtype_id&quot;: 102,
             &quot;collection_id&quot;: 12,
             &quot;ethnic_group_id&quot;: 12,
             &quot;photos&quot;: [
-                &quot;/storage/https://via.placeholder.com/640x480.png/0022ff?text=archaeology+laborum&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/00bb66?text=archaeology+doloremque&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/004499?text=archaeology+assumenda&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/002244?text=archaeology+qui&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/009900?text=archaeology+velit&quot;
+                &quot;/storage/https://via.placeholder.com/640x480.png/00ccee?text=archaeology+consequatur&quot;,
+                &quot;/storage/https://via.placeholder.com/640x480.png/00ff44?text=archaeology+laudantium&quot;,
+                &quot;/storage/https://via.placeholder.com/640x480.png/0000aa?text=archaeology+voluptas&quot;,
+                &quot;/storage/https://via.placeholder.com/640x480.png/00ff00?text=archaeology+qui&quot;,
+                &quot;/storage/https://via.placeholder.com/640x480.png/009966?text=archaeology+exercitationem&quot;
             ],
-            &quot;is_reserved&quot;: true,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;is_reserved&quot;: false,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:29.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:29.000000Z&quot;
         },
         {
             &quot;id&quot;: 3,
-            &quot;name&quot;: &quot;harum placeat&quot;,
-            &quot;description&quot;: &quot;Officia ea ipsum ea corrupti possimus ducimus. Et aspernatur consectetur dicta sunt. Atque assumenda ratione omnis ut doloribus ullam.&quot;,
-            &quot;number&quot;: &quot;ITEM-7982&quot;,
-            &quot;length&quot;: 15,
-            &quot;height&quot;: 63,
-            &quot;width&quot;: 69,
-            &quot;weight&quot;: 3,
-            &quot;archeological_site&quot;: &quot;Port Cyrus&quot;,
-            &quot;technic&quot;: &quot;ut&quot;,
-            &quot;reference&quot;: &quot;excepturi&quot;,
-            &quot;integrity&quot;: &quot;fragmented&quot;,
-            &quot;conservation_state&quot;: &quot;bad&quot;,
-            &quot;conservation_detail&quot;: &quot;Voluptas magnam dolor dicta tempora modi in et.&quot;,
+            &quot;name&quot;: &quot;voluptatem laudantium&quot;,
+            &quot;description&quot;: &quot;Quis officia natus ipsum ratione accusamus laborum. Voluptates ea est alias dolores aliquam.&quot;,
+            &quot;number&quot;: &quot;ITEM-8066&quot;,
+            &quot;length&quot;: 27,
+            &quot;height&quot;: 72,
+            &quot;width&quot;: 24,
+            &quot;weight&quot;: 49,
+            &quot;archeological_site&quot;: &quot;Mckenzieville&quot;,
+            &quot;technic&quot;: &quot;ratione&quot;,
+            &quot;reference&quot;: &quot;mollitia&quot;,
+            &quot;integrity&quot;: &quot;regular&quot;,
+            &quot;conservation_state&quot;: &quot;regular&quot;,
+            &quot;conservation_detail&quot;: &quot;Mollitia provident in voluptate itaque quas hic.&quot;,
             &quot;location_id&quot;: 13,
             &quot;subtype_id&quot;: 103,
             &quot;collection_id&quot;: 13,
             &quot;ethnic_group_id&quot;: 13,
             &quot;photos&quot;: [
-                &quot;/storage/https://via.placeholder.com/640x480.png/0044bb?text=archaeology+ut&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/00aa77?text=archaeology+ratione&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/0044cc?text=archaeology+eaque&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/008877?text=archaeology+odit&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/009944?text=archaeology+enim&quot;
+                &quot;/storage/https://via.placeholder.com/640x480.png/00aa88?text=archaeology+reiciendis&quot;,
+                &quot;/storage/https://via.placeholder.com/640x480.png/0000aa?text=archaeology+ab&quot;,
+                &quot;/storage/https://via.placeholder.com/640x480.png/006699?text=archaeology+eos&quot;,
+                &quot;/storage/https://via.placeholder.com/640x480.png/000077?text=archaeology+nihil&quot;,
+                &quot;/storage/https://via.placeholder.com/640x480.png/003366?text=archaeology+id&quot;
             ],
             &quot;is_reserved&quot;: false,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:29.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:29.000000Z&quot;
         },
         {
             &quot;id&quot;: 4,
-            &quot;name&quot;: &quot;voluptates eveniet&quot;,
-            &quot;description&quot;: &quot;Impedit eos distinctio nobis possimus commodi ut illo. Pariatur molestiae quia repellat consequatur. Aut in laboriosam et velit. Quasi est ea mollitia fuga magnam culpa. Consequatur consequatur quae vero tempora.&quot;,
-            &quot;number&quot;: &quot;ITEM-4543&quot;,
-            &quot;length&quot;: 75,
-            &quot;height&quot;: 17,
-            &quot;width&quot;: 20,
-            &quot;weight&quot;: 17,
-            &quot;archeological_site&quot;: &quot;Lake Litzy&quot;,
-            &quot;technic&quot;: &quot;aliquid&quot;,
-            &quot;reference&quot;: &quot;iste&quot;,
+            &quot;name&quot;: &quot;aut odit&quot;,
+            &quot;description&quot;: &quot;Est qui distinctio fuga in non. Qui consequatur accusamus non omnis ratione consequuntur unde. At sunt iusto et odio ipsa sunt nisi. In cumque nulla et mollitia.&quot;,
+            &quot;number&quot;: &quot;ITEM-7711&quot;,
+            &quot;length&quot;: 76,
+            &quot;height&quot;: 36,
+            &quot;width&quot;: 68,
+            &quot;weight&quot;: 9,
+            &quot;archeological_site&quot;: &quot;New Miracle&quot;,
+            &quot;technic&quot;: &quot;dolores&quot;,
+            &quot;reference&quot;: &quot;rem&quot;,
             &quot;integrity&quot;: &quot;fragmented&quot;,
-            &quot;conservation_state&quot;: &quot;regular&quot;,
-            &quot;conservation_detail&quot;: &quot;Cum aperiam natus aut explicabo aperiam et.&quot;,
+            &quot;conservation_state&quot;: &quot;good&quot;,
+            &quot;conservation_detail&quot;: &quot;Aspernatur quo sint omnis sint.&quot;,
             &quot;location_id&quot;: 14,
             &quot;subtype_id&quot;: 104,
             &quot;collection_id&quot;: 14,
             &quot;ethnic_group_id&quot;: 14,
             &quot;photos&quot;: [
-                &quot;/storage/https://via.placeholder.com/640x480.png/00bbdd?text=archaeology+itaque&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/005566?text=archaeology+omnis&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/0077bb?text=archaeology+minima&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/009933?text=archaeology+non&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/00ccbb?text=archaeology+consectetur&quot;
+                &quot;/storage/https://via.placeholder.com/640x480.png/00bbff?text=archaeology+rem&quot;,
+                &quot;/storage/https://via.placeholder.com/640x480.png/006633?text=archaeology+perspiciatis&quot;,
+                &quot;/storage/https://via.placeholder.com/640x480.png/0033bb?text=archaeology+aperiam&quot;,
+                &quot;/storage/https://via.placeholder.com/640x480.png/00ee33?text=archaeology+laboriosam&quot;,
+                &quot;/storage/https://via.placeholder.com/640x480.png/00dd11?text=archaeology+qui&quot;
             ],
             &quot;is_reserved&quot;: false,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:29.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:29.000000Z&quot;
         },
         {
             &quot;id&quot;: 5,
-            &quot;name&quot;: &quot;saepe eos&quot;,
-            &quot;description&quot;: &quot;Quo et dicta dolorem cumque sit. Velit quia minima ab quae numquam distinctio labore. Voluptatibus ea ratione quae laboriosam. Et incidunt voluptate ut sit tenetur ut blanditiis.&quot;,
-            &quot;number&quot;: &quot;ITEM-3405&quot;,
-            &quot;length&quot;: 89,
-            &quot;height&quot;: 83,
-            &quot;width&quot;: 61,
-            &quot;weight&quot;: 14,
-            &quot;archeological_site&quot;: &quot;South Ines&quot;,
-            &quot;technic&quot;: &quot;excepturi&quot;,
-            &quot;reference&quot;: &quot;fuga&quot;,
-            &quot;integrity&quot;: &quot;regular&quot;,
+            &quot;name&quot;: &quot;veniam ipsam&quot;,
+            &quot;description&quot;: &quot;Eum consequatur quo qui consequatur. Quam corporis voluptatem recusandae.&quot;,
+            &quot;number&quot;: &quot;ITEM-7214&quot;,
+            &quot;length&quot;: 61,
+            &quot;height&quot;: 70,
+            &quot;width&quot;: 23,
+            &quot;weight&quot;: 31,
+            &quot;archeological_site&quot;: &quot;Conniefort&quot;,
+            &quot;technic&quot;: &quot;ab&quot;,
+            &quot;reference&quot;: &quot;dolor&quot;,
+            &quot;integrity&quot;: &quot;fragmented&quot;,
             &quot;conservation_state&quot;: &quot;regular&quot;,
-            &quot;conservation_detail&quot;: &quot;Eius nesciunt eius et fugit dolor.&quot;,
+            &quot;conservation_detail&quot;: &quot;Ut reiciendis possimus dolorum vitae.&quot;,
             &quot;location_id&quot;: 15,
             &quot;subtype_id&quot;: 105,
             &quot;collection_id&quot;: 15,
             &quot;ethnic_group_id&quot;: 15,
             &quot;photos&quot;: [
-                &quot;/storage/https://via.placeholder.com/640x480.png/004422?text=archaeology+minima&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/0033ff?text=archaeology+est&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/0000ee?text=archaeology+atque&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/00ddff?text=archaeology+quisquam&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/0055ff?text=archaeology+et&quot;
+                &quot;/storage/https://via.placeholder.com/640x480.png/009955?text=archaeology+a&quot;,
+                &quot;/storage/https://via.placeholder.com/640x480.png/004433?text=archaeology+sunt&quot;,
+                &quot;/storage/https://via.placeholder.com/640x480.png/00ff88?text=archaeology+voluptatem&quot;,
+                &quot;/storage/https://via.placeholder.com/640x480.png/006600?text=archaeology+dicta&quot;,
+                &quot;/storage/https://via.placeholder.com/640x480.png/00ffee?text=archaeology+non&quot;
             ],
-            &quot;is_reserved&quot;: false,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;is_reserved&quot;: true,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:29.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:29.000000Z&quot;
         },
         {
             &quot;id&quot;: 6,
-            &quot;name&quot;: &quot;ut ut&quot;,
-            &quot;description&quot;: &quot;Quod tenetur labore quis quo neque facilis. Corrupti aspernatur et facere ducimus minima itaque maxime. Quia autem nisi assumenda dolores.&quot;,
-            &quot;number&quot;: &quot;ITEM-7028&quot;,
-            &quot;length&quot;: 62,
-            &quot;height&quot;: 73,
-            &quot;width&quot;: 23,
-            &quot;weight&quot;: 19,
-            &quot;archeological_site&quot;: &quot;East Shanie&quot;,
-            &quot;technic&quot;: &quot;expedita&quot;,
-            &quot;reference&quot;: &quot;enim&quot;,
+            &quot;name&quot;: &quot;dolore nisi&quot;,
+            &quot;description&quot;: &quot;Cupiditate perspiciatis consequatur quisquam quia. Sunt qui ratione repellendus dolorem aut. Itaque sunt aspernatur quia sit asperiores pariatur aut velit. Eius omnis rem voluptatibus expedita accusamus.&quot;,
+            &quot;number&quot;: &quot;ITEM-5568&quot;,
+            &quot;length&quot;: 34,
+            &quot;height&quot;: 40,
+            &quot;width&quot;: 58,
+            &quot;weight&quot;: 42,
+            &quot;archeological_site&quot;: &quot;Port Aliza&quot;,
+            &quot;technic&quot;: &quot;at&quot;,
+            &quot;reference&quot;: &quot;omnis&quot;,
             &quot;integrity&quot;: &quot;fragmented&quot;,
             &quot;conservation_state&quot;: &quot;regular&quot;,
-            &quot;conservation_detail&quot;: &quot;Rerum magnam aut facilis unde aut nemo et.&quot;,
+            &quot;conservation_detail&quot;: &quot;Aut qui animi voluptatibus soluta et eum.&quot;,
             &quot;location_id&quot;: 16,
             &quot;subtype_id&quot;: 106,
             &quot;collection_id&quot;: 16,
             &quot;ethnic_group_id&quot;: 16,
             &quot;photos&quot;: [
-                &quot;/storage/https://via.placeholder.com/640x480.png/00dd99?text=archaeology+aperiam&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/004422?text=archaeology+accusamus&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/0055ee?text=archaeology+necessitatibus&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/00ee33?text=archaeology+minima&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/0066ff?text=archaeology+quidem&quot;
+                &quot;/storage/https://via.placeholder.com/640x480.png/0033cc?text=archaeology+laudantium&quot;,
+                &quot;/storage/https://via.placeholder.com/640x480.png/00ccee?text=archaeology+est&quot;,
+                &quot;/storage/https://via.placeholder.com/640x480.png/004422?text=archaeology+aliquid&quot;,
+                &quot;/storage/https://via.placeholder.com/640x480.png/00ee00?text=archaeology+possimus&quot;,
+                &quot;/storage/https://via.placeholder.com/640x480.png/00bbcc?text=archaeology+ipsam&quot;
             ],
             &quot;is_reserved&quot;: true,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:30.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:30.000000Z&quot;
         },
         {
             &quot;id&quot;: 7,
-            &quot;name&quot;: &quot;aut nesciunt&quot;,
-            &quot;description&quot;: &quot;Ducimus architecto hic architecto dolorem ut. Sed ea voluptates dolorem nemo ea dignissimos. Neque nihil quia qui ratione nesciunt quae.&quot;,
-            &quot;number&quot;: &quot;ITEM-2686&quot;,
-            &quot;length&quot;: 53,
-            &quot;height&quot;: 79,
-            &quot;width&quot;: 38,
-            &quot;weight&quot;: 41,
-            &quot;archeological_site&quot;: &quot;Davidtown&quot;,
-            &quot;technic&quot;: &quot;illo&quot;,
-            &quot;reference&quot;: &quot;dolore&quot;,
-            &quot;integrity&quot;: &quot;fragmented&quot;,
-            &quot;conservation_state&quot;: &quot;bad&quot;,
-            &quot;conservation_detail&quot;: &quot;Officiis perspiciatis voluptas porro accusantium veritatis quia.&quot;,
+            &quot;name&quot;: &quot;minima nesciunt&quot;,
+            &quot;description&quot;: &quot;Et iure commodi adipisci consequuntur ea. Molestiae cupiditate qui quaerat molestiae enim dolores. Quaerat mollitia vitae amet quia quos magnam tenetur. Qui laborum corrupti et sit est omnis. Dolorum magnam enim quod maxime dolor doloribus delectus.&quot;,
+            &quot;number&quot;: &quot;ITEM-0704&quot;,
+            &quot;length&quot;: 71,
+            &quot;height&quot;: 89,
+            &quot;width&quot;: 46,
+            &quot;weight&quot;: 22,
+            &quot;archeological_site&quot;: &quot;Pollichbury&quot;,
+            &quot;technic&quot;: &quot;aut&quot;,
+            &quot;reference&quot;: &quot;ipsa&quot;,
+            &quot;integrity&quot;: &quot;regular&quot;,
+            &quot;conservation_state&quot;: &quot;regular&quot;,
+            &quot;conservation_detail&quot;: &quot;Eum dolores deserunt ullam velit aperiam asperiores.&quot;,
             &quot;location_id&quot;: 17,
             &quot;subtype_id&quot;: 107,
             &quot;collection_id&quot;: 17,
             &quot;ethnic_group_id&quot;: 17,
             &quot;photos&quot;: [
-                &quot;/storage/https://via.placeholder.com/640x480.png/009944?text=archaeology+quasi&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/00ffcc?text=archaeology+necessitatibus&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/007733?text=archaeology+vel&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/00bb11?text=archaeology+qui&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/00dddd?text=archaeology+sed&quot;
+                &quot;/storage/https://via.placeholder.com/640x480.png/0022bb?text=archaeology+quasi&quot;,
+                &quot;/storage/https://via.placeholder.com/640x480.png/009911?text=archaeology+consequuntur&quot;,
+                &quot;/storage/https://via.placeholder.com/640x480.png/0011dd?text=archaeology+amet&quot;,
+                &quot;/storage/https://via.placeholder.com/640x480.png/00ff77?text=archaeology+minus&quot;,
+                &quot;/storage/https://via.placeholder.com/640x480.png/009900?text=archaeology+sint&quot;
             ],
             &quot;is_reserved&quot;: true,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:30.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:30.000000Z&quot;
         },
         {
             &quot;id&quot;: 8,
-            &quot;name&quot;: &quot;beatae accusantium&quot;,
-            &quot;description&quot;: &quot;Enim cumque sit veritatis. Dolores ad ratione cupiditate similique. Deserunt officia nostrum omnis nemo nesciunt.&quot;,
-            &quot;number&quot;: &quot;ITEM-9868&quot;,
-            &quot;length&quot;: 74,
-            &quot;height&quot;: 86,
-            &quot;width&quot;: 28,
-            &quot;weight&quot;: 39,
-            &quot;archeological_site&quot;: &quot;Lake Reilly&quot;,
-            &quot;technic&quot;: &quot;rerum&quot;,
-            &quot;reference&quot;: &quot;natus&quot;,
+            &quot;name&quot;: &quot;excepturi et&quot;,
+            &quot;description&quot;: &quot;Aut doloribus est consequatur ratione aut ad. Doloribus quis ut aut suscipit. Consequatur distinctio consectetur aperiam vero ut velit libero. Praesentium maxime vitae non quaerat reiciendis.&quot;,
+            &quot;number&quot;: &quot;ITEM-3763&quot;,
+            &quot;length&quot;: 91,
+            &quot;height&quot;: 45,
+            &quot;width&quot;: 86,
+            &quot;weight&quot;: 27,
+            &quot;archeological_site&quot;: &quot;Cummingsstad&quot;,
+            &quot;technic&quot;: &quot;hic&quot;,
+            &quot;reference&quot;: &quot;beatae&quot;,
             &quot;integrity&quot;: &quot;fragmented&quot;,
-            &quot;conservation_state&quot;: &quot;bad&quot;,
-            &quot;conservation_detail&quot;: &quot;Cumque cum quia impedit quia.&quot;,
+            &quot;conservation_state&quot;: &quot;regular&quot;,
+            &quot;conservation_detail&quot;: &quot;Neque culpa in debitis et eum.&quot;,
             &quot;location_id&quot;: 18,
             &quot;subtype_id&quot;: 108,
             &quot;collection_id&quot;: 18,
             &quot;ethnic_group_id&quot;: 18,
             &quot;photos&quot;: [
-                &quot;/storage/https://via.placeholder.com/640x480.png/008822?text=archaeology+sed&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/00aadd?text=archaeology+ut&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/0077dd?text=archaeology+excepturi&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/00aa22?text=archaeology+at&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/00dd66?text=archaeology+sed&quot;
+                &quot;/storage/https://via.placeholder.com/640x480.png/006677?text=archaeology+dolorem&quot;,
+                &quot;/storage/https://via.placeholder.com/640x480.png/00ee55?text=archaeology+sed&quot;,
+                &quot;/storage/https://via.placeholder.com/640x480.png/00bb55?text=archaeology+non&quot;,
+                &quot;/storage/https://via.placeholder.com/640x480.png/001100?text=archaeology+provident&quot;,
+                &quot;/storage/https://via.placeholder.com/640x480.png/00cc11?text=archaeology+inventore&quot;
             ],
-            &quot;is_reserved&quot;: true,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;is_reserved&quot;: false,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:30.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:30.000000Z&quot;
         },
         {
             &quot;id&quot;: 9,
-            &quot;name&quot;: &quot;eligendi consequatur&quot;,
-            &quot;description&quot;: &quot;Voluptatibus et recusandae qui autem incidunt laudantium qui sapiente. Neque est qui tempora ut. Animi libero consequuntur natus quaerat sed et iste.&quot;,
-            &quot;number&quot;: &quot;ITEM-6782&quot;,
-            &quot;length&quot;: 75,
-            &quot;height&quot;: 35,
-            &quot;width&quot;: 20,
-            &quot;weight&quot;: 4,
-            &quot;archeological_site&quot;: &quot;Port Brookeview&quot;,
-            &quot;technic&quot;: &quot;nam&quot;,
-            &quot;reference&quot;: &quot;voluptas&quot;,
+            &quot;name&quot;: &quot;tempore quo&quot;,
+            &quot;description&quot;: &quot;Et incidunt aut velit. Officiis consequatur magni eos dolorum delectus reprehenderit iste. Minus in aliquid necessitatibus rerum rem reiciendis. Inventore cupiditate id sint voluptatem.&quot;,
+            &quot;number&quot;: &quot;ITEM-9521&quot;,
+            &quot;length&quot;: 27,
+            &quot;height&quot;: 96,
+            &quot;width&quot;: 70,
+            &quot;weight&quot;: 48,
+            &quot;archeological_site&quot;: &quot;North Kavonview&quot;,
+            &quot;technic&quot;: &quot;fugit&quot;,
+            &quot;reference&quot;: &quot;illum&quot;,
             &quot;integrity&quot;: &quot;regular&quot;,
-            &quot;conservation_state&quot;: &quot;bad&quot;,
-            &quot;conservation_detail&quot;: &quot;Illum autem doloremque deserunt est ipsum quam.&quot;,
+            &quot;conservation_state&quot;: &quot;regular&quot;,
+            &quot;conservation_detail&quot;: &quot;Eaque doloribus quis asperiores.&quot;,
             &quot;location_id&quot;: 19,
             &quot;subtype_id&quot;: 109,
             &quot;collection_id&quot;: 19,
             &quot;ethnic_group_id&quot;: 19,
             &quot;photos&quot;: [
-                &quot;/storage/https://via.placeholder.com/640x480.png/0044cc?text=archaeology+aspernatur&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/001100?text=archaeology+quam&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/00aa11?text=archaeology+eaque&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/004477?text=archaeology+natus&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/00dd00?text=archaeology+ut&quot;
+                &quot;/storage/https://via.placeholder.com/640x480.png/008822?text=archaeology+sit&quot;,
+                &quot;/storage/https://via.placeholder.com/640x480.png/002266?text=archaeology+beatae&quot;,
+                &quot;/storage/https://via.placeholder.com/640x480.png/0077cc?text=archaeology+qui&quot;,
+                &quot;/storage/https://via.placeholder.com/640x480.png/00ffee?text=archaeology+doloribus&quot;,
+                &quot;/storage/https://via.placeholder.com/640x480.png/00ee11?text=archaeology+facilis&quot;
             ],
-            &quot;is_reserved&quot;: true,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;is_reserved&quot;: false,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:30.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:30.000000Z&quot;
         },
         {
             &quot;id&quot;: 10,
-            &quot;name&quot;: &quot;excepturi sint&quot;,
-            &quot;description&quot;: &quot;Qui ut accusamus ad consequatur quos. Est aspernatur et eligendi aspernatur aspernatur quo. Provident explicabo quibusdam minus qui molestias vero molestias.&quot;,
-            &quot;number&quot;: &quot;ITEM-7897&quot;,
-            &quot;length&quot;: 56,
-            &quot;height&quot;: 44,
-            &quot;width&quot;: 15,
-            &quot;weight&quot;: 18,
-            &quot;archeological_site&quot;: &quot;Erinhaven&quot;,
-            &quot;technic&quot;: &quot;vel&quot;,
-            &quot;reference&quot;: &quot;et&quot;,
+            &quot;name&quot;: &quot;facere et&quot;,
+            &quot;description&quot;: &quot;At qui minima tempore fugiat quidem eos non. Quos tempore inventore porro sint odit. Et aliquam dolorum maxime qui accusamus ex.&quot;,
+            &quot;number&quot;: &quot;ITEM-1373&quot;,
+            &quot;length&quot;: 54,
+            &quot;height&quot;: 79,
+            &quot;width&quot;: 62,
+            &quot;weight&quot;: 17,
+            &quot;archeological_site&quot;: &quot;Port Dylanbury&quot;,
+            &quot;technic&quot;: &quot;amet&quot;,
+            &quot;reference&quot;: &quot;assumenda&quot;,
             &quot;integrity&quot;: &quot;regular&quot;,
             &quot;conservation_state&quot;: &quot;regular&quot;,
-            &quot;conservation_detail&quot;: &quot;Culpa harum recusandae voluptatem consectetur impedit suscipit aut.&quot;,
+            &quot;conservation_detail&quot;: &quot;Non ipsam commodi minus consequatur repudiandae at voluptas.&quot;,
             &quot;location_id&quot;: 20,
             &quot;subtype_id&quot;: 110,
             &quot;collection_id&quot;: 20,
             &quot;ethnic_group_id&quot;: 20,
             &quot;photos&quot;: [
-                &quot;/storage/https://via.placeholder.com/640x480.png/007744?text=archaeology+dolore&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/00ee88?text=archaeology+neque&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/0044ff?text=archaeology+ex&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/009944?text=archaeology+officia&quot;,
-                &quot;/storage/https://via.placeholder.com/640x480.png/00dd77?text=archaeology+quae&quot;
+                &quot;/storage/https://via.placeholder.com/640x480.png/004466?text=archaeology+omnis&quot;,
+                &quot;/storage/https://via.placeholder.com/640x480.png/006600?text=archaeology+exercitationem&quot;,
+                &quot;/storage/https://via.placeholder.com/640x480.png/0022dd?text=archaeology+sequi&quot;,
+                &quot;/storage/https://via.placeholder.com/640x480.png/008855?text=archaeology+ut&quot;,
+                &quot;/storage/https://via.placeholder.com/640x480.png/000044?text=archaeology+sint&quot;
             ],
             &quot;is_reserved&quot;: true,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:30.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:30.000000Z&quot;
         }
     ],
     &quot;links&quot;: {
-        &quot;first&quot;: &quot;http://localhost:8000/api/items?page=1&quot;,
-        &quot;last&quot;: &quot;http://localhost:8000/api/items?page=1&quot;,
+        &quot;first&quot;: &quot;http://191.52.55.208:8000/api/items?page=1&quot;,
+        &quot;last&quot;: &quot;http://191.52.55.208:8000/api/items?page=1&quot;,
         &quot;prev&quot;: null,
         &quot;next&quot;: null
     },
@@ -4767,7 +4784,7 @@ vary: Origin
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://localhost:8000/api/items?page=1&quot;,
+                &quot;url&quot;: &quot;http://191.52.55.208:8000/api/items?page=1&quot;,
                 &quot;label&quot;: &quot;1&quot;,
                 &quot;page&quot;: 1,
                 &quot;active&quot;: true
@@ -4779,10 +4796,10 @@ vary: Origin
                 &quot;active&quot;: false
             }
         ],
-        &quot;path&quot;: &quot;http://localhost:8000/api/items&quot;,
+        &quot;path&quot;: &quot;http://191.52.55.208:8000/api/items&quot;,
         &quot;per_page&quot;: 15,
-        &quot;to&quot;: 10,
-        &quot;total&quot;: 10
+        &quot;to&quot;: 9,
+        &quot;total&quot;: 9
     }
 }</code>
  </pre>
@@ -4873,7 +4890,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/items" \
+    "http://191.52.55.208:8000/api/items" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -4900,7 +4917,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/items"
+    "http://191.52.55.208:8000/api/items"
 );
 
 const headers = {
@@ -5229,14 +5246,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/items/1" \
+    --get "http://191.52.55.208:8000/api/items/2" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/items/1"
+    "http://191.52.55.208:8000/api/items/2"
 );
 
 const headers = {
@@ -5266,27 +5283,59 @@ vary: Origin
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
-        &quot;id&quot;: 1,
-        &quot;name&quot;: &quot;qui ratione&quot;,
-        &quot;description&quot;: &quot;Ullam eos id sit molestias dolorem voluptas nihil. Eos ad provident delectus non velit aliquid. Dolore facilis voluptate quos ut.&quot;,
-        &quot;number&quot;: &quot;ITEM-8036&quot;,
-        &quot;length&quot;: 48,
-        &quot;height&quot;: 80,
-        &quot;width&quot;: 67,
-        &quot;weight&quot;: 5,
-        &quot;archeological_site&quot;: &quot;Danielberg&quot;,
-        &quot;technic&quot;: &quot;nostrum&quot;,
-        &quot;reference&quot;: &quot;velit&quot;,
-        &quot;integrity&quot;: &quot;fragmented&quot;,
-        &quot;conservation_state&quot;: &quot;regular&quot;,
-        &quot;conservation_detail&quot;: &quot;Possimus nulla id blanditiis quia alias quos.&quot;,
-        &quot;location_id&quot;: 11,
-        &quot;subtype_id&quot;: 101,
-        &quot;collection_id&quot;: 11,
-        &quot;ethnic_group_id&quot;: 11,
-        &quot;is_reserved&quot;: true,
-        &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+        &quot;id&quot;: 2,
+        &quot;name&quot;: &quot;neque perferendis&quot;,
+        &quot;description&quot;: &quot;Sed nemo aut voluptatem totam. Fugit nam quia neque quis eos. Officiis accusantium eligendi dolore et quod.&quot;,
+        &quot;number&quot;: &quot;ITEM-0474&quot;,
+        &quot;length&quot;: 17,
+        &quot;height&quot;: 91,
+        &quot;width&quot;: 54,
+        &quot;weight&quot;: 19,
+        &quot;archeological_site&quot;: &quot;West Javon&quot;,
+        &quot;technic&quot;: &quot;veritatis&quot;,
+        &quot;reference&quot;: &quot;vel&quot;,
+        &quot;integrity&quot;: &quot;regular&quot;,
+        &quot;conservation_state&quot;: &quot;good&quot;,
+        &quot;conservation_detail&quot;: &quot;Autem atque iure repudiandae et et.&quot;,
+        &quot;location_id&quot;: 12,
+        &quot;subtype_id&quot;: 102,
+        &quot;collection_id&quot;: 12,
+        &quot;ethnic_group_id&quot;: 12,
+        &quot;photos&quot;: [
+            &quot;/storage/https://via.placeholder.com/640x480.png/00ccee?text=archaeology+consequatur&quot;,
+            &quot;/storage/https://via.placeholder.com/640x480.png/00ff44?text=archaeology+laudantium&quot;,
+            &quot;/storage/https://via.placeholder.com/640x480.png/0000aa?text=archaeology+voluptas&quot;,
+            &quot;/storage/https://via.placeholder.com/640x480.png/00ff00?text=archaeology+qui&quot;,
+            &quot;/storage/https://via.placeholder.com/640x480.png/009966?text=archaeology+exercitationem&quot;
+        ],
+        &quot;sub_type&quot;: {
+            &quot;id&quot;: 102,
+            &quot;name&quot;: &quot;consectetur&quot;,
+            &quot;material&quot;: {
+                &quot;id&quot;: 12,
+                &quot;name&quot;: &quot;tempora&quot;,
+                &quot;created_at&quot;: &quot;2025-11-22T08:56:26.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-11-22T08:56:26.000000Z&quot;
+            }
+        },
+        &quot;location&quot;: {
+            &quot;id&quot;: 12,
+            &quot;city&quot;: &quot;Micaelastad&quot;,
+            &quot;state&quot;: &quot;Michigan&quot;,
+            &quot;country&quot;: &quot;Grenada&quot;,
+            &quot;room&quot;: &quot;Room 43&quot;,
+            &quot;shelf&quot;: &quot;Shelf 80&quot;,
+            &quot;bookcase&quot;: &quot;Bookcase 12&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:25.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:25.000000Z&quot;
+        },
+        &quot;collection&quot;: {
+            &quot;id&quot;: 12,
+            &quot;name&quot;: &quot;minus numquam&quot;
+        },
+        &quot;is_reserved&quot;: false,
+        &quot;created_at&quot;: &quot;2025-11-22T08:56:29.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-11-22T08:56:29.000000Z&quot;
     }
 }</code>
  </pre>
@@ -5370,10 +5419,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="GETapi-items--id-"
-               value="1"
+               value="2"
                data-component="url">
     <br>
-<p>The ID of the item. Example: <code>1</code></p>
+<p>The ID of the item. Example: <code>2</code></p>
             </div>
                     </form>
 
@@ -5390,7 +5439,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/items/1" \
+    "http://191.52.55.208:8000/api/items/2" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -5413,7 +5462,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/items/1"
+    "http://191.52.55.208:8000/api/items/2"
 );
 
 const headers = {
@@ -5530,10 +5579,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="PUTapi-items--id-"
-               value="1"
+               value="2"
                data-component="url">
     <br>
-<p>The ID of the item. Example: <code>1</code></p>
+<p>The ID of the item. Example: <code>2</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -5755,14 +5804,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/items/1" \
+    "http://191.52.55.208:8000/api/items/2" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/items/1"
+    "http://191.52.55.208:8000/api/items/2"
 );
 
 const headers = {
@@ -5858,10 +5907,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="DELETEapi-items--id-"
-               value="1"
+               value="2"
                data-component="url">
     <br>
-<p>The ID of the item. Example: <code>1</code></p>
+<p>The ID of the item. Example: <code>2</code></p>
             </div>
                     </form>
 
@@ -5878,14 +5927,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/materials" \
+    --get "http://191.52.55.208:8000/api/materials" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/materials"
+    "http://191.52.55.208:8000/api/materials"
 );
 
 const headers = {
@@ -5917,100 +5966,100 @@ vary: Origin
     &quot;data&quot;: [
         {
             &quot;id&quot;: 1,
-            &quot;name&quot;: &quot;sapiente&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;name&quot;: &quot;facilis&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:13.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:13.000000Z&quot;
         },
         {
             &quot;id&quot;: 2,
-            &quot;name&quot;: &quot;aspernatur&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;name&quot;: &quot;sint&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:13.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:13.000000Z&quot;
         },
         {
             &quot;id&quot;: 3,
-            &quot;name&quot;: &quot;fugiat&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;name&quot;: &quot;laborum&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:13.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:13.000000Z&quot;
         },
         {
             &quot;id&quot;: 4,
-            &quot;name&quot;: &quot;repudiandae&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;name&quot;: &quot;consequuntur&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:14.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:14.000000Z&quot;
         },
         {
             &quot;id&quot;: 5,
-            &quot;name&quot;: &quot;nihil&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;name&quot;: &quot;dolor&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:14.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:14.000000Z&quot;
         },
         {
             &quot;id&quot;: 6,
-            &quot;name&quot;: &quot;aut&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;name&quot;: &quot;id&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:14.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:14.000000Z&quot;
         },
         {
             &quot;id&quot;: 7,
-            &quot;name&quot;: &quot;veritatis&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;name&quot;: &quot;ab&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:14.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:14.000000Z&quot;
         },
         {
             &quot;id&quot;: 8,
-            &quot;name&quot;: &quot;laudantium&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;name&quot;: &quot;totam&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:14.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:14.000000Z&quot;
         },
         {
             &quot;id&quot;: 9,
-            &quot;name&quot;: &quot;soluta&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;name&quot;: &quot;voluptatem&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:14.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:14.000000Z&quot;
         },
         {
             &quot;id&quot;: 10,
-            &quot;name&quot;: &quot;rem&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;name&quot;: &quot;est&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:14.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:14.000000Z&quot;
         },
         {
             &quot;id&quot;: 11,
-            &quot;name&quot;: &quot;atque&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;name&quot;: &quot;adipisci&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:25.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:25.000000Z&quot;
         },
         {
             &quot;id&quot;: 12,
-            &quot;name&quot;: &quot;sed&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;name&quot;: &quot;tempora&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:26.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:26.000000Z&quot;
         },
         {
             &quot;id&quot;: 13,
-            &quot;name&quot;: &quot;velit&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;name&quot;: &quot;quibusdam&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:26.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:26.000000Z&quot;
         },
         {
             &quot;id&quot;: 14,
-            &quot;name&quot;: &quot;ad&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;name&quot;: &quot;neque&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:26.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:26.000000Z&quot;
         },
         {
             &quot;id&quot;: 15,
-            &quot;name&quot;: &quot;laboriosam&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;name&quot;: &quot;minus&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:27.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:27.000000Z&quot;
         }
     ],
     &quot;links&quot;: {
-        &quot;first&quot;: &quot;http://localhost:8000/api/materials?page=1&quot;,
-        &quot;last&quot;: &quot;http://localhost:8000/api/materials?page=2&quot;,
+        &quot;first&quot;: &quot;http://191.52.55.208:8000/api/materials?page=1&quot;,
+        &quot;last&quot;: &quot;http://191.52.55.208:8000/api/materials?page=2&quot;,
         &quot;prev&quot;: null,
-        &quot;next&quot;: &quot;http://localhost:8000/api/materials?page=2&quot;
+        &quot;next&quot;: &quot;http://191.52.55.208:8000/api/materials?page=2&quot;
     },
     &quot;meta&quot;: {
         &quot;current_page&quot;: 1,
@@ -6024,25 +6073,25 @@ vary: Origin
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://localhost:8000/api/materials?page=1&quot;,
+                &quot;url&quot;: &quot;http://191.52.55.208:8000/api/materials?page=1&quot;,
                 &quot;label&quot;: &quot;1&quot;,
                 &quot;page&quot;: 1,
                 &quot;active&quot;: true
             },
             {
-                &quot;url&quot;: &quot;http://localhost:8000/api/materials?page=2&quot;,
+                &quot;url&quot;: &quot;http://191.52.55.208:8000/api/materials?page=2&quot;,
                 &quot;label&quot;: &quot;2&quot;,
                 &quot;page&quot;: 2,
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://localhost:8000/api/materials?page=2&quot;,
+                &quot;url&quot;: &quot;http://191.52.55.208:8000/api/materials?page=2&quot;,
                 &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
                 &quot;page&quot;: 2,
                 &quot;active&quot;: false
             }
         ],
-        &quot;path&quot;: &quot;http://localhost:8000/api/materials&quot;,
+        &quot;path&quot;: &quot;http://191.52.55.208:8000/api/materials&quot;,
         &quot;per_page&quot;: 15,
         &quot;to&quot;: 15,
         &quot;total&quot;: 20
@@ -6136,7 +6185,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/materials" \
+    "http://191.52.55.208:8000/api/materials" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -6147,7 +6196,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/materials"
+    "http://191.52.55.208:8000/api/materials"
 );
 
 const headers = {
@@ -6268,14 +6317,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/materials/1" \
+    --get "http://191.52.55.208:8000/api/materials/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/materials/1"
+    "http://191.52.55.208:8000/api/materials/1"
 );
 
 const headers = {
@@ -6306,9 +6355,9 @@ vary: Origin
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
         &quot;id&quot;: 1,
-        &quot;name&quot;: &quot;sapiente&quot;,
-        &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+        &quot;name&quot;: &quot;facilis&quot;,
+        &quot;created_at&quot;: &quot;2025-11-22T08:56:13.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-11-22T08:56:13.000000Z&quot;
     }
 }</code>
  </pre>
@@ -6412,14 +6461,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/materials/1" \
+    "http://191.52.55.208:8000/api/materials/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/materials/1"
+    "http://191.52.55.208:8000/api/materials/1"
 );
 
 const headers = {
@@ -6539,14 +6588,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/materials/1" \
+    "http://191.52.55.208:8000/api/materials/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/materials/1"
+    "http://191.52.55.208:8000/api/materials/1"
 );
 
 const headers = {
@@ -6662,14 +6711,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/location" \
+    --get "http://191.52.55.208:8000/api/location" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/location"
+    "http://191.52.55.208:8000/api/location"
 );
 
 const headers = {
@@ -6702,189 +6751,189 @@ vary: Origin
         {
             &quot;id&quot;: 1,
             &quot;name&quot;: null,
-            &quot;city&quot;: &quot;South Buster&quot;,
-            &quot;state&quot;: &quot;South Carolina&quot;,
-            &quot;country&quot;: &quot;Reunion&quot;,
-            &quot;room&quot;: &quot;Room 59&quot;,
-            &quot;shelf&quot;: &quot;Shelf 40&quot;,
-            &quot;bookcase&quot;: &quot;Bookcase 76&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;city&quot;: &quot;Garretburgh&quot;,
+            &quot;state&quot;: &quot;North Dakota&quot;,
+            &quot;country&quot;: &quot;Paraguay&quot;,
+            &quot;room&quot;: &quot;Room 08&quot;,
+            &quot;shelf&quot;: &quot;Shelf 87&quot;,
+            &quot;bookcase&quot;: &quot;Bookcase 02&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:24.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:24.000000Z&quot;
         },
         {
             &quot;id&quot;: 2,
             &quot;name&quot;: null,
-            &quot;city&quot;: &quot;Port Geoffrey&quot;,
-            &quot;state&quot;: &quot;Georgia&quot;,
-            &quot;country&quot;: &quot;China&quot;,
-            &quot;room&quot;: &quot;Room 70&quot;,
-            &quot;shelf&quot;: &quot;Shelf 09&quot;,
-            &quot;bookcase&quot;: &quot;Bookcase 69&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;city&quot;: &quot;Wittingfort&quot;,
+            &quot;state&quot;: &quot;Montana&quot;,
+            &quot;country&quot;: &quot;Paraguay&quot;,
+            &quot;room&quot;: &quot;Room 92&quot;,
+            &quot;shelf&quot;: &quot;Shelf 14&quot;,
+            &quot;bookcase&quot;: &quot;Bookcase 29&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:24.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:24.000000Z&quot;
         },
         {
             &quot;id&quot;: 3,
             &quot;name&quot;: null,
-            &quot;city&quot;: &quot;Heathbury&quot;,
-            &quot;state&quot;: &quot;Colorado&quot;,
-            &quot;country&quot;: &quot;Djibouti&quot;,
-            &quot;room&quot;: &quot;Room 21&quot;,
-            &quot;shelf&quot;: &quot;Shelf 47&quot;,
-            &quot;bookcase&quot;: &quot;Bookcase 00&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;city&quot;: &quot;Katlynnstad&quot;,
+            &quot;state&quot;: &quot;Mississippi&quot;,
+            &quot;country&quot;: &quot;Libyan Arab Jamahiriya&quot;,
+            &quot;room&quot;: &quot;Room 31&quot;,
+            &quot;shelf&quot;: &quot;Shelf 36&quot;,
+            &quot;bookcase&quot;: &quot;Bookcase 67&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:25.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:25.000000Z&quot;
         },
         {
             &quot;id&quot;: 4,
             &quot;name&quot;: null,
-            &quot;city&quot;: &quot;North Savion&quot;,
-            &quot;state&quot;: &quot;South Dakota&quot;,
-            &quot;country&quot;: &quot;Hong Kong&quot;,
-            &quot;room&quot;: &quot;Room 49&quot;,
-            &quot;shelf&quot;: &quot;Shelf 59&quot;,
-            &quot;bookcase&quot;: &quot;Bookcase 69&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;city&quot;: &quot;Lake Tristin&quot;,
+            &quot;state&quot;: &quot;Florida&quot;,
+            &quot;country&quot;: &quot;Antarctica (the territory South of 60 deg S)&quot;,
+            &quot;room&quot;: &quot;Room 27&quot;,
+            &quot;shelf&quot;: &quot;Shelf 38&quot;,
+            &quot;bookcase&quot;: &quot;Bookcase 50&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:25.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:25.000000Z&quot;
         },
         {
             &quot;id&quot;: 5,
             &quot;name&quot;: null,
-            &quot;city&quot;: &quot;Yundttown&quot;,
-            &quot;state&quot;: &quot;Maryland&quot;,
-            &quot;country&quot;: &quot;Tonga&quot;,
-            &quot;room&quot;: &quot;Room 26&quot;,
-            &quot;shelf&quot;: &quot;Shelf 09&quot;,
-            &quot;bookcase&quot;: &quot;Bookcase 59&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;city&quot;: &quot;East Jeanetteburgh&quot;,
+            &quot;state&quot;: &quot;Louisiana&quot;,
+            &quot;country&quot;: &quot;Antigua and Barbuda&quot;,
+            &quot;room&quot;: &quot;Room 75&quot;,
+            &quot;shelf&quot;: &quot;Shelf 38&quot;,
+            &quot;bookcase&quot;: &quot;Bookcase 28&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:25.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:25.000000Z&quot;
         },
         {
             &quot;id&quot;: 6,
             &quot;name&quot;: null,
-            &quot;city&quot;: &quot;Lake Clarabelle&quot;,
-            &quot;state&quot;: &quot;Georgia&quot;,
-            &quot;country&quot;: &quot;Mayotte&quot;,
-            &quot;room&quot;: &quot;Room 12&quot;,
-            &quot;shelf&quot;: &quot;Shelf 74&quot;,
-            &quot;bookcase&quot;: &quot;Bookcase 67&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;city&quot;: &quot;Lake Candaceberg&quot;,
+            &quot;state&quot;: &quot;Vermont&quot;,
+            &quot;country&quot;: &quot;Saint Barthelemy&quot;,
+            &quot;room&quot;: &quot;Room 44&quot;,
+            &quot;shelf&quot;: &quot;Shelf 98&quot;,
+            &quot;bookcase&quot;: &quot;Bookcase 28&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:25.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:25.000000Z&quot;
         },
         {
             &quot;id&quot;: 7,
             &quot;name&quot;: null,
-            &quot;city&quot;: &quot;North Damaris&quot;,
-            &quot;state&quot;: &quot;South Carolina&quot;,
-            &quot;country&quot;: &quot;Jamaica&quot;,
-            &quot;room&quot;: &quot;Room 40&quot;,
-            &quot;shelf&quot;: &quot;Shelf 09&quot;,
+            &quot;city&quot;: &quot;South Fernestad&quot;,
+            &quot;state&quot;: &quot;New York&quot;,
+            &quot;country&quot;: &quot;Nigeria&quot;,
+            &quot;room&quot;: &quot;Room 53&quot;,
+            &quot;shelf&quot;: &quot;Shelf 55&quot;,
             &quot;bookcase&quot;: &quot;Bookcase 51&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:25.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:25.000000Z&quot;
         },
         {
             &quot;id&quot;: 8,
             &quot;name&quot;: null,
-            &quot;city&quot;: &quot;New Flo&quot;,
-            &quot;state&quot;: &quot;Mississippi&quot;,
-            &quot;country&quot;: &quot;Moldova&quot;,
-            &quot;room&quot;: &quot;Room 65&quot;,
-            &quot;shelf&quot;: &quot;Shelf 06&quot;,
-            &quot;bookcase&quot;: &quot;Bookcase 84&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;city&quot;: &quot;East Cassidy&quot;,
+            &quot;state&quot;: &quot;Pennsylvania&quot;,
+            &quot;country&quot;: &quot;Czech Republic&quot;,
+            &quot;room&quot;: &quot;Room 56&quot;,
+            &quot;shelf&quot;: &quot;Shelf 88&quot;,
+            &quot;bookcase&quot;: &quot;Bookcase 07&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:25.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:25.000000Z&quot;
         },
         {
             &quot;id&quot;: 9,
             &quot;name&quot;: null,
-            &quot;city&quot;: &quot;East Elainaville&quot;,
-            &quot;state&quot;: &quot;Virginia&quot;,
-            &quot;country&quot;: &quot;Cook Islands&quot;,
-            &quot;room&quot;: &quot;Room 83&quot;,
-            &quot;shelf&quot;: &quot;Shelf 96&quot;,
-            &quot;bookcase&quot;: &quot;Bookcase 26&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;city&quot;: &quot;Howeport&quot;,
+            &quot;state&quot;: &quot;Rhode Island&quot;,
+            &quot;country&quot;: &quot;Brunei Darussalam&quot;,
+            &quot;room&quot;: &quot;Room 64&quot;,
+            &quot;shelf&quot;: &quot;Shelf 36&quot;,
+            &quot;bookcase&quot;: &quot;Bookcase 34&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:25.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:25.000000Z&quot;
         },
         {
             &quot;id&quot;: 10,
             &quot;name&quot;: null,
-            &quot;city&quot;: &quot;New Amiya&quot;,
+            &quot;city&quot;: &quot;Port Keyshawnshire&quot;,
             &quot;state&quot;: &quot;Tennessee&quot;,
-            &quot;country&quot;: &quot;Nigeria&quot;,
-            &quot;room&quot;: &quot;Room 96&quot;,
-            &quot;shelf&quot;: &quot;Shelf 07&quot;,
-            &quot;bookcase&quot;: &quot;Bookcase 10&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;country&quot;: &quot;Zambia&quot;,
+            &quot;room&quot;: &quot;Room 60&quot;,
+            &quot;shelf&quot;: &quot;Shelf 76&quot;,
+            &quot;bookcase&quot;: &quot;Bookcase 01&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:25.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:25.000000Z&quot;
         },
         {
             &quot;id&quot;: 11,
             &quot;name&quot;: null,
-            &quot;city&quot;: &quot;East Kimberlyside&quot;,
-            &quot;state&quot;: &quot;North Dakota&quot;,
-            &quot;country&quot;: &quot;Svalbard &amp; Jan Mayen Islands&quot;,
-            &quot;room&quot;: &quot;Room 59&quot;,
-            &quot;shelf&quot;: &quot;Shelf 46&quot;,
-            &quot;bookcase&quot;: &quot;Bookcase 11&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;city&quot;: &quot;Boscoside&quot;,
+            &quot;state&quot;: &quot;South Carolina&quot;,
+            &quot;country&quot;: &quot;Greenland&quot;,
+            &quot;room&quot;: &quot;Room 95&quot;,
+            &quot;shelf&quot;: &quot;Shelf 98&quot;,
+            &quot;bookcase&quot;: &quot;Bookcase 87&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:25.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:25.000000Z&quot;
         },
         {
             &quot;id&quot;: 12,
             &quot;name&quot;: null,
-            &quot;city&quot;: &quot;Jacobiside&quot;,
+            &quot;city&quot;: &quot;Micaelastad&quot;,
             &quot;state&quot;: &quot;Michigan&quot;,
-            &quot;country&quot;: &quot;Aruba&quot;,
-            &quot;room&quot;: &quot;Room 94&quot;,
-            &quot;shelf&quot;: &quot;Shelf 40&quot;,
-            &quot;bookcase&quot;: &quot;Bookcase 88&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;country&quot;: &quot;Grenada&quot;,
+            &quot;room&quot;: &quot;Room 43&quot;,
+            &quot;shelf&quot;: &quot;Shelf 80&quot;,
+            &quot;bookcase&quot;: &quot;Bookcase 12&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:25.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:25.000000Z&quot;
         },
         {
             &quot;id&quot;: 13,
             &quot;name&quot;: null,
-            &quot;city&quot;: &quot;North Veda&quot;,
-            &quot;state&quot;: &quot;Maine&quot;,
-            &quot;country&quot;: &quot;Aruba&quot;,
-            &quot;room&quot;: &quot;Room 52&quot;,
-            &quot;shelf&quot;: &quot;Shelf 17&quot;,
-            &quot;bookcase&quot;: &quot;Bookcase 50&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;city&quot;: &quot;Jessikafort&quot;,
+            &quot;state&quot;: &quot;Montana&quot;,
+            &quot;country&quot;: &quot;Mayotte&quot;,
+            &quot;room&quot;: &quot;Room 51&quot;,
+            &quot;shelf&quot;: &quot;Shelf 08&quot;,
+            &quot;bookcase&quot;: &quot;Bookcase 18&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:26.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:26.000000Z&quot;
         },
         {
             &quot;id&quot;: 14,
             &quot;name&quot;: null,
-            &quot;city&quot;: &quot;Isadorehaven&quot;,
-            &quot;state&quot;: &quot;Maryland&quot;,
-            &quot;country&quot;: &quot;Jamaica&quot;,
-            &quot;room&quot;: &quot;Room 95&quot;,
-            &quot;shelf&quot;: &quot;Shelf 64&quot;,
-            &quot;bookcase&quot;: &quot;Bookcase 59&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;city&quot;: &quot;Omarimouth&quot;,
+            &quot;state&quot;: &quot;Montana&quot;,
+            &quot;country&quot;: &quot;Germany&quot;,
+            &quot;room&quot;: &quot;Room 37&quot;,
+            &quot;shelf&quot;: &quot;Shelf 12&quot;,
+            &quot;bookcase&quot;: &quot;Bookcase 19&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:26.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:26.000000Z&quot;
         },
         {
             &quot;id&quot;: 15,
             &quot;name&quot;: null,
-            &quot;city&quot;: &quot;New Dorothy&quot;,
-            &quot;state&quot;: &quot;New York&quot;,
-            &quot;country&quot;: &quot;Gibraltar&quot;,
-            &quot;room&quot;: &quot;Room 29&quot;,
-            &quot;shelf&quot;: &quot;Shelf 64&quot;,
-            &quot;bookcase&quot;: &quot;Bookcase 23&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;city&quot;: &quot;South Hailee&quot;,
+            &quot;state&quot;: &quot;Washington&quot;,
+            &quot;country&quot;: &quot;Switzerland&quot;,
+            &quot;room&quot;: &quot;Room 37&quot;,
+            &quot;shelf&quot;: &quot;Shelf 73&quot;,
+            &quot;bookcase&quot;: &quot;Bookcase 55&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:27.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:27.000000Z&quot;
         }
     ],
     &quot;links&quot;: {
-        &quot;first&quot;: &quot;http://localhost:8000/api/location?page=1&quot;,
-        &quot;last&quot;: &quot;http://localhost:8000/api/location?page=2&quot;,
+        &quot;first&quot;: &quot;http://191.52.55.208:8000/api/location?page=1&quot;,
+        &quot;last&quot;: &quot;http://191.52.55.208:8000/api/location?page=2&quot;,
         &quot;prev&quot;: null,
-        &quot;next&quot;: &quot;http://localhost:8000/api/location?page=2&quot;
+        &quot;next&quot;: &quot;http://191.52.55.208:8000/api/location?page=2&quot;
     },
     &quot;meta&quot;: {
         &quot;current_page&quot;: 1,
@@ -6898,25 +6947,25 @@ vary: Origin
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://localhost:8000/api/location?page=1&quot;,
+                &quot;url&quot;: &quot;http://191.52.55.208:8000/api/location?page=1&quot;,
                 &quot;label&quot;: &quot;1&quot;,
                 &quot;page&quot;: 1,
                 &quot;active&quot;: true
             },
             {
-                &quot;url&quot;: &quot;http://localhost:8000/api/location?page=2&quot;,
+                &quot;url&quot;: &quot;http://191.52.55.208:8000/api/location?page=2&quot;,
                 &quot;label&quot;: &quot;2&quot;,
                 &quot;page&quot;: 2,
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://localhost:8000/api/location?page=2&quot;,
+                &quot;url&quot;: &quot;http://191.52.55.208:8000/api/location?page=2&quot;,
                 &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
                 &quot;page&quot;: 2,
                 &quot;active&quot;: false
             }
         ],
-        &quot;path&quot;: &quot;http://localhost:8000/api/location&quot;,
+        &quot;path&quot;: &quot;http://191.52.55.208:8000/api/location&quot;,
         &quot;per_page&quot;: 15,
         &quot;to&quot;: 15,
         &quot;total&quot;: 20
@@ -7010,7 +7059,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/location" \
+    "http://191.52.55.208:8000/api/location" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -7027,7 +7076,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/location"
+    "http://191.52.55.208:8000/api/location"
 );
 
 const headers = {
@@ -7226,14 +7275,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/location/1" \
+    --get "http://191.52.55.208:8000/api/location/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/location/1"
+    "http://191.52.55.208:8000/api/location/1"
 );
 
 const headers = {
@@ -7265,14 +7314,14 @@ vary: Origin
     &quot;data&quot;: {
         &quot;id&quot;: 1,
         &quot;name&quot;: null,
-        &quot;city&quot;: &quot;South Buster&quot;,
-        &quot;state&quot;: &quot;South Carolina&quot;,
-        &quot;country&quot;: &quot;Reunion&quot;,
-        &quot;room&quot;: &quot;Room 59&quot;,
-        &quot;shelf&quot;: &quot;Shelf 40&quot;,
-        &quot;bookcase&quot;: &quot;Bookcase 76&quot;,
-        &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+        &quot;city&quot;: &quot;Garretburgh&quot;,
+        &quot;state&quot;: &quot;North Dakota&quot;,
+        &quot;country&quot;: &quot;Paraguay&quot;,
+        &quot;room&quot;: &quot;Room 08&quot;,
+        &quot;shelf&quot;: &quot;Shelf 87&quot;,
+        &quot;bookcase&quot;: &quot;Bookcase 02&quot;,
+        &quot;created_at&quot;: &quot;2025-11-22T08:56:24.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-11-22T08:56:24.000000Z&quot;
     }
 }</code>
  </pre>
@@ -7376,7 +7425,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/location/1" \
+    "http://191.52.55.208:8000/api/location/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -7393,7 +7442,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/location/1"
+    "http://191.52.55.208:8000/api/location/1"
 );
 
 const headers = {
@@ -7609,14 +7658,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/location/1" \
+    "http://191.52.55.208:8000/api/location/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/location/1"
+    "http://191.52.55.208:8000/api/location/1"
 );
 
 const headers = {
@@ -7732,14 +7781,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/material" \
+    --get "http://191.52.55.208:8000/api/material" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/material"
+    "http://191.52.55.208:8000/api/material"
 );
 
 const headers = {
@@ -7771,100 +7820,100 @@ vary: Origin
     &quot;data&quot;: [
         {
             &quot;id&quot;: 1,
-            &quot;name&quot;: &quot;sapiente&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;name&quot;: &quot;facilis&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:13.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:13.000000Z&quot;
         },
         {
             &quot;id&quot;: 2,
-            &quot;name&quot;: &quot;aspernatur&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;name&quot;: &quot;sint&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:13.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:13.000000Z&quot;
         },
         {
             &quot;id&quot;: 3,
-            &quot;name&quot;: &quot;fugiat&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;name&quot;: &quot;laborum&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:13.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:13.000000Z&quot;
         },
         {
             &quot;id&quot;: 4,
-            &quot;name&quot;: &quot;repudiandae&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;name&quot;: &quot;consequuntur&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:14.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:14.000000Z&quot;
         },
         {
             &quot;id&quot;: 5,
-            &quot;name&quot;: &quot;nihil&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;name&quot;: &quot;dolor&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:14.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:14.000000Z&quot;
         },
         {
             &quot;id&quot;: 6,
-            &quot;name&quot;: &quot;aut&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;name&quot;: &quot;id&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:14.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:14.000000Z&quot;
         },
         {
             &quot;id&quot;: 7,
-            &quot;name&quot;: &quot;veritatis&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;name&quot;: &quot;ab&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:14.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:14.000000Z&quot;
         },
         {
             &quot;id&quot;: 8,
-            &quot;name&quot;: &quot;laudantium&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;name&quot;: &quot;totam&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:14.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:14.000000Z&quot;
         },
         {
             &quot;id&quot;: 9,
-            &quot;name&quot;: &quot;soluta&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;name&quot;: &quot;voluptatem&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:14.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:14.000000Z&quot;
         },
         {
             &quot;id&quot;: 10,
-            &quot;name&quot;: &quot;rem&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+            &quot;name&quot;: &quot;est&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:14.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:14.000000Z&quot;
         },
         {
             &quot;id&quot;: 11,
-            &quot;name&quot;: &quot;atque&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;name&quot;: &quot;adipisci&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:25.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:25.000000Z&quot;
         },
         {
             &quot;id&quot;: 12,
-            &quot;name&quot;: &quot;sed&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;name&quot;: &quot;tempora&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:26.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:26.000000Z&quot;
         },
         {
             &quot;id&quot;: 13,
-            &quot;name&quot;: &quot;velit&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;name&quot;: &quot;quibusdam&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:26.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:26.000000Z&quot;
         },
         {
             &quot;id&quot;: 14,
-            &quot;name&quot;: &quot;ad&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;name&quot;: &quot;neque&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:26.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:26.000000Z&quot;
         },
         {
             &quot;id&quot;: 15,
-            &quot;name&quot;: &quot;laboriosam&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;name&quot;: &quot;minus&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:27.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:27.000000Z&quot;
         }
     ],
     &quot;links&quot;: {
-        &quot;first&quot;: &quot;http://localhost:8000/api/material?page=1&quot;,
-        &quot;last&quot;: &quot;http://localhost:8000/api/material?page=2&quot;,
+        &quot;first&quot;: &quot;http://191.52.55.208:8000/api/material?page=1&quot;,
+        &quot;last&quot;: &quot;http://191.52.55.208:8000/api/material?page=2&quot;,
         &quot;prev&quot;: null,
-        &quot;next&quot;: &quot;http://localhost:8000/api/material?page=2&quot;
+        &quot;next&quot;: &quot;http://191.52.55.208:8000/api/material?page=2&quot;
     },
     &quot;meta&quot;: {
         &quot;current_page&quot;: 1,
@@ -7878,25 +7927,25 @@ vary: Origin
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://localhost:8000/api/material?page=1&quot;,
+                &quot;url&quot;: &quot;http://191.52.55.208:8000/api/material?page=1&quot;,
                 &quot;label&quot;: &quot;1&quot;,
                 &quot;page&quot;: 1,
                 &quot;active&quot;: true
             },
             {
-                &quot;url&quot;: &quot;http://localhost:8000/api/material?page=2&quot;,
+                &quot;url&quot;: &quot;http://191.52.55.208:8000/api/material?page=2&quot;,
                 &quot;label&quot;: &quot;2&quot;,
                 &quot;page&quot;: 2,
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://localhost:8000/api/material?page=2&quot;,
+                &quot;url&quot;: &quot;http://191.52.55.208:8000/api/material?page=2&quot;,
                 &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
                 &quot;page&quot;: 2,
                 &quot;active&quot;: false
             }
         ],
-        &quot;path&quot;: &quot;http://localhost:8000/api/material&quot;,
+        &quot;path&quot;: &quot;http://191.52.55.208:8000/api/material&quot;,
         &quot;per_page&quot;: 15,
         &quot;to&quot;: 15,
         &quot;total&quot;: 20
@@ -7990,7 +8039,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/material" \
+    "http://191.52.55.208:8000/api/material" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -8001,7 +8050,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/material"
+    "http://191.52.55.208:8000/api/material"
 );
 
 const headers = {
@@ -8122,14 +8171,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/material/1" \
+    --get "http://191.52.55.208:8000/api/material/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/material/1"
+    "http://191.52.55.208:8000/api/material/1"
 );
 
 const headers = {
@@ -8160,9 +8209,9 @@ vary: Origin
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
         &quot;id&quot;: 1,
-        &quot;name&quot;: &quot;sapiente&quot;,
-        &quot;created_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-11-22T05:38:01.000000Z&quot;
+        &quot;name&quot;: &quot;facilis&quot;,
+        &quot;created_at&quot;: &quot;2025-11-22T08:56:13.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-11-22T08:56:13.000000Z&quot;
     }
 }</code>
  </pre>
@@ -8266,14 +8315,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/material/1" \
+    "http://191.52.55.208:8000/api/material/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/material/1"
+    "http://191.52.55.208:8000/api/material/1"
 );
 
 const headers = {
@@ -8393,14 +8442,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/material/1" \
+    "http://191.52.55.208:8000/api/material/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/material/1"
+    "http://191.52.55.208:8000/api/material/1"
 );
 
 const headers = {
@@ -8516,16 +8565,16 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/photos" \
+    "http://191.52.55.208:8000/api/photos" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
     --form "item_id=architecto"\
-    --form "photo=@/tmp/phplvjfdkof554ueNaz8d3" </code></pre></div>
+    --form "photo=@/tmp/php56pfaedric0aai9QiMM" </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/photos"
+    "http://191.52.55.208:8000/api/photos"
 );
 
 const headers = {
@@ -8629,7 +8678,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Must be an image. Must not be greater than 5120 kilobytes. Example: <code>/tmp/phplvjfdkof554ueNaz8d3</code></p>
+<p>Must be an image. Must not be greater than 5120 kilobytes. Example: <code>/tmp/php56pfaedric0aai9QiMM</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>item_id</code></b>&nbsp;&nbsp;
@@ -8658,14 +8707,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/photos/1" \
+    --get "http://191.52.55.208:8000/api/photos/6" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/photos/1"
+    "http://191.52.55.208:8000/api/photos/6"
 );
 
 const headers = {
@@ -8695,11 +8744,11 @@ vary: Origin
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
-        &quot;id&quot;: 1,
-        &quot;item_id&quot;: 1,
-        &quot;url&quot;: &quot;/storage/https://via.placeholder.com/640x480.png/00aadd?text=archaeology+non&quot;,
-        &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+        &quot;id&quot;: 6,
+        &quot;item_id&quot;: 2,
+        &quot;url&quot;: &quot;/storage/https://via.placeholder.com/640x480.png/00ccee?text=archaeology+consequatur&quot;,
+        &quot;created_at&quot;: &quot;2025-11-22T08:56:31.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2025-11-22T08:56:31.000000Z&quot;
     }
 }</code>
  </pre>
@@ -8783,10 +8832,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="GETapi-photos--id-"
-               value="1"
+               value="6"
                data-component="url">
     <br>
-<p>The ID of the photo. Example: <code>1</code></p>
+<p>The ID of the photo. Example: <code>6</code></p>
             </div>
                     </form>
 
@@ -8803,14 +8852,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/photos/1" \
+    "http://191.52.55.208:8000/api/photos/6" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/photos/1"
+    "http://191.52.55.208:8000/api/photos/6"
 );
 
 const headers = {
@@ -8906,10 +8955,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="DELETEapi-photos--id-"
-               value="1"
+               value="6"
                data-component="url">
     <br>
-<p>The ID of the photo. Example: <code>1</code></p>
+<p>The ID of the photo. Example: <code>6</code></p>
             </div>
                     </form>
 
@@ -8926,14 +8975,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/reserves" \
+    --get "http://191.52.55.208:8000/api/reserves" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/reserves"
+    "http://191.52.55.208:8000/api/reserves"
 );
 
 const headers = {
@@ -8964,146 +9013,146 @@ vary: Origin
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: 1,
-            &quot;user_email&quot;: &quot;anabel.johnson@example.com&quot;,
-            &quot;item_id&quot;: 1,
-            &quot;reserved_at&quot;: &quot;2025-06-22 00:24:16&quot;,
-            &quot;deadline_at&quot;: &quot;2025-12-08 13:18:58&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 2,
-            &quot;user_email&quot;: &quot;haley.hermann@example.net&quot;,
-            &quot;item_id&quot;: 1,
-            &quot;reserved_at&quot;: &quot;2025-08-20 14:33:09&quot;,
-            &quot;deadline_at&quot;: &quot;2025-11-07 12:04:01&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
-        },
-        {
             &quot;id&quot;: 3,
-            &quot;user_email&quot;: &quot;davonte08@example.net&quot;,
+            &quot;user_email&quot;: &quot;rebeca19@example.net&quot;,
             &quot;item_id&quot;: 2,
-            &quot;reserved_at&quot;: &quot;2025-11-06 01:25:57&quot;,
-            &quot;deadline_at&quot;: &quot;2025-12-18 00:45:57&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;reserved_at&quot;: &quot;2025-04-02 23:01:47&quot;,
+            &quot;deadline_at&quot;: &quot;2025-08-04 15:13:10&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:31.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:31.000000Z&quot;
         },
         {
             &quot;id&quot;: 4,
-            &quot;user_email&quot;: &quot;margarita.schneider@example.com&quot;,
+            &quot;user_email&quot;: &quot;mstreich@example.org&quot;,
             &quot;item_id&quot;: 2,
-            &quot;reserved_at&quot;: &quot;2025-07-16 11:23:53&quot;,
-            &quot;deadline_at&quot;: &quot;2025-11-21 16:39:56&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;reserved_at&quot;: &quot;2025-01-19 22:13:13&quot;,
+            &quot;deadline_at&quot;: &quot;2025-07-14 03:19:27&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:31.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:31.000000Z&quot;
         },
         {
             &quot;id&quot;: 5,
-            &quot;user_email&quot;: &quot;erica67@example.org&quot;,
+            &quot;user_email&quot;: &quot;reichel.kaleb@example.org&quot;,
             &quot;item_id&quot;: 3,
-            &quot;reserved_at&quot;: &quot;2025-03-13 21:53:56&quot;,
-            &quot;deadline_at&quot;: &quot;2025-10-28 22:26:18&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;reserved_at&quot;: &quot;2025-04-19 01:34:01&quot;,
+            &quot;deadline_at&quot;: &quot;2025-05-09 20:01:10&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:31.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:31.000000Z&quot;
         },
         {
             &quot;id&quot;: 6,
-            &quot;user_email&quot;: &quot;leuschke.elissa@example.com&quot;,
+            &quot;user_email&quot;: &quot;green73@example.net&quot;,
             &quot;item_id&quot;: 3,
-            &quot;reserved_at&quot;: &quot;2025-01-15 12:10:33&quot;,
-            &quot;deadline_at&quot;: &quot;2025-06-22 05:10:56&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;reserved_at&quot;: &quot;2025-08-22 20:41:56&quot;,
+            &quot;deadline_at&quot;: &quot;2025-11-09 06:37:47&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:31.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:31.000000Z&quot;
         },
         {
             &quot;id&quot;: 7,
-            &quot;user_email&quot;: &quot;hwindler@example.net&quot;,
+            &quot;user_email&quot;: &quot;rasheed60@example.net&quot;,
             &quot;item_id&quot;: 4,
-            &quot;reserved_at&quot;: &quot;2025-01-28 16:45:51&quot;,
-            &quot;deadline_at&quot;: &quot;2025-04-05 04:55:48&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;reserved_at&quot;: &quot;2025-06-17 00:50:50&quot;,
+            &quot;deadline_at&quot;: &quot;2025-08-07 03:11:24&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:32.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:32.000000Z&quot;
         },
         {
             &quot;id&quot;: 8,
-            &quot;user_email&quot;: &quot;lwalsh@example.com&quot;,
+            &quot;user_email&quot;: &quot;mrolfson@example.net&quot;,
             &quot;item_id&quot;: 4,
-            &quot;reserved_at&quot;: &quot;2025-03-27 23:50:34&quot;,
-            &quot;deadline_at&quot;: &quot;2025-08-19 15:37:47&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;reserved_at&quot;: &quot;2025-02-19 13:10:47&quot;,
+            &quot;deadline_at&quot;: &quot;2025-04-26 10:39:04&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:32.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:32.000000Z&quot;
         },
         {
             &quot;id&quot;: 9,
-            &quot;user_email&quot;: &quot;zohara@example.net&quot;,
+            &quot;user_email&quot;: &quot;pagac.gladys@example.org&quot;,
             &quot;item_id&quot;: 5,
-            &quot;reserved_at&quot;: &quot;2025-01-15 14:52:02&quot;,
-            &quot;deadline_at&quot;: &quot;2025-11-13 07:27:46&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;reserved_at&quot;: &quot;2025-05-10 07:35:34&quot;,
+            &quot;deadline_at&quot;: &quot;2025-12-20 20:13:55&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:33.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:33.000000Z&quot;
         },
         {
             &quot;id&quot;: 10,
-            &quot;user_email&quot;: &quot;twalker@example.net&quot;,
+            &quot;user_email&quot;: &quot;amanda.mayer@example.com&quot;,
             &quot;item_id&quot;: 5,
-            &quot;reserved_at&quot;: &quot;2025-06-18 17:10:04&quot;,
-            &quot;deadline_at&quot;: &quot;2025-07-14 01:25:56&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;reserved_at&quot;: &quot;2025-04-12 06:18:32&quot;,
+            &quot;deadline_at&quot;: &quot;2025-10-25 05:01:05&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:33.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:33.000000Z&quot;
         },
         {
             &quot;id&quot;: 11,
-            &quot;user_email&quot;: &quot;ulehner@example.com&quot;,
+            &quot;user_email&quot;: &quot;guiseppe13@example.net&quot;,
             &quot;item_id&quot;: 6,
-            &quot;reserved_at&quot;: &quot;2025-03-28 13:30:35&quot;,
-            &quot;deadline_at&quot;: &quot;2025-05-11 04:24:42&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;reserved_at&quot;: &quot;2025-09-06 11:17:21&quot;,
+            &quot;deadline_at&quot;: &quot;2025-12-17 23:21:02&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:33.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:33.000000Z&quot;
         },
         {
             &quot;id&quot;: 12,
-            &quot;user_email&quot;: &quot;ambrose.fritsch@example.net&quot;,
+            &quot;user_email&quot;: &quot;christiansen.aliza@example.org&quot;,
             &quot;item_id&quot;: 6,
-            &quot;reserved_at&quot;: &quot;2025-09-22 07:29:03&quot;,
-            &quot;deadline_at&quot;: &quot;2025-12-09 21:53:34&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;reserved_at&quot;: &quot;2025-09-15 03:54:11&quot;,
+            &quot;deadline_at&quot;: &quot;2025-12-11 12:56:18&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:33.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:33.000000Z&quot;
         },
         {
             &quot;id&quot;: 13,
-            &quot;user_email&quot;: &quot;jaylen76@example.com&quot;,
+            &quot;user_email&quot;: &quot;shannon03@example.org&quot;,
             &quot;item_id&quot;: 7,
-            &quot;reserved_at&quot;: &quot;2025-04-21 15:49:12&quot;,
-            &quot;deadline_at&quot;: &quot;2025-07-10 10:59:05&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;reserved_at&quot;: &quot;2025-10-11 15:24:19&quot;,
+            &quot;deadline_at&quot;: &quot;2025-11-29 08:15:28&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:34.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:34.000000Z&quot;
         },
         {
             &quot;id&quot;: 14,
-            &quot;user_email&quot;: &quot;zoey.botsford@example.net&quot;,
+            &quot;user_email&quot;: &quot;afeest@example.net&quot;,
             &quot;item_id&quot;: 7,
-            &quot;reserved_at&quot;: &quot;2025-11-01 22:54:45&quot;,
-            &quot;deadline_at&quot;: &quot;2025-11-29 23:11:51&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;reserved_at&quot;: &quot;2025-02-08 12:23:46&quot;,
+            &quot;deadline_at&quot;: &quot;2025-10-27 10:34:18&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:34.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:34.000000Z&quot;
         },
         {
             &quot;id&quot;: 15,
-            &quot;user_email&quot;: &quot;strosin.salma@example.com&quot;,
+            &quot;user_email&quot;: &quot;baylee.wilderman@example.org&quot;,
             &quot;item_id&quot;: 8,
-            &quot;reserved_at&quot;: &quot;2025-10-31 11:54:46&quot;,
-            &quot;deadline_at&quot;: &quot;2025-12-20 19:14:32&quot;,
-            &quot;created_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-22T05:38:02.000000Z&quot;
+            &quot;reserved_at&quot;: &quot;2025-03-11 14:13:00&quot;,
+            &quot;deadline_at&quot;: &quot;2025-10-23 12:02:58&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:34.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:34.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 16,
+            &quot;user_email&quot;: &quot;hjaskolski@example.org&quot;,
+            &quot;item_id&quot;: 8,
+            &quot;reserved_at&quot;: &quot;2025-01-09 12:23:54&quot;,
+            &quot;deadline_at&quot;: &quot;2025-01-28 06:30:57&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:34.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:34.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 17,
+            &quot;user_email&quot;: &quot;hoeger.jerrell@example.com&quot;,
+            &quot;item_id&quot;: 9,
+            &quot;reserved_at&quot;: &quot;2025-09-01 07:17:57&quot;,
+            &quot;deadline_at&quot;: &quot;2025-11-04 23:44:03&quot;,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:35.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:35.000000Z&quot;
         }
     ],
     &quot;links&quot;: {
-        &quot;first&quot;: &quot;http://localhost:8000/api/reserves?page=1&quot;,
-        &quot;last&quot;: &quot;http://localhost:8000/api/reserves?page=2&quot;,
+        &quot;first&quot;: &quot;http://191.52.55.208:8000/api/reserves?page=1&quot;,
+        &quot;last&quot;: &quot;http://191.52.55.208:8000/api/reserves?page=2&quot;,
         &quot;prev&quot;: null,
-        &quot;next&quot;: &quot;http://localhost:8000/api/reserves?page=2&quot;
+        &quot;next&quot;: &quot;http://191.52.55.208:8000/api/reserves?page=2&quot;
     },
     &quot;meta&quot;: {
         &quot;current_page&quot;: 1,
@@ -9117,28 +9166,28 @@ vary: Origin
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://localhost:8000/api/reserves?page=1&quot;,
+                &quot;url&quot;: &quot;http://191.52.55.208:8000/api/reserves?page=1&quot;,
                 &quot;label&quot;: &quot;1&quot;,
                 &quot;page&quot;: 1,
                 &quot;active&quot;: true
             },
             {
-                &quot;url&quot;: &quot;http://localhost:8000/api/reserves?page=2&quot;,
+                &quot;url&quot;: &quot;http://191.52.55.208:8000/api/reserves?page=2&quot;,
                 &quot;label&quot;: &quot;2&quot;,
                 &quot;page&quot;: 2,
                 &quot;active&quot;: false
             },
             {
-                &quot;url&quot;: &quot;http://localhost:8000/api/reserves?page=2&quot;,
+                &quot;url&quot;: &quot;http://191.52.55.208:8000/api/reserves?page=2&quot;,
                 &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
                 &quot;page&quot;: 2,
                 &quot;active&quot;: false
             }
         ],
-        &quot;path&quot;: &quot;http://localhost:8000/api/reserves&quot;,
+        &quot;path&quot;: &quot;http://191.52.55.208:8000/api/reserves&quot;,
         &quot;per_page&quot;: 15,
         &quot;to&quot;: 15,
-        &quot;total&quot;: 20
+        &quot;total&quot;: 18
     }
 }</code>
  </pre>
@@ -9229,13 +9278,13 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/reserves" \
+    "http://191.52.55.208:8000/api/reserves" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
     \"user_email\": \"gbailey@example.net\",
     \"item_id\": \"architecto\",
-    \"reserved_at\": \"2025-11-22T05:51:48\",
+    \"reserved_at\": \"2025-11-22T09:12:54\",
     \"deadline_at\": \"2051-12-16\"
 }"
 </code></pre></div>
@@ -9243,7 +9292,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/reserves"
+    "http://191.52.55.208:8000/api/reserves"
 );
 
 const headers = {
@@ -9254,7 +9303,7 @@ const headers = {
 let body = {
     "user_email": "gbailey@example.net",
     "item_id": "architecto",
-    "reserved_at": "2025-11-22T05:51:48",
+    "reserved_at": "2025-11-22T09:12:54",
     "deadline_at": "2051-12-16"
 };
 
@@ -9371,10 +9420,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="reserved_at"                data-endpoint="POSTapi-reserves"
-               value="2025-11-22T05:51:48"
+               value="2025-11-22T09:12:54"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-11-22T05:51:48</code></p>
+<p>Must be a valid date. Example: <code>2025-11-22T09:12:54</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>deadline_at</code></b>&nbsp;&nbsp;
@@ -9403,14 +9452,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/reserves/1" \
+    "http://191.52.55.208:8000/api/reserves/3" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/reserves/1"
+    "http://191.52.55.208:8000/api/reserves/3"
 );
 
 const headers = {
@@ -9506,10 +9555,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="DELETEapi-reserves--id-"
-               value="1"
+               value="3"
                data-component="url">
     <br>
-<p>The ID of the reserf. Example: <code>1</code></p>
+<p>The ID of the reserf. Example: <code>3</code></p>
             </div>
                     </form>
 
@@ -9526,14 +9575,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/material-subtypes" \
+    --get "http://191.52.55.208:8000/api/material-subtypes" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/material-subtypes"
+    "http://191.52.55.208:8000/api/material-subtypes"
 );
 
 const headers = {
@@ -9550,7 +9599,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-material-subtypes">
             <blockquote>
-            <p>Example response (500):</p>
+            <p>Example response (200):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -9562,7 +9611,186 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Server Error&quot;
+    &quot;current_page&quot;: 1,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;name&quot;: &quot;minima&quot;,
+            &quot;materials_id&quot;: 1,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:14.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:14.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 2,
+            &quot;name&quot;: &quot;fugiat&quot;,
+            &quot;materials_id&quot;: 1,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:14.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:14.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 3,
+            &quot;name&quot;: &quot;occaecati&quot;,
+            &quot;materials_id&quot;: 1,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:14.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:14.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;name&quot;: &quot;nesciunt&quot;,
+            &quot;materials_id&quot;: 1,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:15.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 5,
+            &quot;name&quot;: &quot;nihil&quot;,
+            &quot;materials_id&quot;: 1,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:15.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 6,
+            &quot;name&quot;: &quot;sunt&quot;,
+            &quot;materials_id&quot;: 1,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:15.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 7,
+            &quot;name&quot;: &quot;voluptas&quot;,
+            &quot;materials_id&quot;: 1,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:15.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 8,
+            &quot;name&quot;: &quot;suscipit&quot;,
+            &quot;materials_id&quot;: 1,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:15.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 9,
+            &quot;name&quot;: &quot;et&quot;,
+            &quot;materials_id&quot;: 1,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:15.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 10,
+            &quot;name&quot;: &quot;laboriosam&quot;,
+            &quot;materials_id&quot;: 1,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:15.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 11,
+            &quot;name&quot;: &quot;cupiditate&quot;,
+            &quot;materials_id&quot;: 2,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:15.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 12,
+            &quot;name&quot;: &quot;est&quot;,
+            &quot;materials_id&quot;: 2,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:15.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 13,
+            &quot;name&quot;: &quot;illo&quot;,
+            &quot;materials_id&quot;: 2,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:15.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 14,
+            &quot;name&quot;: &quot;id&quot;,
+            &quot;materials_id&quot;: 2,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:15.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 15,
+            &quot;name&quot;: &quot;quia&quot;,
+            &quot;materials_id&quot;: 2,
+            &quot;created_at&quot;: &quot;2025-11-22T08:56:15.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-22T08:56:15.000000Z&quot;
+        }
+    ],
+    &quot;first_page_url&quot;: &quot;http://191.52.55.208:8000/api/material-subtypes?page=1&quot;,
+    &quot;from&quot;: 1,
+    &quot;last_page&quot;: 8,
+    &quot;last_page_url&quot;: &quot;http://191.52.55.208:8000/api/material-subtypes?page=8&quot;,
+    &quot;links&quot;: [
+        {
+            &quot;url&quot;: null,
+            &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
+            &quot;page&quot;: null,
+            &quot;active&quot;: false
+        },
+        {
+            &quot;url&quot;: &quot;http://191.52.55.208:8000/api/material-subtypes?page=1&quot;,
+            &quot;label&quot;: &quot;1&quot;,
+            &quot;page&quot;: 1,
+            &quot;active&quot;: true
+        },
+        {
+            &quot;url&quot;: &quot;http://191.52.55.208:8000/api/material-subtypes?page=2&quot;,
+            &quot;label&quot;: &quot;2&quot;,
+            &quot;page&quot;: 2,
+            &quot;active&quot;: false
+        },
+        {
+            &quot;url&quot;: &quot;http://191.52.55.208:8000/api/material-subtypes?page=3&quot;,
+            &quot;label&quot;: &quot;3&quot;,
+            &quot;page&quot;: 3,
+            &quot;active&quot;: false
+        },
+        {
+            &quot;url&quot;: &quot;http://191.52.55.208:8000/api/material-subtypes?page=4&quot;,
+            &quot;label&quot;: &quot;4&quot;,
+            &quot;page&quot;: 4,
+            &quot;active&quot;: false
+        },
+        {
+            &quot;url&quot;: &quot;http://191.52.55.208:8000/api/material-subtypes?page=5&quot;,
+            &quot;label&quot;: &quot;5&quot;,
+            &quot;page&quot;: 5,
+            &quot;active&quot;: false
+        },
+        {
+            &quot;url&quot;: &quot;http://191.52.55.208:8000/api/material-subtypes?page=6&quot;,
+            &quot;label&quot;: &quot;6&quot;,
+            &quot;page&quot;: 6,
+            &quot;active&quot;: false
+        },
+        {
+            &quot;url&quot;: &quot;http://191.52.55.208:8000/api/material-subtypes?page=7&quot;,
+            &quot;label&quot;: &quot;7&quot;,
+            &quot;page&quot;: 7,
+            &quot;active&quot;: false
+        },
+        {
+            &quot;url&quot;: &quot;http://191.52.55.208:8000/api/material-subtypes?page=8&quot;,
+            &quot;label&quot;: &quot;8&quot;,
+            &quot;page&quot;: 8,
+            &quot;active&quot;: false
+        },
+        {
+            &quot;url&quot;: &quot;http://191.52.55.208:8000/api/material-subtypes?page=2&quot;,
+            &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
+            &quot;page&quot;: 2,
+            &quot;active&quot;: false
+        }
+    ],
+    &quot;next_page_url&quot;: &quot;http://191.52.55.208:8000/api/material-subtypes?page=2&quot;,
+    &quot;path&quot;: &quot;http://191.52.55.208:8000/api/material-subtypes&quot;,
+    &quot;per_page&quot;: 15,
+    &quot;prev_page_url&quot;: null,
+    &quot;to&quot;: 15,
+    &quot;total&quot;: 110
 }</code>
  </pre>
     </span>
@@ -9652,7 +9880,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:8000/api/material-subtypes" \
+    "http://191.52.55.208:8000/api/material-subtypes" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -9664,7 +9892,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/material-subtypes"
+    "http://191.52.55.208:8000/api/material-subtypes"
 );
 
 const headers = {
@@ -9798,14 +10026,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/material-subtypes/1" \
+    --get "http://191.52.55.208:8000/api/material-subtypes/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/material-subtypes/1"
+    "http://191.52.55.208:8000/api/material-subtypes/1"
 );
 
 const headers = {
@@ -9937,14 +10165,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost:8000/api/material-subtypes/1" \
+    "http://191.52.55.208:8000/api/material-subtypes/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/material-subtypes/1"
+    "http://191.52.55.208:8000/api/material-subtypes/1"
 );
 
 const headers = {
@@ -10064,14 +10292,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost:8000/api/material-subtypes/1" \
+    "http://191.52.55.208:8000/api/material-subtypes/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/material-subtypes/1"
+    "http://191.52.55.208:8000/api/material-subtypes/1"
 );
 
 const headers = {
@@ -10187,14 +10415,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/items/1/pdf" \
+    --get "http://191.52.55.208:8000/api/items/2/pdf" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/items/1/pdf"
+    "http://191.52.55.208:8000/api/items/2/pdf"
 );
 
 const headers = {
@@ -10218,7 +10446,7 @@ fetch(url, {
                 <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
             </summary>
             <pre><code class="language-http">content-type: application/pdf
-content-disposition: attachment; filename=item_1.pdf
+content-disposition: attachment; filename=item_2.pdf
 cache-control: no-cache, private
 vary: Origin
  </code></pre></details>         <pre>
@@ -10258,8 +10486,8 @@ endobj
 5 0 obj
 &lt;&lt;
 /Producer (�� d o m p d f   3 . 1 . 4   +   C P D F)
-/CreationDate (D:20251122055148+00&#039;00&#039;)
-/ModDate (D:20251122055148+00&#039;00&#039;)
+/CreationDate (D:20251122091254+00&#039;00&#039;)
+/ModDate (D:20251122091254+00&#039;00&#039;)
 &gt;&gt;
 endobj
 6 0 obj
@@ -10271,52 +10499,43 @@ endobj
 endobj
 7 0 obj
 &lt;&lt; /Filter /FlateDecode
-/Length 13624 &gt;&gt;
+/Length 13622 &gt;&gt;
 stream
-x��}��%�q�]��p��Ч���*�LR(Ȃm�ᅠ&Yuml;�����!�36�5��h��Dĉ�����)���s����8u���߾�K��F9F{~x��������IK��r���ah�/�_�)�C��O���,Ͽ|���?��A��vaPq|�����|�����w����&lt;����O�x��^���^{W~���O��=��g�����o�����z�}������������=�=&gt;&lt;���ѿ|���/��g_��x�G��x9��G���e�}|��||����o�~��C��S��(/룕�u[��W�/W�{)�4��M�G�G��~ڿ�U|+�h�}�t�D����ܸ\/׹�ؖ�j�U&gt;�Z��S�a�Z�e��,��}�k�jU����(�~�X{��|��Gm�ϡc�o�n�X�y�&#039;f�y�x\z�6�}��z�:�m��9�}����u�eN��(���U��}cy��(N:���KK��a�~s��Z����[;�&icirc;4&lt;X�2|��:|������2d��H��\�En�H�K�����g��(�s�ɕ��d���v�x���.��c9�����.WK�Ē^�8i��6������ ��S�Iӱ���;k{�גx3���&#039;�jq�6�C`,��O�p�}�=��&lt;�}LK�O�#��/�๺}�&quot;�F�q4�7��X�!&quot;a����K����7�bi��
-��7o�i�AfK���&lt;���IpanB���n�3�	&gt;5�-p�7�&quot;�h�xS�Ƨސ4�!&lt;99�#�8��$Oc	�d.��Ed,�23Z�F�xW2&quot;�lF,���0�I(f�y#(��B�2���MA{f/��	���V��^F��h��q��`:�t,��e����n��;R�ƭ��e�&gt;�~b*gU��h�Y��ĺ-˾і~�s��L��*�}�^�Xj�oԣ	n�x7ޓ�W�o�q���;���S��q�s�c�����\S&gt;!��Ɨ�s�z�vP�|�0Z�c��ƽ�9���k�b��`9�~�]��Lb�`v�����sʇ&#039;-�nZmK�o��۸���0�S����1&lt;�y5&amp; ˺t	�P]��%��o���M};FYwN�mL_f�&gt;�̗D������e�+�Wot���r��KGq�@�M��x���v6�I��u8%�&#039;X���l0�����oH&lt;�;�N(vp]�+&#039;i;ܽ����8��y9C��8�Q��x��,�&amp;��&quot;[�1Yp��t`F��,�&lt;=Z�3�j�N\g�7�X&lt;���8��+x��b��,�J%�
-�GOyC,��e�y-�&lt;�Qozn˪�����M��	P���x�%��I��+�c` ON�px�!N�,��B.A�D&amp;s�t.s��h��Mte��͈$��K�4	Ũ&#039;�H��$-3I��C�Gnb`0{1p��[L�p�om.Wr��7�K�S=u6���Ǻl4����R3�U�]ʹ%�)���F�Z�����&#039;FנT��5l\��X�������w-}��kd���LI�d�&#039;�����Kۢ�^//d��b6�pmZ�\C[V.�V��Vi�Jݳj�5��&lt;,VB��y|iyx�?(:��&gt;�~�%��7������U0����R
-Zq���Rp6��~���B�JE��vG��Ka7/_)�VO�&#039;��Z���k�� )�FM.Ҳ�p&#039;�&amp;mn/R�N�VHٔe��(�)��D�-��j�	��ɨ�pq�
-�+�Y6�z8�����o��z�L��l�R�R���&gt;Fg-�,�:P\6�S�Mepj�&lt;,c�7�8�Q]ŗO���E�a�k]u�l���.�vҩk��%��dٵ��4]�]�f�*8��d�D8�j�,Rd`�L��t��t|^Z(l�K�!����FQF,�z414yPo���́1�9p&amp;��S&#039;���a��c��3��Lt�&quot;�B:���Nf20ݒ(L�$vP�)�dd�&#039;Y�)��m��h@�ތ޾y���?E���g��l�F4J���ت�������&#039;�4���?Y&gt;�෿|SM�,��O�ɏ�&lt;�޴c|��(&#039;2�.=�/\2��ce��Ϗ����(O����@AZ��%���f���p����%:!=���E�n�*�:��7�(9?���Ǝ�kdy���e���6v���eX(�7 p&amp;�n��&amp;/�2�����n\o�2,Bl*���ѹ��/Y��In�L�2�aGUs�1n���$/�$/�kem��Ē�e�s�Pg7^��M�ݖ��e�#��&thorn;AyY�T����7�d��@?P���e�V~p�i&#039;&gt;n�2,#���uL���eXʪ�H�؛��|��eXV���� &lt;l+SW��m&pi;��[����L��H(`�� �4�)%a9��&lt;���L�V��R��b=8E��J^�{��L�Jfq�8�t6c�+q�BWꌧI�3&amp;��gLw5�b!�-�(Z4��h�4I�HW--b]մ�N��E�+��\9����U�,��Z�qu�rS�o-{��k��`K�Y^f��p�x��2ݛ�e2�&amp;2�&#039;&#039;�bxd&#039;@r��i,��E&quot;ӹ���XfF�h��o�JF$�͈%�AF=	Ŭ@�1o%�YHZf���)h���`vc�0fy��] ���M`����~��&OElig;�e�I^|���RCH&gt;�r�Ip?��J�ࣻ�%�&amp;/�2��|$yY�M^�e���l�&amp;�	�W��`ic��\gw���u�J�p���&amp;
-.!.������I��В�.~3��&lt;8���&#039;@����%���D!��H���RA�����EW��EgS#(��.!��P�H8�r�d�v$-�=���i� ��av
-�Ż�����,/�ԓ�ܒ�,�&amp;/�R��\���:���eX�$/N�20��Z-�Dn6c��RK�5C�H��$���٢!|��&OElig;�e��e�c�,������:��|�Z_�$yY�Lͳ�)/�l��1˭�s���
-�$;�7 lx�Ea�&amp;�MЛ��b��[Do��2�V�91=&quot;R�5����1g{&ccedil;Sص�P�x���ʛJF8o:%S[�H�+#�7�����e���1o�Yl��e�(Y^�)���$jp��e�7yY,3)v�qo��a�7yYf��e�q��b~�e]3J��I�D�{���ԭ����.:�����(l����(dM�.V�$/K�z�4X��Vi�Ң,�&amp;&#039;�Z�&Lambda;�,eh����I)N�
-c��4aL��$/wS���\�i�L�~I^�B�&amp;/Kaw4��vI^�2�&amp;/K��e��e)�FK.Ҳ,�(����4ݪ�M^�M9�˲)[0�H��j�	&#039;yY7� ��y&amp;:�&amp;\�^7���U^�%��aR5����ӆǁQ���qj��q�T�8T�|�+r��&lt;�T&amp;��.�D��t2�O� �Q�
-*�D��T�d�JK�R�%�C�%�3 �g�&Uacute;4Ia��B�5iM׬G�&lt;i���������[�Hʹ���-&Yuml;�nI(��\��4�%���T�=K��C�d���n�a����S&#039;�R��:,�{/�6��-�m�)��7��o^����c������(/�i��C��}�}�./�tqg,�j�H|��Y�ٶe$y�&#039;y�� mZ޶�#n&amp;��~��&circ;ez��$/#]�⸐$Z�$s�j�������M^��d�b�2:!�ō���&amp;/&Acirc;����y�Օ�����n�w�w�jX��+yY����q�5x��w�W �{ޮ��&#039;y�%y��|s5,���׻���+�e�ez�.,3��G�����t�a��.&lt;d{sK�2p��˻���P��l8���&amp;/�r�.B�$/���K��I\�rRc�ϛ��J�2�L�8�\�ŕ��$/���C\E3%��X�J��Е:�i��ɮ��]�XHz�E�+�M�8Z�%M�&quot;�UK�XW5-���iQ�ʨeWN-o$m�2����y\��ܔ�[�^��Zvs�`��o!3޲�L�&amp;y�����ɡY�	��� yK@&amp;s��t.&quot;c!���BG0��(�[��Ig3bI�tЅQOB1+�p�AIf�����fn
-�3{10��8L�Y^&#039;���������$/�L�X��&quot;���]�W��Ē�e��e�7y�~].V	N��Ғ�
-
-b� 3��L�,%��X�+�˂o�2,g���W����M^��H��$/��J����D!�%�]�f��yp
-0&lt;9/$N�&quot;&#039;H�K2�B�B�9�(:�bE1����&Phi; F2P0#]BR#�(��p�Hɐ�HZ
-{$5�?�&gt;�A�C�Ż�������}�&#039;Q��g��]�5�E�-��^�Ͼ��1O���� �ԭ��ຢ�2#���2M�f38���&amp;/���I&gt;�$/=��`)#�JsSɤ`i:��e�$y�L��,�բ9��e��&amp;/��X;�,�v�}3��c�`��{�Z6ob���aK�� �H�(�E�F�-sj��#�3#&quot;�Yc�L�s�7|&amp;�]k͈Gk���d��Q2����޸2R{c�h�Z_�������]^����e����M��ϸ�Sf\{��`I��8��2�6�����Tf��e��M^��+�G)��2�ҷ��i�%J�$/�$/Ka{����M�20&gt;�
-+�֛�,�j���,M�2p��t�Um2%Eg��sA��X.(M�bъ*���$/K)x���������T�%e��U�NM
-�$/Ka���n)��H�&#039;��:}���y��L���Z�Mw���I^�Mٜ�4�My�m�)&#039;yY��,�𸜌�	W&#039;��,�p�����X�eZ��&amp;U�xP�m&lt;m�q;����&#039;OU��CՐ��&quot;��#@e�.
-�N��I&#039;S�$B%Q���HTXI��`IF��$+U\�9t^�J0�Jq=�I��6i,�\���t�ڂ7��ޮ{[��.n	&quot;)�B\[��ڻ%���[�r��Ҙ��R�R��,Uz��i�2X��&gt;��c�SX�N�K��바��R�Ķ��{@�ތ޾y��~X^�����?����/�Xs3�r��Ǣn&quot;;�|6~�������bA�j�3O�E�O�&quot;+}[�Q�/�XPH��Q�.h(����mYS�!��o���x����`�[,�]?Q�b�5��%��J	�&lt;Ui����b��C,�p��l5pU��x�-�E���&lt;|,=[l,7�n&lt;��K�M��(�i����kJ����ADqRINjr�S�z��}� l�&lt;zj��N��+:&lt;Xp��	���H6A`���,�&quot;	x�X���e�ġ#��9��}�]	�\��w�y�d ^�j�,�XN(�C\���vN�$,mi�k�Nj,���洇�s 0�W��q��j���^	��� 1e@7��J	���8t����ސ��w��=�)p�[�ł&#039;9��xb�� \��-b�=���r4�7���7��PG3bKVИ&gt;���z��F�
-�몞7�-,��O[Z�\/�M�s�i���`&lt;i	�8�mo�H��{�So� ������e� Y�	���d2�L�&quot;2b�-t���b��+�t6#�d`L]�$�	Ǽ�df!i�yHj榠=��ٍ���ؒ�쮦���&quot;㐤��{�q&#039;���ݻ��qc�w���k�m9q��T�ZV��E�7������ߐ�C7�vQ�J�w�&quot;���wBC��xI����n|Ꝑ��qyT�� 
-�$A5�]����m�-r��t܏�q��Yp�g�_C���сO;{B7^K�q�]��&quot;�n��t�J�j������Iz&#039;�Y�:�wB�7�_��׋
-޴vI1��I�E��	h�e&gt;9A�p)�/�4\*�E�Kdy[D�5�/�4`&amp;��M��%�Se�+���	i&Zeta;��&gt;qi�f�6\�`ǲ���4�I�eNIm�p �^(iOō߸��_���v:e�ӛ����Mw��o�Ե�r^���&#039;�&quot;�,c��&amp;�B�9k�),��*���L�D&lt;`�W Y��գ	�AO�xK[������!�xL��t�z�&quot;+�
-�yC,2s�,U.�N�&lt;���dn��_����nw��&quot;���f��v��-�	���/8�	�e� Y�%�r��d.&quot;��e�X�#-t����x���$#�t��&amp;��$�)y��ef!��yH��Mf/�c�	�^l���Jڝ���̈́��O]w��e�v�H�[�2�Rj!�M)���D}q��F���C�qv�4��Ay-]��x1T���ц]�7p�,�o��v�+��lM�|�,�tozYX��Ѽ�����ǡ��hZ팡��&lt;��7
-�Sk�vh�X�JU�Բ�z��Y��VE�sH�Q0����R�^;��^��ӊ*�P�*�`��R
-�����:}�R�&lt;5)�擗�n^�8Rƭ��O
-��|��a+� )�L�SiYN�}{Uw�l��t��l�c8QdS6�H�#QM6a��a�n�p�U�&lt;�e��	��rD�v��u��ϛ	/��A%=��EB/��ck��O(.�D��ɦb.��&Acirc;��8�Q]ŗO���Eڱt�:��I�vy^�&quot;�`�����[�|�ɲk_�i ���:kD]�t�&amp;j�*�T]`��F���0�JF�g�T����������B�D�EY�(b�����A�qZ�7��� bjL!�&lt;S�I(��i��4F0х��
-�D�J:��4h�tK�0�HL�A5�t��)�d�t�A����z3
-E���[�Ven��4��q��I�Q�?̝��^���RL�q�	x$yX��R��\��������:B��I^6,�a�I^�W	��,/�rM��ʨZ�I^�~�랰̦i�(��e`���*,�$���]F�G�:���Y^�8��cE�;L������IY^�����њު�2L%�ˣ���&#039;&gt;o�2,��&gt;|���	��u	`�I^nGh��x�/3,%�ˣi��Q�򴕻�i{�|$y����.��$/S,��z�a����I^^I^&gt;��h�H�2po͝&quot;N:�cuew���e2�*B�
-��,�GR�#OC�#�����T�2Z�(2��82�B�dDR�d�R�dL��ɨ�2ʬ@�y#�Uf���&lt;Tg��B�e�����F�	0�ˌ��oY^�{��L�D����P�,��BN�&lt;�% ��Hd:����h�#Mt�-\Ɉ���$c:�&uml;&#039;��H8捠$3I��CR37홽�n&amp;�,/o��msI^�&amp;0�%	�@,o�p	G,I^,���@�o�X��\��,��I���\��U���,�&amp;/c�W����v�7-HUR�E[�*��$/��˰vmax$y���eXZ��&#039;yY��J^�9I�&lt;6K����$/��`xr
-4^H8� EN�&quot;� d&quot;.�$.&quot;�&amp;.sHQt�*:�b]r�MA�d�`F���FBQt#�(ʑ�!ۑ��Hj
-�}H����)�N:�v���\���!/���]ʓ���{_�B�v��a�I^lG Ӂ5��P��h��e��&amp;/�%��].��G���SL�%��3�˂o�X�陥��$3��3��Ĳ�g/�I^&Theta;��ͦw�%��ݦw&#039;���!^p� �8A��K&lt;�&quot;��\D2���@G0Z�(F]�Fg3&quot;IF,�1MB1�I8fR2�I��BR3���^f7��]^����e����MP�&#039;yYf|��&OElig;�e�qo��Ɍ�L��̸�*(36�����&amp;/ˌ��ʣ�&iexcl;LJ�k�_U�D��rgun��E�T�G���� a�iyY�֛�,���hV�jr�e�uhe�:���I^��s�R%��((]�bъ*��g���l-�VJ��}`R��0DDF�w����K�v+�w)��H�&#039;��:}��g���L-�H˲p����C
-T&lt;(��eٔG�!dS�Չ$[�;�	ۖ:K�M8�*�&amp;/�&amp;��eݔ# 2Vy��$/g�4�jOzFŎ��ǩ����S��P5�����HP���B���n��T?I��GI*�$VR-4X��*-�J�t����̀�R�E��,�X1�hbh��8-&Ucirc;c�s�L15�N�)���$��4�f����EL�t&quot;S%��d4`�%Q��I$&amp;�S:�ȔO�rS:s� ��惀x���&gt;_^�����?���?e8��W��S�zlC�L�,�#��c�}��)��T�Өp?�)a��~�{a�S�r:���6T�������7�o_&gt;����w��=���&lt;��?s���w��ǲ�&gt;�e����� h9�%��(W&lt;�X�X��fw,㇭��;ԣ.o�_�x��㧴�j��3&Agrave;m���E�a�A�܆�������ǥW�����n�?���Pun����@Iu�*�գɓ;�ȃ�J��}a���Z�)�����@�{�FV�M��2�&quot;���!��0��c�̵!�w&amp;�2+�ǋp���c�;�ˇ����5��z��?�9o�ږ��%�]^�狂��#��m˅J�ˊ�D��UC&Epsilon;ܲ-�L~�/����q�O�%��C�Gvbl�+��&gt;�v$,8���+�91���w�Jp���f����������G\DS�|�i��5� ��zr�_95`&lt;@�S��o���:y�Y���oH]���J�����t��!�8����N���i�dx�Ty�H��(+�T�v%�_\XO�x��t�����	[�S��!��8,&Yacute;�!�+�~D��tJ�j�ƼYsB�����f_�8i�4#��j��E�|�����ݦ�н��2�nٔ��\K�X.^Y�&amp;�,����郸��پ�(�_m-�Hg������&eta;�����7�C}���5�����ޅ��~j7&gt;���B�n*�ݺ��? ��$
-l���\���������U��pQ Cf����h���Mt���f�u��� ��B؊W�0��kC�A_~z���eǫ�㲔��Ky9�h�+���S���s��+&gt;^��C�-�P���i�������J�KX���@�Ia��ȑ*#�Ac��cC~����r���}塍�Z7�.?\=cjcgLsG&quot;�W,ΰ[&quot;�vHlP�bq�E�|\�ao	�sFS�,��-�F!��6�&gt;R�u�ǰ7R�?��^A/�m�83��&gt;ĵ��Cw��o�W7e��w�(�����O�se+oU�}X�S��wxw OQ��[0�=��&lt;)�If��Z�=�������{)N��	�~�ۢ�˥�`T	ԪA�N��.A��,nU��Y��bV�n�xZ�ܮ�� ���D_p ���|&quot;�y�X,��C?��,[	����a�*�&quot;�hѨR&#039;Ƨ���~h�A�Y����\��+�bj��&lt;w�/�������b�W�bƝcQ��gq�t�[�&amp;zXl;,��^��,8A-�8-%�[����bi�!$�D��Kz���t-��a����-��&rho;iէ�L��������ni2`K�����:��؇�F*ϡ5A;Xf�T��lw-&quot;��%&lt;��GP�	��Fꎡ���쐻/��oRi�T&lt;,���յB.���A��W�:gժ�Ӿq�(�ޒ�{-u�,�m`�oH�x[z�c�=��c��m,�̏�$�ϴ���b��[O�b88L]�=9�8�l~�Ԕ3Kba˚o\\���Y�������/�^A�p,���&gt;�rW�
-�����vu_���I��)��c��߬k�S�\�� -,��s�u�^��)����~ޜRZ�廘U4�.|d/�����3�Q�%t�?E�	%��&gt;�o_}��	��3\��݃�E_��b�U�!��&gt;E�T�mX���������ކc]�}x�e�u�$�l�E {$@)u��pUq]��V�b	&quot;�ɭ�D-�T7�2���䀍*Hb�&amp;�lN$��9XhkB�ڊ�Ŷ�As[qƁ��ab��822����ʆ���d��r-e�3U(S=�(�S�Q�{.���2Ui�0��_![~B�������?zg;�L�L�����ǇǻǿM��~�~�w&gt;�C�o~����W��o_&gt;�����׏w��1N�Y��3QR�������&atilde;ݛ�V�����������3|#j�_�?��~��������&Eta;�����|�����į�g�n����e�?�#)G���7�;8ϻ������,o7�ގ��&ntilde;�/{,&gt;ߴ^���P�xf_�w�_�~��||�?�V�+9�}��g�m������N�h�O�Ѿ�&lt;�!���x����{q���O�&lt;�c~,�7��1�$�����OY�G�� �$��$�&#039;q�Շ�`����X�Q&gt;������������7�X�Ti��C�ǝ�&#039;�^�&lt; �I�G�F����� ����Q��P�=��PO�%A�2@t�LK��o��*^Myv ��x�/�Vt�W���U��_�����6��mZ�UF�u��U�j��(�L����*�x�A���athI���	�qH�j�9U�A���c698M�c��	ʾ(&amp;9�U3Qڗ�Dk_u���[L�v��0�n5�&lt;���u&#039;����� |2�?��@0�MR�aJ�n�&quot;d���yhx2�iS�1N?-��{�&lt;4����wx^ӧ��hّ;MF���Z�|/Y�X��+�%*�y ^-:�l�#u`�^�:�H4 ƻ�� ˵���~39��K�&lt;�2�JV�cE�x�o &lt;,x�7B�����4D�!�&quot;Q�GԨM�Ԩ�1i��5&#039;�9i��IkF�5ь�M3����+_t�g�+���m�ݫ�-��M�˵������j�29yi�&gt;�k;��{����➈t���~�����!:�3wh1�O�&amp;h(�g�΃Fg�A`���Y�� �1�yX�� D�{fL儡h���^��
-�f�&lt;���hSXV�&lt;�Z�&lt;�����~+��y ĳ��y������e��`-�� ��e��=�cfⴰ��4��E�\Xr�_L�?��z~f���L�r�S3m1���G_S&#039;}�L�L�k
-���)���H��LEu�����76�&Ocirc;Z�)�N/�z�Lv��Z�U=9\� U�#@T�&amp;N����J�X��7 �X�q���k��y�jay�ʋܽ� 8g�&lt;h���y s��R���� n�����SUR��mhuU���΃��1+�ё:b(���s��2�@�.�1��:�� pz�A�H�14�&lt;��y LQESD-����΃�xgV��)�b�ʵ���1�]��c|��3Ƨŵ��շ�q�XT%�Yܹ{-.������}��e��?�NP�/�_�@��&lt;,�y�X�ceQ[����y���;��h�[D��k�� ˸�� &lt;Wt��#w����V�K�R\����ń�y ^#:�W=R�A�3:��#M*M&gt;K��cE�A�[��k��6nt����=p��� �M :RK��&lt; ��ً��f�&lt;��stĽǭ� Ӱ��U��i�y ^3w`�j�΃\!�y �`�Hr�4��P�%����+��y��&lt;�� �T5:�տg�ҏ�&lt;TyI`s��5Wɝ�*/��C���ʤd����C��oy�xZDr8^�r�΃\����:�+&#039;�:�nt���:=T�M�Q=�	f/$�TNU���Z�\�� Ӣ&quot;�T3�LɎ3��1h:8C�t�a��䦲3�
-I�Tzf��dL�,d= �)�0�%(?�]��*3䠺�r�N���6� ���,�9�d6�`��	ij+Fۊ�m�����+���@3o{*R�*[&lt;��K�ʵ�	�upL�T�$��j�鞋4&lt;Ui�0����C���&gt;��T:�U��i�%�)o���4&lt;�������֭O���x����^dy�4&gt;�I2�Ot;ܫ�A��qc���Oi�����㗟=���&#039;^����jx�~���Ʀ���3�3V�*:�ո���_~,bW�Mi���q�!�OY����B��)���4J
-?-���_��&#039;��J��wҝ�ڞ(�~�*����u�&#039;��K�_�--��Y���4�yl��E���JO�����2���?�2=��/o�r��:\���ZR����e�q�Y�R?�c��V�G�Lv&Iuml;	����OE�̏������k��ӟ.XJ	�+=[��N�\����
-y�I��L���N�j)�bb*jjk���XN��Z��ɹ�D��rM�kՋc�MP�sLo��L�ǚbM���m���휡$n��bn|���t��nle0��&#039;,X-��_�#�W�������o�BǋYB�&gt;{��?n}�ialDoq�Һ\�U��8�6
-�0�{��
-#����F:iՌ&amp;o��f�h~�d힁��]���JX�h�1��_�X���L֔&gt;���9C��\�0ڱBŏ�ho�G��[��zs�u�8d��Ŝ���I[_�kb}�X4�+rU���E��dxź�t��4�U�y���5^�cj�aG�yŎ���X�%��N\�s�پ3(�_m�	�Z?(��&#039;��#�U��/�k+i��P3���,I�W���&lt;\�ؒ�C?]��/�A�3i�b��o�k��x�k�b�ۦE��Vj���l��&Agrave;�ڣ
-��cu��}=�k�B��&gt; ^�EVD��д���ZR��(mV�9na�&gt;��4|?4�1��
-Z��N�S�Js���&scaron;�ǵ��K���O-�&Rho;�ޣI�R����h=�y�?�DI/���?�$(uW�)����z���b���c�&gt;��KӠ1�}�Gp9_�~oo�6�-%�qW�g�&amp;P���K��?Rlр���p�߇�ۣx�I���I_��u�Q����7��Q&amp;-V h�G����.�ͤ�끺k��R�%b�Y��ϸNϣ����ʅ4&quot;%�X��Q���*�FV.��9����e�h�,\�EO��k�޷�%9,��� �e��Ii%8k)����D�[&beta;x�R/6B�B��U�3�x�:g���oԖ�{�ɣ&quot;mn|�$~v�V+&gt;�G�v]��o�O7�G��G��&quot;�no��9B�E~�=�xX��D�o�x���˲;VDj�nQ71u�=�kr5(x��{����z&lt;,�.���1\��}�&lt;&gt;r�^��◵!�&ugrave;��C�,!���#�x\ʜY�y4�xyC�W{��Q��!���*�\�dZ�
-�B=$x�&quot;S��C)^!��{�C_�����!K�P�!Z��?��3k�x���]�񡼣�^��.�}&gt;���h��Mu�Cuw/�I�V,1-�42��,3%4hhJ)yj:*il:��:�UZ���HTy-Ҩ[ R#�H��l�L��&quot;�
-��*Ԗ+�_[*�����%#�㖫j6K�{ĎR�dK���vJ���a6��l�X6Y睭����8k�蔶e6ƛ,�E-�A&amp;s/#M����`�*s�J��q�S����A9�C)��|g��2���W&lt;�7?%ZR	���R܎�J������p�c$秔�ڍ��=0(����፯�S��/�?������1��hX%�2�6
+x��}K�%Gr�]��?�{�O���*�&lt;#�0��^Z�͇it�r��o/����y&quot;�DD}���VA�D�[��q&quot;2�DU�7�}3��R�s��r��|�tC&ucirc;�1�K�㣖���x)b����߾)�C����zS_��x��_?������?��A��vaPq|��{���|�������G�����&lt;���~�Ϟ������מ�՟�}��_�g��̟}�|��|�������&gt;&gt;&lt;_&lt;�����������6������_?��39�^Ϋ&lt;�q���#��x�o�������||����J�~���}��p����߽(�e}�*�n�����s/���q�	�h�H�O����o��O�.���|����:��c��rC-��&#039;Vk��u
+&gt;lX��c�e������V�H��r�&#039;���]&Eta;ˎp�&amp;�:�1N��^�v����|b�G��ǥGl��7��ǨS?і��Cp��^��\�Q�T��b�Q)&gt;[|�70������JNj���dw[�|���7�+a������a���c;�J&Atilde;�,�&#039; &lt;��&#039;|�=-,C���͵XD�֏�̰�:���}��&gt;�\	�N�l�iG ���Z�K?�
+��kA8�r�DI,�5���l�I&lt;��h�qL�Ѫ;E�4�+ͽ���~-�7c��J}�!���pm�8��R��$g�&#039;ړ!O�ϳ�7�d��8���X ���7-b�Qh4G�x\��&quot;8�+�t�i�&gt;�}Q/��1�� ܮ�yC�&amp;�fd�����#�^���&amp;d/X�v8���S�۲Q�x�-��7uo|�@�C1&lt;�� 9A�4��L�&quot;��\D�B,3���`4�Q��p%#��fĒ�����bV �7���,$-3I���g�b`0�1p� [o�I�eԝ��1qL�����ظ�t�vܭSpG�۸U�ܶ�A����OL�㬊�m&lt;��7�X�e�7��O�v���i�U�o��K�z4�M��{���*��2.��x�v�~b�6nz�uL[�;ගk�&#039;d��zn\O�j�ϡF�z�3߸7=�X�{�^�,G�O�K��I,̎1|㵓vNy��e�M�m��m�{�7�q��pr��0�&lt;�f��`Y�.�ʡ����͵Ӿ�	�o�(�&Omega;�����&#039;���(���T�Q��,w%���?�X��&gt;q�(.;�ɵO�5���c&lt;I8��$���2����T����!q��@`�	�΁���z�#�o����ug �&lt;/g����`9�r��&gt;���}��SXd�5&amp;�ә�h�X����G��}vFS-ۉ�L�&amp;��6��Y=b��bZ,��E=�B�dYA��)o�3��&lt;��G0�M�MbYճ��9&lt;�)&gt;&lt;���3o��x�7�^qe|���/8�	�e� Y�%�r��d.&quot;��e�X�#-t����x���$#�t��&amp;��$�)y��ef!��yH��Mf/�c�	�����J�tSx�fBq)x��&Phi;�UW�X����QPjaƽ�K9�$8e��hT�sC�qt����ʖ���kt˶R �����o?u��2�)�L��Q4��via[t���l�U,�M��kha��������*mY�{V��&amp;�r���J��;/�/-�E�����o��~�&amp;������
+&amp;`u�TJA+.��R
+�����:}�R�Y��S���&gt;y)���#e��i��p[�x�� eڨ�EZ��D٤��E
+�i�
+i ��,�E6�Y�H�#QM6�q:u.NV�s%:�&amp;\&#039;���`��X�ɴ��a_�Z*���������S���&amp;Qcj��N��e,�G6������v�H�c;,r������E��N:u�Ӷdu&quot;�,��՝�����S�2�� ��gPMt�E����L��i��P�΂��bB�Mx)`5 [@P��(�EC�&amp;�&amp;���2�90�?�Sc
+��b�8LB�|LS\`�1:��.\�TH&#039;2U��L�A�[��Db��1���L�$+7��3�&gt;6�כ��7�S߻����}󬲙�وF��j������O��?˦9�?�����j�gy��}�~�!��{ӑ��f���,�����/�@&lt;�Q�|?�~p�Gy&quot;O��7
+��&lt;.��&gt;�0��e�S����G-�(�	�a�&gt;Y��樢�3�y��������m��F��ajI^�I^nc�M^��b�(qgR�6&gt;n�2,#����!j��&amp;/�&quot;Ħ��/�+���UI���$/vQ57�{nKO�2pK�2p�V�V�N,I^&gt;�uv�e����m�I^&gt;��&lt;����I%9�][I^���Ӫ�&lt;���M^�e$y����	כ�KY��{3;b�ϛ��J�2�a����me�JX��p6pK�2p1�)]�~ �	L���F0�$,G���G����	�J{X���\�G���^��to��� WɌ!�����f,s%�X�J��4iy�dW���Z,$�Т�E�&amp;W-ޒ&amp;i骥E����I���weԲ�+��7��j���W�&lt;��ZnJ��e/Wx-��l	0�ˌ��oY^�{��L�D����P�,��BN�&lt;�% ��Hd:����h�#Mt�-\Ɉ���$c:�&uml;&#039;��H8捠$3I��CR37홽�n&amp;�,/�� ���	�`��!��c�o�X��,8�˂o�XjI��Z.4	�g��`YI^|t���eXf����$/��˰�9\t���D9��J�,m����.��.QiN���C�%�Eu�]^�9IZ���o&amp;y�� &Oacute;S���B��(�p���!q�($q)4q�C��#(V�Q��ʐ��l
+b$3�%$5��	GQ��َ���GRS�#�Cd`P&lt;�N��xwґ����e�z���[����eXj���K��[�T��˙�e�I^f4Y�����f�]jI�fc���#����8[4��o�X��ܓ�,x�ܖ���Ѹڸ]g4���[��$/��y�0��M�9f��sn6�]!���`&#039;��/�(l�İ	z�&Ouml; �Al��Qb��[��j1Gx3�GDJ��\��9�lo�t
+�����22ByS��M&#039;�djKi�qe��Ɩ�&gt;��,0�9f���3����,c%��4%y9�DMN��&amp;/�e&amp;�3�-=�&amp;/ˌ��,3�3TC�o��+bFI^�R8)�(}o򲔺�=]��Eg�U��m�U6}��	�Ŋ��e)[���B��*MTZ�����S��y���M��#)ũ�Ta,�&amp;�I���e�n*�!���ˡ8���I^��/��R���e)�擗�.��R���e)ܒ�ܓ�,e�h�EZ��e�6���[U��˲)&#039;yY6e&amp;I��#SM6�$/�&amp;d&lt;�Dgل�t�����˴$y9L���T�x���80*v8=N-4?N�� ��!�/tE.0�G:��$]�%�Hu�N��I�&gt;J�PA%����j����TiIV���s�$&lt;�`��,zX�&amp;	#l�X�&amp;m����&#039;Mն�v����uqKI9��ں���-	%u�Ҕ��\߷D�: �
+�G`��{�LS��ҭ�!,{��v�dXJ�^��|�ئ��%�mx?���f������rlU���	��&gt;�QLy������e��#�^�)��9�:۶�$/�$/W�M�ۖr�ͤ����yxٰL/ܖ��e`�W�D˚�B`�P-�2p���;��Q�PF&#039;$��1x��eX����:/��2uv�~��a�-���n\��qy%/����&lt;N����@�
+�}�ە0�$/�$/ךo������zW;{���LO�%�e&amp;y�H�2�&gt;�.3,�څ��bonI^.7yy���
+y�G�x��eX�E@(��e�v��a��:i�K[Nj,�y��aYI^�I^&#039;�˱��ܛ�e2�U2c��hơ���\�3�Rg&lt;MZ�1��&gt;c���I/�hqEѢ�G���IZD�ji몦�t�=-�]���ʩ卤�Zfq��2������~k��^�n� [��2�-�c�[����$/�4�!&lt;99�#�8��$Oc	�d.��Ed,�23Z�F�xW2&quot;�lF,���0�I(f�y#(��B�2���MA{f/��	0���rs���4]���e��I���]�&lt;��@��J2�X��&lt;��,�&amp;/�ү��*�I^\Z��`A�BA$�`&amp;��IR��$yv%yY�M^��L�2�J�2��˰I^��eqR��[?p�($�d���L�2N�&#039;�@�ᅄ�	P��)q	B&amp;�&quot;QH�&quot;Rh�2�EGP���(fѕ!w���H
+f�KHj$E7��)�IKa����Gڇ4��x���xwґ������c�$�3 �L������(��w�Kc��W49���[d��ղQ\W4RfD��Z���l� &#039;y���e�X&lt;I�g��e���,eDSin*�,M&#039;�,�$/�I^|��ŲZ4ǀ���x���k���&alpha;o&amp;y9Lvro@��R��&amp;�M��79l	R��%���H�eN�s�7cfD�4k̕��c��Ϥ�k��h-##�7��p�t2J�����WFjol�S��&Ucirc;c8�&lt;�غ��2���LS���I�4�7sʌk�z,I^�&#039;yYf�f�0�7�ʌ��,���2�r��(�pR&amp;Q�vU?M�D���e��e)lo��I^�&#039;]aE�z���PM򲔥I^nVB�&lambda;��C���L�r.(U��	cR,ZQ��e)o򲔂|���Rp�ʽ�l;��שIa��e)�V��-e�i��p[�/0�5/w��i7yY˲�N�};�˲)�ӕ�)���]6�$/�|��e��Q7��d|��eN����LK��&auml;jJ���=��bǁS���B���
+rq�r�BW�Sy��L�E�]҉T7�d���A�$
+T�
++�,�H��d��K:��K�S	f@P)΢�5i�0�&amp;���k���Y[�&amp;U���uo��-A$��R�k�b\{�$��yKS��[s}�]� X*���J�!X2M]K�އ�t�}
+Kة�a)�{��b�B�ض�y�כ��7�S�O�˱U�I^�G��?��kn��C.��X��Md����Ə���[,�C-x�iA�(���Xd���`�7�}���
+��7*�Ű&gt;Ѵ-k�7���T�/��X��b����&#039;
+^l����D0^)���;ˮ(��7bA�[W�g���bTu�K_l�-�$߶�!@�c���bc��t�/�XZm�EF�7H�/��X^cP�&lt;�.&quot;��JrR�븰ȝ&quot;W�[�웸a���S;8��vr�f_���-N�]E�G�	C8�%�e��H������/3, ���p����JX�r���s�ȳ$�2W+]`��rB�Z%p�s*%ai3H\�tRc��6�=,����Zu���lT�/�0��H�/�0��(��WJ�TwơC�懼�,����O����,&lt;�iL�ӌ�/��hK���v��y�	.ž�u�:�+X���4��Xԋ�5ZV ^W��!X_la�E,x��2��zyn\��N;������HK��9�h�x�E����zC�D����P�,��BN�&lt;�% ��Hd:����h�#Mt�-\Ɉ���$c:�&uml;&#039;��H8捠$3I��CR37홽�n&amp;@Ɩ�dw5���$�0ܛ�;a6&gt;p����/��\+nˉ����bԲ�e/��(u4��&lt;�q�s�rW*o��y(�T����K�Ƹ]u�S�ܖ�ˣ��P�&amp;	�靐��:l��n�m��n���~̍T&sigmaf;s7�U�8���&lt;�|�N���Zz�K��yw�N���&#039;P� W&Ccedil;m0�/��N�;!�&quot;�I�Ҿ���o8�^T��K�aO.zw�M@[.��	ʅK9|	��R�,�\� ��&quot;�1}��3��l�ȝ��(��*�]	��NHs�\���K�6&Icirc;p���;��\p?�N.�pJj&Aring;� i�B�H{*n��E�o 0Dp�s�)��ޜt��m�{m+g0��͕�r�.=q�eˀE41�YOaѭV�,�Ng:�$� ��ɢEp�M�z�ǛX���g����cZ,�{��YA�T��b��kf�rauz�,�&amp;s�X����%xFv˸��٦/�0K���M_l�L` ON�px�!N�,��B.A�D&amp;s�t.s��h��Mte��͈$��K�4	Ũ&#039;�H��$-3I��C�Gnb`0{1p��[L��b�W��L7�7o&amp;&lt;�&amp;x꺣�.3��E����i~�R9H�lJ9�g�T$�k�7j�U�����yu�k骮Ƌ�Ztݏ6�bH��+e)}��{��]I�fk2�g��{���Rt���l�U&lt;-uG�jg-l�uH��Q��Z��CK�ZU�������#��B����(C���t������H�wZ&lt;�VT�����0pP)[M��Rp6��~���B��Iaw4��v��ő2n��|R�����X�H�fJ��H˲p��۫��eS6�+dS&Eacute;&quot;��QD�-��j�	�]�tۄ�����,�p�Nxݔ# 2�{&amp;�{`�{�Lxa*�4?-z,[���@1p�$jLM6s�N��ő��*�|��],Ҏ�[�q�O:@���r��W�Dݒ�N�]��N���Y#���4�P�T����W6��t��W2�&lt;�:���f/�^?��% B��(�EC�&amp;�&amp;���2�90�?�Sc
+��b�8LB�|LS\`�1:��.\�TH&#039;2U��L�A�[��Db��1���L�$+7��3�&gt;o&gt;�כQ�(�O��&middot;*s���;�wMb�R�q�&lt;����g(�b:��M�#��Ҧw����e���^v���eX�j�L�2�a�^KO�2��J�G`y�k��hUF��L�2��;]��e6MPF��$/㖶�Va�&#039;�L}�2=��.���r�٦c�(���a
+p�$�ߠ��N��򨗤�,/���V���a*I^w�?9�y��aY%�q��uLx���K KO�2p;B����|�a)I^�H����ܕ�L�3�l�#���\�t��%y�b�\X�K�딄�L�2�J�2�q�D{XF���{k�qҹ�+��n&amp;/�T���h�P�ld�8��JyZ�L��L��X���BE��Dő��$#��%#��&amp;c:tOF=�Qf*����2�P}e�:���-�^f7*�L�Y^f��p�x��2ݛ�e2�&amp;2�&#039;&#039;�bxd&#039;@r��i,��E&quot;ӹ���XfF�h��o�JF$�͈%�AF=	Ŭ@�1o%�YHZf���)h���`vc�0fyy�^n�K�r6A�,IP`y�K8bI�`��U|��&OElig;�e��e��LR,�\���e�7yӽ��,���`&amp;�iA��,ڢU�x&amp;yY�M^��k{�#���&amp;/�Ғ�,8���W���Iz�Y���o&amp;y�� &Oacute;S���B��(�p���!q�($q)4q�C��#(V�Q��ʐ��l
+b$3�%$5��	GQ��َ���GRS�#�Cd`P&lt;�N��xwґ������&quot;,Х�yY�M^�R����r���KM�`;����X�&quot;�F��$/�7yY,I^�r��&lt;b��bZ,I^�I^|���RO�,�.&amp;�y���%��&lt;{	N�rƔ�o6���,9��6��8�� ����C� Y�	��\��)�L�&quot;��\�:��BG1��ʈ7:�I20bI��i�QO�1+���7HZf��������`�b�0�1���./Ӕ��l��&amp;8��2㛼,�$/ˌ{sEOf�f�d�-TA��	�Pe~7yYfT.W�eRJ_{���e *���;�sS?��-Z��&gt;*���qpOC��R���e)TO=G�RwU��O-K�C+�y�M��#��(()�EA��VT�&lt;��,�`k�R
+����&phi;!&quot;2
+���,�]����[��K�FZ&gt;)���&lt;��,e�h�EZ��e�6�R��A�,/˦&lt;�!��N$ق��ɐMض�Y�m�AV�7yY6�$/����˴$y9����T�x���80*v8=N-4?N�� ��!�/tE.0�G:��$]�%�Hu�N��I�&gt;J�PA%����j����TiIV���s�$&lt;�`��,zheaĢ��GC�e��i�&szlig;g���1�p�L1\&amp;�X&gt;�).0��D.b*��*�d&amp;Ӡ�-��tL&quot;1a՘�IF�|���BЙ�	�7���(\���rlU����e�Y&Aacute;��Z��5x�c�&#039;?fX����04��~��F����N	�?���_U�y8����P-�����W��?&lt;�?&gt;���&lt;�|��x&gt;~�_�������/Ʋ�&gt;�e����� h9�%��(W&lt;�X�X��fw,㇭��;ԣ.o�_�x��㧴�j��3&Agrave;m���E�a�A�܆�������ǥW�����n�?���Pun����@Iu�*�գɓ;�ȃ�J��}a���Z�)�����@�{�FV�M��2�&quot;���!��0��c�̵!�w&amp;�2+�ǋp���c�;�ˇ����5��z��?�9o�ږ��%�]^�狂�#��m˅J�ˊ�D��UC&Epsilon;ܲ-�L~&iuml;����q�O�%��C�Gvbl�+��&gt;�v$,8���+�91���w�Jp���f����������G\DS�|�i��5� ��zr�_95`&lt;@�S��o���:y�Y���oH]���J�����t��!�8����N���i�dx�Ty�H��(+�T�v%�_\XO�x��t�����	[�S��!��8,&Yacute;�!�+�~D��tJ�j�ƼYsB�����f_�8i�4#��j��E�|�����ݦ�н��2�nٔ��\K�X.^Y�&amp;�,����郸��پ�(�_m-�Hg������^�[�~t\xS�ě	��~����5����w���J?�v�?~�s`7�n]Z��� ��g�f	�T.���{BT~Tҿ\����Y�(����P~B� �K� ��&amp;��xn�Ѻ��yUIn!lE���Yp�ܠ/?=Rd벏�U�qYJ��ȥ�J4�|��)z�v�ƹ���z��(]�x״��{R@�CW%
+玎%��qtG��T_�ȅ��䠱���!�v�FZ9y�Ͼ��FW��c���1���3��#��+g�-�\;$6�^���&quot;M&gt;������9��N�ۖf���f��y���c��ȟ��N��޶w��x�ZAС;x�ȫ�2�qŻRy�n����&#039;չ��7�*�&gt;,�)��;��;�����-�Dc��$3�o�ц�x��q�&#039;��߃��qDM�K����U�F�;]�P�YܪV��Ŭ&lt;
+,����]eAj+㉾�@���i�D`�|#�X���~�-X�����3�U4ETѢQ�N�O�����ƃ8�2%M�cW��Ԕ�y��W_㳯�1&gt;-�ń��Ō;Ǣ*y����kq�޷�M��v�X�;�,;$�Y�p�Z~q�ZJ��`9���CH&lt;��:��,���,Z$��&quot;�k�[D��ӪO��./�:����d��^Y&#039;JJ�u�&#039;$�y�T�Ck�v��&gt;$���6�ZDLIKx8_��J,x��CG���!w_hiߤ�&lt;�xX���k�\$-R�b��u�:�U��}�Q�%�Z�Yt�&amp;�ߐ~����{r���#4�Xf�:I.�i��g�ź�����pp���zr�q&gt;&lt;����)g���0�5)޸��)���z��.&quot;p?_f�����Xp/|���T&#039;����*=��!�.��Sr=�2�K�	�Y��$��j��AZXک���j��!큧S�!�m��9����I�w1�h�]��^dI���gУ�K��&gt;J��}�߾�5�g0��=�����#`�x�Cu}� @�b۰,J�C��!
+h�1�Ǻ&lt;����˄�LI��&lt;� �H2�R�0��&lt;M	���D��[&#039;��Z9�n�e�-R��Y�U��FMٜH2�s��ք4�#�mE������qd�d���=�)P�-��%t�Z��5g�P�z&amp;Q&amp;�T�L�\do�e��@a2��B�����Ϟǹ7�=~��vؙl���w���_&gt;�u���_����~����}��&gt;~��&gt;��?&lt;���_����M�?j�Sb����o�A�y���������Uq&gt;ꫡ�f���}����=��������F��ǿ?�����ѯ���G�;9���	,�7�ߗE�Ѕ��G�Q���2}%
+�7�EJ뱋屋�G�����}����v�����������/�s��&lt;�w��g��n���&#039;;��ѻ&gt;J��+D���\�\.��rɯ�=���o�(��X��x��6��shgC�&gt;f�X�n��s�?�sH�ĭT�o���/�c7G�X�/�ߋ?��&iquest;������K�f�,T{��]��q��� ފdz�o$��x��, �❅*�H��z�-���+eZ�]_��V��ɳ�� �m���,x�ֵ��PO��7�J���u�W����o��&quot;�+u`���T�D�e%�8��,T���;�w��@K�,�wLh�C��ϩb���\�ɽiR&amp;��M0�E1I9���&xi;�&amp;J���l��b&para;�̈́ow�I���&amp;�;1L\&#039;o(��(Гy�ILJ��\6Hm�)����,�-~Rg���c�M��8���W侀��r+�1p�yM�Z&atilde;cG�,4y�,:�k��5�D�by.�\���Dgx��,4&lt;�U��Y�E{�d�#� ���,׊�B[�M�p/�� ːO(Y����9(������3:Įg�����D�Q�6�R��Ǥ1�C֜��9�&#039;���D3NZ4�H����|�5�%�h�s�i6t�j��[6%/,ג6���W��I&lt;���e� ��d��%J�W[�{&quot;��Ov�Qv����,����Y�Ŕ&lt;�����	�5:b���uRGlg�΂�`gA`�΂E�1���ih�{�*D��� .�MAX�� Dk�� ^�a���nxgϚzg��v���;�����������������~�@�9raɝ~1u�Ц��M�KC3���nʠOʹ�4wS}qL}�3}2-�)����p�sLM�3���k*�{�t�DSb�?��:�L�M�3��	jjp�W��LpU�#Tq� QQ�8ud+�+u`��f� �c[Ɲz�YzgA��坅*/j������Fcgp�E�Kqr����͢��O	XTIm#��Y�U�{�;�Ǭ�FG�,��tv ��
+�ٚDƐb��΂���#u�м� �zg�0EMU���B|�;~h�A�Y����\��+�bj��&lt;w�/�������b�W�bƝcQ��gq�t�[�&amp;zXl;,��^��,8A-�8-%�[����bi�!�Ek�&gt;�[g�k�,Ȇk��nM���,���\�Y &gt;��Y��_zt�[].KMp��B�Fgx��, _�H��;��, 7�4�4��+EqX���kl��uڴ�Y�RH��
+��06��,H-��� &lt;ktd/ǇN������Y���L�n�wS�Egx��Y���;r�tDg��{�&quot;�ӌ�B��FG��rg��΂\S��, W��K?��P�%���&quot;�\%w���/:��W&#039;��U^L�;U����i���x�ɕ;rݶ&Lambda;S�l��t�,л�Yp�����P=6�G�Z&#039;��@��S�7T�`g�j�NpՒ#Lkf���2�:B̔lƠ��Q�#�M&#039;g����`*{$	S�EL�g�1?��i�LS�`KP~�#�Uf�Au3���lg%lTA5Yds&quot;�l�B[��V�,��ۊ3��Wđ���f�8T6�@U�x$+�&lt;Еk)��ޘ*���I��)�(�=ix��@a2����뗣}L���t��^u��}�4ܧ�9�v�W�p}������֭O���p����n�{��JdJ�v�Wc���~��*~e�c����1��GW��ī�_�x��9&lt;&lt;��i���Ly�������·�������2vE��B����zmAH-4�0��ƏO����i�?|}T��&amp;��{M�W�̀v�T���`Co���&gt;�d���Ғ����Oӟ(�v�\��[���&lt;��+Z*$a7k���=�3I���+W���%,�Ѫ%�{Oq�_vW���8)��&lt;VemUyȄ7�\�JJ�����!��:?~��&amp;�?1�����0�?����q��%~��
+���͐�}~��N?�ʡ�d��r,&amp;�r����&lt;L��4M����Kd�/W�a��P�8V�$e:�gz�$�p�i��I�F
+j����F)j��7��NG���V�Q9Azբ!�?�|��&lt;���k��Vk0t�z%t|ೇ�_���ȏ&amp;ƶ@F�&amp;.��m�Q����a��Sk��	s�W*�0��o��f�h�?o���N��x���:&gt;�����6#�U�:&gt;�ޢdm)�3��3t|`8�u&aacute;�!t���v�xD��)�;�1Y�C��^��z��u�&amp;�9�E��&quot;W��\t�K�W�oI�YW�^�����]Q�{�F�T�W��ؑ5^�c��eGט�;���F��2�}�*&gt;&quot;~_����⸶��OU3��*���T|q��*���U|�-��0��U|��rE49��/��*��f�������/�1Z�ʡ�m��	��*&gt;�5=j�`�&gt;8&#039;Z�����/4\���XTbEV[��M����xe%�ޡ�f��}������I�CS!㙩��Ш�q�T�85�t1w*y\*}\;j���T��T���=*�t/Kz��fЃ�&#039;�CU��n���J�Ryu��6�n�G��� &amp; N*&gt;6�3?�43��w8 �5)��&gt;o#�R2&#039;q-&amp;�~i5&gt;˯6�x��3��H�K�����=����{�b��=Pw�u�J�=ps�e���Fz ��b�p��=�Lz=�p���Zo(�Y&quot;v̐�z��+�&lt;���O�\H#R����K&gt;%[����kad�B�c��\f����%\d�DZ�ѽ��}X���̱�bYF �,a���Q���rHi�H��,��,�b#�*$E[e9C���s�&quot;&lt;�Vl)K�ך@*���gM�gǯ����to��n�u�~�&quot;|t�R.&quot;��qiQ�#d�Q���C���Y&#039;A��Q�q����^(�,�gE��Q�&amp;t��Q��c�&amp;X��g(���Q+����2�rEx�y�W��&#039;�e--~Y�&lt;��nz&lt;�r&lt;ޒ&lt;B�ǥ̙�xHC��w�y�g%��B&lt;���˕O���P�q)�C��o.�|w?�����:����	�t	������=���We�ߥ!�;��5K��f�3/&gt;��v_�tw�0tw����$����S3I#�:�2�B���������Ʀ�:ϩ�Z P��8���D��&quot;�*�&quot;Ub�T���Ԙ-ҩA{*�Fm��
+��*ܞk��[2�&gt;n�ʡf���G�!�N�d��l�4�ۈ�6`��ƈe�u��Z-m�����Ni[fc����\��b�`2�2���JƩ2�A�ĊW�1()����&gt;���.�w��j�!.���z�#|�c��G��O���!e���H��S��EΏi׿��Ϳ��A����t-���ȍ���p�A&gt;��*1��.���
 endstream
 endobj
 8 0 obj
@@ -10559,13 +10778,14 @@ endobj
 endobj
 21 0 obj
 &lt;&lt; /Filter /FlateDecode
-/Length 2132 &gt;&gt;
+/Length 2115 &gt;&gt;
 stream
-x��XˎE�|E-aө���Y�E�Eȋ�&amp;e����7�]�	#E�w�ou��&gt;�v��?��n��}w��V��?y�ƚ�_&lambda;��s/���/��&gt;Wk8)��M�&otilde;�T�X�AK��%���2��_��7�&#039;��y�B`��a�v�.~�x��Yp�����ϐ��?���^��3Dr��ݣ�����sϿ:�;&gt;7����=�&lt;^��~�.��Ǘ[Hr��K��ء�R|��f})0,gc^ay�M���@_ U�|��ty�I�=`�x���쭹�O���W��`C�,��2~����X+6KL��偝b�J�a�E`�K��/X&Rho;��ǳ���\ k�)�3|�\���;ߤ����&amp;�2��I��C�z� ���&not;˽pcX80�Ȯ!�o�,�O&amp;Vܜ&quot;��m��8�{�bK�����a�q�f���#��4�u���=-l�m���ӖV�1�=�l!��X#��nB�A,Xzn�y���q8Pߘ+b�eR{�s0�#E&amp;_ӏ�h�Z�Mx�Z8�1���n�`�=��x-����р+&#039;Y�����i�.�(��s)�+�Z8i��� `�$k��K�&quot;$��5�Hr-l����� ��4�B���P���jA��\D�d����SFg^,4��,	���PY�dHt�.U�U��-U��&#039;�tYk�v&amp;���ZQfL��lAӊ4���j]�ٖ�w3mZgV�Z��[5��Z;hc�x��j� �U�K���	��^���Zf&amp;V9�&gt;�+����6[�.%��SSt�o�[�v��:� �%�P��f�(9ۂ,��f��ޔK&gt;@g����=�ѣ�gR�TR=� ��Ea�c2L�@��r7K�H��I�V=�H��͊.�]�`��nGM�&#039;[���6LLb��K�-鄭�C��Y���/�,&#039;gut��`m�h앷��vAT�G&amp;/�N�X�4�!g���bW.,���Q�J��aY[�,վ�̸������w.*�h�S���Q�R_�!h~�
-[�{p�R�}��VWr�]a�cK4/$���	X�Q
-�=z������8��B/B)i;��j]%/rZ�eل�gmǺ)���@8IVn�$ɤ&amp;W[y�i���[&theta;!ݿ����r܂!��y2&lt;�8�	�B��t�dF��+�e8I�ˡL/�d9T�J���F��NӤ�B%�
-��ir�W2Ҩ2[Um�R1�@�Y=(&lt;�z#���J�*2,�J`���ـ���i�jXTU�ĵ�b�ynm&lt;XwV��)���ʵu4e�~v����y����41�o���1Um�3���.g�M�=Lۓ?��I/���~L�Z}���
-��j�T�հ)+sCB�I}�[��e*r� �v��E0�m̉:��Sc�!9hGO�WԦ�gNcN���j:�V�M_]�ɓt�e��Y�J�C�W0�I�d��Խ�E��tE��fy��1ex�61�W^���I�\Ȧ�fWT�˪L� �&omicron;�k�@�+H� A�Ž4������@���M-��ٺX��8�6�)Ȩ�7��O���1{b�gt����kH3��l�&#039;}�Q��&gt;1��g��	��3K��J$J��j��nG�=�]�h�rZ�tFY6�y}_��[	�j0(	�H&gt;H��b�����B���D���&lt;��x/)-�7N��b6� ���W�Y�-zx	���P�E0o���K�7�r������&lt;��)��^���MA��ocC5�B���ezS��BU�lȵO�&amp;�5 �	�mE�gL�� bԙUO��2%0�*�A�9�������j�4���j,B����&quot;�y=Xdg$�3/ZLM-b���Es��Ё�c���td�B�lO*6�*[���KS�ʵ�x���T(Sg%Q&amp;o�F�&gt;k��`�*�(f��zM��e��ה��H[Ѿ}�)���-�������xw�W���%�s|3�S&gt;��7����;�}gw��=_���yG���m�w8�Hx����o7?�-�{�U��{yu�n��V����}o��}_X���=o������/q2`�o����ɟ��w��c����.�i&#039;yu�o�n��+��a�G^w%���V�x��$�7
+x��X��G�x��C;������+���A�B���V&gt;&gt;؁�,�}&lt;ya(ط��zz�də+F��y��ʟ�T���5���wO�3��۫W�O��5���{����T�X�AK��%���2��_�;�%n�O�k������|��գ&#039;?��#�G��gH��|�o�׍�&quot;��[���B&lt;��~�ܳ/�o��ǻ��qw�7�?���/�������-$�Rz={&#039;vh�妙F�C
+��؇X}%�=�(З H0��7]^bCb6޵t:{k.���*���/��)�!��ߩ+�֊� by`g���c�r��Ң@��s����:�)W����@��_&#039;��:��7)�;x������r:c��=琡�&lt;H�s�0+�r/�NLE&lt;�k�۷K/��Ċ�S�{[&gt;3���Pl�◝�8X5��0&beta;&Igrave;[z�V�ƾ��8����-�my#&gt;|���8��-$^1k$�7�Mh7�K�m2R�5Nb�sE��Ljq��x���k��-S��	oZg3�y[��A�M�,�G7���Z�&lt;p�$��p�Z8�]&Aring;� �&gt;`.ev\&#039;�7 L�dMp��R�$�ҳ�I���~� �b6D�&amp;^(��5J5�޼Q-����w���P��3p������&quot;�%C3�*�a����%�ʹ��v���z����.kM�&Tau;5cZ+ʌ�V�-hZ�fT�^͠k=۲��n�M��̪V˕v���Vkm�/^Y�ĳJ&gt;xi�~�:�`��Kp�OZ���*g�&#039;{EW[���f�ѥAB3|j��&nu;�.�`���	 X�Q�
+Zjf�R��-�R��j�-�M��$p���݃=jn{&amp;eN%�C&not;\6&gt;&amp;�$
+$�,�p�4���To��Ԋެh���Ր��9�v�dy��[k��$��4�b�Nؚ�;k����2�rrVG&gt;���^y[�lD�|d��ꔌ�Lcr6Yj.v�IHj�y�d��5�R��Ό[��kl᮱|Gᢲ��8����,���ء����-5o�G�ku%�1��=�D�B��X��e��_Ѓ-5���ټzJI�ǖP�&quot;(y���/�&amp;\��� /�[�$Y�E�$��\m�Qr��G�o=8�t�Rw K��p���3����`&amp;`
+�f4��b��X����$�.�.0�t��P`+m�Jf��:1p L�2�&lt;4+0Xs��a�Y$^�`H�&quot;�lU��K�g�D��LꍌfF+�Gb�ȰT+��;+gn����aQUiת��繵�`�Y����\Z�+��є��ٕ�38��;c�\�Č�if&amp;�T�e�t7�k���7�n�0mO���&#039;��:l���1	j�e��*�Fp�QSV&aelig;@��	I&amp;1�n��k���Hȁ���u�����1&#039;�0�O�ņ�=�^Q�N�9�9��N�5�,Z�6}u�&#039;O�Yԗ1fg)*��^!�tP&#039;i{�y�+R�:w�oS�]Қ�1Bǔ�UH:�Ĭ^y)K ��&#039;�sr!�^�]Q�.�2��:��mM@� iL���Ǧ;Dk,�I*�7���g�b����b�� ���8�&gt;���I�M�Q��!� c����Q�GsH��j�a�&#039;(�XH,�k*�(y��a��Q�O�totɢ~�iu�e��}��o%0���$p�#� -B��{�Z��
+M�JB�ܖ�ERZ�n����l�Av�#.p!��� Z[����?,�L�`�&amp;$㟗o�,��1�&amp;�y��eS Ľ�)��� C�$Ɔj*�1���4���ِk�&quot;L4k zۊ%�*�V�Ĩ3��*z�eJ`�Ul��s�Ņ�����j�4���j,B����&quot;�y=Xdg$�3/ZLM-b���Es��Ё�c���td�B�lO*6�*[���KS�ʵ�x���T(Sg%Q&amp;o�F�&gt;k��`�*�(f��zM��e��ה��H[Ѿ}�)���-�ǻ���xu������{�_���!r6��}���xG���w��v�W#^~�\}||dW��{�n��_�~���˛���}�+��q�َ������=8���}���v��&#039;�}͑E������1B���7|���m7&amp;dvx�����_󯩷
 endstream
 endobj
 22 0 obj
@@ -13213,33 +13433,33 @@ xref
 0000000363 00000 n 
 0000000512 00000 n 
 0000000615 00000 n 
-0000014313 00000 n 
-0000014448 00000 n 
-0000014843 00000 n 
-0000074332 00000 n 
-0000074401 00000 n 
-0000084976 00000 n 
-0000085118 00000 n 
-0000085514 00000 n 
-0000145257 00000 n 
-0000145326 00000 n 
-0000155891 00000 n 
-0000155948 00000 n 
-0000156005 00000 n 
-0000156110 00000 n 
-0000158316 00000 n 
-0000158509 00000 n 
-0000540041 00000 n 
-0000540240 00000 n 
+0000014311 00000 n 
+0000014446 00000 n 
+0000014841 00000 n 
+0000074330 00000 n 
+0000074399 00000 n 
+0000084974 00000 n 
+0000085116 00000 n 
+0000085512 00000 n 
+0000145255 00000 n 
+0000145324 00000 n 
+0000155889 00000 n 
+0000155946 00000 n 
+0000156003 00000 n 
+0000156108 00000 n 
+0000158297 00000 n 
+0000158490 00000 n 
+0000540022 00000 n 
+0000540221 00000 n 
 trailer
 &lt;&lt;
 /Size 26
 /Root 1 0 R
 /Info 5 0 R
-/ID[&lt;aa760b32eb42b97c68017d85bf1ec7bf&gt;&lt;aa760b32eb42b97c68017d85bf1ec7bf&gt;]
+/ID[&lt;fff6b59ff74193aba1d124b7384a8755&gt;&lt;fff6b59ff74193aba1d124b7384a8755&gt;]
 &gt;&gt;
 startxref
-893052
+893033
 %%EOF
 </code>
  </pre>
@@ -13323,10 +13543,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="GETapi-items--id--pdf"
-               value="1"
+               value="2"
                data-component="url">
     <br>
-<p>The ID of the item. Example: <code>1</code></p>
+<p>The ID of the item. Example: <code>2</code></p>
             </div>
                     </form>
 
