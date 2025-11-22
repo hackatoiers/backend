@@ -4,7 +4,6 @@ namespace App\Http\Resources\Api\MaterialSubtype;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
-
 class MaterialSubtypeResource extends JsonResource
 {
     /**

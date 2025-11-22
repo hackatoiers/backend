@@ -18,7 +18,7 @@ class ItemController extends Controller
     {
         return Excel::download(new ItemsExport, 'items.xlsx');
     }
-
+ 
     public function __construct() {}
 
     /**
