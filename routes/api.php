@@ -47,3 +47,12 @@ Route::get('/items/{id}/pdf', function ($id) {
     return $pdf->download("item_{$item->id}.pdf");
 });
 
+use OwenIt\Auditing\Models\Audit;
+
+Route::get('/audits-pdf', function () {
+    $audits = Audit::with('user', 'auditable')->get();
+
+    $pdf = Pdf::loadView('audits_pdf', compact('audits'));
+
+    return $pdf->download('audits_report.pdf');
+});
