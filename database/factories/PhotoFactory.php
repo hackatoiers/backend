@@ -3,21 +3,18 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Photo;
+use App\Models\Item;
 
-/**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Photo>
- */
 class PhotoFactory extends Factory
 {
-    /**
-     * Define the model's default state.
-     *
-     * @return array<string, mixed>
-     */
+    protected $model = Photo::class;
+
     public function definition(): array
     {
         return [
-            //
+            'photo_url' => $this->faker->imageUrl(640, 480, 'archaeology', true),
+            'item_id' => Item::factory(),
         ];
     }
 }
