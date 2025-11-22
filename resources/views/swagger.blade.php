@@ -15,8 +15,9 @@
 
 <script>
     window.onload = () => {
+        const app_url = window.location.origin;
         SwaggerUIBundle({
-            url: "/openapi.yaml",
+            url: app_url + "/openapi.yaml",
             dom_id: '#swagger-ui',
             presets: [
                 SwaggerUIBundle.presets.apis,
