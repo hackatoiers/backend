@@ -11,11 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('subtypes', function (Blueprint $table) {
+        Schema::create('reserve', function (Blueprint $table) {
             $table->id();
 
-            $table->string('name');
-            $table->foreignId('materials_id')->constrained('materials')->restrictOnDelete();
+            $table->string('user_email');
+            $table->foreignId('item_id')->constrained()->onDelete('cascade');
+            $table->timestamp('reserved_at');
+            $table->timestamp('deadline_at')->nullable();
 
             $table->timestamps();
         });
@@ -26,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('subtypes');
+        Schema::dropIfExists('reserve');
     }
 };

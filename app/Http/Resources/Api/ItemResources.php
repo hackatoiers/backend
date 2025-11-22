@@ -45,6 +45,11 @@ class ItemResources extends JsonResource
                 });
             }),
 
+            "is_reserved" => $this->reserves()
+                ->where('reserved_at', '<=', now())
+                ->where('deadline_at', '>=', now())
+                ->exists(),
+
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ];
