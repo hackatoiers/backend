@@ -10,7 +10,11 @@ class Collection extends Model
     /** @use HasFactory<\Database\Factories\CollectionFactory> */
     use HasFactory;
 
-    protected $table = "collections";
+    protected $table = 'collections';
 
-    protected $fillable = ["name", "owner", "description"];
+    protected $fillable = ['name', 'owner', 'description'];
+
+    protected $auditInclude = [
+        'name', 'owner', 'description',
+    ];
 }

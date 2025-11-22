@@ -13,7 +13,15 @@ class Location extends Model implements Auditable
     use HasFactory, UseAuditable;
 
     protected $table = 'locations';
+    protected $auditInclude = [
+        'city',
+        'state',
+        'country',
 
+        'room',
+        'shelf',
+        'bookcase',
+    ];
     protected $fillable = [
         'city',
         'state',

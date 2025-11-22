@@ -17,6 +17,10 @@ class ConservationAction extends Model
         'description',
     ];
 
+    protected $auditInclude = [
+        'action_date',
+        'description',
+    ];
     public function item()
     {
         return $this->belongsTo(Item::class);

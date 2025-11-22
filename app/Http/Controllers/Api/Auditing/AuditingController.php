@@ -29,4 +29,11 @@ class AuditingController extends Controller
             $query->paginate($request->per_page ?? 15)
         );
     }
+     public function show($id)
+    {
+        $audit = Audit::with('user')->findOrFail($id);
+
+        return new AuditingResource($audit);
+    }
 }
+

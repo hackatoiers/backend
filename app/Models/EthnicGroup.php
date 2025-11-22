@@ -16,11 +16,14 @@ class EthnicGroup extends Model
         'name',
         'description',
     ];
-
+    protected $auditInclude = [
+        'name',
+        'description',
+    ];
     public function items()
     {
         return $this->hasMany(Item::class);
     }
 
-    
+
 }

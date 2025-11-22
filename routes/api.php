@@ -11,6 +11,8 @@ use App\Http\Controllers\Api\Auditing\AuditingController;
 
 Route::get('users/search', [UserController::class, 'search']);
 Route::get('/audits', [AuditingController::class, 'index']);
+Route::get('/audits/{id}', [AuditingController::class, 'show']);
+
 
 Route::apiResource('users', UserController::class);
 

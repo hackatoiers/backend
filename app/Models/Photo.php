@@ -14,6 +14,11 @@ class Photo extends Model
 
     protected $fillable = ["photo_url", "item_id"];
 
+    protected $auditInclude = [
+        "photo_url",
+        "item_id"
+    ];
+
     public function item()
     {
         return $this->belongsTo(Item::class);

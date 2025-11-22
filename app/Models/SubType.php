@@ -9,8 +9,13 @@ class Subtype extends Model
 {
     /** @use HasFactory<\Database\Factories\SubTypeFactory> */
     use HasFactory;
-    
+
     protected $fillable = [
+        'name',
+        'materials_id',
+    ];
+
+    protected $auditInclude = [
         'name',
         'materials_id',
     ];
