@@ -80,6 +80,9 @@
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-GETapi-audits--id-">
                                 <a href="#endpoints-GETapi-audits--id-">GET api/audits/{id}</a>
                             </li>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-audits--model-">
+                                <a href="#endpoints-GETapi-audits--model-">GET api/audits/{model}</a>
+                            </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-GETapi-users">
                                 <a href="#endpoints-GETapi-users">Display a listing of the resource.</a>
                             </li>
@@ -793,6 +796,145 @@ You can check the Dev Tools console for debugging information.</code></pre>
                data-component="url">
     <br>
 <p>The ID of the audit. Example: <code>architecto</code></p>
+            </div>
+                    </form>
+
+                    <h2 id="endpoints-GETapi-audits--model-">GET api/audits/{model}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-audits--model-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/audits/architecto" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/audits/architecto"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-audits--model-">
+            <blockquote>
+            <p>Example response (404):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+vary: Origin
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;No query results for model [OwenIt\\Auditing\\Models\\Audit] architecto&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-audits--model-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-audits--model-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-audits--model-"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-audits--model-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-audits--model-">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-audits--model-" data-method="GET"
+      data-path="api/audits/{model}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-audits--model-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-audits--model-"
+                    onclick="tryItOut('GETapi-audits--model-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-audits--model-"
+                    onclick="cancelTryOut('GETapi-audits--model-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-audits--model-"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/audits/{model}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-audits--model-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-audits--model-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>model</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="model"                data-endpoint="GETapi-audits--model-"
+               value="architecto"
+               data-component="url">
+    <br>
+<p>Example: <code>architecto</code></p>
             </div>
                     </form>
 
@@ -2588,7 +2730,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --data "{
     \"description\": \"Eius et animi quos velit et.\",
-    \"action_date\": \"2025-11-22T02:12:25\"
+    \"action_date\": \"2025-11-22T02:31:41\"
 }"
 </code></pre></div>
 
@@ -2605,7 +2747,7 @@ const headers = {
 
 let body = {
     "description": "Eius et animi quos velit et.",
-    "action_date": "2025-11-22T02:12:25"
+    "action_date": "2025-11-22T02:31:41"
 };
 
 fetch(url, {
@@ -2709,10 +2851,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="action_date"                data-endpoint="POSTapi-conservation-actions"
-               value="2025-11-22T02:12:25"
+               value="2025-11-22T02:31:41"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-11-22T02:12:25</code></p>
+<p>Must be a valid date. Example: <code>2025-11-22T02:31:41</code></p>
         </div>
         </form>
 
@@ -2873,7 +3015,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Accept: application/json" \
     --data "{
     \"description\": \"Eius et animi quos velit et.\",
-    \"action_date\": \"2025-11-22T02:12:25\"
+    \"action_date\": \"2025-11-22T02:31:41\"
 }"
 </code></pre></div>
 
@@ -2890,7 +3032,7 @@ const headers = {
 
 let body = {
     "description": "Eius et animi quos velit et.",
-    "action_date": "2025-11-22T02:12:25"
+    "action_date": "2025-11-22T02:31:41"
 };
 
 fetch(url, {
@@ -3011,10 +3153,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="action_date"                data-endpoint="PUTapi-conservation-actions--id-"
-               value="2025-11-22T02:12:25"
+               value="2025-11-22T02:31:41"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-11-22T02:12:25</code></p>
+<p>Must be a valid date. Example: <code>2025-11-22T02:31:41</code></p>
         </div>
         </form>
 
@@ -7366,7 +7508,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
     --form "item_id=architecto"\
-    --form "photo=@/tmp/php764hvklqvl4sbGk45yE" </code></pre></div>
+    --form "photo=@/tmp/phpi865s3bqjqf464GBX3K" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -7475,7 +7617,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Must be an image. Must not be greater than 5120 kilobytes. Example: <code>/tmp/php764hvklqvl4sbGk45yE</code></p>
+<p>Must be an image. Must not be greater than 5120 kilobytes. Example: <code>/tmp/phpi865s3bqjqf464GBX3K</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>item_id</code></b>&nbsp;&nbsp;

@@ -157,6 +157,61 @@ endpoints:
     custom: []
     httpMethods:
       - GET
+    uri: 'api/audits/{model}'
+    metadata:
+      custom: []
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      model:
+        custom: []
+        name: model
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      model: architecto
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 404
+        content: |-
+          {
+              "message": "No query results for model [OwenIt\\Auditing\\Models\\Audit] architecto"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          vary: Origin
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
     uri: api/users
     metadata:
       custom: []
@@ -793,7 +848,7 @@ endpoints:
         name: action_date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-11-22T02:12:25'
+        example: '2025-11-22T02:31:41'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -801,7 +856,7 @@ endpoints:
         deprecated: false
     cleanBodyParameters:
       description: 'Eius et animi quos velit et.'
-      action_date: '2025-11-22T02:12:25'
+      action_date: '2025-11-22T02:31:41'
     fileParameters: []
     responses: []
     responseFields: []
@@ -916,7 +971,7 @@ endpoints:
         name: action_date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-11-22T02:12:25'
+        example: '2025-11-22T02:31:41'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -924,7 +979,7 @@ endpoints:
         deprecated: false
     cleanBodyParameters:
       description: 'Eius et animi quos velit et.'
-      action_date: '2025-11-22T02:12:25'
+      action_date: '2025-11-22T02:31:41'
     fileParameters: []
     responses: []
     responseFields: []
