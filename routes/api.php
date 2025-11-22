@@ -6,8 +6,12 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\Api\Auditing\AuditingController;
+
 
 Route::get('users/search', [UserController::class, 'search']);
+Route::get('/audits', [AuditingController::class, 'index']);
+
 Route::apiResource('users', UserController::class);
 
 Route::post('auth/login', [AuthController::class, 'login']);

@@ -15,7 +15,7 @@ class Item extends Model
         'name',
         'description',
         'number',
-        
+
         'length',
         'height',
         'width',
@@ -28,7 +28,7 @@ class Item extends Model
         'integrity',
         'conservation_state',
         'conservation_detail',
-    
+
         'location_id',
         'subtype_id',
         'collection_id',
@@ -38,7 +38,7 @@ class Item extends Model
         'conservation_state' => ConservationStateEnum::class,
         'integrity' => IntegrityEnum::class,
     ];
-    
+   
     public function location()
     {
         return $this->hasOne(Location::class);
