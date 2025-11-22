@@ -19,7 +19,7 @@ class ItemController extends Controller
      */
     public function index(Request $request)
     {
-        return ItemResources::item(Item::paginate($this->resolvePerPage($request)));
+        return ItemResources::collection(Item::paginate($this->resolvePerPage($request)));
     }
 
     /**

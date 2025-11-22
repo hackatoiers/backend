@@ -4,6 +4,7 @@ namespace App\Http\Resources\Api;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
+use Illuminate\Support\Facades\Storage;
 
 class ItemResources extends JsonResource
 {
@@ -37,6 +38,12 @@ class ItemResources extends JsonResource
             'subtype_id' => $this->subtype_id,
             'collection_id' => $this->collection_id,
             'ethnic_group_id' => $this->ethnic_group_id,
+
+            'photos' => $this->whenLoaded('photos', function () {
+                return $this->photos->map(function ($photo) {
+                    return Storage::url($photo->photo_url);
+                });
+            }),
 
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
