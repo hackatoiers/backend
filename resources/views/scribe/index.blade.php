@@ -92,62 +92,50 @@
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-GETapi-auth-me">
                                 <a href="#endpoints-GETapi-auth-me">GET api/auth/me</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-collections-search">
-                                <a href="#endpoints-POSTapi-collections-search">Filters, sorts, and fetches the list of resources.</a>
-                            </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-GETapi-collections">
-                                <a href="#endpoints-GETapi-collections">Fetches the list of resources.</a>
+                                <a href="#endpoints-GETapi-collections">Display a listing of the resource.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-POSTapi-collections">
-                                <a href="#endpoints-POSTapi-collections">Creates new resource in a transaction-safe way.</a>
+                                <a href="#endpoints-POSTapi-collections">Store a newly created resource in storage.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-GETapi-collections--id-">
-                                <a href="#endpoints-GETapi-collections--id-">Fetches resource.</a>
+                                <a href="#endpoints-GETapi-collections--id-">Display the specified resource.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-PUTapi-collections--id-">
-                                <a href="#endpoints-PUTapi-collections--id-">Update a resource in a transaction-safe way.</a>
+                                <a href="#endpoints-PUTapi-collections--id-">Update the specified resource in storage.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-DELETEapi-collections--id-">
-                                <a href="#endpoints-DELETEapi-collections--id-">Deletes a resource.</a>
-                            </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-conservation-actions-search">
-                                <a href="#endpoints-POSTapi-conservation-actions-search">Filters, sorts, and fetches the list of resources.</a>
+                                <a href="#endpoints-DELETEapi-collections--id-">Remove the specified resource from storage.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-GETapi-conservation-actions">
-                                <a href="#endpoints-GETapi-conservation-actions">Fetches the list of resources.</a>
+                                <a href="#endpoints-GETapi-conservation-actions">Display a listing of the resource.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-POSTapi-conservation-actions">
-                                <a href="#endpoints-POSTapi-conservation-actions">Creates new resource in a transaction-safe way.</a>
+                                <a href="#endpoints-POSTapi-conservation-actions">Store a newly created resource in storage.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-GETapi-conservation-actions--id-">
-                                <a href="#endpoints-GETapi-conservation-actions--id-">Fetches resource.</a>
+                                <a href="#endpoints-GETapi-conservation-actions--id-">Display the specified resource.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-PUTapi-conservation-actions--id-">
-                                <a href="#endpoints-PUTapi-conservation-actions--id-">Update a resource in a transaction-safe way.</a>
+                                <a href="#endpoints-PUTapi-conservation-actions--id-">Update the specified resource in storage.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-DELETEapi-conservation-actions--id-">
-                                <a href="#endpoints-DELETEapi-conservation-actions--id-">Deletes a resource.</a>
-                            </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-ethnic-groups-search">
-                                <a href="#endpoints-POSTapi-ethnic-groups-search">Filters, sorts, and fetches the list of resources.</a>
+                                <a href="#endpoints-DELETEapi-conservation-actions--id-">Remove the specified resource from storage.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-GETapi-ethnic-groups">
-                                <a href="#endpoints-GETapi-ethnic-groups">Fetches the list of resources.</a>
+                                <a href="#endpoints-GETapi-ethnic-groups">Display a listing of the resource.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-POSTapi-ethnic-groups">
-                                <a href="#endpoints-POSTapi-ethnic-groups">Creates new resource in a transaction-safe way.</a>
+                                <a href="#endpoints-POSTapi-ethnic-groups">Store a newly created resource in storage.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-GETapi-ethnic-groups--id-">
-                                <a href="#endpoints-GETapi-ethnic-groups--id-">Fetches resource.</a>
+                                <a href="#endpoints-GETapi-ethnic-groups--id-">Display the specified resource.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-PUTapi-ethnic-groups--id-">
-                                <a href="#endpoints-PUTapi-ethnic-groups--id-">Update a resource in a transaction-safe way.</a>
+                                <a href="#endpoints-PUTapi-ethnic-groups--id-">Update the specified resource in storage.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-DELETEapi-ethnic-groups--id-">
-                                <a href="#endpoints-DELETEapi-ethnic-groups--id-">Deletes a resource.</a>
-                            </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-items-search">
-                                <a href="#endpoints-POSTapi-items-search">Filters, sorts, and fetches the list of resources.</a>
+                                <a href="#endpoints-DELETEapi-ethnic-groups--id-">Remove the specified resource from storage.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-GETapi-items">
                                 <a href="#endpoints-GETapi-items">Fetches the list of resources.</a>
@@ -164,95 +152,74 @@
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-DELETEapi-items--id-">
                                 <a href="#endpoints-DELETEapi-items--id-">Deletes a resource.</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-materials-search">
-                                <a href="#endpoints-POSTapi-materials-search">Filters, sorts, and fetches the list of resources.</a>
-                            </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-GETapi-materials">
-                                <a href="#endpoints-GETapi-materials">Fetches the list of resources.</a>
+                                <a href="#endpoints-GETapi-materials">Display a listing of the resource.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-POSTapi-materials">
-                                <a href="#endpoints-POSTapi-materials">Creates new resource in a transaction-safe way.</a>
+                                <a href="#endpoints-POSTapi-materials">Store a newly created resource in storage.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-GETapi-materials--id-">
-                                <a href="#endpoints-GETapi-materials--id-">Fetches resource.</a>
+                                <a href="#endpoints-GETapi-materials--id-">Display the specified resource.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-PUTapi-materials--id-">
-                                <a href="#endpoints-PUTapi-materials--id-">Update a resource in a transaction-safe way.</a>
+                                <a href="#endpoints-PUTapi-materials--id-">Update the specified resource in storage.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-DELETEapi-materials--id-">
-                                <a href="#endpoints-DELETEapi-materials--id-">Deletes a resource.</a>
-                            </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-location-search">
-                                <a href="#endpoints-POSTapi-location-search">Filters, sorts, and fetches the list of resources.</a>
+                                <a href="#endpoints-DELETEapi-materials--id-">Remove the specified resource from storage.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-GETapi-location">
-                                <a href="#endpoints-GETapi-location">Fetches the list of resources.</a>
+                                <a href="#endpoints-GETapi-location">Display a listing of the resource.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-POSTapi-location">
-                                <a href="#endpoints-POSTapi-location">Creates new resource in a transaction-safe way.</a>
+                                <a href="#endpoints-POSTapi-location">Store a newly created resource in storage.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-GETapi-location--id-">
-                                <a href="#endpoints-GETapi-location--id-">Fetches resource.</a>
+                                <a href="#endpoints-GETapi-location--id-">Display the specified resource.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-PUTapi-location--id-">
-                                <a href="#endpoints-PUTapi-location--id-">Update a resource in a transaction-safe way.</a>
+                                <a href="#endpoints-PUTapi-location--id-">Update the specified resource in storage.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-DELETEapi-location--id-">
-                                <a href="#endpoints-DELETEapi-location--id-">Deletes a resource.</a>
-                            </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-material-search">
-                                <a href="#endpoints-POSTapi-material-search">Filters, sorts, and fetches the list of resources.</a>
+                                <a href="#endpoints-DELETEapi-location--id-">Remove the specified resource from storage.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-GETapi-material">
-                                <a href="#endpoints-GETapi-material">Fetches the list of resources.</a>
+                                <a href="#endpoints-GETapi-material">Display a listing of the resource.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-POSTapi-material">
-                                <a href="#endpoints-POSTapi-material">Creates new resource in a transaction-safe way.</a>
+                                <a href="#endpoints-POSTapi-material">Store a newly created resource in storage.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-GETapi-material--id-">
-                                <a href="#endpoints-GETapi-material--id-">Fetches resource.</a>
+                                <a href="#endpoints-GETapi-material--id-">Display the specified resource.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-PUTapi-material--id-">
-                                <a href="#endpoints-PUTapi-material--id-">Update a resource in a transaction-safe way.</a>
+                                <a href="#endpoints-PUTapi-material--id-">Update the specified resource in storage.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-DELETEapi-material--id-">
-                                <a href="#endpoints-DELETEapi-material--id-">Deletes a resource.</a>
-                            </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-photos-search">
-                                <a href="#endpoints-POSTapi-photos-search">Filters, sorts, and fetches the list of resources.</a>
-                            </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-photos">
-                                <a href="#endpoints-GETapi-photos">Fetches the list of resources.</a>
+                                <a href="#endpoints-DELETEapi-material--id-">Remove the specified resource from storage.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-POSTapi-photos">
-                                <a href="#endpoints-POSTapi-photos">Creates new resource in a transaction-safe way.</a>
+                                <a href="#endpoints-POSTapi-photos">Store a newly created resource in storage.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-GETapi-photos--id-">
-                                <a href="#endpoints-GETapi-photos--id-">Fetches resource.</a>
-                            </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-PUTapi-photos--id-">
-                                <a href="#endpoints-PUTapi-photos--id-">Update a resource in a transaction-safe way.</a>
+                                <a href="#endpoints-GETapi-photos--id-">Display the specified resource.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-DELETEapi-photos--id-">
-                                <a href="#endpoints-DELETEapi-photos--id-">Deletes a resource.</a>
-                            </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-material-subtypes-search">
-                                <a href="#endpoints-POSTapi-material-subtypes-search">Filters, sorts, and fetches the list of resources.</a>
+                                <a href="#endpoints-DELETEapi-photos--id-">Remove the specified resource from storage.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-GETapi-material-subtypes">
-                                <a href="#endpoints-GETapi-material-subtypes">Fetches the list of resources.</a>
+                                <a href="#endpoints-GETapi-material-subtypes">Display a listing of the resource.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-POSTapi-material-subtypes">
-                                <a href="#endpoints-POSTapi-material-subtypes">Creates new resource in a transaction-safe way.</a>
+                                <a href="#endpoints-POSTapi-material-subtypes">Store a newly created resource in storage.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-GETapi-material-subtypes--id-">
-                                <a href="#endpoints-GETapi-material-subtypes--id-">Fetches resource.</a>
+                                <a href="#endpoints-GETapi-material-subtypes--id-">Display the specified resource.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-PUTapi-material-subtypes--id-">
-                                <a href="#endpoints-PUTapi-material-subtypes--id-">Update a resource in a transaction-safe way.</a>
+                                <a href="#endpoints-PUTapi-material-subtypes--id-">Update the specified resource in storage.</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-DELETEapi-material-subtypes--id-">
-                                <a href="#endpoints-DELETEapi-material-subtypes--id-">Deletes a resource.</a>
+                                <a href="#endpoints-DELETEapi-material-subtypes--id-">Remove the specified resource from storage.</a>
                             </li>
                                                                         </ul>
                             </ul>
@@ -265,7 +232,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: November 21, 2025</li>
+        <li>Last updated: November 22, 2025</li>
     </ul>
 </div>
 
@@ -902,7 +869,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --data "{
     \"email\": \"gbailey@example.net\",
     \"password\": \"+-0pBNvYgxwmi\\/#iw\",
-    \"remember\": false
+    \"remember\": true
 }"
 </code></pre></div>
 
@@ -920,7 +887,7 @@ const headers = {
 let body = {
     "email": "gbailey@example.net",
     "password": "+-0pBNvYgxwmi\/#iw",
-    "remember": false
+    "remember": true
 };
 
 fetch(url, {
@@ -1049,7 +1016,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <code>false</code>
         </label>
     <br>
-<p>Example: <code>false</code></p>
+<p>Example: <code>true</code></p>
         </div>
         </form>
 
@@ -1289,117 +1256,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                         </form>
 
-                    <h2 id="endpoints-POSTapi-collections-search">Filters, sorts, and fetches the list of resources.</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-POSTapi-collections-search">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "http://191.52.55.208:8000/api/collections/search" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://191.52.55.208:8000/api/collections/search"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "POST",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-POSTapi-collections-search">
-</span>
-<span id="execution-results-POSTapi-collections-search" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-POSTapi-collections-search"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-collections-search"
-      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
-</span>
-<span id="execution-error-POSTapi-collections-search" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-collections-search">
-
-Tip: Check that you&#039;re properly connected to the network.
-If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
-You can check the Dev Tools console for debugging information.</code></pre>
-</span>
-<form id="form-POSTapi-collections-search" data-method="POST"
-      data-path="api/collections/search"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-collections-search', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-collections-search"
-                    onclick="tryItOut('POSTapi-collections-search');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-collections-search"
-                    onclick="cancelTryOut('POSTapi-collections-search');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-collections-search"
-                    data-initial-text="Send Request 💥"
-                    data-loading-text="⏱ Sending..."
-                    hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/collections/search</code></b>
-        </p>
-                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="POSTapi-collections-search"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="POSTapi-collections-search"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                        </form>
-
-                    <h2 id="endpoints-GETapi-collections">Fetches the list of resources.</h2>
+                    <h2 id="endpoints-GETapi-collections">Display a listing of the resource.</h2>
 
 <p>
 </p>
@@ -1436,7 +1293,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-collections">
             <blockquote>
-            <p>Example response (403):</p>
+            <p>Example response (200):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -1448,7 +1305,42 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;This action is unauthorized.&quot;
+    &quot;data&quot;: [],
+    &quot;links&quot;: {
+        &quot;first&quot;: &quot;http://191.52.55.208:8000/api/collections?page=1&quot;,
+        &quot;last&quot;: &quot;http://191.52.55.208:8000/api/collections?page=1&quot;,
+        &quot;prev&quot;: null,
+        &quot;next&quot;: null
+    },
+    &quot;meta&quot;: {
+        &quot;current_page&quot;: 1,
+        &quot;from&quot;: null,
+        &quot;last_page&quot;: 1,
+        &quot;links&quot;: [
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
+                &quot;page&quot;: null,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://191.52.55.208:8000/api/collections?page=1&quot;,
+                &quot;label&quot;: &quot;1&quot;,
+                &quot;page&quot;: 1,
+                &quot;active&quot;: true
+            },
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
+                &quot;page&quot;: null,
+                &quot;active&quot;: false
+            }
+        ],
+        &quot;path&quot;: &quot;http://191.52.55.208:8000/api/collections&quot;,
+        &quot;per_page&quot;: 15,
+        &quot;to&quot;: null,
+        &quot;total&quot;: 0
+    }
 }</code>
  </pre>
     </span>
@@ -1525,7 +1417,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                         </form>
 
-                    <h2 id="endpoints-POSTapi-collections">Creates new resource in a transaction-safe way.</h2>
+                    <h2 id="endpoints-POSTapi-collections">Store a newly created resource in storage.</h2>
 
 <p>
 </p>
@@ -1540,7 +1432,13 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <pre><code class="language-bash">curl --request POST \
     "http://191.52.55.208:8000/api/collections" \
     --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+    --header "Accept: application/json" \
+    --data "{
+    \"name\": \"b\",
+    \"owner\": \"n\",
+    \"description\": \"Animi quos velit et fugiat.\"
+}"
+</code></pre></div>
 
 
 <div class="javascript-example">
@@ -1553,9 +1451,16 @@ const headers = {
     "Accept": "application/json",
 };
 
+let body = {
+    "name": "b",
+    "owner": "n",
+    "description": "Animi quos velit et fugiat."
+};
+
 fetch(url, {
     method: "POST",
     headers,
+    body: JSON.stringify(body),
 }).then(response =&gt; response.json());</code></pre></div>
 
 </span>
@@ -1633,9 +1538,46 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <br>
 <p>Example: <code>application/json</code></p>
             </div>
-                        </form>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>name</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="name"                data-endpoint="POSTapi-collections"
+               value="b"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>b</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>owner</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="owner"                data-endpoint="POSTapi-collections"
+               value="n"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>n</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="description"                data-endpoint="POSTapi-collections"
+               value="Animi quos velit et fugiat."
+               data-component="body">
+    <br>
+<p>Must not be greater than 65535 characters. Example: <code>Animi quos velit et fugiat.</code></p>
+        </div>
+        </form>
 
-                    <h2 id="endpoints-GETapi-collections--id-">Fetches resource.</h2>
+                    <h2 id="endpoints-GETapi-collections--id-">Display the specified resource.</h2>
 
 <p>
 </p>
@@ -1672,7 +1614,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-collections--id-">
             <blockquote>
-            <p>Example response (500):</p>
+            <p>Example response (404):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -1684,7 +1626,7 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Server Error&quot;
+    &quot;message&quot;: &quot;No query results for model [App\\Models\\Collection] 16&quot;
 }</code>
  </pre>
     </span>
@@ -1774,7 +1716,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="endpoints-PUTapi-collections--id-">Update a resource in a transaction-safe way.</h2>
+                    <h2 id="endpoints-PUTapi-collections--id-">Update the specified resource in storage.</h2>
 
 <p>
 </p>
@@ -1789,7 +1731,13 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <pre><code class="language-bash">curl --request PUT \
     "http://191.52.55.208:8000/api/collections/16" \
     --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+    --header "Accept: application/json" \
+    --data "{
+    \"name\": \"b\",
+    \"owner\": \"n\",
+    \"description\": \"Animi quos velit et fugiat.\"
+}"
+</code></pre></div>
 
 
 <div class="javascript-example">
@@ -1802,9 +1750,16 @@ const headers = {
     "Accept": "application/json",
 };
 
+let body = {
+    "name": "b",
+    "owner": "n",
+    "description": "Animi quos velit et fugiat."
+};
+
 fetch(url, {
     method: "PUT",
     headers,
+    body: JSON.stringify(body),
 }).then(response =&gt; response.json());</code></pre></div>
 
 </span>
@@ -1899,9 +1854,46 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <br>
 <p>The ID of the collection. Example: <code>16</code></p>
             </div>
-                    </form>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>name</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="name"                data-endpoint="PUTapi-collections--id-"
+               value="b"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>b</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>owner</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="owner"                data-endpoint="PUTapi-collections--id-"
+               value="n"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>n</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="description"                data-endpoint="PUTapi-collections--id-"
+               value="Animi quos velit et fugiat."
+               data-component="body">
+    <br>
+<p>Must not be greater than 65535 characters. Example: <code>Animi quos velit et fugiat.</code></p>
+        </div>
+        </form>
 
-                    <h2 id="endpoints-DELETEapi-collections--id-">Deletes a resource.</h2>
+                    <h2 id="endpoints-DELETEapi-collections--id-">Remove the specified resource from storage.</h2>
 
 <p>
 </p>
@@ -2024,117 +2016,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="endpoints-POSTapi-conservation-actions-search">Filters, sorts, and fetches the list of resources.</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-POSTapi-conservation-actions-search">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "http://191.52.55.208:8000/api/conservation-actions/search" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://191.52.55.208:8000/api/conservation-actions/search"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "POST",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-POSTapi-conservation-actions-search">
-</span>
-<span id="execution-results-POSTapi-conservation-actions-search" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-POSTapi-conservation-actions-search"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-conservation-actions-search"
-      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
-</span>
-<span id="execution-error-POSTapi-conservation-actions-search" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-conservation-actions-search">
-
-Tip: Check that you&#039;re properly connected to the network.
-If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
-You can check the Dev Tools console for debugging information.</code></pre>
-</span>
-<form id="form-POSTapi-conservation-actions-search" data-method="POST"
-      data-path="api/conservation-actions/search"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-conservation-actions-search', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-conservation-actions-search"
-                    onclick="tryItOut('POSTapi-conservation-actions-search');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-conservation-actions-search"
-                    onclick="cancelTryOut('POSTapi-conservation-actions-search');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-conservation-actions-search"
-                    data-initial-text="Send Request 💥"
-                    data-loading-text="⏱ Sending..."
-                    hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/conservation-actions/search</code></b>
-        </p>
-                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="POSTapi-conservation-actions-search"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="POSTapi-conservation-actions-search"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                        </form>
-
-                    <h2 id="endpoints-GETapi-conservation-actions">Fetches the list of resources.</h2>
+                    <h2 id="endpoints-GETapi-conservation-actions">Display a listing of the resource.</h2>
 
 <p>
 </p>
@@ -2171,7 +2053,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-conservation-actions">
             <blockquote>
-            <p>Example response (403):</p>
+            <p>Example response (200):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -2183,7 +2065,42 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;This action is unauthorized.&quot;
+    &quot;data&quot;: [],
+    &quot;links&quot;: {
+        &quot;first&quot;: &quot;http://191.52.55.208:8000/api/conservation-actions?page=1&quot;,
+        &quot;last&quot;: &quot;http://191.52.55.208:8000/api/conservation-actions?page=1&quot;,
+        &quot;prev&quot;: null,
+        &quot;next&quot;: null
+    },
+    &quot;meta&quot;: {
+        &quot;current_page&quot;: 1,
+        &quot;from&quot;: null,
+        &quot;last_page&quot;: 1,
+        &quot;links&quot;: [
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
+                &quot;page&quot;: null,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://191.52.55.208:8000/api/conservation-actions?page=1&quot;,
+                &quot;label&quot;: &quot;1&quot;,
+                &quot;page&quot;: 1,
+                &quot;active&quot;: true
+            },
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
+                &quot;page&quot;: null,
+                &quot;active&quot;: false
+            }
+        ],
+        &quot;path&quot;: &quot;http://191.52.55.208:8000/api/conservation-actions&quot;,
+        &quot;per_page&quot;: 15,
+        &quot;to&quot;: null,
+        &quot;total&quot;: 0
+    }
 }</code>
  </pre>
     </span>
@@ -2260,7 +2177,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                         </form>
 
-                    <h2 id="endpoints-POSTapi-conservation-actions">Creates new resource in a transaction-safe way.</h2>
+                    <h2 id="endpoints-POSTapi-conservation-actions">Store a newly created resource in storage.</h2>
 
 <p>
 </p>
@@ -2275,7 +2192,12 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <pre><code class="language-bash">curl --request POST \
     "http://191.52.55.208:8000/api/conservation-actions" \
     --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+    --header "Accept: application/json" \
+    --data "{
+    \"description\": \"Eius et animi quos velit et.\",
+    \"action_date\": \"2025-11-22T00:28:56\"
+}"
+</code></pre></div>
 
 
 <div class="javascript-example">
@@ -2288,9 +2210,15 @@ const headers = {
     "Accept": "application/json",
 };
 
+let body = {
+    "description": "Eius et animi quos velit et.",
+    "action_date": "2025-11-22T00:28:56"
+};
+
 fetch(url, {
     method: "POST",
     headers,
+    body: JSON.stringify(body),
 }).then(response =&gt; response.json());</code></pre></div>
 
 </span>
@@ -2368,9 +2296,34 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <br>
 <p>Example: <code>application/json</code></p>
             </div>
-                        </form>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="description"                data-endpoint="POSTapi-conservation-actions"
+               value="Eius et animi quos velit et."
+               data-component="body">
+    <br>
+<p>Must not be greater than 1000 characters. Example: <code>Eius et animi quos velit et.</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>action_date</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="action_date"                data-endpoint="POSTapi-conservation-actions"
+               value="2025-11-22T00:28:56"
+               data-component="body">
+    <br>
+<p>Must be a valid date. Example: <code>2025-11-22T00:28:56</code></p>
+        </div>
+        </form>
 
-                    <h2 id="endpoints-GETapi-conservation-actions--id-">Fetches resource.</h2>
+                    <h2 id="endpoints-GETapi-conservation-actions--id-">Display the specified resource.</h2>
 
 <p>
 </p>
@@ -2419,7 +2372,7 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;No query results for model [App\\Models\\ConservationAction].&quot;
+    &quot;message&quot;: &quot;No query results for model [App\\Models\\ConservationAction] 16&quot;
 }</code>
  </pre>
     </span>
@@ -2509,7 +2462,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="endpoints-PUTapi-conservation-actions--id-">Update a resource in a transaction-safe way.</h2>
+                    <h2 id="endpoints-PUTapi-conservation-actions--id-">Update the specified resource in storage.</h2>
 
 <p>
 </p>
@@ -2524,7 +2477,12 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <pre><code class="language-bash">curl --request PUT \
     "http://191.52.55.208:8000/api/conservation-actions/16" \
     --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+    --header "Accept: application/json" \
+    --data "{
+    \"description\": \"Eius et animi quos velit et.\",
+    \"action_date\": \"2025-11-22T00:28:56\"
+}"
+</code></pre></div>
 
 
 <div class="javascript-example">
@@ -2537,9 +2495,15 @@ const headers = {
     "Accept": "application/json",
 };
 
+let body = {
+    "description": "Eius et animi quos velit et.",
+    "action_date": "2025-11-22T00:28:56"
+};
+
 fetch(url, {
     method: "PUT",
     headers,
+    body: JSON.stringify(body),
 }).then(response =&gt; response.json());</code></pre></div>
 
 </span>
@@ -2634,9 +2598,34 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <br>
 <p>The ID of the conservation action. Example: <code>16</code></p>
             </div>
-                    </form>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="description"                data-endpoint="PUTapi-conservation-actions--id-"
+               value="Eius et animi quos velit et."
+               data-component="body">
+    <br>
+<p>Must not be greater than 1000 characters. Example: <code>Eius et animi quos velit et.</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>action_date</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="action_date"                data-endpoint="PUTapi-conservation-actions--id-"
+               value="2025-11-22T00:28:56"
+               data-component="body">
+    <br>
+<p>Must be a valid date. Example: <code>2025-11-22T00:28:56</code></p>
+        </div>
+        </form>
 
-                    <h2 id="endpoints-DELETEapi-conservation-actions--id-">Deletes a resource.</h2>
+                    <h2 id="endpoints-DELETEapi-conservation-actions--id-">Remove the specified resource from storage.</h2>
 
 <p>
 </p>
@@ -2759,117 +2748,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="endpoints-POSTapi-ethnic-groups-search">Filters, sorts, and fetches the list of resources.</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-POSTapi-ethnic-groups-search">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "http://191.52.55.208:8000/api/ethnic-groups/search" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://191.52.55.208:8000/api/ethnic-groups/search"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "POST",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-POSTapi-ethnic-groups-search">
-</span>
-<span id="execution-results-POSTapi-ethnic-groups-search" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-POSTapi-ethnic-groups-search"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-ethnic-groups-search"
-      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
-</span>
-<span id="execution-error-POSTapi-ethnic-groups-search" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-ethnic-groups-search">
-
-Tip: Check that you&#039;re properly connected to the network.
-If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
-You can check the Dev Tools console for debugging information.</code></pre>
-</span>
-<form id="form-POSTapi-ethnic-groups-search" data-method="POST"
-      data-path="api/ethnic-groups/search"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-ethnic-groups-search', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-ethnic-groups-search"
-                    onclick="tryItOut('POSTapi-ethnic-groups-search');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-ethnic-groups-search"
-                    onclick="cancelTryOut('POSTapi-ethnic-groups-search');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-ethnic-groups-search"
-                    data-initial-text="Send Request 💥"
-                    data-loading-text="⏱ Sending..."
-                    hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/ethnic-groups/search</code></b>
-        </p>
-                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="POSTapi-ethnic-groups-search"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="POSTapi-ethnic-groups-search"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                        </form>
-
-                    <h2 id="endpoints-GETapi-ethnic-groups">Fetches the list of resources.</h2>
+                    <h2 id="endpoints-GETapi-ethnic-groups">Display a listing of the resource.</h2>
 
 <p>
 </p>
@@ -2906,7 +2785,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-ethnic-groups">
             <blockquote>
-            <p>Example response (403):</p>
+            <p>Example response (200):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -2918,7 +2797,42 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;This action is unauthorized.&quot;
+    &quot;data&quot;: [],
+    &quot;links&quot;: {
+        &quot;first&quot;: &quot;http://191.52.55.208:8000/api/ethnic-groups?page=1&quot;,
+        &quot;last&quot;: &quot;http://191.52.55.208:8000/api/ethnic-groups?page=1&quot;,
+        &quot;prev&quot;: null,
+        &quot;next&quot;: null
+    },
+    &quot;meta&quot;: {
+        &quot;current_page&quot;: 1,
+        &quot;from&quot;: null,
+        &quot;last_page&quot;: 1,
+        &quot;links&quot;: [
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
+                &quot;page&quot;: null,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://191.52.55.208:8000/api/ethnic-groups?page=1&quot;,
+                &quot;label&quot;: &quot;1&quot;,
+                &quot;page&quot;: 1,
+                &quot;active&quot;: true
+            },
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
+                &quot;page&quot;: null,
+                &quot;active&quot;: false
+            }
+        ],
+        &quot;path&quot;: &quot;http://191.52.55.208:8000/api/ethnic-groups&quot;,
+        &quot;per_page&quot;: 15,
+        &quot;to&quot;: null,
+        &quot;total&quot;: 0
+    }
 }</code>
  </pre>
     </span>
@@ -2995,7 +2909,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                         </form>
 
-                    <h2 id="endpoints-POSTapi-ethnic-groups">Creates new resource in a transaction-safe way.</h2>
+                    <h2 id="endpoints-POSTapi-ethnic-groups">Store a newly created resource in storage.</h2>
 
 <p>
 </p>
@@ -3010,7 +2924,12 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <pre><code class="language-bash">curl --request POST \
     "http://191.52.55.208:8000/api/ethnic-groups" \
     --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+    --header "Accept: application/json" \
+    --data "{
+    \"name\": \"b\",
+    \"description\": \"Et animi quos velit et fugiat.\"
+}"
+</code></pre></div>
 
 
 <div class="javascript-example">
@@ -3023,9 +2942,15 @@ const headers = {
     "Accept": "application/json",
 };
 
+let body = {
+    "name": "b",
+    "description": "Et animi quos velit et fugiat."
+};
+
 fetch(url, {
     method: "POST",
     headers,
+    body: JSON.stringify(body),
 }).then(response =&gt; response.json());</code></pre></div>
 
 </span>
@@ -3103,9 +3028,34 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <br>
 <p>Example: <code>application/json</code></p>
             </div>
-                        </form>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>name</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="name"                data-endpoint="POSTapi-ethnic-groups"
+               value="b"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>b</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="description"                data-endpoint="POSTapi-ethnic-groups"
+               value="Et animi quos velit et fugiat."
+               data-component="body">
+    <br>
+<p>Must not be greater than 1000 characters. Example: <code>Et animi quos velit et fugiat.</code></p>
+        </div>
+        </form>
 
-                    <h2 id="endpoints-GETapi-ethnic-groups--id-">Fetches resource.</h2>
+                    <h2 id="endpoints-GETapi-ethnic-groups--id-">Display the specified resource.</h2>
 
 <p>
 </p>
@@ -3154,7 +3104,7 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;No query results for model [App\\Models\\EthnicGroup].&quot;
+    &quot;message&quot;: &quot;No query results for model [App\\Models\\EthnicGroup] 16&quot;
 }</code>
  </pre>
     </span>
@@ -3244,7 +3194,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="endpoints-PUTapi-ethnic-groups--id-">Update a resource in a transaction-safe way.</h2>
+                    <h2 id="endpoints-PUTapi-ethnic-groups--id-">Update the specified resource in storage.</h2>
 
 <p>
 </p>
@@ -3259,7 +3209,12 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <pre><code class="language-bash">curl --request PUT \
     "http://191.52.55.208:8000/api/ethnic-groups/16" \
     --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+    --header "Accept: application/json" \
+    --data "{
+    \"name\": \"b\",
+    \"description\": \"Et animi quos velit et fugiat.\"
+}"
+</code></pre></div>
 
 
 <div class="javascript-example">
@@ -3272,9 +3227,15 @@ const headers = {
     "Accept": "application/json",
 };
 
+let body = {
+    "name": "b",
+    "description": "Et animi quos velit et fugiat."
+};
+
 fetch(url, {
     method: "PUT",
     headers,
+    body: JSON.stringify(body),
 }).then(response =&gt; response.json());</code></pre></div>
 
 </span>
@@ -3369,9 +3330,34 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <br>
 <p>The ID of the ethnic group. Example: <code>16</code></p>
             </div>
-                    </form>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>name</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="name"                data-endpoint="PUTapi-ethnic-groups--id-"
+               value="b"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>b</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>description</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="description"                data-endpoint="PUTapi-ethnic-groups--id-"
+               value="Et animi quos velit et fugiat."
+               data-component="body">
+    <br>
+<p>Must not be greater than 1000 characters. Example: <code>Et animi quos velit et fugiat.</code></p>
+        </div>
+        </form>
 
-                    <h2 id="endpoints-DELETEapi-ethnic-groups--id-">Deletes a resource.</h2>
+                    <h2 id="endpoints-DELETEapi-ethnic-groups--id-">Remove the specified resource from storage.</h2>
 
 <p>
 </p>
@@ -3493,116 +3479,6 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <p>The ID of the ethnic group. Example: <code>16</code></p>
             </div>
                     </form>
-
-                    <h2 id="endpoints-POSTapi-items-search">Filters, sorts, and fetches the list of resources.</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-POSTapi-items-search">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "http://191.52.55.208:8000/api/items/search" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://191.52.55.208:8000/api/items/search"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "POST",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-POSTapi-items-search">
-</span>
-<span id="execution-results-POSTapi-items-search" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-POSTapi-items-search"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-items-search"
-      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
-</span>
-<span id="execution-error-POSTapi-items-search" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-items-search">
-
-Tip: Check that you&#039;re properly connected to the network.
-If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
-You can check the Dev Tools console for debugging information.</code></pre>
-</span>
-<form id="form-POSTapi-items-search" data-method="POST"
-      data-path="api/items/search"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-items-search', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-items-search"
-                    onclick="tryItOut('POSTapi-items-search');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-items-search"
-                    onclick="cancelTryOut('POSTapi-items-search');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-items-search"
-                    data-initial-text="Send Request 💥"
-                    data-loading-text="⏱ Sending..."
-                    hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/items/search</code></b>
-        </p>
-                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="POSTapi-items-search"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="POSTapi-items-search"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                        </form>
 
                     <h2 id="endpoints-GETapi-items">Fetches the list of resources.</h2>
 
@@ -4264,117 +4140,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="endpoints-POSTapi-materials-search">Filters, sorts, and fetches the list of resources.</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-POSTapi-materials-search">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "http://191.52.55.208:8000/api/materials/search" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://191.52.55.208:8000/api/materials/search"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "POST",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-POSTapi-materials-search">
-</span>
-<span id="execution-results-POSTapi-materials-search" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-POSTapi-materials-search"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-materials-search"
-      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
-</span>
-<span id="execution-error-POSTapi-materials-search" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-materials-search">
-
-Tip: Check that you&#039;re properly connected to the network.
-If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
-You can check the Dev Tools console for debugging information.</code></pre>
-</span>
-<form id="form-POSTapi-materials-search" data-method="POST"
-      data-path="api/materials/search"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-materials-search', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-materials-search"
-                    onclick="tryItOut('POSTapi-materials-search');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-materials-search"
-                    onclick="cancelTryOut('POSTapi-materials-search');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-materials-search"
-                    data-initial-text="Send Request 💥"
-                    data-loading-text="⏱ Sending..."
-                    hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/materials/search</code></b>
-        </p>
-                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="POSTapi-materials-search"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="POSTapi-materials-search"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                        </form>
-
-                    <h2 id="endpoints-GETapi-materials">Fetches the list of resources.</h2>
+                    <h2 id="endpoints-GETapi-materials">Display a listing of the resource.</h2>
 
 <p>
 </p>
@@ -4411,7 +4177,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-materials">
             <blockquote>
-            <p>Example response (403):</p>
+            <p>Example response (200):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -4423,7 +4189,42 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;This action is unauthorized.&quot;
+    &quot;data&quot;: [],
+    &quot;links&quot;: {
+        &quot;first&quot;: &quot;http://191.52.55.208:8000/api/materials?page=1&quot;,
+        &quot;last&quot;: &quot;http://191.52.55.208:8000/api/materials?page=1&quot;,
+        &quot;prev&quot;: null,
+        &quot;next&quot;: null
+    },
+    &quot;meta&quot;: {
+        &quot;current_page&quot;: 1,
+        &quot;from&quot;: null,
+        &quot;last_page&quot;: 1,
+        &quot;links&quot;: [
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
+                &quot;page&quot;: null,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://191.52.55.208:8000/api/materials?page=1&quot;,
+                &quot;label&quot;: &quot;1&quot;,
+                &quot;page&quot;: 1,
+                &quot;active&quot;: true
+            },
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
+                &quot;page&quot;: null,
+                &quot;active&quot;: false
+            }
+        ],
+        &quot;path&quot;: &quot;http://191.52.55.208:8000/api/materials&quot;,
+        &quot;per_page&quot;: 15,
+        &quot;to&quot;: null,
+        &quot;total&quot;: 0
+    }
 }</code>
  </pre>
     </span>
@@ -4500,7 +4301,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                         </form>
 
-                    <h2 id="endpoints-POSTapi-materials">Creates new resource in a transaction-safe way.</h2>
+                    <h2 id="endpoints-POSTapi-materials">Store a newly created resource in storage.</h2>
 
 <p>
 </p>
@@ -4515,7 +4316,11 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <pre><code class="language-bash">curl --request POST \
     "http://191.52.55.208:8000/api/materials" \
     --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+    --header "Accept: application/json" \
+    --data "{
+    \"name\": \"b\"
+}"
+</code></pre></div>
 
 
 <div class="javascript-example">
@@ -4528,9 +4333,14 @@ const headers = {
     "Accept": "application/json",
 };
 
+let body = {
+    "name": "b"
+};
+
 fetch(url, {
     method: "POST",
     headers,
+    body: JSON.stringify(body),
 }).then(response =&gt; response.json());</code></pre></div>
 
 </span>
@@ -4608,9 +4418,22 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <br>
 <p>Example: <code>application/json</code></p>
             </div>
-                        </form>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>name</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="name"                data-endpoint="POSTapi-materials"
+               value="b"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>b</code></p>
+        </div>
+        </form>
 
-                    <h2 id="endpoints-GETapi-materials--id-">Fetches resource.</h2>
+                    <h2 id="endpoints-GETapi-materials--id-">Display the specified resource.</h2>
 
 <p>
 </p>
@@ -4659,7 +4482,7 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;No query results for model [App\\Models\\Material].&quot;
+    &quot;message&quot;: &quot;No query results for model [App\\Models\\Material] 16&quot;
 }</code>
  </pre>
     </span>
@@ -4749,7 +4572,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="endpoints-PUTapi-materials--id-">Update a resource in a transaction-safe way.</h2>
+                    <h2 id="endpoints-PUTapi-materials--id-">Update the specified resource in storage.</h2>
 
 <p>
 </p>
@@ -4876,7 +4699,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="endpoints-DELETEapi-materials--id-">Deletes a resource.</h2>
+                    <h2 id="endpoints-DELETEapi-materials--id-">Remove the specified resource from storage.</h2>
 
 <p>
 </p>
@@ -4999,117 +4822,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="endpoints-POSTapi-location-search">Filters, sorts, and fetches the list of resources.</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-POSTapi-location-search">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "http://191.52.55.208:8000/api/location/search" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://191.52.55.208:8000/api/location/search"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "POST",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-POSTapi-location-search">
-</span>
-<span id="execution-results-POSTapi-location-search" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-POSTapi-location-search"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-location-search"
-      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
-</span>
-<span id="execution-error-POSTapi-location-search" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-location-search">
-
-Tip: Check that you&#039;re properly connected to the network.
-If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
-You can check the Dev Tools console for debugging information.</code></pre>
-</span>
-<form id="form-POSTapi-location-search" data-method="POST"
-      data-path="api/location/search"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-location-search', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-location-search"
-                    onclick="tryItOut('POSTapi-location-search');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-location-search"
-                    onclick="cancelTryOut('POSTapi-location-search');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-location-search"
-                    data-initial-text="Send Request 💥"
-                    data-loading-text="⏱ Sending..."
-                    hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/location/search</code></b>
-        </p>
-                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="POSTapi-location-search"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="POSTapi-location-search"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                        </form>
-
-                    <h2 id="endpoints-GETapi-location">Fetches the list of resources.</h2>
+                    <h2 id="endpoints-GETapi-location">Display a listing of the resource.</h2>
 
 <p>
 </p>
@@ -5146,7 +4859,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-location">
             <blockquote>
-            <p>Example response (403):</p>
+            <p>Example response (200):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -5158,7 +4871,42 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;This action is unauthorized.&quot;
+    &quot;data&quot;: [],
+    &quot;links&quot;: {
+        &quot;first&quot;: &quot;http://191.52.55.208:8000/api/location?page=1&quot;,
+        &quot;last&quot;: &quot;http://191.52.55.208:8000/api/location?page=1&quot;,
+        &quot;prev&quot;: null,
+        &quot;next&quot;: null
+    },
+    &quot;meta&quot;: {
+        &quot;current_page&quot;: 1,
+        &quot;from&quot;: null,
+        &quot;last_page&quot;: 1,
+        &quot;links&quot;: [
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
+                &quot;page&quot;: null,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://191.52.55.208:8000/api/location?page=1&quot;,
+                &quot;label&quot;: &quot;1&quot;,
+                &quot;page&quot;: 1,
+                &quot;active&quot;: true
+            },
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
+                &quot;page&quot;: null,
+                &quot;active&quot;: false
+            }
+        ],
+        &quot;path&quot;: &quot;http://191.52.55.208:8000/api/location&quot;,
+        &quot;per_page&quot;: 15,
+        &quot;to&quot;: null,
+        &quot;total&quot;: 0
+    }
 }</code>
  </pre>
     </span>
@@ -5235,7 +4983,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                         </form>
 
-                    <h2 id="endpoints-POSTapi-location">Creates new resource in a transaction-safe way.</h2>
+                    <h2 id="endpoints-POSTapi-location">Store a newly created resource in storage.</h2>
 
 <p>
 </p>
@@ -5250,7 +4998,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <pre><code class="language-bash">curl --request POST \
     "http://191.52.55.208:8000/api/location" \
     --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+    --header "Accept: application/json" \
+    --data "{
+    \"name\": \"b\",
+    \"city\": \"n\",
+    \"state\": \"g\",
+    \"country\": \"z\",
+    \"room\": \"m\",
+    \"shelf\": \"i\",
+    \"bookcase\": \"y\"
+}"
+</code></pre></div>
 
 
 <div class="javascript-example">
@@ -5263,9 +5021,20 @@ const headers = {
     "Accept": "application/json",
 };
 
+let body = {
+    "name": "b",
+    "city": "n",
+    "state": "g",
+    "country": "z",
+    "room": "m",
+    "shelf": "i",
+    "bookcase": "y"
+};
+
 fetch(url, {
     method: "POST",
     headers,
+    body: JSON.stringify(body),
 }).then(response =&gt; response.json());</code></pre></div>
 
 </span>
@@ -5343,9 +5112,94 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <br>
 <p>Example: <code>application/json</code></p>
             </div>
-                        </form>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>name</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="name"                data-endpoint="POSTapi-location"
+               value="b"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>b</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>city</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="city"                data-endpoint="POSTapi-location"
+               value="n"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>n</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>state</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="state"                data-endpoint="POSTapi-location"
+               value="g"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>g</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>country</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="country"                data-endpoint="POSTapi-location"
+               value="z"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>z</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>room</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="room"                data-endpoint="POSTapi-location"
+               value="m"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>m</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>shelf</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="shelf"                data-endpoint="POSTapi-location"
+               value="i"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>i</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>bookcase</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="bookcase"                data-endpoint="POSTapi-location"
+               value="y"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>y</code></p>
+        </div>
+        </form>
 
-                    <h2 id="endpoints-GETapi-location--id-">Fetches resource.</h2>
+                    <h2 id="endpoints-GETapi-location--id-">Display the specified resource.</h2>
 
 <p>
 </p>
@@ -5394,7 +5248,7 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;No query results for model [App\\Models\\Location].&quot;
+    &quot;message&quot;: &quot;No query results for model [App\\Models\\Location] 16&quot;
 }</code>
  </pre>
     </span>
@@ -5484,7 +5338,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="endpoints-PUTapi-location--id-">Update a resource in a transaction-safe way.</h2>
+                    <h2 id="endpoints-PUTapi-location--id-">Update the specified resource in storage.</h2>
 
 <p>
 </p>
@@ -5499,7 +5353,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <pre><code class="language-bash">curl --request PUT \
     "http://191.52.55.208:8000/api/location/16" \
     --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+    --header "Accept: application/json" \
+    --data "{
+    \"name\": \"b\",
+    \"city\": \"n\",
+    \"state\": \"g\",
+    \"country\": \"z\",
+    \"room\": \"m\",
+    \"shelf\": \"i\",
+    \"bookcase\": \"y\"
+}"
+</code></pre></div>
 
 
 <div class="javascript-example">
@@ -5512,9 +5376,20 @@ const headers = {
     "Accept": "application/json",
 };
 
+let body = {
+    "name": "b",
+    "city": "n",
+    "state": "g",
+    "country": "z",
+    "room": "m",
+    "shelf": "i",
+    "bookcase": "y"
+};
+
 fetch(url, {
     method: "PUT",
     headers,
+    body: JSON.stringify(body),
 }).then(response =&gt; response.json());</code></pre></div>
 
 </span>
@@ -5609,9 +5484,94 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <br>
 <p>The ID of the location. Example: <code>16</code></p>
             </div>
-                    </form>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>name</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="name"                data-endpoint="PUTapi-location--id-"
+               value="b"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>b</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>city</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="city"                data-endpoint="PUTapi-location--id-"
+               value="n"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>n</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>state</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="state"                data-endpoint="PUTapi-location--id-"
+               value="g"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>g</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>country</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="country"                data-endpoint="PUTapi-location--id-"
+               value="z"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>z</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>room</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="room"                data-endpoint="PUTapi-location--id-"
+               value="m"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>m</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>shelf</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="shelf"                data-endpoint="PUTapi-location--id-"
+               value="i"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>i</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>bookcase</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="bookcase"                data-endpoint="PUTapi-location--id-"
+               value="y"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>y</code></p>
+        </div>
+        </form>
 
-                    <h2 id="endpoints-DELETEapi-location--id-">Deletes a resource.</h2>
+                    <h2 id="endpoints-DELETEapi-location--id-">Remove the specified resource from storage.</h2>
 
 <p>
 </p>
@@ -5734,117 +5694,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="endpoints-POSTapi-material-search">Filters, sorts, and fetches the list of resources.</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-POSTapi-material-search">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "http://191.52.55.208:8000/api/material/search" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://191.52.55.208:8000/api/material/search"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "POST",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-POSTapi-material-search">
-</span>
-<span id="execution-results-POSTapi-material-search" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-POSTapi-material-search"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-material-search"
-      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
-</span>
-<span id="execution-error-POSTapi-material-search" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-material-search">
-
-Tip: Check that you&#039;re properly connected to the network.
-If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
-You can check the Dev Tools console for debugging information.</code></pre>
-</span>
-<form id="form-POSTapi-material-search" data-method="POST"
-      data-path="api/material/search"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-material-search', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-material-search"
-                    onclick="tryItOut('POSTapi-material-search');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-material-search"
-                    onclick="cancelTryOut('POSTapi-material-search');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-material-search"
-                    data-initial-text="Send Request 💥"
-                    data-loading-text="⏱ Sending..."
-                    hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/material/search</code></b>
-        </p>
-                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="POSTapi-material-search"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="POSTapi-material-search"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                        </form>
-
-                    <h2 id="endpoints-GETapi-material">Fetches the list of resources.</h2>
+                    <h2 id="endpoints-GETapi-material">Display a listing of the resource.</h2>
 
 <p>
 </p>
@@ -5881,7 +5731,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-material">
             <blockquote>
-            <p>Example response (403):</p>
+            <p>Example response (200):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -5893,7 +5743,42 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;This action is unauthorized.&quot;
+    &quot;data&quot;: [],
+    &quot;links&quot;: {
+        &quot;first&quot;: &quot;http://191.52.55.208:8000/api/material?page=1&quot;,
+        &quot;last&quot;: &quot;http://191.52.55.208:8000/api/material?page=1&quot;,
+        &quot;prev&quot;: null,
+        &quot;next&quot;: null
+    },
+    &quot;meta&quot;: {
+        &quot;current_page&quot;: 1,
+        &quot;from&quot;: null,
+        &quot;last_page&quot;: 1,
+        &quot;links&quot;: [
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;&amp;laquo; Previous&quot;,
+                &quot;page&quot;: null,
+                &quot;active&quot;: false
+            },
+            {
+                &quot;url&quot;: &quot;http://191.52.55.208:8000/api/material?page=1&quot;,
+                &quot;label&quot;: &quot;1&quot;,
+                &quot;page&quot;: 1,
+                &quot;active&quot;: true
+            },
+            {
+                &quot;url&quot;: null,
+                &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
+                &quot;page&quot;: null,
+                &quot;active&quot;: false
+            }
+        ],
+        &quot;path&quot;: &quot;http://191.52.55.208:8000/api/material&quot;,
+        &quot;per_page&quot;: 15,
+        &quot;to&quot;: null,
+        &quot;total&quot;: 0
+    }
 }</code>
  </pre>
     </span>
@@ -5970,7 +5855,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                         </form>
 
-                    <h2 id="endpoints-POSTapi-material">Creates new resource in a transaction-safe way.</h2>
+                    <h2 id="endpoints-POSTapi-material">Store a newly created resource in storage.</h2>
 
 <p>
 </p>
@@ -5985,7 +5870,11 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <pre><code class="language-bash">curl --request POST \
     "http://191.52.55.208:8000/api/material" \
     --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+    --header "Accept: application/json" \
+    --data "{
+    \"name\": \"b\"
+}"
+</code></pre></div>
 
 
 <div class="javascript-example">
@@ -5998,9 +5887,14 @@ const headers = {
     "Accept": "application/json",
 };
 
+let body = {
+    "name": "b"
+};
+
 fetch(url, {
     method: "POST",
     headers,
+    body: JSON.stringify(body),
 }).then(response =&gt; response.json());</code></pre></div>
 
 </span>
@@ -6078,9 +5972,22 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <br>
 <p>Example: <code>application/json</code></p>
             </div>
-                        </form>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>name</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="name"                data-endpoint="POSTapi-material"
+               value="b"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>b</code></p>
+        </div>
+        </form>
 
-                    <h2 id="endpoints-GETapi-material--id-">Fetches resource.</h2>
+                    <h2 id="endpoints-GETapi-material--id-">Display the specified resource.</h2>
 
 <p>
 </p>
@@ -6129,7 +6036,7 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;No query results for model [App\\Models\\Material].&quot;
+    &quot;message&quot;: &quot;No query results for model [App\\Models\\Material] 16&quot;
 }</code>
  </pre>
     </span>
@@ -6219,7 +6126,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="endpoints-PUTapi-material--id-">Update a resource in a transaction-safe way.</h2>
+                    <h2 id="endpoints-PUTapi-material--id-">Update the specified resource in storage.</h2>
 
 <p>
 </p>
@@ -6346,7 +6253,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="endpoints-DELETEapi-material--id-">Deletes a resource.</h2>
+                    <h2 id="endpoints-DELETEapi-material--id-">Remove the specified resource from storage.</h2>
 
 <p>
 </p>
@@ -6469,243 +6376,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="endpoints-POSTapi-photos-search">Filters, sorts, and fetches the list of resources.</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-POSTapi-photos-search">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "http://191.52.55.208:8000/api/photos/search" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://191.52.55.208:8000/api/photos/search"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "POST",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-POSTapi-photos-search">
-</span>
-<span id="execution-results-POSTapi-photos-search" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-POSTapi-photos-search"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-photos-search"
-      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
-</span>
-<span id="execution-error-POSTapi-photos-search" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-photos-search">
-
-Tip: Check that you&#039;re properly connected to the network.
-If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
-You can check the Dev Tools console for debugging information.</code></pre>
-</span>
-<form id="form-POSTapi-photos-search" data-method="POST"
-      data-path="api/photos/search"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-photos-search', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-photos-search"
-                    onclick="tryItOut('POSTapi-photos-search');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-photos-search"
-                    onclick="cancelTryOut('POSTapi-photos-search');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-photos-search"
-                    data-initial-text="Send Request 💥"
-                    data-loading-text="⏱ Sending..."
-                    hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/photos/search</code></b>
-        </p>
-                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="POSTapi-photos-search"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="POSTapi-photos-search"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                        </form>
-
-                    <h2 id="endpoints-GETapi-photos">Fetches the list of resources.</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-GETapi-photos">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://191.52.55.208:8000/api/photos" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://191.52.55.208:8000/api/photos"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-photos">
-            <blockquote>
-            <p>Example response (403):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary style="cursor: pointer;">
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-vary: Origin
- </code></pre></details>         <pre>
-
-<code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;This action is unauthorized.&quot;
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-photos" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-GETapi-photos"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-photos"
-      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
-</span>
-<span id="execution-error-GETapi-photos" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-photos">
-
-Tip: Check that you&#039;re properly connected to the network.
-If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
-You can check the Dev Tools console for debugging information.</code></pre>
-</span>
-<form id="form-GETapi-photos" data-method="GET"
-      data-path="api/photos"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-photos', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-photos"
-                    onclick="tryItOut('GETapi-photos');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-photos"
-                    onclick="cancelTryOut('GETapi-photos');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-photos"
-                    data-initial-text="Send Request 💥"
-                    data-loading-text="⏱ Sending..."
-                    hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/photos</code></b>
-        </p>
-                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="GETapi-photos"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="GETapi-photos"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                        </form>
-
-                    <h2 id="endpoints-POSTapi-photos">Creates new resource in a transaction-safe way.</h2>
+                    <h2 id="endpoints-POSTapi-photos">Store a newly created resource in storage.</h2>
 
 <p>
 </p>
@@ -6719,8 +6390,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
     "http://191.52.55.208:8000/api/photos" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+    --header "Content-Type: multipart/form-data" \
+    --header "Accept: application/json" \
+    --form "item_id=architecto"\
+    --form "photo=@/tmp/phpladq70u29hg570Hpkhd" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -6729,13 +6402,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
-    "Content-Type": "application/json",
+    "Content-Type": "multipart/form-data",
     "Accept": "application/json",
 };
+
+const body = new FormData();
+body.append('item_id', 'architecto');
+body.append('photo', document.querySelector('input[name="photo"]').files[0]);
 
 fetch(url, {
     method: "POST",
     headers,
+    body,
 }).then(response =&gt; response.json());</code></pre></div>
 
 </span>
@@ -6760,7 +6438,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <form id="form-POSTapi-photos" data-method="POST"
       data-path="api/photos"
       data-authed="0"
-      data-hasfiles="0"
+      data-hasfiles="1"
       data-isarraybody="0"
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('POSTapi-photos', this);">
@@ -6796,10 +6474,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="Content-Type"                data-endpoint="POSTapi-photos"
-               value="application/json"
+               value="multipart/form-data"
                data-component="header">
     <br>
-<p>Example: <code>application/json</code></p>
+<p>Example: <code>multipart/form-data</code></p>
             </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
@@ -6813,9 +6491,34 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <br>
 <p>Example: <code>application/json</code></p>
             </div>
-                        </form>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>photo</code></b>&nbsp;&nbsp;
+<small>file</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="file" style="display: none"
+                              name="photo"                data-endpoint="POSTapi-photos"
+               value=""
+               data-component="body">
+    <br>
+<p>Must be an image. Must not be greater than 5120 kilobytes. Example: <code>/tmp/phpladq70u29hg570Hpkhd</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>item_id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="item_id"                data-endpoint="POSTapi-photos"
+               value="architecto"
+               data-component="body">
+    <br>
+<p>The <code>id</code> of an existing record in the items table. Example: <code>architecto</code></p>
+        </div>
+        </form>
 
-                    <h2 id="endpoints-GETapi-photos--id-">Fetches resource.</h2>
+                    <h2 id="endpoints-GETapi-photos--id-">Display the specified resource.</h2>
 
 <p>
 </p>
@@ -6864,7 +6567,7 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;No query results for model [App\\Models\\Photo].&quot;
+    &quot;message&quot;: &quot;No query results for model [App\\Models\\Photo] 16&quot;
 }</code>
  </pre>
     </span>
@@ -6954,134 +6657,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="endpoints-PUTapi-photos--id-">Update a resource in a transaction-safe way.</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-PUTapi-photos--id-">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request PUT \
-    "http://191.52.55.208:8000/api/photos/16" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://191.52.55.208:8000/api/photos/16"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "PUT",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-PUTapi-photos--id-">
-</span>
-<span id="execution-results-PUTapi-photos--id-" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-PUTapi-photos--id-"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-PUTapi-photos--id-"
-      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
-</span>
-<span id="execution-error-PUTapi-photos--id-" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-PUTapi-photos--id-">
-
-Tip: Check that you&#039;re properly connected to the network.
-If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
-You can check the Dev Tools console for debugging information.</code></pre>
-</span>
-<form id="form-PUTapi-photos--id-" data-method="PUT"
-      data-path="api/photos/{id}"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('PUTapi-photos--id-', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-PUTapi-photos--id-"
-                    onclick="tryItOut('PUTapi-photos--id-');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-PUTapi-photos--id-"
-                    onclick="cancelTryOut('PUTapi-photos--id-');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-PUTapi-photos--id-"
-                    data-initial-text="Send Request 💥"
-                    data-loading-text="⏱ Sending..."
-                    hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-darkblue">PUT</small>
-            <b><code>api/photos/{id}</code></b>
-        </p>
-            <p>
-            <small class="badge badge-purple">PATCH</small>
-            <b><code>api/photos/{id}</code></b>
-        </p>
-                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="PUTapi-photos--id-"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="PUTapi-photos--id-"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
-                    <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
-<small>integer</small>&nbsp;
- &nbsp;
- &nbsp;
-                <input type="number" style="display: none"
-               step="any"               name="id"                data-endpoint="PUTapi-photos--id-"
-               value="16"
-               data-component="url">
-    <br>
-<p>The ID of the photo. Example: <code>16</code></p>
-            </div>
-                    </form>
-
-                    <h2 id="endpoints-DELETEapi-photos--id-">Deletes a resource.</h2>
+                    <h2 id="endpoints-DELETEapi-photos--id-">Remove the specified resource from storage.</h2>
 
 <p>
 </p>
@@ -7204,117 +6780,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                     </form>
 
-                    <h2 id="endpoints-POSTapi-material-subtypes-search">Filters, sorts, and fetches the list of resources.</h2>
-
-<p>
-</p>
-
-
-
-<span id="example-requests-POSTapi-material-subtypes-search">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request POST \
-    "http://191.52.55.208:8000/api/material-subtypes/search" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://191.52.55.208:8000/api/material-subtypes/search"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "POST",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-POSTapi-material-subtypes-search">
-</span>
-<span id="execution-results-POSTapi-material-subtypes-search" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-POSTapi-material-subtypes-search"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-POSTapi-material-subtypes-search"
-      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
-</span>
-<span id="execution-error-POSTapi-material-subtypes-search" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-POSTapi-material-subtypes-search">
-
-Tip: Check that you&#039;re properly connected to the network.
-If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
-You can check the Dev Tools console for debugging information.</code></pre>
-</span>
-<form id="form-POSTapi-material-subtypes-search" data-method="POST"
-      data-path="api/material-subtypes/search"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('POSTapi-material-subtypes-search', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-POSTapi-material-subtypes-search"
-                    onclick="tryItOut('POSTapi-material-subtypes-search');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-POSTapi-material-subtypes-search"
-                    onclick="cancelTryOut('POSTapi-material-subtypes-search');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-POSTapi-material-subtypes-search"
-                    data-initial-text="Send Request 💥"
-                    data-loading-text="⏱ Sending..."
-                    hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-black">POST</small>
-            <b><code>api/material-subtypes/search</code></b>
-        </p>
-                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="POSTapi-material-subtypes-search"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                                <div style="padding-left: 28px; clear: unset;">
-                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
-&nbsp;
- &nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="POSTapi-material-subtypes-search"
-               value="application/json"
-               data-component="header">
-    <br>
-<p>Example: <code>application/json</code></p>
-            </div>
-                        </form>
-
-                    <h2 id="endpoints-GETapi-material-subtypes">Fetches the list of resources.</h2>
+                    <h2 id="endpoints-GETapi-material-subtypes">Display a listing of the resource.</h2>
 
 <p>
 </p>
@@ -7351,7 +6817,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-material-subtypes">
             <blockquote>
-            <p>Example response (403):</p>
+            <p>Example response (500):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -7363,7 +6829,7 @@ vary: Origin
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;This action is unauthorized.&quot;
+    &quot;message&quot;: &quot;Server Error&quot;
 }</code>
  </pre>
     </span>
@@ -7440,7 +6906,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                         </form>
 
-                    <h2 id="endpoints-POSTapi-material-subtypes">Creates new resource in a transaction-safe way.</h2>
+                    <h2 id="endpoints-POSTapi-material-subtypes">Store a newly created resource in storage.</h2>
 
 <p>
 </p>
@@ -7455,7 +6921,12 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <pre><code class="language-bash">curl --request POST \
     "http://191.52.55.208:8000/api/material-subtypes" \
     --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
+    --header "Accept: application/json" \
+    --data "{
+    \"name\": \"b\",
+    \"materials_id\": \"architecto\"
+}"
+</code></pre></div>
 
 
 <div class="javascript-example">
@@ -7468,9 +6939,15 @@ const headers = {
     "Accept": "application/json",
 };
 
+let body = {
+    "name": "b",
+    "materials_id": "architecto"
+};
+
 fetch(url, {
     method: "POST",
     headers,
+    body: JSON.stringify(body),
 }).then(response =&gt; response.json());</code></pre></div>
 
 </span>
@@ -7548,9 +7025,34 @@ You can check the Dev Tools console for debugging information.</code></pre>
     <br>
 <p>Example: <code>application/json</code></p>
             </div>
-                        </form>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>name</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="name"                data-endpoint="POSTapi-material-subtypes"
+               value="b"
+               data-component="body">
+    <br>
+<p>Must not be greater than 255 characters. Example: <code>b</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>materials_id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="materials_id"                data-endpoint="POSTapi-material-subtypes"
+               value="architecto"
+               data-component="body">
+    <br>
+<p>The <code>id</code> of an existing record in the materiais table. Example: <code>architecto</code></p>
+        </div>
+        </form>
 
-                    <h2 id="endpoints-GETapi-material-subtypes--id-">Fetches resource.</h2>
+                    <h2 id="endpoints-GETapi-material-subtypes--id-">Display the specified resource.</h2>
 
 <p>
 </p>
@@ -7563,14 +7065,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://191.52.55.208:8000/api/material-subtypes/architecto" \
+    --get "http://191.52.55.208:8000/api/material-subtypes/16" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://191.52.55.208:8000/api/material-subtypes/architecto"
+    "http://191.52.55.208:8000/api/material-subtypes/16"
 );
 
 const headers = {
@@ -7677,19 +7179,19 @@ You can check the Dev Tools console for debugging information.</code></pre>
                         <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
+<small>integer</small>&nbsp;
  &nbsp;
  &nbsp;
-                <input type="text" style="display: none"
-                              name="id"                data-endpoint="GETapi-material-subtypes--id-"
-               value="architecto"
+                <input type="number" style="display: none"
+               step="any"               name="id"                data-endpoint="GETapi-material-subtypes--id-"
+               value="16"
                data-component="url">
     <br>
-<p>The ID of the material subtype. Example: <code>architecto</code></p>
+<p>The ID of the material subtype. Example: <code>16</code></p>
             </div>
                     </form>
 
-                    <h2 id="endpoints-PUTapi-material-subtypes--id-">Update a resource in a transaction-safe way.</h2>
+                    <h2 id="endpoints-PUTapi-material-subtypes--id-">Update the specified resource in storage.</h2>
 
 <p>
 </p>
@@ -7702,14 +7204,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://191.52.55.208:8000/api/material-subtypes/architecto" \
+    "http://191.52.55.208:8000/api/material-subtypes/16" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://191.52.55.208:8000/api/material-subtypes/architecto"
+    "http://191.52.55.208:8000/api/material-subtypes/16"
 );
 
 const headers = {
@@ -7804,19 +7306,19 @@ You can check the Dev Tools console for debugging information.</code></pre>
                         <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
+<small>integer</small>&nbsp;
  &nbsp;
  &nbsp;
-                <input type="text" style="display: none"
-                              name="id"                data-endpoint="PUTapi-material-subtypes--id-"
-               value="architecto"
+                <input type="number" style="display: none"
+               step="any"               name="id"                data-endpoint="PUTapi-material-subtypes--id-"
+               value="16"
                data-component="url">
     <br>
-<p>The ID of the material subtype. Example: <code>architecto</code></p>
+<p>The ID of the material subtype. Example: <code>16</code></p>
             </div>
                     </form>
 
-                    <h2 id="endpoints-DELETEapi-material-subtypes--id-">Deletes a resource.</h2>
+                    <h2 id="endpoints-DELETEapi-material-subtypes--id-">Remove the specified resource from storage.</h2>
 
 <p>
 </p>
@@ -7829,14 +7331,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://191.52.55.208:8000/api/material-subtypes/architecto" \
+    "http://191.52.55.208:8000/api/material-subtypes/16" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://191.52.55.208:8000/api/material-subtypes/architecto"
+    "http://191.52.55.208:8000/api/material-subtypes/16"
 );
 
 const headers = {
@@ -7927,15 +7429,15 @@ You can check the Dev Tools console for debugging information.</code></pre>
                         <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
                     <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
+<small>integer</small>&nbsp;
  &nbsp;
  &nbsp;
-                <input type="text" style="display: none"
-                              name="id"                data-endpoint="DELETEapi-material-subtypes--id-"
-               value="architecto"
+                <input type="number" style="display: none"
+               step="any"               name="id"                data-endpoint="DELETEapi-material-subtypes--id-"
+               value="16"
                data-component="url">
     <br>
-<p>The ID of the material subtype. Example: <code>architecto</code></p>
+<p>The ID of the material subtype. Example: <code>16</code></p>
             </div>
                     </form>
 

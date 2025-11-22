@@ -244,7 +244,7 @@ endpoints:
         name: remember
         description: ''
         required: false
-        example: false
+        example: true
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -253,7 +253,7 @@ endpoints:
     cleanBodyParameters:
       email: gbailey@example.net
       password: '+-0pBNvYgxwmi/#iw'
-      remember: false
+      remember: true
     fileParameters: []
     responses: []
     responseFields: []
@@ -335,37 +335,6 @@ endpoints:
   -
     custom: []
     httpMethods:
-      - POST
-    uri: api/collections/search
-    metadata:
-      custom: []
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Filters, sorts, and fetches the list of resources.'
-      description: ''
-      authenticated: false
-      deprecated: false
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-  -
-    custom: []
-    httpMethods:
       - GET
     uri: api/collections
     metadata:
@@ -374,7 +343,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Fetches the list of resources.'
+      title: 'Display a listing of the resource.'
       description: ''
       authenticated: false
       deprecated: false
@@ -391,11 +360,8 @@ endpoints:
     responses:
       -
         custom: []
-        status: 403
-        content: |-
-          {
-              "message": "This action is unauthorized."
-          }
+        status: 200
+        content: '{"data":[],"links":{"first":"http:\/\/191.52.55.208:8000\/api\/collections?page=1","last":"http:\/\/191.52.55.208:8000\/api\/collections?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","page":null,"active":false},{"url":"http:\/\/191.52.55.208:8000\/api\/collections?page=1","label":"1","page":1,"active":true},{"url":null,"label":"Next &raquo;","page":null,"active":false}],"path":"http:\/\/191.52.55.208:8000\/api\/collections","per_page":15,"to":null,"total":0}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -417,7 +383,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Creates new resource in a transaction-safe way.'
+      title: 'Store a newly created resource in storage.'
       description: ''
       authenticated: false
       deprecated: false
@@ -428,8 +394,44 @@ endpoints:
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
+    bodyParameters:
+      name:
+        custom: []
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: b
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      owner:
+        custom: []
+        name: owner
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: 'n'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      description:
+        custom: []
+        name: description
+        description: 'Must not be greater than 65535 characters.'
+        required: false
+        example: 'Animi quos velit et fugiat.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+    cleanBodyParameters:
+      name: b
+      owner: 'n'
+      description: 'Animi quos velit et fugiat.'
     fileParameters: []
     responses: []
     responseFields: []
@@ -448,7 +450,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Fetches resource.'
+      title: 'Display the specified resource.'
       description: ''
       authenticated: false
       deprecated: false
@@ -477,10 +479,10 @@ endpoints:
     responses:
       -
         custom: []
-        status: 500
+        status: 404
         content: |-
           {
-              "message": "Server Error"
+              "message": "No query results for model [App\\Models\\Collection] 16"
           }
         headers:
           cache-control: 'no-cache, private'
@@ -504,7 +506,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Update a resource in a transaction-safe way.'
+      title: 'Update the specified resource in storage.'
       description: ''
       authenticated: false
       deprecated: false
@@ -527,8 +529,44 @@ endpoints:
       id: 16
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
+    bodyParameters:
+      name:
+        custom: []
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: b
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      owner:
+        custom: []
+        name: owner
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: 'n'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      description:
+        custom: []
+        name: description
+        description: 'Must not be greater than 65535 characters.'
+        required: false
+        example: 'Animi quos velit et fugiat.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+    cleanBodyParameters:
+      name: b
+      owner: 'n'
+      description: 'Animi quos velit et fugiat.'
     fileParameters: []
     responses: []
     responseFields: []
@@ -547,7 +585,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Deletes a resource.'
+      title: 'Remove the specified resource from storage.'
       description: ''
       authenticated: false
       deprecated: false
@@ -568,37 +606,6 @@ endpoints:
         deprecated: false
     cleanUrlParameters:
       id: 16
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-  -
-    custom: []
-    httpMethods:
-      - POST
-    uri: api/conservation-actions/search
-    metadata:
-      custom: []
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Filters, sorts, and fetches the list of resources.'
-      description: ''
-      authenticated: false
-      deprecated: false
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -621,7 +628,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Fetches the list of resources.'
+      title: 'Display a listing of the resource.'
       description: ''
       authenticated: false
       deprecated: false
@@ -638,11 +645,8 @@ endpoints:
     responses:
       -
         custom: []
-        status: 403
-        content: |-
-          {
-              "message": "This action is unauthorized."
-          }
+        status: 200
+        content: '{"data":[],"links":{"first":"http:\/\/191.52.55.208:8000\/api\/conservation-actions?page=1","last":"http:\/\/191.52.55.208:8000\/api\/conservation-actions?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","page":null,"active":false},{"url":"http:\/\/191.52.55.208:8000\/api\/conservation-actions?page=1","label":"1","page":1,"active":true},{"url":null,"label":"Next &raquo;","page":null,"active":false}],"path":"http:\/\/191.52.55.208:8000\/api\/conservation-actions","per_page":15,"to":null,"total":0}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -664,7 +668,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Creates new resource in a transaction-safe way.'
+      title: 'Store a newly created resource in storage.'
       description: ''
       authenticated: false
       deprecated: false
@@ -675,8 +679,32 @@ endpoints:
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
+    bodyParameters:
+      description:
+        custom: []
+        name: description
+        description: 'Must not be greater than 1000 characters.'
+        required: true
+        example: 'Eius et animi quos velit et.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      action_date:
+        custom: []
+        name: action_date
+        description: 'Must be a valid date.'
+        required: true
+        example: '2025-11-22T00:28:56'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      description: 'Eius et animi quos velit et.'
+      action_date: '2025-11-22T00:28:56'
     fileParameters: []
     responses: []
     responseFields: []
@@ -695,7 +723,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Fetches resource.'
+      title: 'Display the specified resource.'
       description: ''
       authenticated: false
       deprecated: false
@@ -727,7 +755,7 @@ endpoints:
         status: 404
         content: |-
           {
-              "message": "No query results for model [App\\Models\\ConservationAction]."
+              "message": "No query results for model [App\\Models\\ConservationAction] 16"
           }
         headers:
           cache-control: 'no-cache, private'
@@ -751,7 +779,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Update a resource in a transaction-safe way.'
+      title: 'Update the specified resource in storage.'
       description: ''
       authenticated: false
       deprecated: false
@@ -774,8 +802,32 @@ endpoints:
       id: 16
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
+    bodyParameters:
+      description:
+        custom: []
+        name: description
+        description: 'Must not be greater than 1000 characters.'
+        required: true
+        example: 'Eius et animi quos velit et.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      action_date:
+        custom: []
+        name: action_date
+        description: 'Must be a valid date.'
+        required: true
+        example: '2025-11-22T00:28:56'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      description: 'Eius et animi quos velit et.'
+      action_date: '2025-11-22T00:28:56'
     fileParameters: []
     responses: []
     responseFields: []
@@ -794,7 +846,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Deletes a resource.'
+      title: 'Remove the specified resource from storage.'
       description: ''
       authenticated: false
       deprecated: false
@@ -815,37 +867,6 @@ endpoints:
         deprecated: false
     cleanUrlParameters:
       id: 16
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-  -
-    custom: []
-    httpMethods:
-      - POST
-    uri: api/ethnic-groups/search
-    metadata:
-      custom: []
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Filters, sorts, and fetches the list of resources.'
-      description: ''
-      authenticated: false
-      deprecated: false
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -868,7 +889,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Fetches the list of resources.'
+      title: 'Display a listing of the resource.'
       description: ''
       authenticated: false
       deprecated: false
@@ -885,11 +906,8 @@ endpoints:
     responses:
       -
         custom: []
-        status: 403
-        content: |-
-          {
-              "message": "This action is unauthorized."
-          }
+        status: 200
+        content: '{"data":[],"links":{"first":"http:\/\/191.52.55.208:8000\/api\/ethnic-groups?page=1","last":"http:\/\/191.52.55.208:8000\/api\/ethnic-groups?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","page":null,"active":false},{"url":"http:\/\/191.52.55.208:8000\/api\/ethnic-groups?page=1","label":"1","page":1,"active":true},{"url":null,"label":"Next &raquo;","page":null,"active":false}],"path":"http:\/\/191.52.55.208:8000\/api\/ethnic-groups","per_page":15,"to":null,"total":0}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -911,7 +929,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Creates new resource in a transaction-safe way.'
+      title: 'Store a newly created resource in storage.'
       description: ''
       authenticated: false
       deprecated: false
@@ -922,8 +940,32 @@ endpoints:
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
+    bodyParameters:
+      name:
+        custom: []
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: b
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      description:
+        custom: []
+        name: description
+        description: 'Must not be greater than 1000 characters.'
+        required: true
+        example: 'Et animi quos velit et fugiat.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      name: b
+      description: 'Et animi quos velit et fugiat.'
     fileParameters: []
     responses: []
     responseFields: []
@@ -942,7 +984,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Fetches resource.'
+      title: 'Display the specified resource.'
       description: ''
       authenticated: false
       deprecated: false
@@ -974,7 +1016,7 @@ endpoints:
         status: 404
         content: |-
           {
-              "message": "No query results for model [App\\Models\\EthnicGroup]."
+              "message": "No query results for model [App\\Models\\EthnicGroup] 16"
           }
         headers:
           cache-control: 'no-cache, private'
@@ -998,7 +1040,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Update a resource in a transaction-safe way.'
+      title: 'Update the specified resource in storage.'
       description: ''
       authenticated: false
       deprecated: false
@@ -1021,8 +1063,32 @@ endpoints:
       id: 16
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
+    bodyParameters:
+      name:
+        custom: []
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: b
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      description:
+        custom: []
+        name: description
+        description: 'Must not be greater than 1000 characters.'
+        required: true
+        example: 'Et animi quos velit et fugiat.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      name: b
+      description: 'Et animi quos velit et fugiat.'
     fileParameters: []
     responses: []
     responseFields: []
@@ -1041,7 +1107,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Deletes a resource.'
+      title: 'Remove the specified resource from storage.'
       description: ''
       authenticated: false
       deprecated: false
@@ -1062,37 +1128,6 @@ endpoints:
         deprecated: false
     cleanUrlParameters:
       id: 16
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-  -
-    custom: []
-    httpMethods:
-      - POST
-    uri: api/items/search
-    metadata:
-      custom: []
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Filters, sorts, and fetches the list of resources.'
-      description: ''
-      authenticated: false
-      deprecated: false
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -1320,37 +1355,6 @@ endpoints:
   -
     custom: []
     httpMethods:
-      - POST
-    uri: api/materials/search
-    metadata:
-      custom: []
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Filters, sorts, and fetches the list of resources.'
-      description: ''
-      authenticated: false
-      deprecated: false
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-  -
-    custom: []
-    httpMethods:
       - GET
     uri: api/materials
     metadata:
@@ -1359,7 +1363,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Fetches the list of resources.'
+      title: 'Display a listing of the resource.'
       description: ''
       authenticated: false
       deprecated: false
@@ -1376,11 +1380,8 @@ endpoints:
     responses:
       -
         custom: []
-        status: 403
-        content: |-
-          {
-              "message": "This action is unauthorized."
-          }
+        status: 200
+        content: '{"data":[],"links":{"first":"http:\/\/191.52.55.208:8000\/api\/materials?page=1","last":"http:\/\/191.52.55.208:8000\/api\/materials?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","page":null,"active":false},{"url":"http:\/\/191.52.55.208:8000\/api\/materials?page=1","label":"1","page":1,"active":true},{"url":null,"label":"Next &raquo;","page":null,"active":false}],"path":"http:\/\/191.52.55.208:8000\/api\/materials","per_page":15,"to":null,"total":0}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -1402,7 +1403,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Creates new resource in a transaction-safe way.'
+      title: 'Store a newly created resource in storage.'
       description: ''
       authenticated: false
       deprecated: false
@@ -1413,8 +1414,20 @@ endpoints:
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
+    bodyParameters:
+      name:
+        custom: []
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: b
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      name: b
     fileParameters: []
     responses: []
     responseFields: []
@@ -1433,7 +1446,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Fetches resource.'
+      title: 'Display the specified resource.'
       description: ''
       authenticated: false
       deprecated: false
@@ -1465,7 +1478,7 @@ endpoints:
         status: 404
         content: |-
           {
-              "message": "No query results for model [App\\Models\\Material]."
+              "message": "No query results for model [App\\Models\\Material] 16"
           }
         headers:
           cache-control: 'no-cache, private'
@@ -1489,7 +1502,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Update a resource in a transaction-safe way.'
+      title: 'Update the specified resource in storage.'
       description: ''
       authenticated: false
       deprecated: false
@@ -1532,7 +1545,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Deletes a resource.'
+      title: 'Remove the specified resource from storage.'
       description: ''
       authenticated: false
       deprecated: false
@@ -1553,37 +1566,6 @@ endpoints:
         deprecated: false
     cleanUrlParameters:
       id: 16
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-  -
-    custom: []
-    httpMethods:
-      - POST
-    uri: api/location/search
-    metadata:
-      custom: []
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Filters, sorts, and fetches the list of resources.'
-      description: ''
-      authenticated: false
-      deprecated: false
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -1606,7 +1588,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Fetches the list of resources.'
+      title: 'Display a listing of the resource.'
       description: ''
       authenticated: false
       deprecated: false
@@ -1623,11 +1605,8 @@ endpoints:
     responses:
       -
         custom: []
-        status: 403
-        content: |-
-          {
-              "message": "This action is unauthorized."
-          }
+        status: 200
+        content: '{"data":[],"links":{"first":"http:\/\/191.52.55.208:8000\/api\/location?page=1","last":"http:\/\/191.52.55.208:8000\/api\/location?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","page":null,"active":false},{"url":"http:\/\/191.52.55.208:8000\/api\/location?page=1","label":"1","page":1,"active":true},{"url":null,"label":"Next &raquo;","page":null,"active":false}],"path":"http:\/\/191.52.55.208:8000\/api\/location","per_page":15,"to":null,"total":0}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -1649,7 +1628,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Creates new resource in a transaction-safe way.'
+      title: 'Store a newly created resource in storage.'
       description: ''
       authenticated: false
       deprecated: false
@@ -1660,8 +1639,92 @@ endpoints:
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
+    bodyParameters:
+      name:
+        custom: []
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: b
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      city:
+        custom: []
+        name: city
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: 'n'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      state:
+        custom: []
+        name: state
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: g
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      country:
+        custom: []
+        name: country
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: z
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      room:
+        custom: []
+        name: room
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: m
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      shelf:
+        custom: []
+        name: shelf
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: i
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      bookcase:
+        custom: []
+        name: bookcase
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: 'y'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      name: b
+      city: 'n'
+      state: g
+      country: z
+      room: m
+      shelf: i
+      bookcase: 'y'
     fileParameters: []
     responses: []
     responseFields: []
@@ -1680,7 +1743,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Fetches resource.'
+      title: 'Display the specified resource.'
       description: ''
       authenticated: false
       deprecated: false
@@ -1712,7 +1775,7 @@ endpoints:
         status: 404
         content: |-
           {
-              "message": "No query results for model [App\\Models\\Location]."
+              "message": "No query results for model [App\\Models\\Location] 16"
           }
         headers:
           cache-control: 'no-cache, private'
@@ -1736,7 +1799,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Update a resource in a transaction-safe way.'
+      title: 'Update the specified resource in storage.'
       description: ''
       authenticated: false
       deprecated: false
@@ -1759,8 +1822,92 @@ endpoints:
       id: 16
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
+    bodyParameters:
+      name:
+        custom: []
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: b
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      city:
+        custom: []
+        name: city
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: 'n'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      state:
+        custom: []
+        name: state
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: g
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      country:
+        custom: []
+        name: country
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: z
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      room:
+        custom: []
+        name: room
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: m
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      shelf:
+        custom: []
+        name: shelf
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: i
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      bookcase:
+        custom: []
+        name: bookcase
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: 'y'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      name: b
+      city: 'n'
+      state: g
+      country: z
+      room: m
+      shelf: i
+      bookcase: 'y'
     fileParameters: []
     responses: []
     responseFields: []
@@ -1779,7 +1926,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Deletes a resource.'
+      title: 'Remove the specified resource from storage.'
       description: ''
       authenticated: false
       deprecated: false
@@ -1800,37 +1947,6 @@ endpoints:
         deprecated: false
     cleanUrlParameters:
       id: 16
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-  -
-    custom: []
-    httpMethods:
-      - POST
-    uri: api/material/search
-    metadata:
-      custom: []
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Filters, sorts, and fetches the list of resources.'
-      description: ''
-      authenticated: false
-      deprecated: false
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -1853,7 +1969,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Fetches the list of resources.'
+      title: 'Display a listing of the resource.'
       description: ''
       authenticated: false
       deprecated: false
@@ -1870,11 +1986,8 @@ endpoints:
     responses:
       -
         custom: []
-        status: 403
-        content: |-
-          {
-              "message": "This action is unauthorized."
-          }
+        status: 200
+        content: '{"data":[],"links":{"first":"http:\/\/191.52.55.208:8000\/api\/material?page=1","last":"http:\/\/191.52.55.208:8000\/api\/material?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","page":null,"active":false},{"url":"http:\/\/191.52.55.208:8000\/api\/material?page=1","label":"1","page":1,"active":true},{"url":null,"label":"Next &raquo;","page":null,"active":false}],"path":"http:\/\/191.52.55.208:8000\/api\/material","per_page":15,"to":null,"total":0}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -1896,7 +2009,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Creates new resource in a transaction-safe way.'
+      title: 'Store a newly created resource in storage.'
       description: ''
       authenticated: false
       deprecated: false
@@ -1907,8 +2020,20 @@ endpoints:
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
+    bodyParameters:
+      name:
+        custom: []
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: b
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      name: b
     fileParameters: []
     responses: []
     responseFields: []
@@ -1927,7 +2052,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Fetches resource.'
+      title: 'Display the specified resource.'
       description: ''
       authenticated: false
       deprecated: false
@@ -1959,7 +2084,7 @@ endpoints:
         status: 404
         content: |-
           {
-              "message": "No query results for model [App\\Models\\Material]."
+              "message": "No query results for model [App\\Models\\Material] 16"
           }
         headers:
           cache-control: 'no-cache, private'
@@ -1983,7 +2108,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Update a resource in a transaction-safe way.'
+      title: 'Update the specified resource in storage.'
       description: ''
       authenticated: false
       deprecated: false
@@ -2026,7 +2151,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Deletes a resource.'
+      title: 'Remove the specified resource from storage.'
       description: ''
       authenticated: false
       deprecated: false
@@ -2062,37 +2187,6 @@ endpoints:
     custom: []
     httpMethods:
       - POST
-    uri: api/photos/search
-    metadata:
-      custom: []
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Filters, sorts, and fetches the list of resources.'
-      description: ''
-      authenticated: false
-      deprecated: false
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-  -
-    custom: []
-    httpMethods:
-      - GET
     uri: api/photos
     metadata:
       custom: []
@@ -2100,63 +2194,44 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Fetches the list of resources.'
+      title: 'Store a newly created resource in storage.'
       description: ''
       authenticated: false
       deprecated: false
     headers:
-      Content-Type: application/json
+      Content-Type: multipart/form-data
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
+    bodyParameters:
+      photo:
         custom: []
-        status: 403
-        content: |-
-          {
-              "message": "This action is unauthorized."
-          }
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          vary: Origin
-        description: null
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-  -
-    custom: []
-    httpMethods:
-      - POST
-    uri: api/photos
-    metadata:
-      custom: []
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Creates new resource in a transaction-safe way.'
-      description: ''
-      authenticated: false
-      deprecated: false
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
+        name: photo
+        description: 'Must be an image. Must not be greater than 5120 kilobytes.'
+        required: true
+        example: null
+        type: file
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      item_id:
+        custom: []
+        name: item_id
+        description: 'The <code>id</code> of an existing record in the items table.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      item_id: architecto
+    fileParameters:
+      photo: null
     responses: []
     responseFields: []
     auth: []
@@ -2174,7 +2249,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Fetches resource.'
+      title: 'Display the specified resource.'
       description: ''
       authenticated: false
       deprecated: false
@@ -2206,57 +2281,13 @@ endpoints:
         status: 404
         content: |-
           {
-              "message": "No query results for model [App\\Models\\Photo]."
+              "message": "No query results for model [App\\Models\\Photo] 16"
           }
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           vary: Origin
         description: null
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-  -
-    custom: []
-    httpMethods:
-      - PUT
-      - PATCH
-    uri: 'api/photos/{id}'
-    metadata:
-      custom: []
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Update a resource in a transaction-safe way.'
-      description: ''
-      authenticated: false
-      deprecated: false
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      id:
-        custom: []
-        name: id
-        description: 'The ID of the photo.'
-        required: true
-        example: 16
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        deprecated: false
-    cleanUrlParameters:
-      id: 16
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses: []
     responseFields: []
     auth: []
     controller: null
@@ -2273,7 +2304,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Deletes a resource.'
+      title: 'Remove the specified resource from storage.'
       description: ''
       authenticated: false
       deprecated: false
@@ -2294,37 +2325,6 @@ endpoints:
         deprecated: false
     cleanUrlParameters:
       id: 16
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-  -
-    custom: []
-    httpMethods:
-      - POST
-    uri: api/material-subtypes/search
-    metadata:
-      custom: []
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Filters, sorts, and fetches the list of resources.'
-      description: ''
-      authenticated: false
-      deprecated: false
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -2347,7 +2347,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Fetches the list of resources.'
+      title: 'Display a listing of the resource.'
       description: ''
       authenticated: false
       deprecated: false
@@ -2364,10 +2364,10 @@ endpoints:
     responses:
       -
         custom: []
-        status: 403
+        status: 500
         content: |-
           {
-              "message": "This action is unauthorized."
+              "message": "Server Error"
           }
         headers:
           cache-control: 'no-cache, private'
@@ -2390,7 +2390,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Creates new resource in a transaction-safe way.'
+      title: 'Store a newly created resource in storage.'
       description: ''
       authenticated: false
       deprecated: false
@@ -2401,8 +2401,32 @@ endpoints:
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
+    bodyParameters:
+      name:
+        custom: []
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: b
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      materials_id:
+        custom: []
+        name: materials_id
+        description: 'The <code>id</code> of an existing record in the materiais table.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      name: b
+      materials_id: architecto
     fileParameters: []
     responses: []
     responseFields: []
@@ -2421,7 +2445,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Fetches resource.'
+      title: 'Display the specified resource.'
       description: ''
       authenticated: false
       deprecated: false
@@ -2434,14 +2458,14 @@ endpoints:
         name: id
         description: 'The ID of the material subtype.'
         required: true
-        example: architecto
-        type: string
+        example: 16
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      id: architecto
+      id: 16
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -2477,7 +2501,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Update a resource in a transaction-safe way.'
+      title: 'Update the specified resource in storage.'
       description: ''
       authenticated: false
       deprecated: false
@@ -2490,14 +2514,14 @@ endpoints:
         name: id
         description: 'The ID of the material subtype.'
         required: true
-        example: architecto
-        type: string
+        example: 16
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      id: architecto
+      id: 16
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -2520,7 +2544,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Deletes a resource.'
+      title: 'Remove the specified resource from storage.'
       description: ''
       authenticated: false
       deprecated: false
@@ -2533,14 +2557,14 @@ endpoints:
         name: id
         description: 'The ID of the material subtype.'
         required: true
-        example: architecto
-        type: string
+        example: 16
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         deprecated: false
     cleanUrlParameters:
-      id: architecto
+      id: 16
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

@@ -9,4 +9,13 @@ class Photo extends Model
 {
     /** @use HasFactory<\Database\Factories\PhotoFactory> */
     use HasFactory;
+
+    protected $table = "photos";
+
+    protected $fillable = ["photo_url", "item_id"];
+
+    public function item()
+    {
+        return $this->belongsTo(Item::class);
+    }
 }

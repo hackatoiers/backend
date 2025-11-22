@@ -24,5 +24,5 @@ Route::apiResource('items', ItemController::class);
 Route::apiResource('materials', MaterialController::class);
 Route::apiResource('location', LocationController::class);
 Route::apiResource('material', MaterialController::class);
-Route::apiResource('photos', PhotoController::class);
+Route::apiResource('photos', PhotoController::class)->only(['store', 'show', 'destroy']);
 Route::apiResource('material-subtypes', MaterialSubtypeController::class);

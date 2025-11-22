@@ -8,15 +8,9 @@ use Illuminate\Http\Request;
 use App\Http\Requests\Api\Collection\StoreCollectionRequest;
 use App\Http\Requests\Api\Collection\UpdateCollectionRequest;
 use App\Http\Resources\Api\Collection\CollectionResource;
-use Symfony\Component\HttpKernel\HttpCache\Store;
 
 class CollectionController extends Controller
 {
-    public function __construct()
-    {
-
-    }
-
     /**
      * Display a listing of the resource.
      */
