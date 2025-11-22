@@ -7,7 +7,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Api\Auditing\AuditingController;
-
+use App\Models\Item;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 Route::get('users/search', [UserController::class, 'search']);
 Route::get('/audits', [AuditingController::class, 'index']);
@@ -34,3 +35,11 @@ Route::apiResource('material', MaterialController::class);
 Route::apiResource('photos', PhotoController::class)->only(['store', 'show', 'destroy']);
 Route::apiResource('reserves', ReserveController::class)->only(['store', 'index', 'show', 'destroy']);
 Route::apiResource('material-subtypes', MaterialSubtypeController::class);
+
+Route::get('/items/{id}/pdf', function ($id) {
+    $item = Item::with('photos')->findOrFail($id);
+
+    $pdf = Pdf::loadView('item_pdf', compact('item'));
+
+    return $pdf->download("item_{$item->id}.pdf");
+});
