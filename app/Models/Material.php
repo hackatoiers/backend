@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\MaterialEnum;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use OwenIt\Auditing\Contracts\Auditable;
@@ -21,7 +22,9 @@ class Material extends Model implements Auditable
     protected $fillable = [
         'name',
     ];
-
+    protected $casts = [
+    'material' => MaterialEnum::class
+];
     public function subtypes()
     {
         return $this->hasMany(Subtype::class, 'materials_id');
